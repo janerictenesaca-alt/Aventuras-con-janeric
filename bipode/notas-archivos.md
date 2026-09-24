@@ -42,3 +42,42 @@
 
 ### Qué NO traen estos PDF
 - No dan las medidas de los tubos (diámetro ni pared) ni el grosor de las placas, salvo la placa del winche.
+
+## Lote 2 — Arachnipod (Ferno / Climbing Technology) y manual TerrAdaptor en español
+
+### Arachnipod (ficha, folleto y manual de 56 páginas)
+- Sistema modular: 1 pata (mástil), **bípode (A-frame)**, A-frame de lado, trípode, cuadrípode y puente.
+- **Cabeza tipo bisagra de puerta:** cada pata trae su propia cabeza de aluminio anodizado (perfil extruido con recortes a los lados). Las cabezas se unen con un **pasador "Qik-link"** que pasa por el centro, como el eje de una bisagra. Si se quita el pasador, se saca o se agrega una pata.
+- **Las patas son de perfil rectangular**, no redondo (se ve en los dibujos). Cada pata tiene **3 tramos telescópicos** que se traban con **2 pasadores de pata** (de bola). Las alturas llevan letra y número (A-1 = la más alta ... F-6).
+- Cada cabeza tiene: **grillete en D** para vientos, **cáncamo giratorio 360°** para la carga y orejas para unir más patas.
+- **Pata con polea:** polea de acero inoxidable con **2 canales**, uno para **cuerda de hasta 13 mm** y otro para **cable de acero de hasta 8 mm**. Va sobre 2 rodamientos y tiene pasadores que impiden que la cuerda se salga.
+- **Pata normal:** 1420 mm guardada, **3050 mm** estirada, **8,6 kg**. **Pata con polea:** 1550 / 3150 mm, 10 kg.
+- **Trípode completo:** 25,8 kg; guardado mide 370 × 130 × 1420 mm.
+- **Pies:** pie estándar con suela de poliuretano y huecos (se puede fijar con **perno de 12 mm**), pie de punta con punta de inoxidable, "zapato" para suelo blando y estaca para clavar. El kit trae **pernos M12 para roca** y broca M12.
+- **Carga de trabajo (WLL) del A-frame, con el ancla afuera:**
+  | Altura | WLL | Rotura mínima |
+  |---|---|---|
+  | A-1 (la más alta) | 280 kg | 28 kN |
+  | B-2 | 340 kg | 34 kN |
+  | C-3 | 400 kg | 40 kN |
+  | Carga amarrada a una pata | 220 kg | — |
+- **Factor de seguridad: 10 a 1** (más exigente que el Vortex, que usa 4 a 1).
+- Medidas del trípode armado (folleto): altura máxima 2959 mm; distancia entre pies 2171–2533 mm.
+- **Reglas para el A-frame:** usar **placa de amarre** (rigging plate) para los vientos, **cuerda entre pies con bloqueador** para que las patas no se abran, y alargar las patas **antes** de abrirlas.
+- Certificado **EN 795:2012** (1 persona) y **CEN/TS 16415:2013** (2 personas). Vida útil máxima: **12 años**.
+- Carga típica: 1 persona 80–120 kg; rescate (persona + rescatista + camilla) 200–280 kg.
+- **Idea para nosotros:** el perfil rectangular y la cabeza de placa con pasador son más fáciles de fabricar en Ecuador que la cabeza del Vortex.
+
+### TerrAdaptor — manual en español (mayo 2023, 39 páginas)
+- Cabeza: **placa principal + media placa**. Las patas entran en **abrazaderas** que giran para cambiar el ángulo. Cada ángulo se traba con **3 pasadores de cabeza de bloqueo de carga**.
+- Patas: **tubo de perfil** (delgado, huecos del 1 al 9) dentro del **tubo medio** (grueso, huecos X e Y). Se unen con pasadores de acoplamiento. Una pata puede tener hasta 4 tramos.
+- **Pasador principal de la cabeza:** rotura mínima **≥ 5900 kg (13 000 lb)**, con botón de bola de liberación rápida.
+- **A-frame (tabla 4-6):** 2,13 m de alto, pata de arriba en X5, pata de abajo en X9, cuerda entre pies de **3048 mm (120")** → rompe a **24,9 kN**.
+- Trípode normal: rotura mínima de **36 kN** hasta 2,4 m de alto (norma NFPA 1983).
+- Peso: 3 bolsas de 9,3, 19,25 y 10,7 kg.
+- El manual pide **no cambiar los pasadores por otros de ferretería**, porque pueden no tener la resistencia necesaria.
+- **No da los diámetros de los tubos.**
+
+### Lo que todavía falta para el diseño
+- Diámetros y grosor de pared reales de los tubos (Vortex: solo se sabe Ø 50 y Ø 60 mm).
+- Fotos de la cabeza A-frame del Vortex de frente, de lado y desde arriba, en lo posible con una regla o un objeto de medida conocida.
