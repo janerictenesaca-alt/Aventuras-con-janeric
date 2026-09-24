@@ -145,3 +145,23 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - **Págs. 21 y 22, ángulo de los vientos:** nunca menos de 30°; lo ideal es 45° o más. El ángulo del viento no puede ser menor que el ángulo de la fuerza aplicada; así la fuerza en el viento no pasa de la fuerza aplicada. El "plano de vientos" está entre 2 vientos y el "plano del marco" entre 2 patas (en el A-frame).
 - **Pág. 24, trípode de patas iguales:** es la única configuración con certificación CE EN 795. Maniotas en triángulo; la carga va en el centro del triángulo. La línea de tiro va cerca de la línea de carga.
 - **Págs. 25 y 26, trípode de pata de caballete con winche:** como marco de anclaje necesita maniotas. Si la fuerza sale fuera de la huella del trípode, hace falta un viento opuesto atrás.
+- **Pág. 27, trípode de pata de caballete con polea direccional:** las maniotas solas no alcanzan; en el ejemplo, todos los pies están empernados al piso.
+- **Pág. 28, BÍPODE A-FRAME:**
+  - Es un marco direccional: la cuerda pasa por una polea en la cabeza.
+  - Se usa con maniotas, pies Raptor metidos en grietas y vientos.
+  - Necesita vientos anclados adelante (cerca o sobre el borde) y atrás. Si la carga se puede ir de lado, también vientos a los lados.
+  - La fuerza aplicada tiene que quedar centrada dentro de la huella, en el plano del marco del bípode.
+- **Pág. 29, A-frame de lado:** vientos a cada lado. Sirve cuando no hay anclajes en el borde.
+- **Pág. 30, gin pole:** mínimo 3 vientos, ideal separados 120°. La fuerza tiene que bajar a lo largo del mástil.
+- **Pág. 31, TABLA DE RESISTENCIAS (dato clave para el diseño):**
+  | Rotura (MBS) | Carga de trabajo (WLL) | Armado | Trípode igual | A-frame | Gin pole |
+  |---|---|---|---|---|---|
+  | 22 kN | 5,5 kN | patas de afuera | 3 | 3 | 1 |
+  | | | huecos a la vista en la pata de adentro | 5 | 3 | 4 |
+  | | | altura al punto de unión | 320 cm (126") | 305 cm (120") | 185 cm (73") |
+  | 36 kN | 9 kN | patas de afuera | 2 | 2 | — |
+  | | | huecos a la vista en la pata de adentro | 5 | 4 | — |
+  | | | altura al punto de unión | 241 cm (95") | 241 cm (95") | — |
+  - Factor de diseño 4:1. La carga de trabajo es la fuerza aplicada, que puede ser mayor que el peso de la carga.
+  - **Orden de cada pata (Fig. 1):** cabeza A-frame arriba → patas de afuera (2 o 3, unidas entre sí) → **1 pata de adentro abajo** (ahí se cuentan los huecos a la vista) → pie Raptor.
+  - Cálculo con la tabla: el A-frame pasa de 241 a 305 cm (+64 cm) al agregar 1 pata de afuera y tapar 1 hueco (−15 cm).
