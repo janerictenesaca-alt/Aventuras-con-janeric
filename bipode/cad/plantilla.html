@@ -1,0 +1,408 @@
+<title>Bípode A-Frame v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F5F7; --paper:#FFFFFF; --ink:#18232E; --muted:#56636F; --line:#C9D2DA; --grid:#E3E9EE;
+  --orange:#C8561A; --blue:#2C66B0; --part:#DCE6F2; --ghost:#9AA8B5;
+  --warn-bg:#FFF1E8; --warn-ink:#7A2E06; --ok-bg:#EAF2FB;
+  --display:"IBM Plex Sans Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10161C; --paper:#172029; --ink:#E6ECF1; --muted:#9AA8B5; --line:#33414E; --grid:#1F2A34;
+    --orange:#F07A36; --blue:#6FA0E6; --part:#22364D; --ghost:#5D6B78;
+    --warn-bg:#3A2114; --warn-ink:#FFC9A6; --ok-bg:#16273A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10161C; --paper:#172029; --ink:#E6ECF1; --muted:#9AA8B5; --line:#33414E; --grid:#1F2A34;
+  --orange:#F07A36; --blue:#6FA0E6; --part:#22364D; --ghost:#5D6B78;
+  --warn-bg:#3A2114; --warn-ink:#FFC9A6; --ok-bg:#16273A; color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px;padding-block:28px 64px;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(30px,5.4vw,44px);font-weight:700}
+h2{font-size:26px;font-weight:700}
+h3{font-size:18px;font-weight:700}
+p{margin:0;max-width:70ch}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+header{display:grid;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:20px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+section{display:grid;gap:14px}
+.sheet{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:16px;display:grid;gap:12px;min-width:0}
+.warn{background:var(--warn-bg);color:var(--warn-ink);border-left:4px solid var(--orange);padding:14px 16px;display:grid;gap:6px}
+.warn strong{font-family:var(--display);font-size:18px}
+.two{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.three{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.draw{overflow-x:auto}
+.draw svg{display:block;width:100%;height:auto;max-height:560px}
+.draw.tube svg{min-width:640px}
+svg .part{fill:var(--part);stroke:var(--ink);stroke-width:1.2}
+svg .hole{fill:var(--paper);stroke:var(--ink);stroke-width:1}
+svg .ghost{fill:none;stroke:var(--ghost);stroke-width:1;stroke-dasharray:5 4}
+svg .cl{stroke:var(--orange);stroke-width:.7;stroke-dasharray:8 3 2 3}
+svg .dim{stroke:var(--muted);stroke-width:.8}
+svg .ah{fill:var(--muted)}
+svg .dt{font-family:var(--mono);fill:var(--ink)}
+svg .hl{font-family:var(--mono);fill:var(--blue);font-weight:500}
+.cap{font-family:var(--mono);font-size:12px;color:var(--muted)}
+#view3d{display:block;width:100%;max-width:100%;aspect-ratio:4/3;border-radius:4px;touch-action:none;cursor:grab;
+  background:linear-gradient(var(--grid) 1px,transparent 1px) 0 0/24px 24px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/24px 24px,var(--paper)}
+@media (min-width:760px){#view3d{aspect-ratio:16/10}}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+.tbl table{min-width:640px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.n{font-family:var(--mono);color:var(--orange);font-weight:500;white-space:nowrap}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.mono{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums}
+ol,ul{margin:0;padding-left:22px;display:grid;gap:6px;max-width:74ch}
+.spec{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px;font-size:14px;margin:0}
+.spec dt{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:2px}
+.spec dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12.5px;border:1px solid var(--line);border-radius:3px;padding:4px 8px;background:var(--paper)}
+.stats{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.stat{border-top:2px solid var(--ink);padding-top:8px;display:grid;gap:2px}
+.stat b{font-family:var(--display);font-size:26px;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--muted)}
+.step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.step .k{font-family:var(--display);font-weight:700;font-size:20px;color:var(--paper);background:var(--blue);border-radius:3px;text-align:center;line-height:34px}
+.step div{display:grid;gap:6px}
+a{color:var(--blue)}
+code{font-family:var(--mono);font-size:13px;background:var(--ok-bg);padding:1px 5px;border-radius:3px;word-break:break-all}
+.src{font-size:13px;color:var(--muted)}
+.src ul{gap:2px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Plano de fabricación · versión 2 · para revisión de ingeniero</div>
+  <h1>Bípode (A-frame) de aluminio para rescate y rápel</h1>
+  <p>Diseño propio para fabricar en Ecuador. Junta lo mejor del Arizona Vortex (patas redondas que entran una en otra), del Arachnipod y el TerrAdaptor (cabeza de placas con pasadores) y de los accesorios SMC (anillos de amarre y pies de garra). Casi todo se hace con corte láser o chorro de agua, torno y taladro. Solo se suelda en dos piezas que no cargan a la persona directamente.</p>
+  <div class="meta">
+    <span>Medidas en milímetros (mm)</span>
+    <span>Aluminio 6061-T6 + acero A36 y AISI 4140</span>
+    <span>Rotura objetivo: 36 kN (hasta 2,0 m)</span>
+    <span>Peso total aprox.: {{KG_TOTAL}} kg</span>
+  </div>
+</header>
+
+<div class="warn">
+  <strong>Antes de usarlo con personas</strong>
+  <p>Estas medidas salen de los manuales y fotos de los equipos originales y de cálculos básicos. Un ingeniero mecánico tiene que revisar los cálculos y firmar el plano. Y hay que hacer una prueba de carga sin personas (sección 9) antes del primer uso. Los pasadores de bola y los pernos se compran; no se reemplazan por piezas de ferretería sin grado.</p>
+</div>
+
+<section>
+  <div class="eyebrow">1 · Modelo 3D</div>
+  <h2>Así queda armado</h2>
+  <div class="sheet">
+    <canvas id="view3d" aria-label="Modelo 3D del bípode. Arrastra para girar, rueda o dos dedos para acercar."></canvas>
+    <div class="cap">Arrastra para girar · rueda del mouse o dos dedos para acercar. Se muestra en la altura 4 (punto de carga a 2,02 m). Azul: cabeza · plateado: patas · naranja: anillos y pies · verde: vientos · naranja fino: maniota.</div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>1,59–2,45 m</b><span>altura al punto de carga (7 alturas)</span></div>
+    <div class="stat"><b>32</b><span>puntos de amarre: 12 en la cabeza, 16 en los anillos, 4 en los pies</span></div>
+    <div class="stat"><b>{{KG_CABEZA}} kg</b><span>peso de la cabeza armada</span></div>
+    <div class="stat"><b>{{KG_TOTAL}} kg</b><span>peso total con pies y anillos</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">2 · De dónde sale cada idea</div>
+  <h2>Qué se tomó de cada marca</h2>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>Parte</th><th>Idea tomada de</th><th>Cómo queda aquí</th></tr></thead>
+    <tbody>
+      <tr><td>Patas redondas que entran una en otra</td><td>Arizona Vortex</td><td>Tubo Ø 50,8 que corre dentro de tubo Ø 60,3, casi las mismas medidas del Vortex (Ø 50 y Ø 60). Huecos cada 150 mm, igual que el Vortex.</td></tr>
+      <tr><td>Cabeza de dos placas con pasadores</td><td>Arachnipod y TerrAdaptor</td><td>Dos placas iguales de aluminio cortadas con láser, unidas con pernos. No hay soldadura en la cabeza.</td></tr>
+      <tr><td>Muchos huecos para mosquetón en la cabeza</td><td>SMC Space Station y cabeza Vortex</td><td>6 huecos de amarre, 3 barras de carga, 2 pernos para vientos y 1 ventana para cinta.</td></tr>
+      <tr><td>Barra de carga donde se cuelga la polea</td><td>TerrAdaptor (pasador principal)</td><td>Barra de acero 4140 de 1" que atraviesa las dos placas. El mosquetón abraza una barra gruesa y no el aluminio.</td></tr>
+      <tr><td>Aros en medio de las patas</td><td>Vortex (placa azul) y TerrAdaptor (anillo de amarre)</td><td>Disco de 200 mm con 8 huecos que se pone en cualquier hueco de la pata de abajo.</td></tr>
+      <tr><td>Pie con garra y huecos para amarrar</td><td>Vortex Raptor y SMC Talon</td><td>Placa de acero de 10 mm con punta y 2 huecos. Entra en una ranura de la pata y se asegura con un perno.</td></tr>
+      <tr><td>Pie plano para roca o cemento</td><td>Vortex Flat Foot y Arachnipod</td><td>Base de acero con 4 huecos para anclar con tus pernos de 1/2" y caucho abajo. Es opcional.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">3 · Alturas y cargas</div>
+  <h2>Tabla de alturas</h2>
+  <p>La altura se cambia con el hueco de la pata de arriba que queda en el primer hueco de la pata de abajo. Siempre van 2 pasadores en cada unión. Las patas están abiertas 18° cada una (36° entre las dos), fijo por la cabeza.</p>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>Altura</th><th>Hueco de la pata de arriba</th><th>Suelo a barra de carga</th><th>Suelo a punta de cabeza</th><th>Distancia entre pies</th><th>Pata de arriba dentro de la de abajo</th><th>Carga de trabajo (uso general 4:1)</th><th>Con personas (10:1)</th></tr></thead>
+    <tbody>{{TABLA_ALTURAS}}</tbody>
+  </table>
+  </div>
+  <p class="cap">Cargas estimadas con cálculo de pandeo de las patas y un margen de 0,6 por imperfecciones. Son parecidas a las del Vortex (9 kN con 2 tramos, 5,5 kN con 3 tramos) y del Arachnipod (280 a 400 kg con personas). El ingeniero las tiene que confirmar y la prueba de carga las valida.</p>
+</section>
+
+<section>
+  <div class="eyebrow">4 · Piezas</div>
+  <h2>Lista de piezas para un bípode</h2>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>#</th><th>Pieza</th><th>Cant.</th><th>Material y medida</th><th>Cómo se hace</th><th>Peso c/u</th></tr></thead>
+    <tbody>
+      <tr><td class="n">01</td><td>Placa de la cabeza</td><td class="num">2</td><td class="mono">Aluminio 6061-T6, plancha 3/8" (9,53) · {{PLACA_W}} × {{PLACA_H}}</td><td>Corte por chorro de agua o láser de fibra con el DXF</td><td class="num">{{KG_PLACA}} kg</td></tr>
+      <tr><td class="n">02</td><td>Casquillo de la cabeza</td><td class="num">2</td><td class="mono">Tubo aluminio 6061-T6 2" céd. 40 (Ø 60,3 × 3,91) · largo 160</td><td>Sierra + 2 huecos taladrados junto con las placas</td><td class="num">{{KG_CAS}} kg</td></tr>
+      <tr><td class="n">03</td><td>Barra de carga</td><td class="num">3</td><td class="mono">Acero AISI 4140 bonificado, barra Ø 25,4 (1") · largo 108</td><td>Torno: refrentar, chaflán 1 mm, 2 huecos Ø 5,2 a 7 mm de cada punta</td><td class="num">{{KG_BARRA}} kg</td></tr>
+      <tr><td class="n">04</td><td>Distanciador</td><td class="num">2</td><td class="mono">Tubo acero Ø 25,4 × 3,2 · largo 60,5 exacto</td><td>Sierra + refrentar en torno (las dos puntas planas y paralelas)</td><td class="num">0,1 kg</td></tr>
+      <tr><td class="n">05</td><td>Pata de arriba</td><td class="num">2</td><td class="mono">Tubo aluminio 6061-T6 Ø 50,8 × 6,35 (2" × 1/4") · largo 1500</td><td>Sierra + 10 huecos Ø 9,9 cada 150</td><td class="num">{{KG_SUP}} kg</td></tr>
+      <tr><td class="n">06</td><td>Pata de abajo</td><td class="num">2</td><td class="mono">Tubo aluminio 6061-T6 2" céd. 40 (Ø 60,3 × 3,91) · largo 1500</td><td>Sierra + 5 huecos Ø 9,9 + 2 ranuras + 1 hueco Ø 13,1</td><td class="num">{{KG_INF}} kg</td></tr>
+      <tr><td class="n">07</td><td>Anillo de amarre (disco + manguito)</td><td class="num">2</td><td class="mono">Disco aluminio 3/8" Ø 200 + tubo 2½" céd. 40 (Ø 73,0 × 5,16) largo 90</td><td>Disco con láser o chorro de agua · manguito con sierra · soldadura TIG</td><td class="num">{{KG_ANILLO}} kg</td></tr>
+      <tr><td class="n">08</td><td>Pie de garra</td><td class="num">2</td><td class="num">Acero A36, plancha 10 mm</td><td>Corte láser con el DXF · pintura en polvo naranja o galvanizado</td><td class="num">{{KG_PIE}} kg</td></tr>
+      <tr><td class="n">09</td><td>Pie plano (opcional)</td><td class="num">2</td><td class="mono">Lengua A36 10 mm + base A36 8 mm 160 × 160 + 2 orejas A36 8 mm + caucho 5 mm</td><td>Corte láser · soldadura MIG de las orejas a la base</td><td class="num">≈ 2,2 kg</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Pernos, pasadores y cuerdas (se compran)</h3>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>Cant.</th><th>Qué</th><th>Medida</th><th>Dónde va</th></tr></thead>
+    <tbody>
+      <tr><td class="num">8 (+2 de repuesto)</td><td>Pasador de bola con anillo (ball lock pin), acero inoxidable 17-4 o 304</td><td class="mono">Ø 3/8" (9,5 mm) · largo útil 4" (≈ 100 mm) · resistencia ≥ 60 kN en doble corte</td><td>2 en la cabeza, 4 en las uniones de patas, 2 en los anillos</td></tr>
+      <tr><td class="num">4</td><td>Perno hexagonal grado 8 + tuerca de seguridad (nylon) + 2 arandelas</td><td class="mono">3/8" × 4" (llave 14 mm o 9/16")</td><td>Perno fijo de cada casquillo (2 por lado)</td></tr>
+      <tr><td class="num">2</td><td>Perno hexagonal grado 8 + tuerca de seguridad + 2 arandelas</td><td class="num">1/2" × 3½" (llave 19)</td><td>Distanciadores de arriba de la cabeza</td></tr>
+      <tr><td class="num">2</td><td>Perno hexagonal grado 8 + tuerca de seguridad + 2 arandelas</td><td class="num">1/2" × 3" (llave 19)</td><td>Unión del pie con la pata</td></tr>
+      <tr><td class="num">6</td><td>Pasador tipo R (clip R) de acero</td><td class="num">Ø 5 mm (3/16")</td><td>Seguro de las 3 barras de carga (2 por barra)</td></tr>
+      <tr><td class="num">2</td><td>Perno grado 8 + tuerca de seguridad (solo si haces el pie plano)</td><td class="num">1/2" × 2"</td><td>Bisagra del pie plano</td></tr>
+      <tr><td class="num">1</td><td>Cuerda estática 11 mm para la maniota</td><td class="num">5 m</td><td>Entre los huecos L de los pies, con un bloqueador para tensar</td></tr>
+      <tr><td class="num">2–4</td><td>Cuerda estática 11 mm para vientos</td><td class="num">10 m cada una</td><td>De los pernos de arriba de la cabeza a los anclajes, a 45°</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Los pasadores de bola de 3/8" se consiguen por Amazon o McMaster-Carr (por ejemplo "3/8 ball lock pin 4 inch grip"). Si no llegan a tiempo, un tornero puede hacer pasadores de acero 4140 Ø 9,5 con un hueco de 3 mm en la punta para un clip R. Así pierde la rapidez pero no la resistencia.</p>
+</section>
+
+<section>
+  <div class="eyebrow">5 · Planos de corte</div>
+  <h2>Piezas para corte láser o chorro de agua</h2>
+  <p>Las medidas X y Y de cada hueco se miden desde el centro de la pieza (marcado con una cruz naranja). Los DXF tienen exactamente este dibujo, en la capa <code>CORTE</code>, a escala 1:1 en milímetros.</p>
+
+  <div class="sheet">
+    <h3>01 · Placa de la cabeza (hacer 2 iguales)</h3>
+    <dl class="spec">
+      <dt>Material</dt><dd>Aluminio 6061-T6, plancha de 3/8" (9,53 mm)</dd>
+      <dt>Tamaño</dt><dd>{{PLACA_W}} × {{PLACA_H}} mm · {{KG_PLACA}} kg cada una</dd>
+      <dt>Corte</dt><dd>Chorro de agua (lo mejor en aluminio grueso) o láser de fibra de 6 kW o más. Pedir borde limpio, sin rebaba.</dd>
+      <dt>Huecos C</dt><dd>Cortarlos a Ø 8 y terminarlos con broca de 25/64" (9,9 mm) con la cabeza armada (paso 6), para que queden alineados con el casquillo.</dd>
+      <dt>Huecos A, B, D</dt><dd>Cortar a la medida final. Redondear los filos de los huecos A y B con lima (radio 1 mm) para que no corten cuerdas ni cintas.</dd>
+    </dl>
+    <div class="draw">{{SVG_PLACA}}</div>
+    <p class="cap">Línea punteada gris: dónde quedan los casquillos (entre las dos placas).</p>
+    {{TABLA_PLACA}}
+  </div>
+
+  <div class="two">
+    <div class="sheet">
+      <h3>07 · Disco del anillo de amarre (hacer 2)</h3>
+      <dl class="spec">
+        <dt>Material</dt><dd>Aluminio 6061-T6, plancha 3/8" (9,53)</dd>
+        <dt>Medida</dt><dd>Ø 200 · hueco central Ø 73,5 · 8 huecos Ø 25 en un círculo de Ø 130</dd>
+      </dl>
+      <div class="draw">{{SVG_ANILLO}}</div>
+      {{TABLA_ANILLO}}
+    </div>
+    <div class="sheet">
+      <h3>08 · Pie de garra (hacer 2)</h3>
+      <dl class="spec">
+        <dt>Material</dt><dd>Acero A36, plancha 10 mm</dd>
+        <dt>Medida</dt><dd>150 × 195 mm · {{KG_PIE}} kg</dd>
+        <dt>Uso</dt><dd>La parte de arriba (80 de ancho) entra en las 2 ranuras de la pata de abajo. La punta se clava en tierra o se apoya en una grieta de roca.</dd>
+      </dl>
+      <div class="draw">{{SVG_PIE}}</div>
+      {{TABLA_PIE}}
+    </div>
+  </div>
+
+  <div class="sheet">
+    <h3>09 · Pie plano (opcional, hacer 2)</h3>
+    <p>Sirve en roca plana, cemento o techo. La lengua entra en la pata igual que el pie de garra. Abajo gira sobre un perno de 1/2" entre las 2 orejas, que van soldadas a la base con 10,5 mm de separación entre ellas. Los 4 huecos de la base (Ø 14, a 120 mm entre centros) sirven para fijarla a la roca con los pernos de 1/2" que compraste. Pegar caucho de 5 mm abajo con los mismos huecos.</p>
+    <div class="three">
+      <div><div class="cap">Lengua · A36 10 mm</div><div class="draw">{{SVG_LENGUA}}</div></div>
+      <div><div class="cap">Base · A36 8 mm (punteado: orejas)</div><div class="draw">{{SVG_BASE}}</div></div>
+      <div><div class="cap">Oreja · A36 8 mm · hacer 4</div><div class="draw">{{SVG_OREJA}}</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">6 · Planos de tubos</div>
+  <h2>Tubos: largo y huecos</h2>
+  <p>Todas las medidas se toman desde la <b>punta de arriba</b> del tubo. Los huecos Ø 9,9 atraviesan el tubo de lado a lado, bien centrados y todos en la misma línea. Hacerlos en taladro de pedestal con el tubo apoyado en un prisma en V. Si el primer hueco queda chueco, el pasador no entra.</p>
+
+  <div class="sheet">
+    <h3>05 · Pata de arriba (hacer 2)</h3>
+    <dl class="spec">
+      <dt>Tubo</dt><dd>Aluminio 6061-T6 Ø 50,8 × pared 6,35 (2" × 1/4") · largo 1500 · {{KG_SUP}} kg</dd>
+      <dt>Huecos</dt><dd>10 huecos Ø 9,9 a 75, 225, 375 … 1425 (cada 150)</dd>
+      <dt>Marca</dt><dd>Grabar o pintar junto al hueco 1125: "ÚLTIMO HUECO". Nunca se une más abajo, porque quedarían menos de 400 mm de tubo adentro.</dd>
+    </dl>
+    <div class="draw tube">{{SVG_SUP}}</div>
+  </div>
+
+  <div class="sheet">
+    <h3>06 · Pata de abajo (hacer 2)</h3>
+    <dl class="spec">
+      <dt>Tubo</dt><dd>Aluminio 6061-T6 2" cédula 40 (Ø 60,3 × pared 3,91, por dentro 52,5) · largo 1500 · {{KG_INF}} kg</dd>
+      <dt>Huecos</dt><dd>Ø 9,9 a 30 y 180 (unión con la pata de arriba) · a 480, 780 y 1080 (anillo de amarre) · Ø 13,1 a 1460 (perno del pie)</dd>
+      <dt>Ranuras</dt><dd>2 ranuras opuestas en la punta de abajo, de 10,5 de ancho × 75 de largo, giradas 90° respecto a los huecos. Por ellas pasa el pie de 10 mm.</dd>
+      <dt>Prueba</dt><dd>Antes de hacer huecos, meter la pata de arriba en esta y ver que corra suave en todo el largo. Por dentro debe quedar 1,5 a 2 mm más ancha.</dd>
+    </dl>
+    <div class="draw tube">{{SVG_INF}}</div>
+  </div>
+
+  <div class="two">
+    <div class="sheet">
+      <h3>02 · Casquillo de la cabeza (hacer 2)</h3>
+      <dl class="spec">
+        <dt>Tubo</dt><dd>Mismo tubo de la pata de abajo, largo 160</dd>
+        <dt>Huecos</dt><dd>Ø 9,9 a 35 (perno fijo) y a 115 (pasador de la pata). Taladrar con las placas armadas.</dd>
+      </dl>
+      <div class="draw tube">{{SVG_CAS}}</div>
+    </div>
+    <div class="sheet">
+      <h3>07 · Manguito del anillo (hacer 2)</h3>
+      <dl class="spec">
+        <dt>Tubo</dt><dd>Aluminio 6061-T6 2½" cédula 40 (Ø 73,0 × 5,16, por dentro 62,7) · largo 90</dd>
+        <dt>Hueco</dt><dd>Ø 9,9 a 70 de la punta de arriba (20 de la de abajo)</dd>
+        <dt>Disco</dt><dd>Centro del disco a 55 de la punta de abajo. Soldadura TIG en ángulo de 6 mm, arriba y abajo del disco, todo alrededor.</dd>
+      </dl>
+      <div class="draw tube">{{SVG_MAN}}</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">7 · Orden de fabricación</div>
+  <h2>Por dónde empezar</h2>
+  <div class="sheet" style="gap:16px">
+    <div class="step"><span class="k">1</span><div><b>Comprar y medir los tubos.</b><p>Comprar primero los tubos de 2" × 1/4" y 2" cédula 40. Medirlos con calibrador. La pata de arriba tiene que correr dentro de la de abajo con 1,5 a 2 mm de holgura. Si no corre, no seguir: hay que cambiar un tubo (ver sección 8).</p></div></div>
+    <div class="step"><span class="k">2</span><div><b>Mandar a cortar las placas.</b><p>Llevar los DXF al taller de corte: 2 placas de cabeza y 2 discos en aluminio 3/8", y 2 pies de garra (y el pie plano si lo quieres) en acero. Tarda de 1 a 3 días.</p></div></div>
+    <div class="step"><span class="k">3</span><div><b>Cortar los tubos a largo.</b><p>Con sierra de cinta y refrentar las puntas: 2 × 1500 (arriba), 2 × 1500 (abajo), 2 × 160 (casquillos), 2 × 90 (manguitos). Quitar rebabas por dentro y por fuera.</p></div></div>
+    <div class="step"><span class="k">4</span><div><b>Hacer los huecos y las ranuras de las patas.</b><p>Taladro de pedestal y prisma en V. Marcar todo desde la punta de arriba. Empezar con broca de 6 mm y terminar con 25/64" (9,9 mm). Las ranuras del pie se hacen con fresadora o con 2 cortes de sierra y lima.</p></div></div>
+    <div class="step"><span class="k">5</span><div><b>Tornear las barras de carga y los distanciadores.</b><p>3 barras de 4140 de Ø 25,4 × 108 con 2 huecos Ø 5,2. 2 distanciadores de 60,5 exactos: de esta medida depende que las placas queden paralelas.</p></div></div>
+    <div class="step"><span class="k">6</span><div><b>Armar la cabeza y taladrar en conjunto.</b><p>Poner las 2 placas con los distanciadores y las barras. Meter los casquillos entre las placas, alinearlos con la línea punteada del plano y apretar con prensas. Taladrar los huecos C atravesando placa, casquillo y placa en una sola pasada. Poner los 4 pernos fijos de 3/8".</p></div></div>
+    <div class="step"><span class="k">7</span><div><b>Soldar los anillos (y el pie plano).</b><p>Anillo: TIG con corriente alterna, varilla ER5356, argón puro. Limpiar con cepillo de acero inoxidable y acetona. Si el taller puede, hacer tratamiento térmico T6 después. Pie plano: soldadura MIG normal de acero.</p></div></div>
+    <div class="step"><span class="k">8</span><div><b>Acabado.</b><p>Limar todos los filos. Anodizar la cabeza en azul y los anillos en naranja, o pintura en polvo. Pies: pintura en polvo naranja o galvanizado. Grabar en cada placa: número de serie, fecha y "Carga de trabajo 9 kN".</p></div></div>
+    <div class="step"><span class="k">9</span><div><b>Armado completo y prueba de carga.</b><p>Ver secciones 9 y 10. Solo después de pasar la prueba se usa con personas.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">8 · Si no hay aluminio</div>
+  <h2>Materiales de reemplazo</h2>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>Pieza</th><th>Primera opción</th><th>Si no se consigue</th><th>Qué cambia</th></tr></thead>
+    <tbody>
+      <tr><td>Pata de arriba</td><td class="num">Al 6061-T6 Ø 50,8 × 6,35</td><td class="mono">Al 6061-T6 Ø 50,8 × 4,76 (3/16")</td><td>Pierde un 15 % de rigidez: usar solo hasta la altura 5.</td></tr>
+      <tr><td>Pata de abajo</td><td class="num">Al 6061-T6 2" céd. 40</td><td class="mono">Al 6061-T6 Ø 63,5 × 4,76 + buje de nylon de 1,5 mm en la boca</td><td>Holgura mayor. El buje evita que la pata baile.</td></tr>
+      <tr><td>Todas las patas</td><td class="num">Aluminio</td><td class="mono">Acero ASTM A513 Ø 50,8 × 3 dentro de Ø 60,3 × 3,5</td><td>Mismos huecos. Pesa unos 2,6 veces más (≈ 28 kg las 4 patas). Galvanizar.</td></tr>
+      <tr><td>Placas de cabeza y discos</td><td class="num">Al 6061-T6 3/8"</td><td class="num">Acero A36 de 8 mm con láser</td><td>Mismo DXF. La cabeza pasa de {{KG_CABEZA}} kg a unos 8 kg.</td></tr>
+      <tr><td>Tubos 6063 de ventanería</td><td colspan="3">No sirven. El 6063-T5 tiene la mitad de la fuerza del 6061-T6. Pedir el certificado del material.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Dónde preguntar: distribuidores de aluminio industrial (6061-T6 en barras, planchas y tubo) y de acero (A36, 4140 y tubo mecánico) en Quito y Guayaquil. Si no hay tubo 6061 en stock, se puede importar por courier desde EE. UU. (Online Metals o McMaster-Carr), pidiéndolo cortado a 1500 mm.</p>
+</section>
+
+<section>
+  <div class="eyebrow">9 · Prueba de carga</div>
+  <h2>Prueba antes de usar</h2>
+  <ol>
+    <li>Armar en suelo plano a la <b>altura 4</b>, con la maniota tensada y 2 vientos a 45°.</li>
+    <li>Colgar de la barra B1 una carga de <b>18 kN (≈ 1.800 kg)</b> por 3 minutos, el doble de la carga de trabajo. Se puede hacer con un tecle y un dinamómetro (celda de carga) anclado al suelo, sin tener que juntar tanto peso.</li>
+    <li>Repetir a la <b>altura 7</b> con <b>11 kN (≈ 1.100 kg)</b>.</li>
+    <li>Revisar: que ningún tubo quede doblado (poner una regla de 1 m sobre la pata), que ningún hueco se haya ovalado, que los pasadores salgan con la mano y que las placas sigan planas.</li>
+    <li>Si algo se deforma, no se usa. Se refuerza y se vuelve a probar.</li>
+    <li>Anotar fecha, carga y resultado en una hoja que se guarda con el equipo.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="eyebrow">10 · Armado en el lugar</div>
+  <h2>Cómo se arma para un descenso</h2>
+  <ol>
+    <li>Armar las patas en el suelo, cerca una de la otra: pata de arriba dentro de la de abajo, 2 pasadores por pata, en la misma altura las dos.</li>
+    <li>Poner los pies (garra en tierra, plano en roca) y el anillo si hace falta.</li>
+    <li>Meter las patas en los casquillos y poner los 2 pasadores de la cabeza. Revisar que las bolas de cada pasador salgan del otro lado.</li>
+    <li>Pasar la maniota por los huecos L de los pies y tensarla con un bloqueador.</li>
+    <li>Colgar la polea de la barra B1 con un mosquetón de acero antes de levantar.</li>
+    <li>Levantar y amarrar los vientos a los pernos de arriba (D1 y D2) hacia los anclajes de atrás a 45°, nunca a menos de 30°. Si la carga se puede ir de lado, poner también vientos a los lados.</li>
+    <li>La fuerza de la cuerda tiene que caer dentro del plano de las patas. Inclinación máxima hacia el borde: 15°.</li>
+    <li>Cargar poco a poco con una cuerda de seguridad aparte y revisar que nada se mueva.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="eyebrow">11 · Archivos</div>
+  <h2>Archivos para el taller</h2>
+  <ul>
+    <li><b>DXF para corte</b> (capa CORTE, 1:1 en mm): placa de cabeza, disco del anillo, pie de garra y las 3 piezas del pie plano.</li>
+    <li><b>STEP</b> de cada pieza y del bípode armado: se abren en SolidWorks, Fusion 360, FreeCAD o Inventor.</li>
+    <li><b>STL</b> de cada pieza: para ver en el celular o imprimir en 3D una maqueta.</li>
+    <li><b>GLB</b> del bípode armado: el mismo modelo 3D de esta página.</li>
+  </ul>
+  <p>Van en un ZIP aparte y en la carpeta <code>bipode/archivos</code> del repositorio. Todas las medidas salen de un solo archivo (<code>bipode/cad/geometria.py</code>). Si se cambia una medida ahí, se vuelven a generar el 3D, los DXF y este documento.</p>
+</section>
+
+<section class="src">
+  <div class="eyebrow">Fuentes</div>
+  <ul>
+    <li>Rock Exotica · Arizona Vortex: catálogo de patas VXUL y VXLL, manual de uso y ficha técnica</li>
+    <li>Ferno · Arachnipod: ficha técnica, folleto V5, manual de uso V6.1 y manual de inspección V1.2</li>
+    <li>SMC · TerrAdaptor: manual en español (mayo 2023), Space Station, pies modulares, QuickLash y soporte de winche</li>
+  </ul>
+</section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+  var cv=document.getElementById('view3d');
+  if(!window.THREE||!cv||!THREE.GLTFLoader) return;
+  var r=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true,preserveDrawingBuffer:true});
+  r.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  r.outputEncoding=THREE.sRGBEncoding;
+  var scene=new THREE.Scene();
+  var cam=new THREE.PerspectiveCamera(32,1.6,10,50000);
+  scene.add(new THREE.HemisphereLight(0xffffff,0x556677,1.1));
+  var dl=new THREE.DirectionalLight(0xffffff,0.9);dl.position.set(3000,5000,4000);scene.add(dl);
+  var dl2=new THREE.DirectionalLight(0xffffff,0.35);dl2.position.set(-3000,2000,-3000);scene.add(dl2);
+  var ctr=new THREE.OrbitControls(cam,cv);
+  ctr.enableDamping=true;ctr.autoRotate=!matchMedia('(prefers-reduced-motion: reduce)').matches;ctr.autoRotateSpeed=0.8;
+  cv.addEventListener('pointerdown',function(){ctr.autoRotate=false;});
+  function size(){var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}
+  window.addEventListener('resize',size);size();
+  fetch('modelo_glb.txt').then(function(r){return r.text();}).then(function(b64){
+    var bin=atob(b64.trim()),buf=new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++)buf[i]=bin.charCodeAt(i);
+    new THREE.GLTFLoader().parse(buf.buffer,'',onModel);
+  });
+  function onModel(gl){
+    var m=gl.scene;
+    var box=new THREE.Box3().setFromObject(m);
+    var sz=box.getSize(new THREE.Vector3());
+    m.position.set(0,-box.min.y-sz.y/2,0);
+    m.traverse(function(o){if(o.isMesh&&o.material){o.material.metalness=Math.min(o.material.metalness||0,0.5);o.material.roughness=0.45;}});
+    scene.add(m);
+    var d=sz.y*2.5;
+    cam.position.set(d*0.55,d*0.18,d*0.85);
+    ctr.target.set(0,0,0);ctr.update();
+  }
+  (function loop(){ctr.update();r.render(scene,cam);requestAnimationFrame(loop);})();
+})();
+</script>

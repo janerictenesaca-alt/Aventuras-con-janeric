@@ -1,0 +1,408 @@
+<title>Bípode A-Frame v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F5F7; --paper:#FFFFFF; --ink:#18232E; --muted:#56636F; --line:#C9D2DA; --grid:#E3E9EE;
+  --orange:#C8561A; --blue:#2C66B0; --part:#DCE6F2; --ghost:#9AA8B5;
+  --warn-bg:#FFF1E8; --warn-ink:#7A2E06; --ok-bg:#EAF2FB;
+  --display:"IBM Plex Sans Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10161C; --paper:#172029; --ink:#E6ECF1; --muted:#9AA8B5; --line:#33414E; --grid:#1F2A34;
+    --orange:#F07A36; --blue:#6FA0E6; --part:#22364D; --ghost:#5D6B78;
+    --warn-bg:#3A2114; --warn-ink:#FFC9A6; --ok-bg:#16273A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10161C; --paper:#172029; --ink:#E6ECF1; --muted:#9AA8B5; --line:#33414E; --grid:#1F2A34;
+  --orange:#F07A36; --blue:#6FA0E6; --part:#22364D; --ghost:#5D6B78;
+  --warn-bg:#3A2114; --warn-ink:#FFC9A6; --ok-bg:#16273A; color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px;padding-block:28px 64px;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(30px,5.4vw,44px);font-weight:700}
+h2{font-size:26px;font-weight:700}
+h3{font-size:18px;font-weight:700}
+p{margin:0;max-width:70ch}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+header{display:grid;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:20px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+section{display:grid;gap:14px}
+.sheet{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:16px;display:grid;gap:12px;min-width:0}
+.warn{background:var(--warn-bg);color:var(--warn-ink);border-left:4px solid var(--orange);padding:14px 16px;display:grid;gap:6px}
+.warn strong{font-family:var(--display);font-size:18px}
+.two{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.three{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.draw{overflow-x:auto}
+.draw svg{display:block;width:100%;height:auto;max-height:560px}
+.draw.tube svg{min-width:640px}
+svg .part{fill:var(--part);stroke:var(--ink);stroke-width:1.2}
+svg .hole{fill:var(--paper);stroke:var(--ink);stroke-width:1}
+svg .ghost{fill:none;stroke:var(--ghost);stroke-width:1;stroke-dasharray:5 4}
+svg .cl{stroke:var(--orange);stroke-width:.7;stroke-dasharray:8 3 2 3}
+svg .dim{stroke:var(--muted);stroke-width:.8}
+svg .ah{fill:var(--muted)}
+svg .dt{font-family:var(--mono);fill:var(--ink)}
+svg .hl{font-family:var(--mono);fill:var(--blue);font-weight:500}
+.cap{font-family:var(--mono);font-size:12px;color:var(--muted)}
+#view3d{display:block;width:100%;max-width:100%;aspect-ratio:4/3;border-radius:4px;touch-action:none;cursor:grab;
+  background:linear-gradient(var(--grid) 1px,transparent 1px) 0 0/24px 24px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/24px 24px,var(--paper)}
+@media (min-width:760px){#view3d{aspect-ratio:16/10}}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+.tbl table{min-width:640px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.n{font-family:var(--mono);color:var(--orange);font-weight:500;white-space:nowrap}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.mono{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums}
+ol,ul{margin:0;padding-left:22px;display:grid;gap:6px;max-width:74ch}
+.spec{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px;font-size:14px;margin:0}
+.spec dt{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:2px}
+.spec dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12.5px;border:1px solid var(--line);border-radius:3px;padding:4px 8px;background:var(--paper)}
+.stats{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.stat{border-top:2px solid var(--ink);padding-top:8px;display:grid;gap:2px}
+.stat b{font-family:var(--display);font-size:26px;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--muted)}
+.step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.step .k{font-family:var(--display);font-weight:700;font-size:20px;color:var(--paper);background:var(--blue);border-radius:3px;text-align:center;line-height:34px}
+.step div{display:grid;gap:6px}
+a{color:var(--blue)}
+code{font-family:var(--mono);font-size:13px;background:var(--ok-bg);padding:1px 5px;border-radius:3px;word-break:break-all}
+.src{font-size:13px;color:var(--muted)}
+.src ul{gap:2px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Plano de fabricación · versión 2 · para revisión de ingeniero</div>
+  <h1>Bípode (A-frame) de aluminio para rescate y rápel</h1>
+  <p>Diseño propio para fabricar en Ecuador. Junta lo mejor del Arizona Vortex (patas redondas que entran una en otra), del Arachnipod y el TerrAdaptor (cabeza de placas con pasadores) y de los accesorios SMC (anillos de amarre y pies de garra). Casi todo se hace con corte láser o chorro de agua, torno y taladro. Solo se suelda en dos piezas que no cargan a la persona directamente.</p>
+  <div class="meta">
+    <span>Medidas en milímetros (mm)</span>
+    <span>Aluminio 6061-T6 + acero A36 y AISI 4140</span>
+    <span>Rotura objetivo: 36 kN (hasta 2,0 m)</span>
+    <span>Peso total aprox.: 23,2 kg</span>
+  </div>
+</header>
+
+<div class="warn">
+  <strong>Antes de usarlo con personas</strong>
+  <p>Estas medidas salen de los manuales y fotos de los equipos originales y de cálculos básicos. Un ingeniero mecánico tiene que revisar los cálculos y firmar el plano. Y hay que hacer una prueba de carga sin personas (sección 9) antes del primer uso. Los pasadores de bola y los pernos se compran; no se reemplazan por piezas de ferretería sin grado.</p>
+</div>
+
+<section>
+  <div class="eyebrow">1 · Modelo 3D</div>
+  <h2>Así queda armado</h2>
+  <div class="sheet">
+    <canvas id="view3d" aria-label="Modelo 3D del bípode. Arrastra para girar, rueda o dos dedos para acercar."></canvas>
+    <div class="cap">Arrastra para girar · rueda del mouse o dos dedos para acercar. Se muestra en la altura 4 (punto de carga a 2,02 m). Azul: cabeza · plateado: patas · naranja: anillos y pies · verde: vientos · naranja fino: maniota.</div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>1,59–2,45 m</b><span>altura al punto de carga (7 alturas)</span></div>
+    <div class="stat"><b>32</b><span>puntos de amarre: 12 en la cabeza, 16 en los anillos, 4 en los pies</span></div>
+    <div class="stat"><b>5,9 kg</b><span>peso de la cabeza armada</span></div>
+    <div class="stat"><b>23,2 kg</b><span>peso total con pies y anillos</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">2 · De dónde sale cada idea</div>
+  <h2>Qué se tomó de cada marca</h2>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>Parte</th><th>Idea tomada de</th><th>Cómo queda aquí</th></tr></thead>
+    <tbody>
+      <tr><td>Patas redondas que entran una en otra</td><td>Arizona Vortex</td><td>Tubo Ø 50,8 que corre dentro de tubo Ø 60,3, casi las mismas medidas del Vortex (Ø 50 y Ø 60). Huecos cada 150 mm, igual que el Vortex.</td></tr>
+      <tr><td>Cabeza de dos placas con pasadores</td><td>Arachnipod y TerrAdaptor</td><td>Dos placas iguales de aluminio cortadas con láser, unidas con pernos. No hay soldadura en la cabeza.</td></tr>
+      <tr><td>Muchos huecos para mosquetón en la cabeza</td><td>SMC Space Station y cabeza Vortex</td><td>6 huecos de amarre, 3 barras de carga, 2 pernos para vientos y 1 ventana para cinta.</td></tr>
+      <tr><td>Barra de carga donde se cuelga la polea</td><td>TerrAdaptor (pasador principal)</td><td>Barra de acero 4140 de 1" que atraviesa las dos placas. El mosquetón abraza una barra gruesa y no el aluminio.</td></tr>
+      <tr><td>Aros en medio de las patas</td><td>Vortex (placa azul) y TerrAdaptor (anillo de amarre)</td><td>Disco de 200 mm con 8 huecos que se pone en cualquier hueco de la pata de abajo.</td></tr>
+      <tr><td>Pie con garra y huecos para amarrar</td><td>Vortex Raptor y SMC Talon</td><td>Placa de acero de 10 mm con punta y 2 huecos. Entra en una ranura de la pata y se asegura con un perno.</td></tr>
+      <tr><td>Pie plano para roca o cemento</td><td>Vortex Flat Foot y Arachnipod</td><td>Base de acero con 4 huecos para anclar con tus pernos de 1/2" y caucho abajo. Es opcional.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">3 · Alturas y cargas</div>
+  <h2>Tabla de alturas</h2>
+  <p>La altura se cambia con el hueco de la pata de arriba que queda en el primer hueco de la pata de abajo. Siempre van 2 pasadores en cada unión. Las patas están abiertas 18° cada una (36° entre las dos), fijo por la cabeza.</p>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>Altura</th><th>Hueco de la pata de arriba</th><th>Suelo a barra de carga</th><th>Suelo a punta de cabeza</th><th>Distancia entre pies</th><th>Pata de arriba dentro de la de abajo</th><th>Carga de trabajo (uso general 4:1)</th><th>Con personas (10:1)</th></tr></thead>
+    <tbody><tr><td class='n'>1</td><td class='num'>225</td><td class='num'>1,59 m</td><td class='num'>1,79 m</td><td class='num'>1,40 m</td><td class='num'>1305</td><td class='num'>9 kN (≈ 900 kg)</td><td class='num'>360 kg</td></tr><tr><td class='n'>2</td><td class='num'>375</td><td class='num'>1,73 m</td><td class='num'>1,93 m</td><td class='num'>1,49 m</td><td class='num'>1155</td><td class='num'>9 kN (≈ 900 kg)</td><td class='num'>360 kg</td></tr><tr><td class='n'>3</td><td class='num'>525</td><td class='num'>1,88 m</td><td class='num'>2,07 m</td><td class='num'>1,58 m</td><td class='num'>1005</td><td class='num'>9 kN (≈ 900 kg)</td><td class='num'>360 kg</td></tr><tr><td class='n'>4</td><td class='num'>675</td><td class='num'>2,02 m</td><td class='num'>2,22 m</td><td class='num'>1,68 m</td><td class='num'>855</td><td class='num'>9 kN (≈ 900 kg)</td><td class='num'>360 kg</td></tr><tr><td class='n'>5</td><td class='num'>825</td><td class='num'>2,16 m</td><td class='num'>2,36 m</td><td class='num'>1,77 m</td><td class='num'>705</td><td class='num'>5,5 kN (≈ 550 kg)</td><td class='num'>220 kg</td></tr><tr><td class='n'>6</td><td class='num'>975</td><td class='num'>2,30 m</td><td class='num'>2,50 m</td><td class='num'>1,86 m</td><td class='num'>555</td><td class='num'>5,5 kN (≈ 550 kg)</td><td class='num'>220 kg</td></tr><tr><td class='n'>7</td><td class='num'>1125</td><td class='num'>2,45 m</td><td class='num'>2,64 m</td><td class='num'>1,95 m</td><td class='num'>405</td><td class='num'>5,5 kN (≈ 550 kg)</td><td class='num'>220 kg</td></tr></tbody>
+  </table>
+  </div>
+  <p class="cap">Cargas estimadas con cálculo de pandeo de las patas y un margen de 0,6 por imperfecciones. Son parecidas a las del Vortex (9 kN con 2 tramos, 5,5 kN con 3 tramos) y del Arachnipod (280 a 400 kg con personas). El ingeniero las tiene que confirmar y la prueba de carga las valida.</p>
+</section>
+
+<section>
+  <div class="eyebrow">4 · Piezas</div>
+  <h2>Lista de piezas para un bípode</h2>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>#</th><th>Pieza</th><th>Cant.</th><th>Material y medida</th><th>Cómo se hace</th><th>Peso c/u</th></tr></thead>
+    <tbody>
+      <tr><td class="n">01</td><td>Placa de la cabeza</td><td class="num">2</td><td class="mono">Aluminio 6061-T6, plancha 3/8" (9,53) · 411,2 × 267</td><td>Corte por chorro de agua o láser de fibra con el DXF</td><td class="num">1,6 kg</td></tr>
+      <tr><td class="n">02</td><td>Casquillo de la cabeza</td><td class="num">2</td><td class="mono">Tubo aluminio 6061-T6 2" céd. 40 (Ø 60,3 × 3,91) · largo 160</td><td>Sierra + 2 huecos taladrados junto con las placas</td><td class="num">0,3 kg</td></tr>
+      <tr><td class="n">03</td><td>Barra de carga</td><td class="num">3</td><td class="mono">Acero AISI 4140 bonificado, barra Ø 25,4 (1") · largo 108</td><td>Torno: refrentar, chaflán 1 mm, 2 huecos Ø 5,2 a 7 mm de cada punta</td><td class="num">0,4 kg</td></tr>
+      <tr><td class="n">04</td><td>Distanciador</td><td class="num">2</td><td class="mono">Tubo acero Ø 25,4 × 3,2 · largo 60,5 exacto</td><td>Sierra + refrentar en torno (las dos puntas planas y paralelas)</td><td class="num">0,1 kg</td></tr>
+      <tr><td class="n">05</td><td>Pata de arriba</td><td class="num">2</td><td class="mono">Tubo aluminio 6061-T6 Ø 50,8 × 6,35 (2" × 1/4") · largo 1500</td><td>Sierra + 10 huecos Ø 9,9 cada 150</td><td class="num">3,6 kg</td></tr>
+      <tr><td class="n">06</td><td>Pata de abajo</td><td class="num">2</td><td class="mono">Tubo aluminio 6061-T6 2" céd. 40 (Ø 60,3 × 3,91) · largo 1500</td><td>Sierra + 5 huecos Ø 9,9 + 2 ranuras + 1 hueco Ø 13,1</td><td class="num">2,8 kg</td></tr>
+      <tr><td class="n">07</td><td>Anillo de amarre (disco + manguito)</td><td class="num">2</td><td class="mono">Disco aluminio 3/8" Ø 200 + tubo 2½" céd. 40 (Ø 73,0 × 5,16) largo 90</td><td>Disco con láser o chorro de agua · manguito con sierra · soldadura TIG</td><td class="num">0,9 kg</td></tr>
+      <tr><td class="n">08</td><td>Pie de garra</td><td class="num">2</td><td class="num">Acero A36, plancha 10 mm</td><td>Corte láser con el DXF · pintura en polvo naranja o galvanizado</td><td class="num">1,1 kg</td></tr>
+      <tr><td class="n">09</td><td>Pie plano (opcional)</td><td class="num">2</td><td class="mono">Lengua A36 10 mm + base A36 8 mm 160 × 160 + 2 orejas A36 8 mm + caucho 5 mm</td><td>Corte láser · soldadura MIG de las orejas a la base</td><td class="num">≈ 2,2 kg</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Pernos, pasadores y cuerdas (se compran)</h3>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>Cant.</th><th>Qué</th><th>Medida</th><th>Dónde va</th></tr></thead>
+    <tbody>
+      <tr><td class="num">8 (+2 de repuesto)</td><td>Pasador de bola con anillo (ball lock pin), acero inoxidable 17-4 o 304</td><td class="mono">Ø 3/8" (9,5 mm) · largo útil 4" (≈ 100 mm) · resistencia ≥ 60 kN en doble corte</td><td>2 en la cabeza, 4 en las uniones de patas, 2 en los anillos</td></tr>
+      <tr><td class="num">4</td><td>Perno hexagonal grado 8 + tuerca de seguridad (nylon) + 2 arandelas</td><td class="mono">3/8" × 4" (llave 14 mm o 9/16")</td><td>Perno fijo de cada casquillo (2 por lado)</td></tr>
+      <tr><td class="num">2</td><td>Perno hexagonal grado 8 + tuerca de seguridad + 2 arandelas</td><td class="num">1/2" × 3½" (llave 19)</td><td>Distanciadores de arriba de la cabeza</td></tr>
+      <tr><td class="num">2</td><td>Perno hexagonal grado 8 + tuerca de seguridad + 2 arandelas</td><td class="num">1/2" × 3" (llave 19)</td><td>Unión del pie con la pata</td></tr>
+      <tr><td class="num">6</td><td>Pasador tipo R (clip R) de acero</td><td class="num">Ø 5 mm (3/16")</td><td>Seguro de las 3 barras de carga (2 por barra)</td></tr>
+      <tr><td class="num">2</td><td>Perno grado 8 + tuerca de seguridad (solo si haces el pie plano)</td><td class="num">1/2" × 2"</td><td>Bisagra del pie plano</td></tr>
+      <tr><td class="num">1</td><td>Cuerda estática 11 mm para la maniota</td><td class="num">5 m</td><td>Entre los huecos L de los pies, con un bloqueador para tensar</td></tr>
+      <tr><td class="num">2–4</td><td>Cuerda estática 11 mm para vientos</td><td class="num">10 m cada una</td><td>De los pernos de arriba de la cabeza a los anclajes, a 45°</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Los pasadores de bola de 3/8" se consiguen por Amazon o McMaster-Carr (por ejemplo "3/8 ball lock pin 4 inch grip"). Si no llegan a tiempo, un tornero puede hacer pasadores de acero 4140 Ø 9,5 con un hueco de 3 mm en la punta para un clip R. Así pierde la rapidez pero no la resistencia.</p>
+</section>
+
+<section>
+  <div class="eyebrow">5 · Planos de corte</div>
+  <h2>Piezas para corte láser o chorro de agua</h2>
+  <p>Las medidas X y Y de cada hueco se miden desde el centro de la pieza (marcado con una cruz naranja). Los DXF tienen exactamente este dibujo, en la capa <code>CORTE</code>, a escala 1:1 en milímetros.</p>
+
+  <div class="sheet">
+    <h3>01 · Placa de la cabeza (hacer 2 iguales)</h3>
+    <dl class="spec">
+      <dt>Material</dt><dd>Aluminio 6061-T6, plancha de 3/8" (9,53 mm)</dd>
+      <dt>Tamaño</dt><dd>411,2 × 267 mm · 1,6 kg cada una</dd>
+      <dt>Corte</dt><dd>Chorro de agua (lo mejor en aluminio grueso) o láser de fibra de 6 kW o más. Pedir borde limpio, sin rebaba.</dd>
+      <dt>Huecos C</dt><dd>Cortarlos a Ø 8 y terminarlos con broca de 25/64" (9,9 mm) con la cabeza armada (paso 6), para que queden alineados con el casquillo.</dd>
+      <dt>Huecos A, B, D</dt><dd>Cortar a la medida final. Redondear los filos de los huecos A y B con lima (radio 1 mm) para que no corten cuerdas ni cintas.</dd>
+    </dl>
+    <div class="draw"><svg viewBox="-260.6 -175.6 521.2 377.0" font-size="12.4" role="img" aria-label="Placa de la cabeza con sus huecos"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><polygon class="part" points="-154.04,117.55 -154.92,110.14 -155.78,106.30 -156.36,104.41 -157.78,100.73 -158.62,98.95 -160.57,95.53 -162.85,92.31 -165.43,89.33 -168.30,86.62 -169.82,85.38 -171.41,84.21 -174.75,82.11 -178.28,80.36 -180.10,79.61 -184.17,78.17 -185.70,77.52 -187.81,76.47 -190.66,74.74 -193.33,72.74 -195.30,70.97 -197.58,68.53 -199.04,66.68 -200.52,64.48 -202.14,61.57 -203.10,59.42 -204.21,56.27 -204.87,53.71 -205.41,50.41 -205.59,48.07 -205.60,45.42 -205.44,43.07 -205.07,40.44 -204.56,38.14 -203.89,35.83 -160.31,-98.19 -159.31,-100.64 -158.26,-102.75 -156.91,-105.03 -155.57,-106.96 -153.89,-109.02 -151.57,-111.41 -149.80,-112.96 -147.68,-114.55 -144.84,-116.31 -141.85,-117.78 -138.72,-118.95 -135.50,-119.81 -132.21,-120.35 -128.88,-120.56 -125.55,-120.45 -122.24,-120.01 -119.94,-119.50 -117.40,-118.75 -115.20,-117.91 -112.19,-116.47 -109.91,-115.12 -107.98,-113.77 -106.67,-112.74 -103.78,-110.24 -100.62,-107.92 -97.25,-105.93 -93.70,-104.27 -90.01,-102.96 -86.20,-102.02 -82.32,-101.46 -78.40,-101.29 -74.49,-101.50 -72.54,-101.74 -68.70,-102.52 -63.66,-103.93 -61.41,-104.32 -59.79,-104.48 -57.19,-104.53 -54.91,-104.36 -53.30,-104.12 -49.83,-103.42 -47.89,-103.13 -43.98,-102.84 -40.05,-102.94 -36.16,-103.42 -34.23,-103.80 -30.45,-104.85 -26.78,-106.26 -23.28,-108.03 -21.59,-109.04 -18.15,-111.33 -16.69,-112.18 -14.30,-113.39 -11.16,-114.64 -7.90,-115.57 -4.57,-116.19 -1.20,-116.47 2.18,-116.42 4.57,-116.19 7.21,-115.73 9.54,-115.15 12.08,-114.31 14.30,-113.39 16.69,-112.18 18.15,-111.33 21.59,-109.04 23.28,-108.03 26.78,-106.26 28.60,-105.51 32.33,-104.28 36.16,-103.42 40.05,-102.94 43.98,-102.84 47.89,-103.13 49.83,-103.42 53.30,-104.12 54.91,-104.36 57.19,-104.53 58.81,-104.53 61.09,-104.36 63.66,-103.93 67.93,-102.73 69.87,-102.24 71.83,-101.86 73.81,-101.57 75.80,-101.38 77.80,-101.29 79.80,-101.31 81.80,-101.42 83.79,-101.63 85.76,-101.94 87.72,-102.35 89.66,-102.86 91.57,-103.46 93.44,-104.16 95.28,-104.95 97.07,-105.83 98.82,-106.80 100.52,-107.86 102.17,-109.00 103.75,-110.22 107.20,-113.17 109.91,-115.12 112.80,-116.79 115.83,-118.17 118.99,-119.25 122.24,-120.01 125.55,-120.45 128.88,-120.56 131.52,-120.42 133.18,-120.22 136.46,-119.59 138.72,-118.95 140.30,-118.40 142.74,-117.38 144.24,-116.63 147.11,-114.93 149.03,-113.57 150.32,-112.52 151.57,-111.41 153.44,-109.53 154.97,-107.74 155.97,-106.41 157.43,-104.20 158.58,-102.15 159.70,-99.74 160.78,-96.85 203.89,35.83 204.72,38.81 205.33,42.09 205.60,45.42 205.55,48.75 205.28,51.39 204.65,54.66 203.69,57.86 202.84,60.05 201.37,63.05 199.61,65.88 197.58,68.53 195.79,70.48 194.08,72.10 192.02,73.77 190.66,74.74 188.67,75.99 187.20,76.79 184.80,77.91 180.10,79.61 176.49,81.19 174.75,82.11 171.41,84.21 169.82,85.38 166.83,87.94 164.10,90.79 161.67,93.89 160.57,95.53 158.62,98.95 157.78,100.73 156.36,104.41 155.78,106.30 154.92,110.14 154.63,112.09 154.19,116.57 153.57,119.90 152.64,123.16 151.39,126.30 150.65,127.82 149.33,130.15 147.99,132.15 146.97,133.50 145.22,135.52 144.04,136.73 142.26,138.35 140.15,139.99 138.15,141.33 136.69,142.18 134.30,143.39 132.08,144.31 130.48,144.86 127.90,145.57 125.55,146.04 122.89,146.37 121.20,146.47 118.80,146.47 116.13,146.27 113.75,145.92 112.10,145.57 109.52,144.86 107.26,144.05 104.81,142.97 102.69,141.83 101.25,140.95 98.50,138.97 95.96,136.73 94.12,134.80 93.03,133.50 91.05,130.75 89.35,127.82 88.33,125.65 87.03,122.36 86.23,120.56 84.38,117.10 83.33,115.44 80.99,112.29 78.36,109.38 76.93,108.03 73.90,105.54 70.64,103.36 68.93,102.39 65.38,100.71 61.68,99.39 59.79,98.87 55.94,98.10 53.99,97.86 50.07,97.67 46.15,97.86 42.27,98.44 40.35,98.87 36.60,100.01 32.97,101.51 29.51,103.36 26.24,105.54 22.96,108.14 20.64,109.78 18.29,111.18 14.95,112.82 11.47,114.11 7.87,115.06 4.20,115.66 0.49,115.89 -3.23,115.75 -6.91,115.26 -10.53,114.40 -12.30,113.84 -14.95,112.82 -17.43,111.65 -20.64,109.78 -22.96,108.14 -26.23,105.55 -27.81,104.43 -31.14,102.43 -34.65,100.76 -38.30,99.44 -40.17,98.91 -42.07,98.48 -45.90,97.88 -49.78,97.67 -51.72,97.70 -55.59,98.05 -57.51,98.36 -61.29,99.27 -63.14,99.86 -66.74,101.31 -68.49,102.16 -71.85,104.11 -75.00,106.38 -76.49,107.63 -79.28,110.33 -80.57,111.78 -82.94,114.86 -84.99,118.16 -86.72,121.64 -88.33,125.65 -89.03,127.19 -89.82,128.69 -91.05,130.75 -92.59,132.94 -94.12,134.80 -95.96,136.73 -97.74,138.35 -99.85,139.99 -101.85,141.33 -104.18,142.65 -106.35,143.67 -108.84,144.64 -112.10,145.57 -114.45,146.04 -117.11,146.37 -120.49,146.49 -123.87,146.27 -127.21,145.73 -130.48,144.86 -132.74,144.05 -134.30,143.39 -137.31,141.83 -140.15,139.99 -142.80,137.88 -145.22,135.52 -147.41,132.94 -149.33,130.15 -150.97,127.19 -152.31,124.08 -153.34,120.86 -154.04,117.55"/><rect class="hole" x="-35.0" y="-22.0" width="70.0" height="28.0" rx="14.0"/><text class="hl" x="0.0" y="-4.0" text-anchor="middle">V</text><line class="cl" x1="-12" y1="0" x2="12" y2="0"/><line class="cl" x1="0" y1="-12" x2="0" y2="12"/><circle class="hole" cx="0.0" cy="-82.0" r="12.5"/><text class="hl" x="0.0" y="-78.3" font-size="9.3" text-anchor="middle">A1</text><circle class="hole" cx="-120.0" cy="112.0" r="12.5"/><text class="hl" x="-120.0" y="115.7" font-size="9.3" text-anchor="middle">A4</text><circle class="hole" cx="120.0" cy="112.0" r="12.5"/><text class="hl" x="120.0" y="115.7" font-size="9.3" text-anchor="middle">A5</text><circle class="hole" cx="0.0" cy="78.0" r="12.9"/><text class="hl" x="0.0" y="81.7" font-size="9.3" text-anchor="middle">B1</text><circle class="hole" cx="-72.0" cy="62.0" r="12.9"/><text class="hl" x="-72.0" y="65.7" font-size="9.3" text-anchor="middle">B2</text><circle class="hole" cx="72.0" cy="62.0" r="12.9"/><text class="hl" x="72.0" y="65.7" font-size="9.3" text-anchor="middle">B3</text><circle class="hole" cx="-58.0" cy="-78.0" r="6.55"/><text class="hl" x="-58.0" y="-74.3" font-size="5.5" text-anchor="middle">D1</text><circle class="hole" cx="58.0" cy="-78.0" r="6.55"/><text class="hl" x="58.0" y="-74.3" font-size="5.5" text-anchor="middle">D2</text><circle class="hole" cx="-136.1" cy="-62.8" r="4.95"/><text class="hl" x="-136.1" y="-59.1" font-size="4.2" text-anchor="middle">CI1</text><circle class="hole" cx="-160.8" cy="13.3" r="4.95"/><text class="hl" x="-160.8" y="17.0" font-size="4.2" text-anchor="middle">CI2</text><circle class="hole" cx="136.1" cy="-62.8" r="4.95"/><text class="hl" x="136.1" y="-59.1" font-size="4.2" text-anchor="middle">CD1</text><circle class="hole" cx="160.8" cy="13.3" r="4.95"/><text class="hl" x="160.8" y="17.0" font-size="4.2" text-anchor="middle">CD2</text><polygon class="ghost" points="-146.0,65.4 -203.4,46.8 -154.0,-105.4 -96.6,-86.8 -146.0,65.4"/><polygon class="ghost" points="203.4,46.8 146.0,65.4 96.6,-86.8 154.0,-105.4 203.4,46.8"/><line class="dim" x1="-205.6" y1="171.5" x2="205.6" y2="171.5" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="0.0" y="187.6" text-anchor="middle">411,2</text><line class="dim" x1="227.6" y1="-120.6" x2="227.6" y2="146.5" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="235.0" y="13.0" transform="rotate(90 235.0 13.0)" text-anchor="middle">267</text></svg></div>
+    <p class="cap">Línea punteada gris: dónde quedan los casquillos (entre las dos placas).</p>
+    <div class='tbl'><table><thead><tr><th>Hueco</th><th>X</th><th>Y</th><th>Diámetro</th><th>Para qué sirve</th></tr></thead><tbody><tr><td class='n'>A1</td><td class='num'>0</td><td class='num'>82</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón (vientos, equipo)</td></tr><tr><td class='n'>A4</td><td class='num'>-120</td><td class='num'>-112</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón (vientos, equipo)</td></tr><tr><td class='n'>A5</td><td class='num'>120</td><td class='num'>-112</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón (vientos, equipo)</td></tr><tr><td class='n'>B1</td><td class='num'>0</td><td class='num'>-78</td><td class='num'>Ø 25,8</td><td>Barra de carga Ø 25,4 (B1 = carga principal)</td></tr><tr><td class='n'>B2</td><td class='num'>-72</td><td class='num'>-62</td><td class='num'>Ø 25,8</td><td>Barra de carga Ø 25,4 (B1 = carga principal)</td></tr><tr><td class='n'>B3</td><td class='num'>72</td><td class='num'>-62</td><td class='num'>Ø 25,8</td><td>Barra de carga Ø 25,4 (B1 = carga principal)</td></tr><tr><td class='n'>D1</td><td class='num'>-58</td><td class='num'>78</td><td class='num'>Ø 13,1</td><td>Perno 1/2" con distanciador (une las placas; amarre de vientos)</td></tr><tr><td class='n'>D2</td><td class='num'>58</td><td class='num'>78</td><td class='num'>Ø 13,1</td><td>Perno 1/2" con distanciador (une las placas; amarre de vientos)</td></tr><tr><td class='n'>CI1</td><td class='num'>-136,1</td><td class='num'>62,8</td><td class='num'>Ø 9,9</td><td>Casquillo de pata: 1 = perno fijo 3/8", 2 = pasador de pata 3/8"</td></tr><tr><td class='n'>CI2</td><td class='num'>-160,8</td><td class='num'>-13,3</td><td class='num'>Ø 9,9</td><td>Casquillo de pata: 1 = perno fijo 3/8", 2 = pasador de pata 3/8"</td></tr><tr><td class='n'>CD1</td><td class='num'>136,1</td><td class='num'>62,8</td><td class='num'>Ø 9,9</td><td>Casquillo de pata: 1 = perno fijo 3/8", 2 = pasador de pata 3/8"</td></tr><tr><td class='n'>CD2</td><td class='num'>160,8</td><td class='num'>-13,3</td><td class='num'>Ø 9,9</td><td>Casquillo de pata: 1 = perno fijo 3/8", 2 = pasador de pata 3/8"</td></tr><tr><td class='n'>V</td><td class='num'>0</td><td class='num'>8</td><td class='num'>70 × 28</td><td>Ventana ovalada para pasar una cinta o una gaza de cuerda</td></tr></tbody></table></div>
+  </div>
+
+  <div class="two">
+    <div class="sheet">
+      <h3>07 · Disco del anillo de amarre (hacer 2)</h3>
+      <dl class="spec">
+        <dt>Material</dt><dd>Aluminio 6061-T6, plancha 3/8" (9,53)</dd>
+        <dt>Medida</dt><dd>Ø 200 · hueco central Ø 73,5 · 8 huecos Ø 25 en un círculo de Ø 130</dd>
+      </dl>
+      <div class="draw"><svg viewBox="-155.0 -155.0 310.0 310.0" font-size="7.4" role="img" aria-label="Disco del anillo de amarre"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><polygon class="part" points="100.00,-0.00 99.98,1.75 99.94,3.49 99.86,5.23 99.76,6.98 99.62,8.72 99.45,10.45 99.25,12.19 99.03,13.92 98.77,15.64 98.48,17.36 98.16,19.08 97.81,20.79 97.44,22.50 97.03,24.19 96.59,25.88 96.13,27.56 95.63,29.24 95.11,30.90 94.55,32.56 93.97,34.20 93.36,35.84 92.72,37.46 92.05,39.07 91.35,40.67 90.63,42.26 89.88,43.84 89.10,45.40 88.29,46.95 87.46,48.48 86.60,50.00 85.72,51.50 84.80,52.99 83.87,54.46 82.90,55.92 81.92,57.36 80.90,58.78 79.86,60.18 78.80,61.57 77.71,62.93 76.60,64.28 75.47,65.61 74.31,66.91 73.14,68.20 71.93,69.47 70.71,70.71 69.47,71.93 68.20,73.14 66.91,74.31 65.61,75.47 64.28,76.60 62.93,77.71 61.57,78.80 60.18,79.86 58.78,80.90 57.36,81.92 55.92,82.90 54.46,83.87 52.99,84.80 51.50,85.72 50.00,86.60 48.48,87.46 46.95,88.29 45.40,89.10 43.84,89.88 42.26,90.63 40.67,91.35 39.07,92.05 37.46,92.72 35.84,93.36 34.20,93.97 32.56,94.55 30.90,95.11 29.24,95.63 27.56,96.13 25.88,96.59 24.19,97.03 22.50,97.44 20.79,97.81 19.08,98.16 17.36,98.48 15.64,98.77 13.92,99.03 12.19,99.25 10.45,99.45 8.72,99.62 6.98,99.76 5.23,99.86 3.49,99.94 1.75,99.98 0.00,100.00 -1.75,99.98 -3.49,99.94 -5.23,99.86 -6.98,99.76 -8.72,99.62 -10.45,99.45 -12.19,99.25 -13.92,99.03 -15.64,98.77 -17.36,98.48 -19.08,98.16 -20.79,97.81 -22.50,97.44 -24.19,97.03 -25.88,96.59 -27.56,96.13 -29.24,95.63 -30.90,95.11 -32.56,94.55 -34.20,93.97 -35.84,93.36 -37.46,92.72 -39.07,92.05 -40.67,91.35 -42.26,90.63 -43.84,89.88 -45.40,89.10 -46.95,88.29 -48.48,87.46 -50.00,86.60 -51.50,85.72 -52.99,84.80 -54.46,83.87 -55.92,82.90 -57.36,81.92 -58.78,80.90 -60.18,79.86 -61.57,78.80 -62.93,77.71 -64.28,76.60 -65.61,75.47 -66.91,74.31 -68.20,73.14 -69.47,71.93 -70.71,70.71 -71.93,69.47 -73.14,68.20 -74.31,66.91 -75.47,65.61 -76.60,64.28 -77.71,62.93 -78.80,61.57 -79.86,60.18 -80.90,58.78 -81.92,57.36 -82.90,55.92 -83.87,54.46 -84.80,52.99 -85.72,51.50 -86.60,50.00 -87.46,48.48 -88.29,46.95 -89.10,45.40 -89.88,43.84 -90.63,42.26 -91.35,40.67 -92.05,39.07 -92.72,37.46 -93.36,35.84 -93.97,34.20 -94.55,32.56 -95.11,30.90 -95.63,29.24 -96.13,27.56 -96.59,25.88 -97.03,24.19 -97.44,22.50 -97.81,20.79 -98.16,19.08 -98.48,17.36 -98.77,15.64 -99.03,13.92 -99.25,12.19 -99.45,10.45 -99.62,8.72 -99.76,6.98 -99.86,5.23 -99.94,3.49 -99.98,1.75 -100.00,-0.00 -99.98,-1.75 -99.94,-3.49 -99.86,-5.23 -99.76,-6.98 -99.62,-8.72 -99.45,-10.45 -99.25,-12.19 -99.03,-13.92 -98.77,-15.64 -98.48,-17.36 -98.16,-19.08 -97.81,-20.79 -97.44,-22.50 -97.03,-24.19 -96.59,-25.88 -96.13,-27.56 -95.63,-29.24 -95.11,-30.90 -94.55,-32.56 -93.97,-34.20 -93.36,-35.84 -92.72,-37.46 -92.05,-39.07 -91.35,-40.67 -90.63,-42.26 -89.88,-43.84 -89.10,-45.40 -88.29,-46.95 -87.46,-48.48 -86.60,-50.00 -85.72,-51.50 -84.80,-52.99 -83.87,-54.46 -82.90,-55.92 -81.92,-57.36 -80.90,-58.78 -79.86,-60.18 -78.80,-61.57 -77.71,-62.93 -76.60,-64.28 -75.47,-65.61 -74.31,-66.91 -73.14,-68.20 -71.93,-69.47 -70.71,-70.71 -69.47,-71.93 -68.20,-73.14 -66.91,-74.31 -65.61,-75.47 -64.28,-76.60 -62.93,-77.71 -61.57,-78.80 -60.18,-79.86 -58.78,-80.90 -57.36,-81.92 -55.92,-82.90 -54.46,-83.87 -52.99,-84.80 -51.50,-85.72 -50.00,-86.60 -48.48,-87.46 -46.95,-88.29 -45.40,-89.10 -43.84,-89.88 -42.26,-90.63 -40.67,-91.35 -39.07,-92.05 -37.46,-92.72 -35.84,-93.36 -34.20,-93.97 -32.56,-94.55 -30.90,-95.11 -29.24,-95.63 -27.56,-96.13 -25.88,-96.59 -24.19,-97.03 -22.50,-97.44 -20.79,-97.81 -19.08,-98.16 -17.36,-98.48 -15.64,-98.77 -13.92,-99.03 -12.19,-99.25 -10.45,-99.45 -8.72,-99.62 -6.98,-99.76 -5.23,-99.86 -3.49,-99.94 -1.75,-99.98 0.00,-100.00 1.75,-99.98 3.49,-99.94 5.23,-99.86 6.98,-99.76 8.72,-99.62 10.45,-99.45 12.19,-99.25 13.92,-99.03 15.64,-98.77 17.36,-98.48 19.08,-98.16 20.79,-97.81 22.50,-97.44 24.19,-97.03 25.88,-96.59 27.56,-96.13 29.24,-95.63 30.90,-95.11 32.56,-94.55 34.20,-93.97 35.84,-93.36 37.46,-92.72 39.07,-92.05 40.67,-91.35 42.26,-90.63 43.84,-89.88 45.40,-89.10 46.95,-88.29 48.48,-87.46 50.00,-86.60 51.50,-85.72 52.99,-84.80 54.46,-83.87 55.92,-82.90 57.36,-81.92 58.78,-80.90 60.18,-79.86 61.57,-78.80 62.93,-77.71 64.28,-76.60 65.61,-75.47 66.91,-74.31 68.20,-73.14 69.47,-71.93 70.71,-70.71 71.93,-69.47 73.14,-68.20 74.31,-66.91 75.47,-65.61 76.60,-64.28 77.71,-62.93 78.80,-61.57 79.86,-60.18 80.90,-58.78 81.92,-57.36 82.90,-55.92 83.87,-54.46 84.80,-52.99 85.72,-51.50 86.60,-50.00 87.46,-48.48 88.29,-46.95 89.10,-45.40 89.88,-43.84 90.63,-42.26 91.35,-40.67 92.05,-39.07 92.72,-37.46 93.36,-35.84 93.97,-34.20 94.55,-32.56 95.11,-30.90 95.63,-29.24 96.13,-27.56 96.59,-25.88 97.03,-24.19 97.44,-22.50 97.81,-20.79 98.16,-19.08 98.48,-17.36 98.77,-15.64 99.03,-13.92 99.25,-12.19 99.45,-10.45 99.62,-8.72 99.76,-6.98 99.86,-5.23 99.94,-3.49 99.98,-1.75 100.00,-0.00"/><circle class="hole" cx="0" cy="0" r="36.75"/><line class="cl" x1="-12" y1="0" x2="12" y2="0"/><line class="cl" x1="0" y1="-12" x2="0" y2="12"/><circle class="hole" cx="60.1" cy="-24.9" r="12.5"/><text class="hl" x="60.1" y="-22.7" font-size="5.5" text-anchor="middle">R1</text><circle class="hole" cx="24.9" cy="-60.1" r="12.5"/><text class="hl" x="24.9" y="-57.9" font-size="5.5" text-anchor="middle">R2</text><circle class="hole" cx="-24.9" cy="-60.1" r="12.5"/><text class="hl" x="-24.9" y="-57.9" font-size="5.5" text-anchor="middle">R3</text><circle class="hole" cx="-60.1" cy="-24.9" r="12.5"/><text class="hl" x="-60.1" y="-22.7" font-size="5.5" text-anchor="middle">R4</text><circle class="hole" cx="-60.1" cy="24.9" r="12.5"/><text class="hl" x="-60.1" y="27.1" font-size="5.5" text-anchor="middle">R5</text><circle class="hole" cx="-24.9" cy="60.1" r="12.5"/><text class="hl" x="-24.9" y="62.3" font-size="5.5" text-anchor="middle">R6</text><circle class="hole" cx="24.9" cy="60.1" r="12.5"/><text class="hl" x="24.9" y="62.3" font-size="5.5" text-anchor="middle">R7</text><circle class="hole" cx="60.1" cy="24.9" r="12.5"/><text class="hl" x="60.1" y="27.1" font-size="5.5" text-anchor="middle">R8</text><line class="dim" x1="-100.0" y1="125.0" x2="100.0" y2="125.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="0.0" y="134.6" text-anchor="middle">200</text><line class="dim" x1="122.0" y1="-100.0" x2="122.0" y2="100.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="126.4" y="0.0" transform="rotate(90 126.4 0.0)" text-anchor="middle">200</text></svg></div>
+      <div class='tbl'><table><thead><tr><th>Hueco</th><th>X</th><th>Y</th><th>Diámetro</th><th>Para qué sirve</th></tr></thead><tbody><tr><td class='n'>R1</td><td class='num'>60,1</td><td class='num'>24,9</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón</td></tr><tr><td class='n'>R2</td><td class='num'>24,9</td><td class='num'>60,1</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón</td></tr><tr><td class='n'>R3</td><td class='num'>-24,9</td><td class='num'>60,1</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón</td></tr><tr><td class='n'>R4</td><td class='num'>-60,1</td><td class='num'>24,9</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón</td></tr><tr><td class='n'>R5</td><td class='num'>-60,1</td><td class='num'>-24,9</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón</td></tr><tr><td class='n'>R6</td><td class='num'>-24,9</td><td class='num'>-60,1</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón</td></tr><tr><td class='n'>R7</td><td class='num'>24,9</td><td class='num'>-60,1</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón</td></tr><tr><td class='n'>R8</td><td class='num'>60,1</td><td class='num'>-24,9</td><td class='num'>Ø 25</td><td>Punto de amarre para mosquetón</td></tr><tr><td class='n'>C</td><td class='num'>0</td><td class='num'>0</td><td class='num'>Ø 73,5</td><td>Hueco central: entra el manguito Ø 73</td></tr></tbody></table></div>
+    </div>
+    <div class="sheet">
+      <h3>08 · Pie de garra (hacer 2)</h3>
+      <dl class="spec">
+        <dt>Material</dt><dd>Acero A36, plancha 10 mm</dd>
+        <dt>Medida</dt><dd>150 × 195 mm · 1,1 kg</dd>
+        <dt>Uso</dt><dd>La parte de arriba (80 de ancho) entra en las 2 ranuras de la pata de abajo. La punta se clava en tierra o se apoya en una grieta de roca.</dd>
+      </dl>
+      <div class="draw"><svg viewBox="-130.0 -130.0 260.0 305.0" font-size="7.3" role="img" aria-label="Pie de garra"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><polygon class="part" points="-74.99,0.00 -43.61,-0.02 -42.84,-0.17 -41.78,-0.67 -40.91,-1.46 -40.30,-2.47 -40.08,-3.22 -40.00,-4.00 -40.00,-74.90 -40.00,-75.00 -39.90,-75.00 40.00,-75.00 40.00,-4.00 40.08,-3.22 40.30,-2.47 40.91,-1.46 41.46,-0.91 42.47,-0.30 43.61,-0.02 74.99,0.00 55.00,60.00 22.27,60.00 21.50,60.07 20.41,60.46 19.76,60.88 19.21,61.43 18.77,62.06 18.46,62.77 0.00,119.99 -18.46,62.77 -18.77,62.06 -19.21,61.43 -19.76,60.88 -20.41,60.46 -21.50,60.07 -22.27,60.00 -55.00,60.00 -74.99,0.00"/><line class="cl" x1="-12" y1="0" x2="12" y2="0"/><line class="cl" x1="0" y1="-12" x2="0" y2="12"/><circle class="hole" cx="0.0" cy="-40.0" r="6.55"/><text class="hl" x="0.0" y="-37.8" font-size="5.4" text-anchor="middle">P1</text><circle class="hole" cx="-35.0" cy="25.0" r="12.5"/><text class="hl" x="-35.0" y="27.2" font-size="5.4" text-anchor="middle">L1</text><circle class="hole" cx="35.0" cy="25.0" r="12.5"/><text class="hl" x="35.0" y="27.2" font-size="5.4" text-anchor="middle">L2</text><line class="cl" x1="-60" y1="0" x2="60" y2="0"/><rect class="ghost" x="-30.15" y="0" width="60.3" height="105.0"/><text class="dt" x="34.15" y="-90">tubo</text><line class="dim" x1="-75.0" y1="145.0" x2="75.0" y2="145.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="0.0" y="154.4" text-anchor="middle">150</text><line class="dim" x1="97.0" y1="-75.0" x2="97.0" y2="120.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="101.4" y="22.5" transform="rotate(90 101.4 22.5)" text-anchor="middle">195</text></svg></div>
+      <div class='tbl'><table><thead><tr><th>Hueco</th><th>X</th><th>Y</th><th>Diámetro</th><th>Para qué sirve</th></tr></thead><tbody><tr><td class='n'>P1</td><td class='num'>0</td><td class='num'>40</td><td class='num'>Ø 13,1</td><td>Perno 1/2" que une el pie con la pata</td></tr><tr><td class='n'>L1</td><td class='num'>-35</td><td class='num'>-25</td><td class='num'>Ø 25</td><td>Amarre de la maniota o de un anclaje</td></tr><tr><td class='n'>L2</td><td class='num'>35</td><td class='num'>-25</td><td class='num'>Ø 25</td><td>Amarre de la maniota o de un anclaje</td></tr></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="sheet">
+    <h3>09 · Pie plano (opcional, hacer 2)</h3>
+    <p>Sirve en roca plana, cemento o techo. La lengua entra en la pata igual que el pie de garra. Abajo gira sobre un perno de 1/2" entre las 2 orejas, que van soldadas a la base con 10,5 mm de separación entre ellas. Los 4 huecos de la base (Ø 14, a 120 mm entre centros) sirven para fijarla a la roca con los pernos de 1/2" que compraste. Pegar caucho de 5 mm abajo con los mismos huecos.</p>
+    <div class="three">
+      <div><div class="cap">Lengua · A36 10 mm</div><div class="draw"><svg viewBox="-95.0 -130.0 190.0 240.0" font-size="5.7" role="img" aria-label="Lengua del pie plano"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><polygon class="part" points="-40.00,-0.00 -40.00,-0.10 -40.00,-74.90 -40.00,-75.00 -39.90,-75.00 39.90,-75.00 40.00,-75.00 40.00,-74.90 40.00,-0.10 40.00,-0.00 39.90,-0.00 34.00,-0.00 33.61,0.02 33.22,0.08 32.84,0.17 32.47,0.30 32.11,0.47 31.78,0.67 31.46,0.91 31.17,1.17 30.91,1.46 30.67,1.78 30.47,2.11 30.30,2.47 30.17,2.84 30.08,3.22 30.02,3.61 30.00,4.00 30.00,54.90 30.00,55.00 29.90,55.00 -29.90,55.00 -30.00,55.00 -30.00,54.90 -30.00,4.00 -30.02,3.61 -30.08,3.22 -30.17,2.84 -30.30,2.47 -30.47,2.11 -30.67,1.78 -30.91,1.46 -31.17,1.17 -31.46,0.91 -31.78,0.67 -32.11,0.47 -32.47,0.30 -32.84,0.17 -33.22,0.08 -33.61,0.02 -34.00,-0.00 -39.90,-0.00 -40.00,-0.00"/><line class="cl" x1="-12" y1="0" x2="12" y2="0"/><line class="cl" x1="0" y1="-12" x2="0" y2="12"/><circle class="hole" cx="0.0" cy="-40.0" r="6.55"/><text class="hl" x="0.0" y="-38.3" font-size="4.3" text-anchor="middle">P1</text><circle class="hole" cx="0.0" cy="30.0" r="6.55"/><text class="hl" x="0.0" y="31.7" font-size="4.3" text-anchor="middle">P2</text><line class="dim" x1="-40.0" y1="80.0" x2="40.0" y2="80.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="0.0" y="87.4" text-anchor="middle">80</text><line class="dim" x1="62.0" y1="-75.0" x2="62.0" y2="55.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="65.4" y="-10.0" transform="rotate(90 65.4 -10.0)" text-anchor="middle">130</text></svg></div></div>
+      <div><div class="cap">Base · A36 8 mm (punteado: orejas)</div><div class="draw"><svg viewBox="-135.0 -135.0 270.0 270.0" font-size="6.4" role="img" aria-label="Base del pie plano"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><polygon class="part" points="80.00,70.00 79.95,70.98 79.81,71.95 79.57,72.90 79.24,73.83 78.82,74.71 78.31,75.56 77.73,76.34 77.07,77.07 76.34,77.73 75.56,78.31 74.71,78.82 73.83,79.24 72.90,79.57 71.95,79.81 70.98,79.95 70.00,80.00 -70.00,80.00 -70.98,79.95 -71.95,79.81 -72.90,79.57 -73.83,79.24 -74.71,78.82 -75.56,78.31 -76.34,77.73 -77.07,77.07 -77.73,76.34 -78.31,75.56 -78.82,74.71 -79.24,73.83 -79.57,72.90 -79.81,71.95 -79.95,70.98 -80.00,70.00 -80.00,-70.00 -79.95,-70.98 -79.81,-71.95 -79.57,-72.90 -79.24,-73.83 -78.82,-74.71 -78.31,-75.56 -77.73,-76.34 -77.07,-77.07 -76.34,-77.73 -75.56,-78.31 -74.71,-78.82 -73.83,-79.24 -72.90,-79.57 -71.95,-79.81 -70.98,-79.95 -70.00,-80.00 70.00,-80.00 70.98,-79.95 71.95,-79.81 72.90,-79.57 73.83,-79.24 74.71,-78.82 75.56,-78.31 76.34,-77.73 77.07,-77.07 77.73,-76.34 78.31,-75.56 78.82,-74.71 79.24,-73.83 79.57,-72.90 79.81,-71.95 79.95,-70.98 80.00,-70.00 80.00,70.00"/><line class="cl" x1="-12" y1="0" x2="12" y2="0"/><line class="cl" x1="0" y1="-12" x2="0" y2="12"/><circle class="hole" cx="-60.0" cy="60.0" r="7.0"/><text class="hl" x="-60.0" y="61.9" font-size="4.8" text-anchor="middle">F1</text><circle class="hole" cx="60.0" cy="60.0" r="7.0"/><text class="hl" x="60.0" y="61.9" font-size="4.8" text-anchor="middle">F2</text><circle class="hole" cx="60.0" cy="-60.0" r="7.0"/><text class="hl" x="60.0" y="-58.1" font-size="4.8" text-anchor="middle">F3</text><circle class="hole" cx="-60.0" cy="-60.0" r="7.0"/><text class="hl" x="-60.0" y="-58.1" font-size="4.8" text-anchor="middle">F4</text><rect class="ghost" x="-35.0" y="-13.25" width="70.0" height="8.0"/><rect class="ghost" x="-35.0" y="5.25" width="70.0" height="8.0"/><line class="dim" x1="-80.0" y1="105.0" x2="80.0" y2="105.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="0.0" y="113.4" text-anchor="middle">160</text><line class="dim" x1="102.0" y1="-80.0" x2="102.0" y2="80.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="105.9" y="0.0" transform="rotate(90 105.9 0.0)" text-anchor="middle">160</text></svg></div></div>
+      <div><div class="cap">Oreja · A36 8 mm · hacer 4</div><div class="draw"><svg viewBox="-90.0 -115.0 180.0 170.0" font-size="4.3" role="img" aria-label="Oreja del pie plano"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><polygon class="part" points="35.00,-0.00 -35.00,-0.00 -35.00,-60.00 35.00,-60.00 35.00,-0.00"/><line class="cl" x1="-12" y1="0" x2="12" y2="0"/><line class="cl" x1="0" y1="-12" x2="0" y2="12"/><circle class="hole" cx="0.0" cy="-35.0" r="6.55"/><text class="hl" x="0.0" y="-33.7" font-size="3.2" text-anchor="middle">O1</text><line class="dim" x1="-35.0" y1="25.0" x2="35.0" y2="25.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="0.0" y="30.6" text-anchor="middle">70</text><line class="dim" x1="57.0" y1="-60.0" x2="57.0" y2="-0.0" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="59.6" y="-30.0" transform="rotate(90 59.6 -30.0)" text-anchor="middle">60</text></svg></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">6 · Planos de tubos</div>
+  <h2>Tubos: largo y huecos</h2>
+  <p>Todas las medidas se toman desde la <b>punta de arriba</b> del tubo. Los huecos Ø 9,9 atraviesan el tubo de lado a lado, bien centrados y todos en la misma línea. Hacerlos en taladro de pedestal con el tubo apoyado en un prisma en V. Si el primer hueco queda chueco, el pasador no entra.</p>
+
+  <div class="sheet">
+    <h3>05 · Pata de arriba (hacer 2)</h3>
+    <dl class="spec">
+      <dt>Tubo</dt><dd>Aluminio 6061-T6 Ø 50,8 × pared 6,35 (2" × 1/4") · largo 1500 · 3,6 kg</dd>
+      <dt>Huecos</dt><dd>10 huecos Ø 9,9 a 75, 225, 375 … 1425 (cada 150)</dd>
+      <dt>Marca</dt><dd>Grabar o pintar junto al hueco 1125: "ÚLTIMO HUECO". Nunca se une más abajo, porque quedarían menos de 400 mm de tubo adentro.</dd>
+    </dl>
+    <div class="draw tube"><svg viewBox="-40 -95.3 1580.0 375.5" font-size="16.6" role="img" aria-label="Pata de arriba"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><rect class="part" x="0" y="-25.4" width="1500.0" height="50.8"/><circle class="hole" cx="75.0" cy="0" r="4.95"/><line class="cl" x1="75.0" y1="-33.4" x2="75.0" y2="33.4"/><text class="dt" x="75.0" y="45.2" text-anchor="end" transform="rotate(-90 75.0 39.4)">75</text><circle class="hole" cx="225.0" cy="0" r="4.95"/><line class="cl" x1="225.0" y1="-33.4" x2="225.0" y2="33.4"/><text class="dt" x="225.0" y="45.2" text-anchor="end" transform="rotate(-90 225.0 39.4)">225</text><circle class="hole" cx="375.0" cy="0" r="4.95"/><line class="cl" x1="375.0" y1="-33.4" x2="375.0" y2="33.4"/><text class="dt" x="375.0" y="45.2" text-anchor="end" transform="rotate(-90 375.0 39.4)">375</text><circle class="hole" cx="525.0" cy="0" r="4.95"/><line class="cl" x1="525.0" y1="-33.4" x2="525.0" y2="33.4"/><text class="dt" x="525.0" y="45.2" text-anchor="end" transform="rotate(-90 525.0 39.4)">525</text><circle class="hole" cx="675.0" cy="0" r="4.95"/><line class="cl" x1="675.0" y1="-33.4" x2="675.0" y2="33.4"/><text class="dt" x="675.0" y="45.2" text-anchor="end" transform="rotate(-90 675.0 39.4)">675</text><circle class="hole" cx="825.0" cy="0" r="4.95"/><line class="cl" x1="825.0" y1="-33.4" x2="825.0" y2="33.4"/><text class="dt" x="825.0" y="45.2" text-anchor="end" transform="rotate(-90 825.0 39.4)">825</text><circle class="hole" cx="975.0" cy="0" r="4.95"/><line class="cl" x1="975.0" y1="-33.4" x2="975.0" y2="33.4"/><text class="dt" x="975.0" y="45.2" text-anchor="end" transform="rotate(-90 975.0 39.4)">975</text><circle class="hole" cx="1125.0" cy="0" r="4.95"/><line class="cl" x1="1125.0" y1="-33.4" x2="1125.0" y2="33.4"/><text class="dt" x="1125.0" y="45.2" text-anchor="end" transform="rotate(-90 1125.0 39.4)">1125 ←último para unir</text><circle class="hole" cx="1275.0" cy="0" r="4.95"/><line class="cl" x1="1275.0" y1="-33.4" x2="1275.0" y2="33.4"/><text class="dt" x="1275.0" y="45.2" text-anchor="end" transform="rotate(-90 1275.0 39.4)">1275</text><circle class="hole" cx="1425.0" cy="0" r="4.95"/><line class="cl" x1="1425.0" y1="-33.4" x2="1425.0" y2="33.4"/><text class="dt" x="1425.0" y="45.2" text-anchor="end" transform="rotate(-90 1425.0 39.4)">1425</text><line class="dim" x1="0.0" y1="-45.4" x2="1500.0" y2="-45.4" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="750.0" y="-53.7" text-anchor="middle">1500  (Ø 50,8)</text><text class="dt" x="0" y="-78.6">punta de arriba</text><text class="dt" x="1500.0" y="-78.6" text-anchor="end">punta de abajo</text></svg></div>
+  </div>
+
+  <div class="sheet">
+    <h3>06 · Pata de abajo (hacer 2)</h3>
+    <dl class="spec">
+      <dt>Tubo</dt><dd>Aluminio 6061-T6 2" cédula 40 (Ø 60,3 × pared 3,91, por dentro 52,5) · largo 1500 · 2,8 kg</dd>
+      <dt>Huecos</dt><dd>Ø 9,9 a 30 y 180 (unión con la pata de arriba) · a 480, 780 y 1080 (anillo de amarre) · Ø 13,1 a 1460 (perno del pie)</dd>
+      <dt>Ranuras</dt><dd>2 ranuras opuestas en la punta de abajo, de 10,5 de ancho × 75 de largo, giradas 90° respecto a los huecos. Por ellas pasa el pie de 10 mm.</dd>
+      <dt>Prueba</dt><dd>Antes de hacer huecos, meter la pata de arriba en esta y ver que corra suave en todo el largo. Por dentro debe quedar 1,5 a 2 mm más ancha.</dd>
+    </dl>
+    <div class="draw tube"><svg viewBox="-40 -100.0 1580.0 323.1" font-size="16.6" role="img" aria-label="Pata de abajo"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><rect class="part" x="0" y="-30.15" width="1500.0" height="60.3"/><rect class="hole" x="1425.0" y="-5.25" width="75.0" height="10.5"/><circle class="hole" cx="30.0" cy="0" r="4.95"/><line class="cl" x1="30.0" y1="-38.15" x2="30.0" y2="38.15"/><text class="dt" x="30.0" y="50.0" text-anchor="end" transform="rotate(-90 30.0 44.1)">30</text><circle class="hole" cx="180.0" cy="0" r="4.95"/><line class="cl" x1="180.0" y1="-38.15" x2="180.0" y2="38.15"/><text class="dt" x="180.0" y="50.0" text-anchor="end" transform="rotate(-90 180.0 44.1)">180</text><circle class="hole" cx="480.0" cy="0" r="4.95"/><line class="cl" x1="480.0" y1="-38.15" x2="480.0" y2="38.15"/><text class="dt" x="480.0" y="50.0" text-anchor="end" transform="rotate(-90 480.0 44.1)">480</text><circle class="hole" cx="780.0" cy="0" r="4.95"/><line class="cl" x1="780.0" y1="-38.15" x2="780.0" y2="38.15"/><text class="dt" x="780.0" y="50.0" text-anchor="end" transform="rotate(-90 780.0 44.1)">780</text><circle class="hole" cx="1080.0" cy="0" r="4.95"/><line class="cl" x1="1080.0" y1="-38.15" x2="1080.0" y2="38.15"/><text class="dt" x="1080.0" y="50.0" text-anchor="end" transform="rotate(-90 1080.0 44.1)">1080</text><circle class="hole" cx="1460.0" cy="0" r="6.55"/><line class="cl" x1="1460.0" y1="-38.15" x2="1460.0" y2="38.15"/><text class="dt" x="1460.0" y="50.0" text-anchor="end" transform="rotate(-90 1460.0 44.1)">1460 (perno pie)</text><line class="dim" x1="0.0" y1="-50.1" x2="1500.0" y2="-50.1" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="750.0" y="-58.4" text-anchor="middle">1500  (Ø 60,3)</text><text class="dt" x="0" y="-83.4">punta de arriba</text><text class="dt" x="1500.0" y="-83.4" text-anchor="end">punta de abajo</text></svg></div>
+  </div>
+
+  <div class="two">
+    <div class="sheet">
+      <h3>02 · Casquillo de la cabeza (hacer 2)</h3>
+      <dl class="spec">
+        <dt>Tubo</dt><dd>Mismo tubo de la pata de abajo, largo 160</dd>
+        <dt>Huecos</dt><dd>Ø 9,9 a 35 (perno fijo) y a 115 (pasador de la pata). Taladrar con las placas armadas.</dd>
+      </dl>
+      <div class="draw tube"><svg viewBox="-40 -51.1 240.0 149.6" font-size="5.0" role="img" aria-label="Casquillo de la cabeza"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><rect class="part" x="0" y="-30.15" width="160.0" height="60.3"/><circle class="hole" cx="35.0" cy="0" r="4.95"/><line class="cl" x1="35.0" y1="-38.15" x2="35.0" y2="38.15"/><text class="dt" x="35.0" y="45.9" text-anchor="end" transform="rotate(-90 35.0 44.1)">35 perno fijo</text><circle class="hole" cx="115.0" cy="0" r="4.95"/><line class="cl" x1="115.0" y1="-38.15" x2="115.0" y2="38.15"/><text class="dt" x="115.0" y="45.9" text-anchor="end" transform="rotate(-90 115.0 44.1)">115 pasador</text><line class="dim" x1="0.0" y1="-36.1" x2="160.0" y2="-36.1" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="80.0" y="-38.6" text-anchor="middle">160  (Ø 60,3)</text><text class="dt" x="0" y="-46.1">punta de arriba</text><text class="dt" x="160.0" y="-46.1" text-anchor="end">punta de abajo</text></svg></div>
+    </div>
+    <div class="sheet">
+      <h3>07 · Manguito del anillo (hacer 2)</h3>
+      <dl class="spec">
+        <dt>Tubo</dt><dd>Aluminio 6061-T6 2½" cédula 40 (Ø 73,0 × 5,16, por dentro 62,7) · largo 90</dd>
+        <dt>Hueco</dt><dd>Ø 9,9 a 70 de la punta de arriba (20 de la de abajo)</dd>
+        <dt>Disco</dt><dd>Centro del disco a 55 de la punta de abajo. Soldadura TIG en ángulo de 6 mm, arriba y abajo del disco, todo alrededor.</dd>
+      </dl>
+      <div class="draw tube"><svg viewBox="-40 -57.5 170.0 128.2" font-size="5.0" role="img" aria-label="Manguito del anillo"><defs><marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" class="ah"/></marker></defs><rect class="part" x="0" y="-36.5" width="90.0" height="73.0"/><circle class="hole" cx="70.0" cy="0" r="4.95"/><line class="cl" x1="70.0" y1="-44.5" x2="70.0" y2="44.5"/><text class="dt" x="70.0" y="52.2" text-anchor="end" transform="rotate(-90 70.0 50.5)">70</text><line class="dim" x1="0.0" y1="-42.5" x2="90.0" y2="-42.5" marker-start="url(#fl)" marker-end="url(#fl)"/><text class="dt" x="45.0" y="-45.0" text-anchor="middle">90  (Ø 73)</text><rect class="ghost" x="30.235" y="-35.0" width="9.53" height="70.0"/><text class="dt" x="35.0" y="-38.0" text-anchor="middle">disco</text><text class="dt" x="0" y="-52.5">punta de arriba</text><text class="dt" x="90.0" y="-52.5" text-anchor="end">punta de abajo</text></svg></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">7 · Orden de fabricación</div>
+  <h2>Por dónde empezar</h2>
+  <div class="sheet" style="gap:16px">
+    <div class="step"><span class="k">1</span><div><b>Comprar y medir los tubos.</b><p>Comprar primero los tubos de 2" × 1/4" y 2" cédula 40. Medirlos con calibrador. La pata de arriba tiene que correr dentro de la de abajo con 1,5 a 2 mm de holgura. Si no corre, no seguir: hay que cambiar un tubo (ver sección 8).</p></div></div>
+    <div class="step"><span class="k">2</span><div><b>Mandar a cortar las placas.</b><p>Llevar los DXF al taller de corte: 2 placas de cabeza y 2 discos en aluminio 3/8", y 2 pies de garra (y el pie plano si lo quieres) en acero. Tarda de 1 a 3 días.</p></div></div>
+    <div class="step"><span class="k">3</span><div><b>Cortar los tubos a largo.</b><p>Con sierra de cinta y refrentar las puntas: 2 × 1500 (arriba), 2 × 1500 (abajo), 2 × 160 (casquillos), 2 × 90 (manguitos). Quitar rebabas por dentro y por fuera.</p></div></div>
+    <div class="step"><span class="k">4</span><div><b>Hacer los huecos y las ranuras de las patas.</b><p>Taladro de pedestal y prisma en V. Marcar todo desde la punta de arriba. Empezar con broca de 6 mm y terminar con 25/64" (9,9 mm). Las ranuras del pie se hacen con fresadora o con 2 cortes de sierra y lima.</p></div></div>
+    <div class="step"><span class="k">5</span><div><b>Tornear las barras de carga y los distanciadores.</b><p>3 barras de 4140 de Ø 25,4 × 108 con 2 huecos Ø 5,2. 2 distanciadores de 60,5 exactos: de esta medida depende que las placas queden paralelas.</p></div></div>
+    <div class="step"><span class="k">6</span><div><b>Armar la cabeza y taladrar en conjunto.</b><p>Poner las 2 placas con los distanciadores y las barras. Meter los casquillos entre las placas, alinearlos con la línea punteada del plano y apretar con prensas. Taladrar los huecos C atravesando placa, casquillo y placa en una sola pasada. Poner los 4 pernos fijos de 3/8".</p></div></div>
+    <div class="step"><span class="k">7</span><div><b>Soldar los anillos (y el pie plano).</b><p>Anillo: TIG con corriente alterna, varilla ER5356, argón puro. Limpiar con cepillo de acero inoxidable y acetona. Si el taller puede, hacer tratamiento térmico T6 después. Pie plano: soldadura MIG normal de acero.</p></div></div>
+    <div class="step"><span class="k">8</span><div><b>Acabado.</b><p>Limar todos los filos. Anodizar la cabeza en azul y los anillos en naranja, o pintura en polvo. Pies: pintura en polvo naranja o galvanizado. Grabar en cada placa: número de serie, fecha y "Carga de trabajo 9 kN".</p></div></div>
+    <div class="step"><span class="k">9</span><div><b>Armado completo y prueba de carga.</b><p>Ver secciones 9 y 10. Solo después de pasar la prueba se usa con personas.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">8 · Si no hay aluminio</div>
+  <h2>Materiales de reemplazo</h2>
+  <div class="sheet tbl">
+  <table>
+    <thead><tr><th>Pieza</th><th>Primera opción</th><th>Si no se consigue</th><th>Qué cambia</th></tr></thead>
+    <tbody>
+      <tr><td>Pata de arriba</td><td class="num">Al 6061-T6 Ø 50,8 × 6,35</td><td class="mono">Al 6061-T6 Ø 50,8 × 4,76 (3/16")</td><td>Pierde un 15 % de rigidez: usar solo hasta la altura 5.</td></tr>
+      <tr><td>Pata de abajo</td><td class="num">Al 6061-T6 2" céd. 40</td><td class="mono">Al 6061-T6 Ø 63,5 × 4,76 + buje de nylon de 1,5 mm en la boca</td><td>Holgura mayor. El buje evita que la pata baile.</td></tr>
+      <tr><td>Todas las patas</td><td class="num">Aluminio</td><td class="mono">Acero ASTM A513 Ø 50,8 × 3 dentro de Ø 60,3 × 3,5</td><td>Mismos huecos. Pesa unos 2,6 veces más (≈ 28 kg las 4 patas). Galvanizar.</td></tr>
+      <tr><td>Placas de cabeza y discos</td><td class="num">Al 6061-T6 3/8"</td><td class="num">Acero A36 de 8 mm con láser</td><td>Mismo DXF. La cabeza pasa de 5,9 kg a unos 8 kg.</td></tr>
+      <tr><td>Tubos 6063 de ventanería</td><td colspan="3">No sirven. El 6063-T5 tiene la mitad de la fuerza del 6061-T6. Pedir el certificado del material.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Dónde preguntar: distribuidores de aluminio industrial (6061-T6 en barras, planchas y tubo) y de acero (A36, 4140 y tubo mecánico) en Quito y Guayaquil. Si no hay tubo 6061 en stock, se puede importar por courier desde EE. UU. (Online Metals o McMaster-Carr), pidiéndolo cortado a 1500 mm.</p>
+</section>
+
+<section>
+  <div class="eyebrow">9 · Prueba de carga</div>
+  <h2>Prueba antes de usar</h2>
+  <ol>
+    <li>Armar en suelo plano a la <b>altura 4</b>, con la maniota tensada y 2 vientos a 45°.</li>
+    <li>Colgar de la barra B1 una carga de <b>18 kN (≈ 1.800 kg)</b> por 3 minutos, el doble de la carga de trabajo. Se puede hacer con un tecle y un dinamómetro (celda de carga) anclado al suelo, sin tener que juntar tanto peso.</li>
+    <li>Repetir a la <b>altura 7</b> con <b>11 kN (≈ 1.100 kg)</b>.</li>
+    <li>Revisar: que ningún tubo quede doblado (poner una regla de 1 m sobre la pata), que ningún hueco se haya ovalado, que los pasadores salgan con la mano y que las placas sigan planas.</li>
+    <li>Si algo se deforma, no se usa. Se refuerza y se vuelve a probar.</li>
+    <li>Anotar fecha, carga y resultado en una hoja que se guarda con el equipo.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="eyebrow">10 · Armado en el lugar</div>
+  <h2>Cómo se arma para un descenso</h2>
+  <ol>
+    <li>Armar las patas en el suelo, cerca una de la otra: pata de arriba dentro de la de abajo, 2 pasadores por pata, en la misma altura las dos.</li>
+    <li>Poner los pies (garra en tierra, plano en roca) y el anillo si hace falta.</li>
+    <li>Meter las patas en los casquillos y poner los 2 pasadores de la cabeza. Revisar que las bolas de cada pasador salgan del otro lado.</li>
+    <li>Pasar la maniota por los huecos L de los pies y tensarla con un bloqueador.</li>
+    <li>Colgar la polea de la barra B1 con un mosquetón de acero antes de levantar.</li>
+    <li>Levantar y amarrar los vientos a los pernos de arriba (D1 y D2) hacia los anclajes de atrás a 45°, nunca a menos de 30°. Si la carga se puede ir de lado, poner también vientos a los lados.</li>
+    <li>La fuerza de la cuerda tiene que caer dentro del plano de las patas. Inclinación máxima hacia el borde: 15°.</li>
+    <li>Cargar poco a poco con una cuerda de seguridad aparte y revisar que nada se mueva.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="eyebrow">11 · Archivos</div>
+  <h2>Archivos para el taller</h2>
+  <ul>
+    <li><b>DXF para corte</b> (capa CORTE, 1:1 en mm): placa de cabeza, disco del anillo, pie de garra y las 3 piezas del pie plano.</li>
+    <li><b>STEP</b> de cada pieza y del bípode armado: se abren en SolidWorks, Fusion 360, FreeCAD o Inventor.</li>
+    <li><b>STL</b> de cada pieza: para ver en el celular o imprimir en 3D una maqueta.</li>
+    <li><b>GLB</b> del bípode armado: el mismo modelo 3D de esta página.</li>
+  </ul>
+  <p>Van en un ZIP aparte y en la carpeta <code>bipode/archivos</code> del repositorio. Todas las medidas salen de un solo archivo (<code>bipode/cad/geometria.py</code>). Si se cambia una medida ahí, se vuelven a generar el 3D, los DXF y este documento.</p>
+</section>
+
+<section class="src">
+  <div class="eyebrow">Fuentes</div>
+  <ul>
+    <li>Rock Exotica · Arizona Vortex: catálogo de patas VXUL y VXLL, manual de uso y ficha técnica</li>
+    <li>Ferno · Arachnipod: ficha técnica, folleto V5, manual de uso V6.1 y manual de inspección V1.2</li>
+    <li>SMC · TerrAdaptor: manual en español (mayo 2023), Space Station, pies modulares, QuickLash y soporte de winche</li>
+  </ul>
+</section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+  var cv=document.getElementById('view3d');
+  if(!window.THREE||!cv||!THREE.GLTFLoader) return;
+  var r=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true,preserveDrawingBuffer:true});
+  r.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  r.outputEncoding=THREE.sRGBEncoding;
+  var scene=new THREE.Scene();
+  var cam=new THREE.PerspectiveCamera(32,1.6,10,50000);
+  scene.add(new THREE.HemisphereLight(0xffffff,0x556677,1.1));
+  var dl=new THREE.DirectionalLight(0xffffff,0.9);dl.position.set(3000,5000,4000);scene.add(dl);
+  var dl2=new THREE.DirectionalLight(0xffffff,0.35);dl2.position.set(-3000,2000,-3000);scene.add(dl2);
+  var ctr=new THREE.OrbitControls(cam,cv);
+  ctr.enableDamping=true;ctr.autoRotate=!matchMedia('(prefers-reduced-motion: reduce)').matches;ctr.autoRotateSpeed=0.8;
+  cv.addEventListener('pointerdown',function(){ctr.autoRotate=false;});
+  function size(){var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}
+  window.addEventListener('resize',size);size();
+  fetch('modelo_glb.txt').then(function(r){return r.text();}).then(function(b64){
+    var bin=atob(b64.trim()),buf=new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++)buf[i]=bin.charCodeAt(i);
+    new THREE.GLTFLoader().parse(buf.buffer,'',onModel);
+  });
+  function onModel(gl){
+    var m=gl.scene;
+    var box=new THREE.Box3().setFromObject(m);
+    var sz=box.getSize(new THREE.Vector3());
+    m.position.set(0,-box.min.y-sz.y/2,0);
+    m.traverse(function(o){if(o.isMesh&&o.material){o.material.metalness=Math.min(o.material.metalness||0,0.5);o.material.roughness=0.45;}});
+    scene.add(m);
+    var d=sz.y*2.5;
+    cam.position.set(d*0.55,d*0.18,d*0.85);
+    ctr.target.set(0,0,0);ctr.update();
+  }
+  (function loop(){ctr.update();r.render(scene,cam);requestAnimationFrame(loop);})();
+})();
+</script>
