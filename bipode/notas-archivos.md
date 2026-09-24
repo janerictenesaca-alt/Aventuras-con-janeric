@@ -213,3 +213,14 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   7. Verificar las conexiones.
   8. Llevar el equipo a su sitio y recién ahí poner maniotas y asegurar los pies.
 - **Pág. 26, QuickLash:** se pone en el tubo delgado con un pasador largo de bola; la bola debe verse del otro lado. Aguanta 30 kN derecho y 15 kN de lado a 90°. No se amarran cargas que hagan girar el tubo.
+- **TerrAdaptor pág. 27, Estación de espacio (Space Station):** hay un módulo fijo (su placa no gira) y un módulo libre (su placa gira y se alinea sola con la carga). Juntos forman una cabeza de 2 pisos: los vientos van al piso de arriba (libre) y la carga al de abajo (fijo). Colgar la carga por debajo de los vientos da más estabilidad y evita que se vuelque con golpes de carga. El cuerno y la placa permiten amarrar con una gaza sin mosquetón.
+- **Pág. 28, kit Speedlock:** 12 pasadores de bola con anillo. Se usan solo para unir tramos de patas, pies y abrazaderas. La bola tiene que verse del otro lado. Se retiran si salen sin apretar el botón, si están doblados o si las bolas no vuelven.
+- **Pág. 29:** la altura de las tablas se mide del piso al punto de fijación principal. Se arma con 2 tramos o más según la altura. El trípode simétrico reparte la carga igual entre las 3 patas y es el más fuerte.
+- **Pág. 30, tabla 4-1 (trípode simétrico):** 1,22 m → 54,3 kN; 2,13 m → 53,8 kN; 2,44 m → 35,6 kN; 3,05 m → 31,1 kN; 3,66 m → 24,9 kN; 3,96 m → 20,5 kN.
+  - **Tabla 4-2:** a la misma altura de 2,13 m, abrir más el ángulo de la cabeza baja la resistencia: A/A 53,8 kN → B/B 44,9 kN → C/C 34,3 kN. **Mientras más abiertas las patas, menos fuerza aguanta.**
+  - **Tabla 4-3 (configuración amplia):** 2,13 m → 44,9 kN; 2,44 m → 42,7 kN; 2,59 m → 36,9 kN.
+- **Pág. 31:**
+  - **Tabla 4-4 (cuatro patas):** 57,8 kN a 1,22 m y 22,7 kN a 3,96 m.
+  - **Tabla 4-5 (edge-A de 3 patas):** 1,83 m → 40,5 kN; 2,13 m → 42,7 kN.
+  - **Tabla 4-6 (cuadro A de 2 patas):** 2,13 m, pata de arriba en X5, pata de abajo en X9, maniota de 120" (3048 mm) → **24,9 kN (5.600 lbf)**.
+  - **Comparación:** el A-frame del Vortex rompe a 36 kN a 2,41 m. El del TerrAdaptor rompe a 24,9 kN a 2,13 m.
