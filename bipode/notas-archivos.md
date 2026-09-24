@@ -172,3 +172,19 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Unir los vientos opuestos al mismo punto de la cabeza.
   - Unir la pata del gin pole al punto vertical central de la cabeza.
 - **Space Station (SMC), fotos reales:** tubo naranja con 2 placas de 7 lóbulos (una naranja arriba y una negra abajo), cuerno de caucho arriba y pasador de bola al costado. Es una idea para una "placa de amarre de 2 pisos".
+
+## Lote 5 — capturas de Space Station (pág. 5) y del manual TerrAdaptor en español (págs. 7, 14, 15 y 16)
+- **Space Station pág. 5:** unido con la cabeza del TerrAdaptor suma 14 puntos. Usa el pasador principal de 5½" (el de 4½" es muy corto). El módulo fijo se puede poner a media pata para tener más anclajes; no se usa para unir 2 tubos.
+- **TerrAdaptor pág. 7:** nombres de las piezas de la cabeza: placa principal, media placa, horquilla, pasador de fijación principal, pasadores de cabeza de bloqueo de carga, abrazaderas de pata (centrada y de compensación), anillo de amarre arriba del tubo de perfil y pasador de acoplamiento de pata.
+- **Pág. 14:**
+  - Tubo de perfil (delgado) con huecos 1 a 9 y tubo medio (grueso) con huecos X e Y.
+  - La configuración más corta es un solo tubo de perfil fijado a la cabeza. Se puede llegar a 4 tramos.
+  - El pasador de pata tiene un asa que debe quedar asegurada.
+- **Pág. 15:**
+  - Buena práctica: extender primero la pata de abajo; las patas son más fuertes cuando el traslape está cerca de la cabeza.
+  - Hay que retirar las patas dobladas y no usar pasadores de ferretería.
+  - La cabeza tiene 10 huecos ovalados en la curva de afuera para ajustar el ángulo. El ángulo se fija con 3 pasadores de bloqueo de carga (6 posiciones, de la A a la F).
+- **Pág. 16:**
+  - El ángulo se cambia solo sin carga: se sacan los 2 pasadores de afuera y la pata gira sobre el de adentro.
+  - Hay que retirar los pasadores cuando el anodizado duro esté gastado.
+  - Abrazadera centrada para la pata de atrás y abrazaderas compensadas para las de los lados.
