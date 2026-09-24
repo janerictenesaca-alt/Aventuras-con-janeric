@@ -224,3 +224,19 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - **Tabla 4-5 (edge-A de 3 patas):** 1,83 m → 40,5 kN; 2,13 m → 42,7 kN.
   - **Tabla 4-6 (cuadro A de 2 patas):** 2,13 m, pata de arriba en X5, pata de abajo en X9, maniota de 120" (3048 mm) → **24,9 kN (5.600 lbf)**.
   - **Comparación:** el A-frame del Vortex rompe a 36 kN a 2,41 m. El del TerrAdaptor rompe a 24,9 kN a 2,13 m.
+- **TerrAdaptor pág. 32:**
+  - **Una pata (tabla 4-7):** 2,44 m → 20 kN.
+  - **Viga horizontal (tabla 4-8):** 1,22 m → 24,9 kN con 1 tubo y 36,5 kN con 2 tubos; 2,44 m con 2 tubos → 17,8 kN. Es de las configuraciones más débiles.
+  - Los voladizos y brazos pescantes multiplican la fuerza; se usan con extrema precaución.
+- **Pág. 33, configuraciones certificadas:**
+  - Todas las patas con la misma extensión.
+  - Máximo 2 tubos delgados y 1 tubo grueso por pata.
+  - Los únicos anclajes aceptados son el pasador principal y los huecos auxiliares de la placa principal o de la media placa.
+  - Ángulos: estrecho A/A-B, medio B/B-C y amplio C/C-D.
+- **Pág. 34:** fotos de la placa principal y la media placa en cada ángulo. La horquilla está abajo, al centro, con su pasador de bola, y hay filas de huecos en arco.
+- **Pág. 37, kit de 3 patas:**
+  - 1 cabeza; 2 abrazaderas compensadas y 1 centrada, cada una con 3 pasadores de bloqueo.
+  - 1 pasador principal y 3 kits de patas con pie basculante.
+  - 3 cuerdas de maniota, pasadores extra y 2 anillos de amarre.
+  - 3 bolsas.
+- **Pág. 38:** lista de repuestos. Los tornillos son de aleación SHCS (cabeza Allen) con tuercas de nylon, kit 230326.
