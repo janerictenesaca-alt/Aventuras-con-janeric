@@ -117,3 +117,23 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Cable de winche: desechar si hay alambres rotos en un tramo de 25 mm.
 - Vida útil máxima: **12 años** desde la fabricación.
 - Cuerda de la maniota: **8 mm** kernmantle.
+
+## Lote 4 — Manual del Vortex (vortex-technical-notice.pdf, 80 páginas), capturas de las páginas 1, 5 y 7 a 14
+
+- **Pág. 7, kit completo:** 1 cabeza A-frame, 1 cabeza gin pole, 3 patas de adentro (inner), 7 patas de afuera (outer), 3 pies Raptor, 3 pies planos, 1 polea de cabeza, 17 pasadores de pata, 4 pasadores de cabeza.
+- **Pág. 8:** las piezas son maquinadas de aluminio sólido. Pasadores de pata: bola 3/8" (VXQR375). Pasadores de cabeza: bola 1/2" (VXQR500). Polea de 1,5" que se pone en la cabeza con un pasador de cabeza.
+- **Pág. 10, cabeza A-frame:**
+  - A: 2 orejas arriba con hueco de 1/2" para unir la cabeza gin pole.
+  - B: punto de unión central horizontal.
+  - C: punto de unión central vertical.
+  - D: canal hundido para que pase la cuerda.
+  - E: puntos de anclaje izquierdo y derecho abajo, por las ventanas triangulares.
+  - F: varias ranuras de alineación para la pata de afuera, en la boca de cada tubo.
+  - G: varios huecos de ajuste del pasador de pata, en fila a lo largo de cada tubo.
+  - H: puntos de amarre a los lados, mirando hacia afuera.
+  - I: puntos de unión de 1/2" a la izquierda y a la derecha (los 4 pasadores).
+- **Pág. 10, cabeza gin pole (naranja):** hueco de pasador de pata de 3/8", horquilla central, unión de 1/2" con la cabeza A-frame y anclajes alrededor.
+- **Pág. 11:** la cabeza gin pole se une a la A-frame con 2 pasadores de 1/2" y gira como una bisagra.
+- **Pág. 12:** en la cabeza entran tanto la pata de adentro como la de afuera. La de afuera tiene un tope de alineación que va en 1 de 3 posiciones. Los varios huecos de la cabeza permiten ajustar un poco el largo y el giro de la pata.
+- **Pág. 13, patas:** hechas en CNC con medidas exactas. La pata de adentro tiene huecos de ajuste de 3/8" y la marca "último hueco". La pata de afuera tiene un hueco de 3/8", una ranura de alineación en un extremo y un tope de alineación en el otro. Dos patas de afuera se unen metiendo el tope en la ranura de la otra y poniendo un pasador de bola. La bola del pasador debe salir por fuera del tubo.
+- **Pág. 14, pies:** el Raptor y el pie plano sirven en la pata de adentro y en la de afuera. El pie plano tiene rótula; no hay que dejarla en su límite de giro. El Raptor se coloca para que agarre lo más posible de la superficie.
