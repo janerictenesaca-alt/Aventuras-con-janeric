@@ -81,3 +81,39 @@
 ### Lo que todavía falta para el diseño
 - Diámetros y grosor de pared reales de los tubos (Vortex: solo se sabe Ø 50 y Ø 60 mm).
 - Fotos de la cabeza A-frame del Vortex de frente, de lado y desde arriba, en lo posible con una regla o un objeto de medida conocida.
+
+## Lote 3 — 5 fotos del Vortex + manual de inspección del Arachnipod
+
+### Foto 3: cabeza A-frame del Vortex (la más importante)
+Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm = 2"). Son **aproximadas (±10 %)**.
+- **Tubos de la cabeza (azules):** diámetro de fuera ≈ **56–60 mm** y largo ≈ **150 mm**. Adentro entra la pata de arriba de Ø 50,8.
+- **Ángulo de cada pata:** entre **15° y 20°** respecto de la vertical, así que el ángulo entre las dos patas es de **30 a 40°**. La foto tiene perspectiva; hay que confirmarlo.
+- Cada tubo tiene arriba un **hueco transversal** para el pasador de pata y, al lado, un **tornillo pequeño con aro**, que parece el tope de alineación.
+- **Cuerpo del centro:** 2 **orejas laterales** con ventana (una a cada lado) y **2 placas en forma de "H"** en el medio, con huecos para mosquetón.
+- **4 pasadores dorados** de cabeza (2 arriba y 2 abajo), horizontales, de ≈ **13 mm** (1/2") con seguro de anillo. Entre el pasador de arriba y el de abajo hay ≈ **75 mm**.
+- **No se ven cordones de soldadura:** parece **una sola pieza maquinada en CNC** (o fundida). Esto contradice la nota anterior de que los tubos estaban soldados.
+- Los pasadores de ajuste de las patas van **dentro del tubo grueso** (Ø 60, gris claro abajo a la derecha).
+
+### Foto 4: patas (catálogo oficial)
+- **Pata de arriba (VXUL):** Ø **50,8 mm (2,0")** × **978 mm (38,5")**, **2,1 kg**. Arriba tiene una **muesca en U** que encaja en el tope de alineación de la cabeza (las "3 ranuras"). Tiene un hueco transversal cerca de la punta y la marca "CAUTION! This is the LAST HOLE" (último hueco permitido).
+- **Pata de abajo (VXLL):** Ø **59,7 mm (2,35")** × **1054 mm (41,5")**, **2,5 kg**. Abajo tiene un **perno-espiga fijo** que entra en el pie. Se puede poner al revés y conectarla a la cabeza.
+- Peso por metro, calculado: pata de arriba ≈ 2,15 kg/m → **pared ≈ 5 mm**. Pata de abajo ≈ 2,37 kg/m → **pared ≈ 4,5 mm** (suponiendo aluminio de 2,7 g/cm³ y sin contar las piezas de las puntas).
+- Holgura entre patas: 59,7 − 2 × 4,5 = **50,7 mm por dentro**, justo para la pata de 50,8. Encajan con muy poca holgura.
+
+### Foto 1: placa naranja con tubo corto
+- Disco con **10 huecos ovalados** alrededor y un **hueco central en cruz** (para una espiga con traba). El tubo corto tiene **2 filas de 3 huecos** para pasador.
+- Uso probable: placa de amarre para la punta de una pata o para la cabeza de mástil (gin pole).
+
+### Foto 2: placa azul con tubo
+- Disco con **10 huecos redondos** (para mosquetón) y un tubo vertical con **barra transversal interna**. Tiene huecos en fila y **pasador de bola con anillo** (ball-lock).
+- Uso: placa de amarre o cabeza que se pone en la punta de una pata.
+
+### Foto 5: pie plano articulado (VXFF)
+- Base de bronce o anodizada con **4 huecos** para pernos, **rótula de bola**, tubo naranja que va a la pata con hueco de pasador y tornillo, y tubo azul con huecos y disco de amarre arriba.
+
+### Manual de inspección del Arachnipod (19 páginas)
+- Pasadores: **desechar si tienen marcas de más de 0,5 mm** de profundidad.
+- Bloqueador de la cuerda entre pies: sacar 600 a 1000 mm de cuerda, colgar **50 kg** y comprobar que no resbale.
+- Cable de winche: desechar si hay alambres rotos en un tramo de 25 mm.
+- Vida útil máxima: **12 años** desde la fabricación.
+- Cuerda de la maniota: **8 mm** kernmantle.
