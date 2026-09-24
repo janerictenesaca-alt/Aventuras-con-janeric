@@ -165,3 +165,10 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Factor de diseño 4:1. La carga de trabajo es la fuerza aplicada, que puede ser mayor que el peso de la carga.
   - **Orden de cada pata (Fig. 1):** cabeza A-frame arriba → patas de afuera (2 o 3, unidas entre sí) → **1 pata de adentro abajo** (ahí se cuentan los huecos a la vista) → pie Raptor.
   - Cálculo con la tabla: el A-frame pasa de 241 a 305 cm (+64 cm) al agregar 1 pata de afuera y tapar 1 hueco (−15 cm).
+- **Pág. 37, texto en español, paso 6 "Fuerza y estabilidad":** el Vortex se probó hasta la falla. Para que aguante más:
+  - Bajar la altura al mínimo.
+  - Acortar las patas al mínimo.
+  - Poner la pata de adentro al final de la pata (junto al pie), no entre dos patas de afuera.
+  - Unir los vientos opuestos al mismo punto de la cabeza.
+  - Unir la pata del gin pole al punto vertical central de la cabeza.
+- **Space Station (SMC), fotos reales:** tubo naranja con 2 placas de 7 lóbulos (una naranja arriba y una negra abajo), cuerno de caucho arriba y pasador de bola al costado. Es una idea para una "placa de amarre de 2 pisos".
