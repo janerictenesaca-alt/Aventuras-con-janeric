@@ -193,3 +193,23 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - **Pág. 19, pie de talón:** picos de aluminio con **punta de acero reforzada cambiable**, sujetas con tornillos prisioneros al costado. Tiene 2 puntos de amarre de resistencia completa. Sirve para clavarse o para montarse sobre tubos, raíces o roca. Los picos se afilan con lima y se guardan con protector. **Pie basculante:** curvo, reparte el peso, tiene 2 puntos de amarre y un gancho, y se puede voltear.
 - **Pág. 20, pie de articulación:** almohadilla de caucho y rótula. La base tiene huecos para tornillos o pernos. La muesca se alinea para que la base quede plana; si no, la rótula se daña. Tiene 3 huecos grandes para amarrar y un punto auxiliar en la placa del adaptador. Los mosquetones no deben quedar cargados de lado.
 - **Pág. 21, correa de sujeción de leva (maniota):** es un elemento estructural. Lleva ganchos en los puntos de los pies; si falta punto, un gancho se pone en el ojo del otro gancho. Se tensa hasta que cada pata se flexione ligeramente. Primero se ajustan los ángulos y las alturas y después se aprieta la maniota. Hay que proteger la correa de filos cortantes.
+- **TerrAdaptor pág. 22, punto de fijación principal:**
+  - Es una **horquilla de 2 posiciones** al fondo de la cabeza, con un pasador de bola de rotura mínima ≥ 5.900 kg (13.000 lb) y botón de liberación.
+  - La parte angosta sirve para una polea o un mosquetón. La parte ancha sirve para giratorios y poleas múltiples, y es la preferida cuando la carga se mueve.
+  - No se pasa una cuerda en movimiento directo sobre el pasador. El pasador se retira si el botón o las bolas no funcionan.
+- **Pág. 23:**
+  - Hay 3 **puntos de fijación auxiliares** en la cabeza para mosquetones. **No** se amarra nada en los huecos de ajuste del ángulo, porque no son de carga.
+  - Las medias placas se fijan a la placa principal con 4 tornillos a 450 lb·pulg (≈ 51 N·m) con tuercas de nylon. El tornillo debe sobresalir de la tuerca.
+- **Pág. 24:**
+  - Los 3 tornillos de la media placa no se sacan. No se usa tornillería de ferretería.
+  - **Anillo de amarre:** se pone en cualquier lugar del tubo delgado y en la cantidad que haga falta. Si la carga del amarre pasa de 22 kN, conviene amarrar a la cabeza. El mosquetón no debe quedar cargado de lado.
+- **Pág. 25, montaje en el suelo:**
+  1. Dar la altura a todas las patas.
+  2. Poner los pies.
+  3. Poner las patas delanteras y ajustar los ángulos.
+  4. Poner la pata trasera.
+  5. Poner cuerdas y encordado en la horquilla (queda alta al levantar).
+  6. Levantar desde las patas delanteras inclinando hacia la trasera.
+  7. Verificar las conexiones.
+  8. Llevar el equipo a su sitio y recién ahí poner maniotas y asegurar los pies.
+- **Pág. 26, QuickLash:** se pone en el tubo delgado con un pasador largo de bola; la bola debe verse del otro lado. Aguanta 30 kN derecho y 15 kN de lado a 90°. No se amarran cargas que hagan girar el tubo.
