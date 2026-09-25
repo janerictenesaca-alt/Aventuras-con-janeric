@@ -527,3 +527,15 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Abajo izq.: pata de ADENTRO, mismo diámetro en todo el largo, huecos 3/8" en línea cada ~2–3 diámetros.
   - Abajo der.: extremo MACHO de la pata de afuera: rebajado (escalón), hueco 3/8" en el rebaje, tope redondo de
     alineación en el escalón y un hueco chico bajo el escalón (fijación del tope).
+
+## Corrección 9 — medidas de huecos (medidas en las imágenes, escala 0,715 mm/px con largos del catálogo)
+- `09_pata_de_adentro.jpg`: pata de ADENTRO Ø 50,8 × 978. 7 huecos 3/8" pasantes en línea:
+  primero a 70 de un extremo, luego cada 139,7 (5½"), último a 70 del otro extremo (70, 209,7, 349,4, 489, 628,8, 768,5, 908).
+  Simétrica: se puede poner en cualquier sentido.
+- `10_pata_de_afuera.jpg`: pata de AFUERA Ø 59,7 × 1054:
+  - MACHO rebajado a Ø 50,8 en 152 de largo (escalón a 152 de la punta). Hueco 3/8" a 89 de la punta.
+    Tope de alineación en el escalón; hueco chico a 186 de la punta (34 pasando el escalón).
+  - HEMBRA: hueco 3/8" a 63,5 (2½") de la boca; ranura de alineación de ≈ 9,5 de ancho × 11 de fondo en la boca.
+  - Comprobación: 89 + 63,5 = 152,5 ≈ largo del macho → al unir 2 patas de afuera el escalón toca la boca y los huecos coinciden.
+- Usuario: la parte que sobresale arriba de la cabeza tiene que quedar a distancia exacta para cruzar los pasadores de seguridad
+  → los huecos G del casquillo y el hueco del accesorio de arriba deben caer en múltiplos de 139,7 respecto a los huecos del tubo.
