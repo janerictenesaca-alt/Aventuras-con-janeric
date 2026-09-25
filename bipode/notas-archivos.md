@@ -405,3 +405,13 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Tubo derecho con **hueco arriba** (la pata sale).
 - **Foto de rescate:** gin pole / A-frame de lado armada en voladizo sobre un precipicio con camilla. La pata va apoyada en roca con una bolsa, y hay vientos.
 - **Mochila:** gin pole naranja y cabeza A-frame azul (con pasadores puestos), cordón naranja, polea y pasadores. Se ve **el tubo azul de un lado con fila de huecos**.
+- **Manual del Vortex, capturas otra vez (págs. 1, 5, 7, 8, 9):**
+  - **Pág. 5 (FOTO CLAVE):** dibujo técnico de la cabeza A-frame con la gin pole encima, desde arriba y atrás. Se ven:
+    - La **gin pole** como placa en forma de escudo con 5 huecos: 4 ovalados y 1 central redondo más grande.
+    - La **cara de atrás de la A-frame** con **filas de ranuras ovaladas pequeñas en cada tubo** (4–5 por lado), **ventanas en forma de gota** y marcas grabadas: carga máxima 2 personas, fecha de armado, fecha de prueba, modelo, número de serie y CE 0598.
+  - **Pág. 7:**
+    - Peso del sistema **33 kg**.
+    - Pasadores de pata de 3/8" = **80 kN**; de cabeza de 1/2" = **142 kN**.
+    - Bolsas: 1 de cabeza, 4 de patas, 1 de pies y 1 de pasadores.
+  - **Pág. 8:** lámina de piezas A–I (ya anotada).
+  - **Pág. 9:** armado del trípode de pata de caballete. **A-frame + gin pole unidas con pasadores.** Detalle: la **pata de adentro entra en el pie** y se asegura con un pasador.
