@@ -557,3 +557,23 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   3. Las escuadras 06 de arriba no existen en el original: allí hay un brazo inclinado (marco de la ventana E) del tubo a la
      aleta de afuera, por abajo.
   4. Las aletas del original son orejas más chicas (rectángulo redondeado alrededor de los 2 huecos), no placas tan grandes.
+
+## AZORP (carrete de anclajes) — información para v8 (no ejecutado)
+- Fotos del usuario 110–130 (chat). Dos piezas, cada una de UNA sola pieza maquinada (disco + tubo):
+  - NARANJA = "Inner" (CMC 727401): disco con 9 huecos grandes + 1 hueco chico arriba; tubo de ~1 diámetro de alto con 3 huecos
+    3/8" en línea. Centro del disco con 2 muescas (llave) opuestas + anillo de apoyo. Tubo ajusta sobre Ø 50,8
+    (pata de adentro o macho de la pata de afuera). Las muescas reciben el tope de alineación de la pata de afuera (como una hembra).
+    Fotos: en punta de pata de adentro (sale el tubo por delante), en el macho de la pata de afuera, en medio de una unión.
+  - AZUL = "Outer" (CMC 727402): disco con 9 huecos grandes + 1 chico; tubo más alto y más ancho con 3 huecos en línea en 2 caras
+    (a 90°). Ajusta sobre la pata de afuera Ø 59,7 o sobre el macho; el disco naranja se puede montar sobre el tubo azul (foto 126).
+  - Kit: 2 pasadores rápidos inox 3/8" con anillo en D, bolso. Grabado: MBS 67 kN "G" (tiendas: 60 kN), NFPA 1983, EN 795.
+  - Hueco chico: probable marca de orientación alineada con la llave + amarre del cordón del pasador; NO es anclaje.
+- Configuraciones vistas: carrete arriba del tubo que sale de la cabeza (A-frame o gin pole); gin pole entre disco azul (abajo)
+  y naranja (arriba) en una pata vertical (mástil con cabrestante); en tubo horizontal (brazo); disco azul solo en mástil con
+  cuerda amarrada al tubo; cabeza A-frame usada como grúa girando en un mástil.
+- Regla v8: todos los huecos 3/8" con paso 139,7 (5½") y los mismos encajes (Ø 50,8 / Ø 59,7) en tubos, casquillos,
+  gin pole, pies y AZORP, para que cualquier combinación quede trabada con pasador y sin juego.
+- Retoque placa azul pendiente (ver corrección 11) + 2 poleas en los pasadores de abajo + cuerda amarrada al ala naranja.
+- Foto extra: el AZORP AZUL (boca abajo) va montado SOBRE el casquillo naranja del PIE PLANO (con rótula): el tubo azul
+  cubre el casquillo del pie y se traba con pasador → el pie plano con el disco azul arriba sirve como base/anclaje en piso o pared.
+  Encaje: diámetro interior del tubo azul = diámetro exterior del casquillo del pie (y de la pata de afuera); huecos alineados.
