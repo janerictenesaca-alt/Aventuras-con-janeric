@@ -461,3 +461,11 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Pág. 29: A-frame de lado.
   - Pág. 30: gin pole con 3 vientos (ideal a 120°).
   - Pág. 31: tabla de resistencias. En la Fig. 1, **cada pata** es: A-frame → **2 patas de afuera** → **1 pata de adentro** (con 2 huecos a la vista) → Raptor.
+
+## Correcciones del usuario a v7 (lote 1)
+- Foto `fotos-correcciones/01_kit_completo_tubos.jpg` (kit Vortex completo, ROPAM).
+- Se ve: 7 tubos plateados claros (principales), 3 tubos oscuros con huecos en todo el largo (van DENTRO de los principales, en las puntas),
+  cabeza A-frame azul, gin pole naranja, manual, 2 pasadores grandes + ~10 chicos, 3 pies planos con rótula azul,
+  3 casquillos naranjas rectos con pasador y 3 pies Raptor naranjas.
+- Usuario: "6 tubos principales y 3 tubos que van dentro de los principales, en las puntas". Calcular los huecos de los tubos
+  para esa función (ajuste de altura). En v7 falla esa parte.
