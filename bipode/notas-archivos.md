@@ -344,3 +344,25 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Los 3 pies planos tienen un **pasador de pata con anillo arriba**. La base marrón muestra **4 huecos grandes** (2 arriba y 2 abajo) y el aro azul de 8 tornillos.
   - Los 3 Raptor tienen un **pasador arriba**, la punta en garra con **2 huecos y una ranura**, y un **tornillo en la punta**.
 - **Raptor con maniota:** los ganchos en S de las cintas se enganchan en el **hueco de abajo del Raptor**.
+- **Cabeza A-frame, cara con cortes, de frente (FOTO CLAVE):**
+  - 2 tubos azules con **una fila de 4–5 huecos**, más un **tornillo tope con arandela dorada** donde se amarra un **cordón naranja** que sujeta el pasador.
+  - Cuerpo en forma de **escalera o marco abierto**:
+    - **4 orejas verticales** (2 a cada lado del centro).
+    - **2 pasadores horizontales arriba y 2 abajo**, que atraviesan cada par de orejas (pasadores con anillo).
+    - **2 ventanas triangulares grandes** en los extremos.
+    - Al centro, un bloque con **canal curvo arriba** y un **hueco en forma de corazón**.
+  - La **polea** cuelga del pasador de abajo a la izquierda.
+- **Trípode desde el costado:**
+  - La **gin pole naranja es una placa ancha arriba**, con el tubo inclinado que entra desde abajo.
+  - Se une a la cabeza azul con **2 pasadores en una placa lateral azul**; la polea va entre las placas.
+  - La gin pole tiene **pasador de pata con cordón naranja** y un **gancho** abajo.
+- **Pasadores de bola:** botón azul, mango negro y **anillo en D**.
+  - 4 largos y delgados (pata, 3/8") y 2 cortos y gruesos (cabeza, 1/2").
+  - **Bola de bloqueo** cerca de la punta.
+- **Trípode CMC con bolsas:**
+  - Cabeza azul de frente con **2 ventanas ovaladas**.
+  - Las **puntas de los tubos de la cabeza salen hacia arriba** (la pata de afuera atraviesa la cabeza y sobresale).
+  - La gin pole va en el centro detrás.
+  - Pata trasera de **3 tramos** (la de arriba más oscura).
+  - Mochila azul, 2 bolsas largas y 2 fundas de pies.
+- **Trípode de frente, sin bolsas:** cada pata tiene **2 tramos** con unión a media altura. Las **puntas de pata sobresalen por arriba** de la cabeza.
