@@ -476,3 +476,12 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Usuario: los 3 tubos de adentro van dentro de los principales, sujetos en la pieza azul y la naranja, y sobresalen por la punta
   para montar un accesorio extra (lo va a mostrar; probablemente la placa AZORP / "Zube" de las fotos 161–163).
 - Hacer: pata que pase por el casquillo, huecos alineados con los huecos G del casquillo, y largo que sobresale arriba.
+
+## Corrección 3
+- Foto `fotos-correcciones/03_tubos_en_las_patas.jpg`: aquí NADA sobresale arriba; las patas entran desde abajo y los casquillos
+  quedan abiertos arriba. Las patas tienen uniones (tramos) con remaches/pasadores a media altura.
+- Usuario: los 3 tubos de adentro son intercambiables: (a) arriba, pasando por la cabeza y sobresaliendo (para el extra),
+  o (b) al revés, en la mitad/punta de la pata para alargar las patas. Configuración variable.
+- En la foto: 2 poleas con eslabón giratorio colgadas de los 2 pasadores de abajo (una en cada ranura izq./der.);
+  cuerda amarrada con nudo al ala naranja de la gin pole.
+- Hacer: los huecos de tubos principales, tubos de adentro y casquillos deben coincidir en las 2 configuraciones.
