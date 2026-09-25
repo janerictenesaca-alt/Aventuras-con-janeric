@@ -587,3 +587,11 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   rótula), rueda de polea VXHPW 1,5" ×1 (con rodamiento, va en un pasador de cabeza), pasadores de pata 3/8" VXQR375 ×17,
   pasadores de cabeza 1/2" VXQR500 ×4.
 - OJO: son 7 patas de afuera (no 6). v8 debe llevar 7.
+
+## Decisión del usuario: pies
+- NO se hace el pie plano con rótula (no hay rótulas ni materiales en Ecuador). Se queda el pie de punta de flecha de v7
+  (garra de láser + casquillo); al usuario le gusta.
+- El casquillo del pie de flecha debe tener el MISMO diámetro exterior que el casquillo del pie original, para que la placa
+  AZUL del carrete (AZORP) entre por encima y se trabe con pasador (como en la foto del pie plano + disco azul).
+  → v8: casquillo de pie Ø 63,5 exterior; tubo azul del carrete con interior ≈ 64,1; huecos del pasador alineados.
+- Todo lo demás, igual al original en todas sus configuraciones.
