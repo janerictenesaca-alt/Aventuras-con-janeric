@@ -415,3 +415,27 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
     - Bolsas: 1 de cabeza, 4 de patas, 1 de pies y 1 de pasadores.
   - **Pág. 8:** lámina de piezas A–I (ya anotada).
   - **Pág. 9:** armado del trípode de pata de caballete. **A-frame + gin pole unidas con pasadores.** Detalle: la **pata de adentro entra en el pie** y se asegura con un pasador.
+- **Manual del Vortex, págs. 10 a 14 en alta resolución (CLAVE PARA LA FORMA):**
+  - **Pág. 10, A-frame (vista 3D de atrás):**
+    - Los tubos tienen en la boca **ranuras F (varias)** y en el costado **2 filas de huecos G**.
+    - En el cuerpo:
+      - **2 orejas A arriba**, altas y separadas, con hueco de 1/2".
+      - Entre ellas un **puente B horizontal hueco**, un **canal D hundido** y la **unión vertical C** abajo.
+      - **Ventanas triangulares E** a los lados.
+      - **Placas H de amarre** mirando hacia afuera y los **pasadores I** de 1/2" a izquierda y derecha, que atraviesan **pares de placas verticales**.
+    - Vista lateral: el cuerpo es un **marco de placas verticales paralelas con nervios**.
+  - **Pág. 10, gin pole:**
+    - De lado es una **placa larga horizontal** con el **tubo inclinado debajo** (A = hueco de pasador de 3/8") y la **horquilla central B** colgando.
+    - En la punta, la **oreja C** con hueco de 1/2" para unirse a la A-frame.
+    - Vista 3D: placa con el **tubo central y 4 huecos radiales D** alrededor.
+  - **Pág. 11:** la gin pole baja **entre las orejas A** de la A-frame y se une con **2 pasadores de 1/2"**, con la bola afuera. Después gira como bisagra para cambiar el ángulo de la pata de caballete.
+  - **Pág. 12:**
+    - En la A-frame y en la gin pole entran tanto la pata de afuera como la de adentro.
+    - La pata de afuera tiene un **tope de alineación** que va en 1 de 3 ranuras de la boca.
+    - La **pata de adentro es más angosta** y tiene grabado "This is the last hole".
+  - **Pág. 13, patas:**
+    - Pata de adentro con **huecos de ajuste de 3/8" en fila** y la advertencia del último hueco.
+    - Pata de afuera con un **hueco de pasador de 3/8"**, una **ranura de alineación** en un extremo y un **perno tope de alineación** en el otro.
+    - 2 patas de afuera se unen metiendo el tope en la ranura, con el pasador de bola atravesando.
+    - **La bola del pasador debe salir afuera.**
+  - **Pág. 14:** los pies plano y Raptor entran en las **2 patas**. No hay que dejar la rótula del pie plano en su tope. El Raptor se pone para que agarre al máximo.
