@@ -450,3 +450,8 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
     3. Pie plano con 4 pernos.
     4. Amarrado a un poste.
     - Los vientos deben ser livianos, fuertes, delgados y de muy poca elongación. **Las maniotas y los vientos no vienen en el kit.**
+- **Manual del Vortex, págs. 21, 22 y 24 a 26 (alta resolución):**
+  - **Págs. 21 y 22:** ángulo de los vientos de 30° mínimo e ideal 45°, y nunca menor que el ángulo de la fuerza aplicada. Plano de vientos y plano del marco.
+  - **Pág. 24:** el trípode de patas iguales es el **único certificado CE EN 795**. Maniotas en triángulo; la carga al centro del triángulo; la línea de tiro cerca de la línea de carga. Si la carga se aleja del centro, el trípode tiende a volcarse.
+  - **Pág. 25:** pata de caballete con winche en la pata. Las maniotas alcanzan, pero girar la manivela del winche puede mover la pata de caballete. La fuerza tiene que quedar dentro de la huella.
+  - **Pág. 26:** la misma configuración con la carga fuera de la huella. **Las maniotas no alcanzan**: hace falta un viento opuesto atrás.
