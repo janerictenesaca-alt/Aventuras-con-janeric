@@ -577,3 +577,13 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Foto extra: el AZORP AZUL (boca abajo) va montado SOBRE el casquillo naranja del PIE PLANO (con rótula): el tubo azul
   cubre el casquillo del pie y se traba con pasador → el pie plano con el disco azul arriba sirve como base/anclaje en piso o pared.
   Encaje: diámetro interior del tubo azul = diámetro exterior del casquillo del pie (y de la pata de afuera); huecos alineados.
+
+## Manual "Legs to heads" y "Vortex hardware" (fotos 131–132 del chat)
+- Pata de ADENTRO y pata de AFUERA entran las dos en la cabeza A-frame y en la gin pole.
+  Pata de afuera en A-frame: su tope de alineación cae en UNA de las 3 ranuras F (3 posiciones de giro).
+- Kit oficial: pata de afuera VXLL ×7 ("se pone a los pies; se puede dar vuelta para entrar en las cabezas"),
+  pata de adentro VXUL ×3 ("va en A-frame, gin pole y pies; entra en la de afuera para ajustar altura o unir 2 de afuera"),
+  gin pole VXGH ×1, A-frame VXAF ×1, pie Raptor VXRF ×3 (punta de carburo cambiable, gira), pie plano VXFF ×3 (suela de caucho,
+  rótula), rueda de polea VXHPW 1,5" ×1 (con rodamiento, va en un pasador de cabeza), pasadores de pata 3/8" VXQR375 ×17,
+  pasadores de cabeza 1/2" VXQR500 ×4.
+- OJO: son 7 patas de afuera (no 6). v8 debe llevar 7.
