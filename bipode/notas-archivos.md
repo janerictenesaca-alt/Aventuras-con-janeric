@@ -328,3 +328,19 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Disco naranja "rock exotica AZORP" con **10 huecos grandes** para mosquetón en el borde, **hueco central** para el tubo y **2 huecos chicos** para pasador y tornillo.
   - Abajo, en la misma pata, un **disco azul** igual.
   - Se usa para colgar muchos mosquetones en el centro del trípode.
+- **Pie plano con maniota:**
+  - La pata de afuera tiene **2 tornillos pequeños** en el borde de la unión.
+  - Las **maniotas son cintas rojas con gancho en S** y **hebilla de leva**, enganchadas en los **huecos de la base** del pie plano.
+- **AZORP en la pata, desde el costado:**
+  - Carrete de **2 discos** (azul de 10 huecos y naranja de 10 huecos) con un tubo entre ambos que va sobre la pata.
+  - Encima, la **gin pole naranja con huecos**.
+  - Pasadores de cabeza con anillo.
+- **Trípode con bolsas:**
+  - Trípode armado de frente. La **cabeza azul lleva la gin pole naranja al centro**, con "rock exotica" grabado.
+  - La pata central es **más oscura**.
+  - **5 bolsas** (4 largas y 1 corta).
+  - Certificación **EN 795:2012**, **33 kg**.
+- **Bolsas de pies (CMC):**
+  - Los 3 pies planos tienen un **pasador de pata con anillo arriba**. La base marrón muestra **4 huecos grandes** (2 arriba y 2 abajo) y el aro azul de 8 tornillos.
+  - Los 3 Raptor tienen un **pasador arriba**, la punta en garra con **2 huecos y una ranura**, y un **tornillo en la punta**.
+- **Raptor con maniota:** los ganchos en S de las cintas se enganchan en el **hueco de abajo del Raptor**.
