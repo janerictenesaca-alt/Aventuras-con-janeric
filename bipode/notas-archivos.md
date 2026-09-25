@@ -439,3 +439,14 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
     - 2 patas de afuera se unen metiendo el tope en la ranura, con el pasador de bola atravesando.
     - **La bola del pasador debe salir afuera.**
   - **Pág. 14:** los pies plano y Raptor entran en las **2 patas**. No hay que dejar la rótula del pie plano en su tope. El Raptor se pone para que agarre al máximo.
+- **Manual del Vortex, págs. 15 y 17 a 20 (repetidas en alta resolución, ya anotadas):**
+  - Pág. 15: configuraciones.
+  - Pág. 17: modo de uso y fuerza aplicada.
+  - Pág. 18: tendencia de movimiento. Cada par de pies lleva su propia maniota; los pies tienden a abrirse hacia afuera.
+  - Pág. 19: la pata de caballete tiende a moverse; la pata de atrás se asegura contra tensión, compresión y deslizamiento.
+  - Pág. 20: 4 formas de asegurar los pies (dibujos):
+    1. Maniotas de cinta en el pie Raptor.
+    2. Raptor en una grieta.
+    3. Pie plano con 4 pernos.
+    4. Amarrado a un poste.
+    - Los vientos deben ser livianos, fuertes, delgados y de muy poca elongación. **Las maniotas y los vientos no vienen en el kit.**
