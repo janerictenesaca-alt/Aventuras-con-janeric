@@ -504,3 +504,11 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Pasador (J): las bolas deben salir por completo del otro lado del tubo.
 - Usuario: según cómo se pongan los tubos se alarga la parte de arriba (para poner una pieza más) o, dándoles la vuelta, las patas.
 - Hacer v8: macho rebajado del mismo tubo con tope; hembra con ranuras; huecos que coincidan en todas las combinaciones.
+
+## Corrección 6
+- Foto `fotos-correcciones/06_patas_distintas.webp` (render A-frame): pata izq. = 2 de afuera + de adentro + Raptor;
+  pata der. = 1 de afuera + de adentro corta + Raptor. Cada pata puede tener distinto largo (terreno desparejo).
+  Nada sobresale arriba de los casquillos en esta configuración.
+- Usuario: dando vuelta los tubos se alargan las patas; o el tubo sale por arriba de la cabeza y ahí se pone
+  "otra cosa para más anclajes" (placa de anclajes tipo AZORP sobre el tubo que sobresale).
+- Hacer v8: modelo y juego con configuraciones: (1) patas largas, (2) tubo arriba + placa de anclajes, (3) patas desiguales.
