@@ -455,3 +455,9 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - **Pág. 24:** el trípode de patas iguales es el **único certificado CE EN 795**. Maniotas en triángulo; la carga al centro del triángulo; la línea de tiro cerca de la línea de carga. Si la carga se aleja del centro, el trípode tiende a volcarse.
   - **Pág. 25:** pata de caballete con winche en la pata. Las maniotas alcanzan, pero girar la manivela del winche puede mover la pata de caballete. La fuerza tiene que quedar dentro de la huella.
   - **Pág. 26:** la misma configuración con la carga fuera de la huella. **Las maniotas no alcanzan**: hace falta un viento opuesto atrás.
+- **Manual del Vortex, págs. 27 a 31 (alta resolución, ya anotadas antes):**
+  - Pág. 27: pata de caballete con polea direccional; los 3 pies van empernados al piso.
+  - Pág. 28: A-frame con vientos adelante y atrás.
+  - Pág. 29: A-frame de lado.
+  - Pág. 30: gin pole con 3 vientos (ideal a 120°).
+  - Pág. 31: tabla de resistencias. En la Fig. 1, **cada pata** es: A-frame → **2 patas de afuera** → **1 pata de adentro** (con 2 huecos a la vista) → Raptor.
