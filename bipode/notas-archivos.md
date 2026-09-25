@@ -512,3 +512,10 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Usuario: dando vuelta los tubos se alargan las patas; o el tubo sale por arriba de la cabeza y ahí se pone
   "otra cosa para más anclajes" (placa de anclajes tipo AZORP sobre el tubo que sobresale).
 - Hacer v8: modelo y juego con configuraciones: (1) patas largas, (2) tubo arriba + placa de anclajes, (3) patas desiguales.
+
+## Corrección 7
+- Foto `fotos-correcciones/07_tubos_salen_arriba.webp`: configuración "al revés": en los 2 casquillos azules el tubo
+  sobresale por arriba (~1 diámetro, ≈ 60–80 mm). Ahí va la pieza de más anclajes (el usuario la mostrará).
+- Patas del A-frame: 2 tramos de afuera + de adentro abajo + pie Raptor. La gin pole naranja arriba al centro y su pata
+  (tubos oscuros, 3 tramos con pasadores) baja vertical al centro, con pie naranja.
+- Se ven 5 bolsos de transporte (4 largos + 1 corto).
