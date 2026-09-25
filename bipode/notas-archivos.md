@@ -276,3 +276,37 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Patas plateadas en 2 tramos visibles, con la unión marcada.
   - Pies Raptor naranja con pasador y garra.
   - La gin pole naranja arriba a la derecha.
+- **Foto pie plano (VXFF):**
+  - Casquillo naranja con un **pasador pequeño con tope en la parte de arriba** y un **hueco de pasador abajo con un tornillo tope al lado**.
+  - Debajo: rótula de bronce, **aro azul de 8 tornillos Allen** que atrapa la bola, y **base marrón/cobre cuadrada con las esquinas levantadas** y 4 huecos avellanados.
+  - Entra en la **pata de adentro**, que va dentro de la pata de afuera.
+- **Foto pie Raptor (VXRF):**
+  - Casquillo naranja que se hace más angosto (**forma de cuña**) hacia la punta.
+  - **2 huecos redondos grandes** para amarrar, una **ranura** y un **pasador saliente (espiga)** al costado.
+  - **Punta de carburo cambiable**, fijada con un tornillo.
+  - Arriba lleva un **pasador de pata con anillo**.
+- **Foto lámina "VORTEX HARDWARE" (clave):**
+  - A: pata de afuera ×7, gris, con **huecos solo en las puntas**; el **extremo de arriba es más angosto** (tubo interior sobresale).
+  - B: pata de adentro ×3, con **una fila de huecos a todo el largo** (~9).
+  - C: cabeza gin pole ×1, naranja.
+  - D: cabeza A-frame ×1.
+  - E: Raptor ×3.
+  - F: pie plano ×3.
+  - G: polea VXHPW de 1,5" ×1.
+  - H: pasadores de pata y pie **VXQR375** ×17 (bola, botón negro).
+  - I: pasadores de cabeza **VXQR500** ×4.
+  - "La mayoría de las piezas son maquinadas de aluminio sólido."
+  - **Cabeza A-frame vista de frente-abajo:** 2 tubos con **6–7 huecos en fila cada uno**; en el cuerpo, **2 ventanas triangulares grandes**, **2 rectangulares al centro y un hueco en forma de corazón abajo**.
+- **Foto gin pole de frente:**
+  - Tubo al centro.
+  - Placa con forma de **escudo/casa** y **4 huecos ovalados grandes** (2 a cada lado).
+  - Ranura interior con **rosca** (tornillo de tope).
+  - Abajo, **2 patas de horquilla** (las orejas que se enganchan a la A-frame).
+  - Todo en una pieza.
+- **Foto cabeza A-frame (cara lisa, de atrás):**
+  - Tubo **corto a la izquierda** y **largo a la derecha**.
+  - Cuerpo en forma de **puente curvo** (arriba cóncavo).
+  - Grabado "ARIZONA VORTEX", "USA", el logo y "Proof Loaded to 23 kN".
+  - **2 ventanas ovaladas inclinadas**, 1 hueco central en forma de corazón y **2 muescas semicirculares abajo**.
+  - Los tubos tienen **2 filas de huecos** y **ranuras en la boca**.
+  - Se ve una **soldadura** en la unión del tubo izquierdo con el cuerpo.
