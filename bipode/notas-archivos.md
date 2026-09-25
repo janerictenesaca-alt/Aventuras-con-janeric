@@ -366,3 +366,33 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Pata trasera de **3 tramos** (la de arriba más oscura).
   - Mochila azul, 2 bolsas largas y 2 fundas de pies.
 - **Trípode de frente, sin bolsas:** cada pata tiene **2 tramos** con unión a media altura. Las **puntas de pata sobresalen por arriba** de la cabeza.
+- **Trípode CMC grande:**
+  - Cabeza azul de frente con **ventanas en forma de gota**.
+  - La pata trasera (gin pole) tiene arriba un **tubo marrón oscuro** (pata de adentro) que atraviesa la gin pole y sobresale por arriba.
+  - Patas plateadas de **2 tramos**, con **tornillos tope** en cada unión.
+  - Pies Raptor naranja.
+  - 3 bolsas largas, mochila y 2 fundas de pies.
+- **Cabeza A-frame, cara lisa, de frente (FOTO CLAVE):**
+  - Cuerpo con **borde de arriba cóncavo** (curva).
+  - Grabados: "CMC", "ARIZONA VORTEX", "Manufactured by rock exotica", "USA", el logo, "Proof Loaded to 23 kN January 24, 2013".
+  - **2 ventanas triangulares redondeadas**, un **hueco central en forma de gota o corazón** y **2 muescas en semicírculo en el borde de abajo**.
+  - Por las ventanas se ven los pasadores del otro lado.
+  - Tubos con **fila de huecos + tornillo tope con arandela dorada y cordón naranja**. Las **puntas de los tubos van biseladas**.
+  - La gin pole naranja va arriba, con un **anillo de acero** (buje) en su tubo.
+  - Polea colgando al centro.
+- **Cabeza desde abajo y atrás, con polea verde CMC:**
+  - La cara de atrás de la A-frame es un **marco abierto**: **placas verticales (orejas) en pares** y **4 pasadores dorados** (2 arriba y 2 abajo) que atraviesan.
+  - La gin pole naranja tiene una **oreja redonda grande** con hueco en el costado, una **placa ancha arriba** y un **pasador con anillo**.
+  - La polea verde cuelga de un pasador de abajo.
+- **Gin pole sola sobre la pata (FOTO CLAVE):**
+  - Placa naranja arriba en forma de **escudo/U** con **2 orejas** a los lados (con hueco) y **4 huecos ovalados** alrededor del tubo.
+  - En el tubo va un **buje de acero** que atraviesa (la pata sale por arriba).
+  - Grabados "WARNING…", "Assembly Date", "Patent Pending".
+  - Abajo, un **collar naranja** con un pasador con anillo y un hueco.
+  - En la pata de adentro está grabado "CAUTION! This is the LAST HOLE".
+- **Cabeza armada desde el costado:**
+  - La **pata atraviesa el tubo azul** y sobresale por arriba (con "LAST HOLE").
+  - El tubo azul tiene **tornillo tope + 2 huecos**.
+  - Placas azules en paralelo con **ventana triangular**.
+  - La gin pole naranja se une con **1 pasador grande** por su oreja redonda.
+  - Las patas de adentro tienen **huecos en fila**.
