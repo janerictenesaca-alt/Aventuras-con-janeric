@@ -539,3 +539,11 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Comprobación: 89 + 63,5 = 152,5 ≈ largo del macho → al unir 2 patas de afuera el escalón toca la boca y los huecos coinciden.
 - Usuario: la parte que sobresale arriba de la cabeza tiene que quedar a distancia exacta para cruzar los pasadores de seguridad
   → los huecos G del casquillo y el hueco del accesorio de arriba deben caer en múltiplos de 139,7 respecto a los huecos del tubo.
+
+## Corrección 10
+- Foto `fotos-correcciones/11_tubo_salido_arriba.webp`: tubo que atraviesa el casquillo azul y sale arriba con UN hueco 3/8"
+  en la parte salida (ahí se pasa el pasador del accesorio). El tubo de la gin pole naranja también sale un poco arriba.
+- Usuario: el accesorio de arriba se puede poner en CUALQUIERA de las 3 patas (2 casquillos azules + tubo naranja).
+  Por eso todos los huecos (tubos, casquillos azules y tubo naranja) van con el MISMO paso, para que coincidan cada vez que el
+  tubo sale un poco más. Regla v8: paso único 139,7 mm (5½") desde la boca en todos los tubos y casquillos; el hueco del
+  accesorio a la misma distancia sobre la boca de arriba en los 3 casquillos.
