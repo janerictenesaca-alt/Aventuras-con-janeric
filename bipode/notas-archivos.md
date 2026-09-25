@@ -240,3 +240,19 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - 3 cuerdas de maniota, pasadores extra y 2 anillos de amarre.
   - 3 bolsas.
 - **Pág. 38:** lista de repuestos. Los tornillos son de aleación SHCS (cabeza Allen) con tuercas de nylon, kit 230326.
+
+## Búsqueda en internet: en cuántas partes se divide el Vortex (25-09-2026)
+9 tipos de pieza (más las bolsas):
+| # | Pieza | Código | Cant. en el kit | Peso c/u |
+|---|---|---|---|---|
+| 1 | Cabeza A-frame (A-Frame Joiner) | VXAF | 1 | 2,3 kg |
+| 2 | Cabeza gin pole | VXGH | 1 | 1 kg |
+| 3 | Pata de adentro / de arriba | VXUL | 3 | 2,1 kg |
+| 4 | Pata de afuera / de abajo | VXLL | 7 | 2,5 kg |
+| 5 | Pie Raptor | VXRF | 3 | 470 g |
+| 6 | Pie plano | VXFF | 3 | 1,3 kg |
+| 7 | Polea de cabeza 38 mm (Headset Pulley Wheel) | HPW | 1 | — |
+| 8 | Pasador de cabeza 13 × 81 mm | VX0310 | 4 | 68 g |
+| 9 | Pasador de pata y pie 9,4 × 98 mm | VX0300 | 17 (VX2: 11) | 43 g |
+- Total: 40 piezas en el kit original (34 en el VX2 nuevo). Peso con los 2 juegos de pies: 33 kg.
+- Fuentes: Mountain Tek, CMC, Rope Access Equip, R3 SAR Gear, Sky5 Store, WorkSafe Gear.
