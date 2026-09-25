@@ -595,3 +595,16 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   AZUL del carrete (AZORP) entre por encima y se trabe con pasador (como en la foto del pie plano + disco azul).
   → v8: casquillo de pie Ø 63,5 exterior; tubo azul del carrete con interior ≈ 64,1; huecos del pasador alineados.
 - Todo lo demás, igual al original en todas sus configuraciones.
+
+## Accesorio aparte: AHP "Appalachian Hitching Post" (Rock Exotica) — para el vehículo (fotos 134–137 del chat)
+- Placa naranja maquinada de una pieza, grosor ~ 25 mm (bloque). Partes:
+  - Lengüeta "TO HITCH" (flecha grabada): barra rectangular que entra en un adaptador negro de tubo cuadrado de 2" (enganche
+    de remolque del carro), trabado con pasador de enganche.
+  - Cuerpo con contorno ondulado y 4 huecos grandes de anclaje (grabado: 36 kN MBS · 5 kN WLL cada uno).
+  - Horquilla en U abajo: la pata del trípode (pata de adentro Ø 50,8) entra en la U y un pasador ("AHP PIN ONLY! Confirm pin is
+    locked") cruza las 2 puntas y el hueco de la pata. Ancho de la U ≈ 52 mm; hueco de pasador en las puntas.
+  - 2 orejas laterales con huecos ovalados: "HOBBLE STRAP – Not for life support" (maniota).
+  - Grabados: "Read instructions before use", número de serie, "PROTOTYPE! NOT FOR LIVE LOAD" (en la foto de campo).
+- Uso: el pie de una pata del trípode queda anclado al enganche del carro; se ven cintas y poleas a los lados.
+- v8: diseñarla como accesorio aparte, con planos; U y pasador compatibles con Ø 50,8 y el paso de huecos 139,7;
+  lengüeta para receptor de 2" (50,8 × 50,8). No va montada en el trípode.
