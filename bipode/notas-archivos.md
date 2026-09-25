@@ -310,3 +310,21 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - **2 ventanas ovaladas inclinadas**, 1 hueco central en forma de corazón y **2 muescas semicirculares abajo**.
   - Los tubos tienen **2 filas de huecos** y **ranuras en la boca**.
   - Se ve una **soldadura** en la unión del tubo izquierdo con el cuerpo.
+- **Foto "Basic configurations":** 6 armados.
+  - A: trípode (marco de anclaje, maniota en triángulo).
+  - B: A-frame.
+  - C: trípode de pata de caballete con winche en la pata.
+  - D: A-frame de lado.
+  - E: pata de caballete con polea direccional.
+  - F: gin pole.
+- **Foto cabeza en altura (cara con cortes, clave):**
+  - Cuerpo azul **abierto como armazón**: nervios, orejas y bordes curvos, no una placa llena.
+  - Arriba, **4 orejas** con pasadores de cabeza **atravesando de lado a lado**.
+  - Abajo, **nervios con 3 aberturas** donde se cuelgan mosquetones y poleas.
+  - La gin pole naranja va encima, abisagrada con 2 pasadores. Tiene huecos ovalados, tubo diagonal y **rosca/ranura interior**.
+  - Los tubos azules tienen **huecos en fila** y un **tornillo pequeño con tope** cerca de la boca.
+- **Foto gin pole en uso (armado alternativo):** cabeza azul con un tubo largo y un tubo abierto. La gin pole naranja va debajo. Encima de la pata hay un **disco naranja de 10 huecos** (AZORP) con 3 tornillos.
+- **Fotos AZORP (x2, repetida):**
+  - Disco naranja "rock exotica AZORP" con **10 huecos grandes** para mosquetón en el borde, **hueco central** para el tubo y **2 huecos chicos** para pasador y tornillo.
+  - Abajo, en la misma pata, un **disco azul** igual.
+  - Se usa para colgar muchos mosquetones en el centro del trípode.
