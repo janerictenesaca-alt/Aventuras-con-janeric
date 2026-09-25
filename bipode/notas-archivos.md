@@ -519,3 +519,11 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Patas del A-frame: 2 tramos de afuera + de adentro abajo + pie Raptor. La gin pole naranja arriba al centro y su pata
   (tubos oscuros, 3 tramos con pasadores) baja vertical al centro, con pie naranja.
 - Se ven 5 bolsos de transporte (4 largos + 1 corto).
+
+## Corrección 8
+- Foto `fotos-correcciones/08_extremos_de_tubos.jpg` (render de extremos):
+  - Arriba (2 tubos): extremo HEMBRA de la pata de afuera: en la boca hay ranuras de 2 formas: una en U recta y otra en
+    ojo de cerradura (cuello angosto + redondo al fondo) donde se traba el tope. Hueco 3/8" a ~1 diámetro de la boca.
+  - Abajo izq.: pata de ADENTRO, mismo diámetro en todo el largo, huecos 3/8" en línea cada ~2–3 diámetros.
+  - Abajo der.: extremo MACHO de la pata de afuera: rebajado (escalón), hueco 3/8" en el rebaje, tope redondo de
+    alineación en el escalón y un hueco chico bajo el escalón (fijación del tope).
