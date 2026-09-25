@@ -469,3 +469,10 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   3 casquillos naranjas rectos con pasador y 3 pies Raptor naranjas.
 - Usuario: "6 tubos principales y 3 tubos que van dentro de los principales, en las puntas". Calcular los huecos de los tubos
   para esa función (ajuste de altura). En v7 falla esa parte.
+
+## Corrección 2
+- Foto `fotos-correcciones/02_tubos_pasan_por_la_cabeza.jpg`: el tubo ATRAVIESA el casquillo azul y el tubo naranja de la gin pole
+  y SOBRESALE por arriba de la cabeza (unos 100–150 mm). Los casquillos de la cabeza están abiertos arriba y abajo.
+- Usuario: los 3 tubos de adentro van dentro de los principales, sujetos en la pieza azul y la naranja, y sobresalen por la punta
+  para montar un accesorio extra (lo va a mostrar; probablemente la placa AZORP / "Zube" de las fotos 161–163).
+- Hacer: pata que pase por el casquillo, huecos alineados con los huecos G del casquillo, y largo que sobresale arriba.
