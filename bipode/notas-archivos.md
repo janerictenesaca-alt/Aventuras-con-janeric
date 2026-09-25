@@ -547,3 +547,13 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   Por eso todos los huecos (tubos, casquillos azules y tubo naranja) van con el MISMO paso, para que coincidan cada vez que el
   tubo sale un poco más. Regla v8: paso único 139,7 mm (5½") desde la boca en todos los tubos y casquillos; el hueco del
   accesorio a la misma distancia sobre la boca de arriba en los 3 casquillos.
+
+## Corrección 11 — placa azul (v7 casi idéntica, falta retoque)
+- Fotos `12_original_placa_azul_atras.jpg`, `13_original_placa_azul_arriba.jpg`, comparación `14_comparacion_v7_vs_original.png`.
+- Diferencias encontradas:
+  1. SOBRA la placa trasera 04 (72 × 104 con ventana y corazón): en el original el centro atrás está ABIERTO, es una U
+     (silla) entre las 2 aletas de adentro, no una caja cerrada. Esa es la "plaquita de más".
+  2. La placa de fondo 05 es demasiado grande (llega hasta atrás): en el original es un puente chico abajo, con el hueco C.
+  3. Las escuadras 06 de arriba no existen en el original: allí hay un brazo inclinado (marco de la ventana E) del tubo a la
+     aleta de afuera, por abajo.
+  4. Las aletas del original son orejas más chicas (rectángulo redondeado alrededor de los 2 huecos), no placas tan grandes.
