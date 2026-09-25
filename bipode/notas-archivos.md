@@ -485,3 +485,11 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - En la foto: 2 poleas con eslabón giratorio colgadas de los 2 pasadores de abajo (una en cada ranura izq./der.);
   cuerda amarrada con nudo al ala naranja de la gin pole.
 - Hacer: los huecos de tubos principales, tubos de adentro y casquillos deben coincidir en las 2 configuraciones.
+
+## Corrección 4
+- Foto `fotos-correcciones/04_patas_a_pies.png` (manual, "Legs to feet"): el pie plano y el pie Raptor se ponen tanto en la
+  pata de AFUERA (E, H) como en la pata de ADENTRO (F, I). Pie Raptor con 2 huecos grandes, ranura en gancho y huecos chicos.
+  Pie plano con rótula: la rótula no debe quedar tope (G). Raptor: apoyar la garra, no el costado (J).
+- Usuario: la pata puede ser corta (solo el pie) o extendida; depende de cómo se combinen los 6 tubos principales y los 3 de adentro.
+- Hacer: la boca del pie, la del casquillo y el extremo de cada tubo deben tener el mismo encaje y los huecos alineados,
+  para que cualquier tubo (principal o de adentro) entre en cualquier pie o casquillo.
