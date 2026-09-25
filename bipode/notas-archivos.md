@@ -396,3 +396,12 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   - Placas azules en paralelo con **ventana triangular**.
   - La gin pole naranja se une con **1 pasador grande** por su oreja redonda.
   - Las patas de adentro tienen **huecos en fila**.
+- **Repetidas** (ya anotadas): kit desarmado, cabeza con gin pole de lado, gin pole sobre la pata y AZORP.
+- **Cabeza A-frame, cara de atrás, sin gin pole (FOTO CLAVE):**
+  - **4 placas verticales** (2 pares) que unen los 2 tubos.
+  - Al centro, un **puente en forma de "H"** con **canal curvo arriba**.
+  - **2 pasadores largos arriba y 2 abajo**, que atraviesan cada par de placas hasta el tubo.
+  - **Ventanas triangulares** a los lados.
+  - Tubo derecho con **hueco arriba** (la pata sale).
+- **Foto de rescate:** gin pole / A-frame de lado armada en voladizo sobre un precipicio con camilla. La pata va apoyada en roca con una bolsa, y hay vientos.
+- **Mochila:** gin pole naranja y cabeza A-frame azul (con pasadores puestos), cordón naranja, polea y pasadores. Se ve **el tubo azul de un lado con fila de huecos**.
