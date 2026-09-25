@@ -256,3 +256,23 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 | 9 | Pasador de pata y pie 9,4 × 98 mm | VX0300 | 17 (VX2: 11) | 43 g |
 - Total: 40 piezas en el kit original (34 en el VX2 nuevo). Peso con los 2 juegos de pies: 33 kg.
 - Fuentes: Mountain Tek, CMC, Rope Access Equip, R3 SAR Gear, Sky5 Store, WorkSafe Gear.
+
+## Lote 6 — reinicio: 5 fotos del Vortex real (25-09-2026)
+- **Foto 67, kit desarmado:**
+  - 7 patas de afuera plateadas (claras, con huecos solo en las puntas) y 3 patas de adentro (más oscuras, con una fila de huecos a todo el largo).
+  - 1 cabeza A-frame azul con 4 pasadores dorados y 1 cabeza gin pole dorada/naranja.
+  - 2 pasadores de cabeza + 10 pasadores de pata, y el manual.
+  - 3 pies planos: tubo dorado + rótula + base de cobre con aro azul de 10 huecos.
+  - 3 pies Raptor: tubo dorado con la punta cortada en garra.
+  - 3 casquillos cortos dorados (probablemente adaptadores).
+- **Foto 68, cabeza en uso (desde abajo y atrás):**
+  - Cara azul con **muchos cortes pequeños**: ranuras y ovalados en fila, texto grabado y ventanas.
+  - Los tubos de la cabeza tienen **huecos en fila a lo largo**.
+  - Hay pasadores con cordón naranja, la gin pole naranja abisagrada atrás, poleas y mosquetones colgando al centro.
+- **Foto 69:** gin pole naranja sobre la cabeza azul, en un mástil (monópode) con un técnico.
+- **Foto 70, pie plano de cerca:** tubo naranja con 2 huecos (uno con tornillo tope al lado), rótula dorada y base de cobre con aro azul y 4 huecos en las esquinas.
+- **Foto 71, trípode completo:**
+  - Cabeza azul con la parte de arriba curva/cilíndrica.
+  - Patas plateadas en 2 tramos visibles, con la unión marcada.
+  - Pies Raptor naranja con pasador y garra.
+  - La gin pole naranja arriba a la derecha.
