@@ -493,3 +493,14 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Usuario: la pata puede ser corta (solo el pie) o extendida; depende de cómo se combinen los 6 tubos principales y los 3 de adentro.
 - Hacer: la boca del pie, la del casquillo y el extremo de cada tubo deben tener el mismo encaje y los huecos alineados,
   para que cualquier tubo (principal o de adentro) entre en cualquier pie o casquillo.
+
+## Corrección 5
+- Foto `fotos-correcciones/05_detalle_tubos.png` (manual, "Vortex legs detail"):
+  - Pata de AFUERA (B): un extremo HEMBRA con ranuras de alineación en U (I) y un hueco 3/8" (C) cerca de la boca;
+    el otro extremo MACHO rebajado en CNC del mismo tubo (no espigón aparte), con un tope/perno de alineación (G) y un hueco 3/8" (H).
+  - Pata de ADENTRO (F): tubo liso con huecos 3/8" de ajuste (D) a lo largo; grabado "This is the last hole" junto al último hueco (E).
+  - Unión adentro+afuera (A): la de adentro entra por la boca hembra y el pasador pasa por el hueco C y un hueco D.
+  - Unión afuera+afuera (K): el macho entra en la hembra, el tope G cae en la ranura I, pasador por H/C.
+  - Pasador (J): las bolas deben salir por completo del otro lado del tubo.
+- Usuario: según cómo se pongan los tubos se alarga la parte de arriba (para poner una pieza más) o, dándoles la vuelta, las patas.
+- Hacer v8: macho rebajado del mismo tubo con tope; hembra con ranuras; huecos que coincidan en todas las combinaciones.
