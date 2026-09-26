@@ -140,9 +140,9 @@ a{color:var(--azul)}
 <div class="envol">
   <header class="cabecera">
     <div>
-      <div class="etiqueta">VX-EC · Rev. D · Aventuras con Janeric</div>
+      <div class="etiqueta">VX-EC · Rev. E · Aventuras con Janeric</div>
       <h1>Trípode <span>VX-EC</span></h1>
-      <p class="lead">Copia del Arizona Vortex armado como trípode. La cabeza azul es una placa lisa de una sola pieza con 2 tubos, 4 aletas y un puente; la gin pole naranja son 7 piezas. 7 patas de afuera, 3 de adentro, 3 pies, el carrete de anclajes y el poste AHP para el carro. Todos los huecos siguen una sola regla: 63,5 mm desde cada boca y 139,7 mm entre huecos.</p>
+      <p class="lead">Copia del Arizona Vortex armado como trípode. La cabeza azul es una placa lisa de 15,9 mm con 2 tubos, 4 aletas y un puente; la gin pole naranja son 7 piezas de 12,7 mm. 7 patas de afuera, 3 de adentro, 3 pies, el carrete de anclajes, el poste AHP de acero para el carro y el pie plano con rótula. Todos los huecos siguen una sola regla: 63,5 mm desde cada boca y 139,7 mm entre huecos.</p>
     </div>
     <div class="cifras">
       <div class="cifra"><b>417 × 165</b><span>mm, cabeza A-frame (igual al Vortex)</span></div>
@@ -160,7 +160,9 @@ a{color:var(--azul)}
       <button id="v-cab" aria-pressed="false">Cabeza + gin pole</button>
       <button id="v-af" aria-pressed="false">Solo cabeza A-frame</button>
       <button id="v-trib" aria-pressed="false">Tubo arriba + carrete</button>
-      <button id="v-acc" aria-pressed="false">Carrete y AHP</button>
+      <button id="v-car" aria-pressed="false">Carretes + gin pole de lado</button>
+      <button id="v-ahp" aria-pressed="false">AHP (carro)</button>
+      <button id="v-rot" aria-pressed="false">Pie con rótula</button>
       <span class="sep" aria-hidden="true"></span>
       <button id="c-iso">3D</button><button id="c-frente">Frente</button><button id="c-atras">Atrás</button><button id="c-lado">Lado</button><button id="c-arriba">Arriba</button>
       <button id="c-giro" aria-pressed="false">Girar solo</button>
@@ -179,6 +181,9 @@ a{color:var(--azul)}
     <div class="barra" role="group" aria-label="Modo del juego">
       <button id="m-soldar" aria-pressed="true">Soldar la cabeza y la gin pole</button>
       <button id="m-armar" aria-pressed="false">Armar el trípode</button>
+      <button id="m-carrete" aria-pressed="false">Carretes</button>
+      <button id="m-ahp" aria-pressed="false">AHP</button>
+      <button id="m-rotula" aria-pressed="false">Pie con rótula</button>
     </div>
     <div class="juego">
       <div class="escena" id="escena2">
@@ -203,14 +208,14 @@ a{color:var(--azul)}
 
   <section id="planos" aria-labelledby="t-planos">
     <div class="cab-sec"><div class="etiqueta">3 · Planos</div><h2 id="t-planos">Cada pieza, numerada y con medidas</h2>
-      <p><b>Todas las medidas están en milímetros (mm).</b> Las placas 01, 03, 04, 05, 07, 08, 09 y los discos 15 y 16 se cortan con láser en plancha de 10 mm; el AHP (17) en plancha de 1" con chorro de agua. El PDF de 12 hojas en A3 y los archivos DXF están en la sección 6.</p></div>
+      <p><b>Todas las medidas están en milímetros (mm).</b> Cada dibujo dice cuántas piezas fabricar («FABRICAR × N»). La placa 01 va en aluminio de 15,9 mm; 03, 04, 05, 07, 08, 09 y los discos 15 y 16 en 12,7 mm; el AHP (17) y la base del pie con rótula (18) en acero A36. El PDF de 13 hojas en A3 y los archivos DXF están en la sección 6.</p></div>
     <div class="planos">%%TARJETAS%%</div>
   </section>
 
   <section id="piezas" aria-labelledby="t-piezas">
     <div class="cab-sec"><div class="etiqueta">4 · Lista</div><h2 id="t-piezas">Piezas y alturas</h2></div>
     <div class="dos">
-      <div class="tabla"><table><thead><tr><th>N.º</th><th>Pieza</th><th>Material</th><th>Cant.</th><th>kg c/u</th></tr></thead><tbody>%%LISTA%%</tbody></table></div>
+      <div class="tabla"><table><thead><tr><th>N.º</th><th>Pieza</th><th>Material</th><th>FABRICAR</th><th>kg c/u</th></tr></thead><tbody>%%LISTA%%</tbody></table></div>
       <div style="display:grid;gap:12px">
         <div class="tabla"><table><thead><tr><th>Patas de afuera</th><th>Hueco pata de adentro</th><th>Altura</th><th>Lado entre pies</th></tr></thead><tbody>%%ALTURAS%%</tbody></table></div>
         <p style="font-size:14px;color:var(--gris)">Altura del suelo al pasador de abajo de la cabeza, con las 3 patas iguales. Hueco 1 = pata de adentro metida lo menos posible. Vortex: 2,41 m con 2 patas de afuera.</p>
@@ -232,7 +237,7 @@ a{color:var(--azul)}
 
   <section id="archivos" aria-labelledby="t-archivos">
     <div class="cab-sec"><div class="etiqueta">6 · Archivos</div><h2 id="t-archivos">Archivos para el taller y el diseñador</h2>
-      <p>Todo está en la carpeta <code>bipode/v7</code> del repositorio. Desde GitHub se baja cada archivo o la carpeta completa en ZIP (botón «Code» → «Download ZIP»).</p></div>
+      <p>Todo está en la carpeta <code>bipode/v9</code> del repositorio. Desde GitHub se baja cada archivo o la carpeta completa en ZIP (botón «Code» → «Download ZIP»).</p></div>
     <a class="boton-enlace" href="%%REPO%%" target="_blank" rel="noopener">Abrir la carpeta en GitHub ↗</a>
     <ul class="archivos">%%ARCHIVOS%%</ul>
   </section>
@@ -342,20 +347,22 @@ if(!window.THREE || !THREE.GLTFLoader || !THREE.OrbitControls){
 // ---------------------------------------------------------------- 1 · visor
 var E1 = new Escena(document.getElementById('escena1'));
 var vista1 = 'tri', vistas = {};
-var ARCH = {tri:'tripode_glb.txt', trib:'tripode_b_glb.txt', cab:'cabeza_glb.txt', af:'cabeza_glb.txt', acc:'acc_glb.txt'};
-var CLAVE = {tri:'tri', trib:'trib', cab:'cab', af:'cab', acc:'acc'};
+var ARCH = {tri:'tripode_glb.txt', trib:'tripode_b_glb.txt', cab:'cabeza_glb.txt', af:'cabeza_glb.txt', car:'acc_glb.txt', ahp:'acc_glb.txt', rot:'acc_glb.txt'};
+var CLAVE = {tri:'tri', trib:'trib', cab:'cab', af:'cab', car:'acc', ahp:'acc', rot:'acc'};
+var FILTRO = {car:/^a_c/, ahp:/^a_17/, rot:/^a_18/, carrete:/^a_c/, rotula:/^a_18/};
+FILTRO.ahp2 = FILTRO.ahp;
 var DIRS = {tri:{iso:[1,.35,1.4], frente:[0,.12,-1], atras:[0,.18,1], lado:[1,.1,0], arriba:[0,1,.002]},
             cab:{iso:[1,.9,1.3], frente:[0,.05,-1], atras:[0,.2,1], lado:[1,.05,0], arriba:[0,1,.002]},
             acc:{iso:[.8,.9,1.2], frente:[0,.05,-1], atras:[0,.2,1], lado:[1,.05,0], arriba:[0,1,.002]}};
 DIRS.trib = DIRS.tri;
-var BOTONES = ['tri','cab','af','trib','acc'];
+var BOTONES = ['tri','cab','af','trib','car','ahp','rot'];
 function mostrar(v){
   vista1 = v;
   BOTONES.forEach(function(k){ document.getElementById('v-'+k).setAttribute('aria-pressed', k === v); });
   var clave = CLAVE[v];
   var p = vistas[clave] ? Promise.resolve(vistas[clave]) : modelo(ARCH[v]).then(function(m){ vistas[clave] = m; return m; });
   p.then(function(m){
-    m.userData.cont.children.forEach(function(o){ o.visible = !(v === 'af' && /^g_/.test(o.name)); });
+    m.userData.cont.children.forEach(function(o){ var vis = FILTRO[v] ? FILTRO[v].test(o.name) : !(v === 'af' && /^g_/.test(o.name)); o.traverse(function(x){ if(x.isMesh) x.visible = vis; }); o.visible = vis; });
     E1.poner(m); E1.mirar(DIRS[clave].iso, null, (clave === 'tri' || clave === 'trib') ? .8 : 1);
   }).catch(function(e){ falla(E1.el, e); });
 }
@@ -366,7 +373,9 @@ mostrar('tri');
 
 // ---------------------------------------------------------------- 2 · juego
 var E2 = new Escena(document.getElementById('escena2'));
-var modo = 'soldar', J = {soldar:null, armar:null}, k = 0;
+var modo = 'soldar', J = {}, k = 0, MODOS = ['soldar','armar','carrete','ahp','rotula'];
+var ARCHJ = {soldar:'cabeza_glb.txt', armar:'tripode_glb.txt', carrete:'acc_glb.txt', ahp:'acc_glb.txt', rotula:'acc_glb.txt'};
+var TXT_FIN = {soldar:'Cabeza y gin pole listas', armar:'Trípode armado', carrete:'Carretes armados con la gin pole de lado', ahp:'AHP armado', rotula:'Pie con rótula armado'};
 var EXP = {}; D.tri.forEach(function(p){ EXP[p.n] = p.e; });
 
 function montarJuego(m, nombre){
@@ -374,15 +383,17 @@ function montarJuego(m, nombre){
   var pasos = D[nombre], piezas = {}, C;
   m.updateMatrixWorld(true);
   var hijos = m.userData.cont.children.slice();
+  if(FILTRO[nombre]){ hijos = hijos.filter(function(o){ var ok = FILTRO[nombre].test(o.name); o.visible = ok; return ok; }); }
   var caja = new THREE.Box3(); hijos.forEach(function(o){ caja.expandByObject(o); }); C = caja.getCenter(new THREE.Vector3());
   hijos.forEach(function(o){
     var casa = o.position.clone(), e;
     if(nombre === 'armar'){ var v = EXP[o.name] || [0,0,0]; e = new THREE.Vector3(v[0], v[1], v[2]); }
     else {
       var c = new THREE.Box3().setFromObject(o).getCenter(new THREE.Vector3()), d = c.clone().sub(C);
-      if(/^g_/.test(o.name)) d.z += 140;
+      if(/^g_|^a_cG/.test(o.name)) d.z += 140;
       if(/^c_P-|^c_PL/.test(o.name)) d.x *= 2.2;
       e = d.multiplyScalar(1.5).add(new THREE.Vector3(0, 90 + (/^g_/.test(o.name) ? 60 : 0), 0));
+      if(nombre === 'rotula'){ e.y = Math.abs(e.y) + 60; e.x *= 1.6; e.z *= 1.6; }
     }
     piezas[o.name] = {o:o, casa:casa, fuera:casa.clone().add(e), paso:-1, pos:casa.clone()};
   });
@@ -419,8 +430,8 @@ function aplicar(anim){
   };
   var N = j.pasos.length, p = j.pasos[Math.min(k, N-1)];
   document.getElementById('j-k').textContent = k >= N ? 'Listo · ' + N + ' de ' + N + ' pasos' : 'Paso ' + (k+1) + ' de ' + N;
-  document.getElementById('j-t').textContent = k >= N ? (modo === 'soldar' ? 'Cabeza y gin pole listas' : 'Trípode armado') : p.t;
-  document.getElementById('j-d').textContent = k >= N ? (modo === 'soldar' ? 'Todas las piezas en su lugar. Toca «Desarmar» para ir hacia atrás.' : 'Las 3 patas iguales, con maniotas. Toca «Desarmar» para ir hacia atrás.') : p.d;
+  document.getElementById('j-t').textContent = k >= N ? TXT_FIN[modo] : p.t;
+  document.getElementById('j-d').textContent = k >= N ? (modo === 'armar' ? 'Las 3 patas iguales, con maniotas. Toca «Desarmar» para ir hacia atrás.' : 'Todas las piezas en su lugar. Toca «Desarmar» para ir hacia atrás.') : p.d;
   document.getElementById('j-bar').style.width = (100*k/N) + '%';
   document.getElementById('j-ant').disabled = k <= 0;
   document.getElementById('j-sig').disabled = k >= N;
@@ -437,16 +448,14 @@ function lista(){
 }
 function modoJuego(m){
   modo = m; k = 0;
-  document.getElementById('m-soldar').setAttribute('aria-pressed', m === 'soldar');
-  document.getElementById('m-armar').setAttribute('aria-pressed', m === 'armar');
+  MODOS.forEach(function(x){ document.getElementById('m-'+x).setAttribute('aria-pressed', m === x); });
   lista();
-  var arch = m === 'soldar' ? 'cabeza_glb.txt' : 'tripode_glb.txt';
-  var p = J[m] ? Promise.resolve(J[m]) : modelo(arch).then(function(mo){ return montarJuego(mo, m); });
-  p.then(function(j){ E2.poner(j.m); aplicar(false); E2.mirar(m === 'soldar' ? [1,.9,1.3] : [1,.5,1.5], j.caja, .72); })
+  var p = J[m] ? Promise.resolve(J[m]) : modelo(ARCHJ[m]).then(function(mo){ return montarJuego(mo, m); });
+  p.then(function(j){ E2.poner(j.m); aplicar(false); E2.mirar(dirJuego(m), j.caja, .72); })
    .catch(function(e){ falla(E2.el, e); });
 }
-document.getElementById('m-soldar').addEventListener('click', function(){ modoJuego('soldar'); });
-document.getElementById('m-armar').addEventListener('click', function(){ modoJuego('armar'); });
+function dirJuego(m){ return m === 'armar' ? [1,.5,1.5] : (m === 'ahp' ? [.9,.8,-1.1] : [1,.9,1.3]); }
+MODOS.forEach(function(x){ document.getElementById('m-'+x).addEventListener('click', function(){ modoJuego(x); }); });
 document.getElementById('j-sig').addEventListener('click', function(){ var j = J[modo]; if(j && k < j.pasos.length){ k++; aplicar(true); } });
 document.getElementById('j-ant').addEventListener('click', function(){ if(k > 0){ k--; aplicar(true); } });
 document.getElementById('j-todo-des').addEventListener('click', function(){ k = 0; aplicar(true); });
@@ -454,7 +463,7 @@ document.getElementById('j-todo-arm').addEventListener('click', function(){ var 
 document.getElementById('j-reset').addEventListener('click', function(){
   var j = J[modo]; k = 0; if(!j) return;
   Object.keys(j.piezas).forEach(function(n){ var q = j.piezas[n]; q.o.position.copy(q.paso < 0 ? q.casa : q.fuera); });
-  E2.ctl.autoRotate = false; aplicar(false); E2.mirar(modo === 'soldar' ? [1,.9,1.3] : [1,.5,1.5], j.caja, .72);
+  E2.ctl.autoRotate = false; aplicar(false); E2.mirar(dirJuego(modo), j.caja, .72);
 });
 modoJuego('soldar');
 })();

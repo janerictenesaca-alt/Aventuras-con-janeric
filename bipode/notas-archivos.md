@@ -698,3 +698,18 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   → también sirve al derecho o de cabeza. Carrete armado: 154,9 = 63,5 (naranja) + 91,4 (azul).
 - Comprobar con programa todas las configuraciones del original: tubo arriba, spool, gin de lado, naranja en macho con tope,
   naranja en pata de adentro, azul sobre pata de afuera y sobre el pie.
+
+## v9 (Rev. E) — ejecutado
+- Placa frontal 01 en 15,9 mm (5/8"); aletas, puente, gin pole y discos en 12,7 mm (1/2").
+- Corazón reemplazado por 2 huecos Ø 25 a x = ±19, z = 52,2 (13 mm entre ellos, 39,7 mm al borde).
+- Puente 04 subido a z = 11,0–23,7: la gin pole al juntarse baja hasta z = 28,7 (tope a 78°, choca el ala con una aleta) → 5 mm de luz. Hueco C a 42 mm de la placa, 14 mm de metal atrás.
+- Orejas 07 de 12,7 con lengüeta que atraviesa el ala (ranuras 13,1 × 20,4) y cuerpo de 110 mm bajo el ala con borde diagonal. Hueco del pasador en el mismo lugar.
+- Ala 05: punta alargada 45 mm con hueco P Ø 22; ancho 150; chaflán 13 × 45° adelante para que la gin pole quepa de lado entre discos.
+- Ojo 08 ampliado a R 25 (12,5 mm de metal).
+- Pie 14 y casquillo 18a de 215 mm (antes 140): la pata de adentro (127) o el macho (152) chocaban con la lengüeta de 60 de la garra.
+- Patas de afuera dadas vuelta giran sobre Y (el tope sigue entrando en la ranura F del pie).
+- Config. B: las 3 patas apuntan a un punto 250 mm sobre la boca de arriba → no pueden salir 253 mm las 3. Con carrete: solo esa pata sale 253,4; las otras 2 en A con j = 2 (mismo largo exacto: 2562,8 mm). Las 3 arriba sin carrete: máximo 113,7 mm.
+- AHP en acero A36: 17a espiga cuadrada 2"×1/4"×300 (entra directo en el enganche), 17b yugo, 17c brazos ×2, 17d placa de anclajes en U (4 × Ø25), 17e alma de la T, 17f argollas ×2 a 35° hacia arriba.
+- Pie con rótula 18a–18h: bola de enganche 2" comprada, asiento 1045 con rosca M8, anillo Ø110, base A36 250×120×10 (4 × Ø14 + 2 × Ø25), suela caucho 5 mm.
+- Chequeos: v9_chequeo.py (0 choques en cabeza, A, B, carretes, AHP, rótula) y v9_bordes.py (todo hueco de mosquetón ≥ 12 mm).
+- Pendiente de respuesta: los 3 tubos naranja rectos del kit (se toman como casquillos de pie de repuesto).

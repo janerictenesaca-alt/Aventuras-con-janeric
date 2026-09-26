@@ -315,7 +315,7 @@ OREJA = perfil_oreja()
 def perfil_ojo():
     """B: ojo central de la gin pole (x, z), placa colgada bajo el ala, hueco para mosquetón."""
     zc = -24.0
-    p = unary_union([Point(0, zc).buffer(22, quad_segs=48), box(-22, zc, 22, GP_ALA_Z[0])])
+    p = unary_union([Point(0, zc).buffer(25, quad_segs=48), box(-25, zc, 25, GP_ALA_Z[0])])      # 12,5 mm de metal alrededor del hueco
     p = p.buffer(-3, quad_segs=8).buffer(3, quad_segs=8)
     return Polygon(p.exterior).simplify(0.02), [("B", 0.0, zc, 25.0)]
 
