@@ -634,3 +634,8 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - En la punta (casquillo de la cabeza) va un tubo, y DENTRO de ese tubo va otro tubo que sale como EXTENSIÓN;
   en esa extensión se ponen los carretes naranja y azul. Mostrarlo claro en 3D y en el juego (tubo dentro de tubo + carretes).
 - En la foto del kit también hay 3 tubos naranjas rectos con pasador (aparte de los 3 pies con rótula y 3 Raptor): confirmar su uso.
+
+## Pedido: cantidades visibles (sin ejecutar)
+- En cada dibujo/plano (PDF y página) poner grande "FABRICAR × N" con la cantidad total de esa pieza
+  (ej.: patas de afuera × 7, patas de adentro × 3, pies × 3, aletas × 4, orejas × 2…), no solo el dibujo de una.
+- Agregar una tabla de corte/fabricación con todas las piezas y cantidades totales del kit completo.
