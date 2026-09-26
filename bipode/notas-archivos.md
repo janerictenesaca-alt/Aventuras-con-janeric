@@ -713,3 +713,8 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Pie con rótula 18a–18h: bola de enganche 2" comprada, asiento 1045 con rosca M8, anillo Ø110, base A36 250×120×10 (4 × Ø14 + 2 × Ø25), suela caucho 5 mm.
 - Chequeos: v9_chequeo.py (0 choques en cabeza, A, B, carretes, AHP, rótula) y v9_bordes.py (todo hueco de mosquetón ≥ 12 mm).
 - Pendiente de respuesta: los 3 tubos naranja rectos del kit (se toman como casquillos de pie de repuesto).
+
+## Corrección pedida después de v9 (pendiente de «ejecuta»)
+- Placa frontal 01: los 2 huecos Ø 25 quedaron muy altos (z 52,2). Bajarlos: borde del hueco a 10–15 mm del borde de abajo. Propuesta: 12 mm → centro a z 24,5.
+- Puente 04 (media luna con hueco C): separarlo de la placa frontal hacia atrás, dejando un espacio de ~20 mm para que el mosquetón pase por detrás de la placa y salga por abajo. Propuesta: borde de adelante en y = −14, hueco C en y = −40, borde de atrás en y = −65 (las aletas llegan a −66). Soldado solo a las 2 aletas de adentro. Se mantiene la altura z 11–23,7 (la gin pole baja hasta 28,7).
+- La otra opción (subir el puente por encima de los huecos) no cabe: la gin pole choca al juntarse.
