@@ -647,3 +647,10 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 2. El puente central 04 (pieza en media luna) va MÁS ARRIBA, pero un poco más abajo que lo más bajo que llegue la pieza naranja
    (ojo 08 / orejas) cuando la pata de la gin pole se junta (gira hacia la cabeza), para que no se golpeen: calcular el giro
    de la gin pole alrededor del pasador de arriba y dejar ~5 mm de luz.
+
+## Corrección: orejas de la gin pole se ven débiles (fotos 148–149, sin ejecutar)
+- Las 2 orejas (07) donde cruza el pasador están muy al borde y poco unidas al ala: reforzar.
+- Plan: (a) encastre: el ala 05 lleva 2 ranuras y las orejas pasan a través (lengüetas) y se sueldan arriba y abajo, como una
+  sola pieza; (b) orejas más largas hacia atrás bajo el ala (más cordón de soldadura) con borde de abajo en diagonal (cartela);
+  (c) unir las 2 orejas con una placa transversal que incluya el ojo 08 (forma de C/U, como el bloque entre las patas del
+  original en la foto 149). La posición x = 50…60 no se cambia porque debe entrar en las ranuras de la cabeza.
