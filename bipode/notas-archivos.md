@@ -718,3 +718,4 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Placa frontal 01: los 2 huecos Ø 25 quedaron muy altos (z 52,2). Bajarlos: borde del hueco a 10–15 mm del borde de abajo. Propuesta: 12 mm → centro a z 24,5.
 - Puente 04 (media luna con hueco C): separarlo de la placa frontal hacia atrás, dejando un espacio de ~20 mm para que el mosquetón pase por detrás de la placa y salga por abajo. Propuesta: borde de adelante en y = −14, hueco C en y = −40, borde de atrás en y = −65 (las aletas llegan a −66). Soldado solo a las 2 aletas de adentro. Se mantiene la altura z 11–23,7 (la gin pole baja hasta 28,7).
 - La otra opción (subir el puente por encima de los huecos) no cabe: la gin pole choca al juntarse.
+- Ala 05 de la gin pole (placa naranja): agregar 2 huecos de anclaje más, uno a cada lado del hueco P de la punta. Calculado: Ø 22 en (±51, −172), 12,7 mm de metal a todo (borde, P, hueco del tubo). Quedan 7 huecos de mosquetón.
