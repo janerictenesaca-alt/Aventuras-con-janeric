@@ -725,3 +725,11 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Foto 19_AHP_parte_de_atras.jpg: el tubo cuadrado pasa por encima del cuerpo y llega hasta la unión de los brazos; hueco del pasador del enganche cerca de su punta. Por atrás, el cuerpo tiene un reborde (pared alrededor) y una pared de refuerzo cruzada donde se une con el tubo. Los brazos son barras gruesas con punta redonda y el hueco del pasador de lado. Las argollas (en forma de D) van soldadas afuera de cada brazo, inclinadas ~10° hacia el lado de atrás (el del refuerzo), no planas.
 - Pedido: refuerzo por atrás parecido al de la gin pole (cartelas entre el tubo y la placa). Todo bien reforzado: carga bastante peso. Anclajes: huecos del cuerpo + 2 argollas. El usuario dijo «tres orificios de un lado»; en las fotos se ven 2 + 2 → confirmar.
 - Confirmado por el usuario: 4 huecos en el cuerpo (2 + 2) + 2 orejitas = 6 anclajes, igual que el original. Solo agregar el refuerzo por atrás (como la gin pole). Así lo quería desde el inicio.
+
+## v10 (Rev. F) — ejecutado
+- 01: 2 huecos Ø 25 bajados: 12 mm de metal al borde de abajo (centro z 24,5), ±19 mm.
+- 04: puente abajo (z 0–12,7) y separado 20 mm de la placa (y −13,9 … −61,9), soldado solo a las aletas de adentro; hueco C en y −36,9 (12 mm adelante, 14 atrás). Gin pole al juntarse baja a z 28,7: sin choque.
+- 01r: 4 cartelitas Al 8 mm (16 × 20 mm) placa–casquillo por atrás, a 20 y 128 mm de la boca de arriba.
+- 05: 2 huecos P2 Ø 22 en (±51, −172): 7 anclajes.
+- AHP igual al original: 17b placa A36 25,4 (centro 4 × Ø25 + 2 patitas, pasador de canto a 24 mm), 17a tubo cuadrado atrás, 17d pared, 17e cartelas ×2, 17f orejitas ×2 inclinadas 10° hacia atrás (ventana 26 × 36). Pasador 3/8" × 4".
+- 0 choques, todos los huecos de mosquetón ≥ 12 mm.
