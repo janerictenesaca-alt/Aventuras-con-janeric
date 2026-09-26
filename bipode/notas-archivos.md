@@ -688,3 +688,13 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Arreglo v9: luz entre discos ≈ 135 mm (alto total del carrete 154,9 = 63,5 + 63,5 + 27,94) → pasador del carrete a 63,5 del
   disco naranja y a 91,4 del disco azul (ambos huecos ya existen). Comprobar: punta de la oreja no toca el tubo azul
   (hueco de la oreja en el círculo de huecos R 59; punta a R 43 > R 36,5 del tubo azul) y pasador 1/2" entra en los Ø 24.
+
+## Carretes: al derecho o de cabeza (fotos 155–159, sin ejecutar)
+- El carrete naranja se usa al derecho o de cabeza (disco arriba o abajo), y el azul encima; la punta de la pata a veces queda
+  al ras del disco y a veces sale bastante: eso sale de elegir otro hueco de la pata (paso 139,7) u otro hueco del carrete (27,9).
+- v9: carrete naranja con alto total 127 mm (= 2 × 63,5): huecos a 35,6 · 63,5 · 91,4 desde el disco = los mismos desde la boca
+  → funciona igual al derecho o de cabeza. Carrete azul: alto total 144,9 mm (luz entre discos 134,9 para la gin pole de lado),
+  fila 1 de huecos medidos desde el disco (35,6 · 63,5 · 91,4) y fila 2 a 90° medidos desde la boca del tubo (35,6 · 63,5 · 91,4)
+  → también sirve al derecho o de cabeza. Carrete armado: 154,9 = 63,5 (naranja) + 91,4 (azul).
+- Comprobar con programa todas las configuraciones del original: tubo arriba, spool, gin de lado, naranja en macho con tope,
+  naranja en pata de adentro, azul sobre pata de afuera y sobre el pie.
