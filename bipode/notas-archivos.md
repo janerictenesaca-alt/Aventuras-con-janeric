@@ -639,3 +639,11 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - En cada dibujo/plano (PDF y página) poner grande "FABRICAR × N" con la cantidad total de esa pieza
   (ej.: patas de afuera × 7, patas de adentro × 3, pies × 3, aletas × 4, orejas × 2…), no solo el dibujo de una.
 - Agregar una tabla de corte/fabricación con todas las piezas y cantidades totales del kit completo.
+
+## Correcciones a la placa azul v8 (capturas 15 y 16, sin ejecutar)
+1. Cambiar el hueco en forma de corazón (placa 01) por 2 huecos REDONDOS para 2 mosquetones grandes, sin mover ninguna otra medida.
+   Revisado: caben 2 × Ø 26 mm con centros en x = ±18 mm, z = 30 mm (puente de 10 mm entre ellos; bordes lejos de las aletas
+   de adentro en x = 36 y de las muescas). Se engancha rodeando el puente del medio.
+2. El puente central 04 (pieza en media luna) va MÁS ARRIBA, pero un poco más abajo que lo más bajo que llegue la pieza naranja
+   (ojo 08 / orejas) cuando la pata de la gin pole se junta (gira hacia la cabeza), para que no se golpeen: calcular el giro
+   de la gin pole alrededor del pasador de arriba y dejar ~5 mm de luz.
