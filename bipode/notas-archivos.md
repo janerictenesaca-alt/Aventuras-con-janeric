@@ -654,3 +654,5 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   sola pieza; (b) orejas más largas hacia atrás bajo el ala (más cordón de soldadura) con borde de abajo en diagonal (cartela);
   (c) unir las 2 orejas con una placa transversal que incluya el ojo 08 (forma de C/U, como el bloque entre las patas del
   original en la foto 149). La posición x = 50…60 no se cambia porque debe entrar en las ranuras de la cabeza.
+- Agregar un hueco de anclaje en la PUNTA del ala 05 de la gin pole (lado opuesto a la cabeza). Hoy no cabe (el tubo llega casi
+  al borde): alargar la punta del ala ~30 mm para un hueco Ø 22 con ≥ 8 mm de borde.
