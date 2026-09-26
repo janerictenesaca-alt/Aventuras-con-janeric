@@ -656,3 +656,7 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   original en la foto 149). La posición x = 50…60 no se cambia porque debe entrar en las ranuras de la cabeza.
 - Agregar un hueco de anclaje en la PUNTA del ala 05 de la gin pole (lado opuesto a la cabeza). Hoy no cabe (el tubo llega casi
   al borde): alargar la punta del ala ~30 mm para un hueco Ø 22 con ≥ 8 mm de borde.
+- Puente central 04: subirlo, pero sin tapar por detrás los 2 huecos nuevos de la placa 01 (Ø 26 en z = 17…43): va arriba de
+  ellos (cara de abajo del puente ≥ ~50 mm) y por debajo de lo más bajo que llega la gin pole al juntarse (luz ~5 mm).
+- Hueco C del puente: acercarlo al borde de atrás, dejando borde suficiente para el tirón del mosquetón (≥ 12–14 mm de metal).
+  Lo mismo para los 2 huecos que reemplazan el corazón (≥ 10 mm entre ellos y a los bordes).
