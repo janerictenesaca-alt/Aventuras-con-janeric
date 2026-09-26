@@ -733,3 +733,4 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - 05: 2 huecos P2 Ø 22 en (±51, −172): 7 anclajes.
 - AHP igual al original: 17b placa A36 25,4 (centro 4 × Ø25 + 2 patitas, pasador de canto a 24 mm), 17a tubo cuadrado atrás, 17d pared, 17e cartelas ×2, 17f orejitas ×2 inclinadas 10° hacia atrás (ventana 26 × 36). Pasador 3/8" × 4".
 - 0 choques, todos los huecos de mosquetón ≥ 12 mm.
+- Tubos naranja rectos del kit: el usuario no sabe cuáles son; se cierra la pregunta. Las cantidades del kit ya están en la tabla (hoja 02). Nota «confirmar» quitada del PDF.

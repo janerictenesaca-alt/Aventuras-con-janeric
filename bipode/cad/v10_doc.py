@@ -737,7 +737,7 @@ def hoja_lista():
         <div class="aviso"><b>Numeración</b>01–04 cabeza A-frame (azul) · 05–09 gin pole (naranja) · 10 pata de afuera (7: 6 en uso + 1 de repuesto) ·
         13 pata de adentro · 14 pie · 15–16 carrete · 17a–f AHP del carro (igual al original) · 18a–h pie con rótula. Se compran: 16 pasadores 3/8" × 3", 1 pasador 3/8" × 4" (AHP), 4 (+1) pasadores 1/2",
         2 poleas, 3 maniotas, 3 bolas de enganche, 24 tornillos M8 (hoja de material). Grabar el número en cada pieza.
-        Los 3 tubos naranja rectos con pasador del kit original: por ahora se toman como casquillos de pie de repuesto (confirmar).</div>
+        Las cantidades de esta tabla son el kit completo a fabricar.</div>
       </div>
       <div class="bloque" style="gap:4mm">
         <h3>Alturas · trípode de patas iguales</h3>
