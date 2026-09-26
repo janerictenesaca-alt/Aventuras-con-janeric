@@ -608,3 +608,13 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Uso: el pie de una pata del trípode queda anclado al enganche del carro; se ven cintas y poleas a los lados.
 - v8: diseñarla como accesorio aparte, con planos; U y pasador compatibles con Ø 50,8 y el paso de huecos 139,7;
   lengüeta para receptor de 2" (50,8 × 50,8). No va montada en el trípode.
+
+## Corrección del usuario al AHP de v8 (información, sin ejecutar)
+- El AHP de v8 quedó muy simple: le falta la parte de abajo.
+- Los 2 brazos largos (la horquilla) llevan cada uno una argolla (oreja de maniota) que NO es recta: va medio inclinada.
+- La parte larga ("lengüeta") es un TUBO CUADRADO; por debajo lleva un refuerzo en forma de T que baja por el centro
+  hasta donde empiezan los 2 brazos largos.
+- Se puede fabricar por partes: una especie de C (horquilla) + tubo cuadrado arriba + T de refuerzo abajo. Pensar el despiece.
+- Hacer el AHP en 3D detallado para el fabricante, y agregarlo al visor 3D y al juego de armar/desarmar por partes, igual que
+  el trípode, la cabeza azul y la gin pole. Lo mismo para el carrete (AZORP) y lo demás que no quedó bien entendido.
+- El usuario enviará más fotos (otros ángulos y la parte de atrás). Esperar "ejecuta".
