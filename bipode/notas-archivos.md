@@ -678,3 +678,13 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Materiales propuestos: bola = BOLA DE ENGANCHE DE REMOLQUE 2" (Ø 50,8, rosca 1") comprada, acero forjado, ≥ 3500 kg;
   asiento y anillo de retención en acero 1045 o Al 7075 torneados; base en acero A36 10 mm láser (o Al 6061 16 mm);
   suela de caucho 5 mm pegada; tornillos M8 clase 8.8. Medidas y huecos compatibles con la regla (63,5 / 139,7).
+
+## Configuración "loca": gin pole de lado entre los 2 carretes (foto 17, sin ejecutar)
+- Una pata vertical en el suelo; carrete azul abajo, carrete naranja arriba; la cabeza gin pole puesta DE LADO (ala vertical,
+  su tubo horizontal) entre los 2 discos: sus 2 orejas quedan una arriba y otra abajo y 2 pasadores de 1/2" verticales pasan
+  por un hueco del disco naranja + oreja de arriba, y por la oreja de abajo + hueco del disco azul (huecos de los 2 discos alineados:
+  para eso sirve el hueco chico de marca).
+- En v8 NO funciona: la luz entre discos es 107 mm y las orejas ocupan 120 mm (122,7 si van en 12,7 mm).
+- Arreglo v9: luz entre discos ≈ 135 mm (alto total del carrete 154,9 = 63,5 + 63,5 + 27,94) → pasador del carrete a 63,5 del
+  disco naranja y a 91,4 del disco azul (ambos huecos ya existen). Comprobar: punta de la oreja no toca el tubo azul
+  (hueco de la oreja en el círculo de huecos R 59; punta a R 43 > R 36,5 del tubo azul) y pasador 1/2" entra en los Ø 24.
