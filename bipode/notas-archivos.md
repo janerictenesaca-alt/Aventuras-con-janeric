@@ -660,3 +660,6 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   ellos (cara de abajo del puente ≥ ~50 mm) y por debajo de lo más bajo que llega la gin pole al juntarse (luz ~5 mm).
 - Hueco C del puente: acercarlo al borde de atrás, dejando borde suficiente para el tirón del mosquetón (≥ 12–14 mm de metal).
   Lo mismo para los 2 huecos que reemplazan el corazón (≥ 10 mm entre ellos y a los bordes).
+- Pedido: placa frontal 01 más gruesa (lo más posible) y, si se puede, las de atrás un poco más.
+  Propuesta: 01 en 16 mm (5/8") o 19 mm (3/4"), chorro de agua; aletas/puente/gin en 12,7 mm (1/2") manteniendo la ranura de 18 mm
+  (aletas de adentro x = 33,3…46, de afuera x = 64…76,7). Pendiente: respuesta del usuario sobre huecos (1 × Ø36 o 2 × Ø25 o 2 × Ø34 vertical).
