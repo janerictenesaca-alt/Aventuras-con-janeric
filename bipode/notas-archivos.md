@@ -668,3 +668,13 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - REGLA para todo hueco de mosquetón (C, los 2 del frente, ala, carretes, AHP): mínimo 12 mm de metal entre el hueco y
   cualquier borde u otro hueco, y cálculo de tirón por hueco (2 secciones × ancho × grosor × 240 MPa ≥ 2 × 36 kN).
   Además: que no choquen, no se crucen y no se tapen entre piezas. Revisarlo con un programa en todas las piezas.
+
+## Pie plano con rótula (fotos pie_plano_150–153) — diseñarlo también (sin ejecutar)
+- Casquillo naranja igual al pie de flecha (Ø 60,3 / 51,4, hueco a 63,5 de la boca, ranuras F) + hueco grande lateral abajo;
+  cerrado abajo con un tapón que lleva la ROTULA.
+- Rótula: bola de acero en un cuello (en la foto, cuello cónico + bola), asiento esférico en la base, anillo azul de retención
+  atornillado (8 tornillos) que deja inclinar ~15–20° y girar 360°. Base naranja/cobre con 4 huecos de perno de anclaje y
+  2 huecos grandes para maniota/anclaje; suela de caucho abajo. Pernos de brida (en la foto 153).
+- Materiales propuestos: bola = BOLA DE ENGANCHE DE REMOLQUE 2" (Ø 50,8, rosca 1") comprada, acero forjado, ≥ 3500 kg;
+  asiento y anillo de retención en acero 1045 o Al 7075 torneados; base en acero A36 10 mm láser (o Al 6061 16 mm);
+  suela de caucho 5 mm pegada; tornillos M8 clase 8.8. Medidas y huecos compatibles con la regla (63,5 / 139,7).
