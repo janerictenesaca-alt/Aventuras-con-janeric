@@ -618,3 +618,14 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Hacer el AHP en 3D detallado para el fabricante, y agregarlo al visor 3D y al juego de armar/desarmar por partes, igual que
   el trípode, la cabeza azul y la gin pole. Lo mismo para el carrete (AZORP) y lo demás que no quedó bien entendido.
 - El usuario enviará más fotos (otros ángulos y la parte de atrás). Esperar "ejecuta".
+
+## Carrete AZORP — más detalle (fotos 138–142 del chat, sin ejecutar)
+- Los huecos grandes de los discos tienen el borde redondeado/avellanado (no filo vivo) por las 2 caras; borde exterior del disco redondeado.
+- Unión disco–tubo con un filete (radio) maquinado, no a escuadra.
+- Tubo azul: 3 huecos en línea en una cara + otra fila a 90°, y 2 huecos más cerca de la boca (foto 140); en otra foto se ve una
+  ranura larga en la boca del tubo azul con el pasador de anillo.
+- Tubo naranja: 3 huecos en línea + 1 cerca de la boca; el pasador de anillo cruza el tubo naranja y la pata.
+- Montajes vistos: naranja sobre la pata de adentro (sale la punta por delante); naranja en el macho de la pata de afuera con el
+  tope en la llave (foto 142); azul con su tubo metido en el disco naranja sobre la pata (foto 138).
+- Pedido: carrete en 3D con el mismo detalle que el trípode, agregado AL COSTADO en el visor, y en el juego para armar/desarmar
+  por partes (para que el ingeniero entienda). Esperar "ejecuta".
