@@ -663,3 +663,5 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - Pedido: placa frontal 01 más gruesa (lo más posible) y, si se puede, las de atrás un poco más.
   Propuesta: 01 en 16 mm (5/8") o 19 mm (3/4"), chorro de agua; aletas/puente/gin en 12,7 mm (1/2") manteniendo la ranura de 18 mm
   (aletas de adentro x = 33,3…46, de afuera x = 64…76,7). Pendiente: respuesta del usuario sobre huecos (1 × Ø36 o 2 × Ø25 o 2 × Ø34 vertical).
+- DECIDIDO: 2 huecos redondos lado a lado en lugar del corazón (Ø 25, 1 mosquetón grande suelto en cada uno).
+  El puente 04 (aro azul con hueco C) no debe tapar esos 2 huecos y no debe chocar con el ojo naranja 08 al flexionar la gin pole.
