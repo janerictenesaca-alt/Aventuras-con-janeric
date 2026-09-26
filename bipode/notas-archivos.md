@@ -665,3 +665,6 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   (aletas de adentro x = 33,3…46, de afuera x = 64…76,7). Pendiente: respuesta del usuario sobre huecos (1 × Ø36 o 2 × Ø25 o 2 × Ø34 vertical).
 - DECIDIDO: 2 huecos redondos lado a lado en lugar del corazón (Ø 25, 1 mosquetón grande suelto en cada uno).
   El puente 04 (aro azul con hueco C) no debe tapar esos 2 huecos y no debe chocar con el ojo naranja 08 al flexionar la gin pole.
+- REGLA para todo hueco de mosquetón (C, los 2 del frente, ala, carretes, AHP): mínimo 12 mm de metal entre el hueco y
+  cualquier borde u otro hueco, y cálculo de tirón por hueco (2 secciones × ancho × grosor × 240 MPa ≥ 2 × 36 kN).
+  Además: que no choquen, no se crucen y no se tapen entre piezas. Revisarlo con un programa en todas las piezas.
