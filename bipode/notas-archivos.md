@@ -629,3 +629,8 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
   tope en la llave (foto 142); azul con su tubo metido en el disco naranja sobre la pata (foto 138).
 - Pedido: carrete en 3D con el mismo detalle que el trípode, agregado AL COSTADO en el visor, y en el juego para armar/desarmar
   por partes (para que el ingeniero entienda). Esperar "ejecuta".
+
+## Aclaración del usuario: extensión arriba (sin ejecutar)
+- En la punta (casquillo de la cabeza) va un tubo, y DENTRO de ese tubo va otro tubo que sale como EXTENSIÓN;
+  en esa extensión se ponen los carretes naranja y azul. Mostrarlo claro en 3D y en el juego (tubo dentro de tubo + carretes).
+- En la foto del kit también hay 3 tubos naranjas rectos con pasador (aparte de los 3 pies con rótula y 3 Raptor): confirmar su uso.
