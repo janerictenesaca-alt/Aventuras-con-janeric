@@ -734,3 +734,9 @@ Medidas sacadas de la foto, usando como referencia la pata de arriba (Ø 50,8 mm
 - AHP igual al original: 17b placa A36 25,4 (centro 4 × Ø25 + 2 patitas, pasador de canto a 24 mm), 17a tubo cuadrado atrás, 17d pared, 17e cartelas ×2, 17f orejitas ×2 inclinadas 10° hacia atrás (ventana 26 × 36). Pasador 3/8" × 4".
 - 0 choques, todos los huecos de mosquetón ≥ 12 mm.
 - Tubos naranja rectos del kit: el usuario no sabe cuáles son; se cierra la pregunta. Las cantidades del kit ya están en la tabla (hoja 02). Nota «confirmar» quitada del PDF.
+
+## Resistencia del Vortex original (manual, pág. 31 «Strength Ratings Table», pruebas del fabricante)
+- 36 kN MBS / 9 kN WLL: trípode de patas iguales o A-frame con 2 patas de afuera, 5 huecos (trípode) o 4 (A-frame) de pata de adentro a la vista, 241 cm al punto de conexión.
+- 22 kN MBS / 5,5 kN WLL: trípode con 3 patas de afuera (320 cm), A-frame con 3 (305 cm), gin pole con 1 (185 cm).
+- WLL = MBS / 4. MBS = fuerza a la que el sistema cedió. Pasadores 80 kN (3/8") y 142 kN (1/2"). Máximo 2 personas. CE EN 795 solo como trípode de patas iguales. Peso 33 kg.
+- Nuestro diseño (cálculo): ~20 kN por la cabeza de Al soldada; patas ~50 kN con 2 patas. Para llegar a 36 kN: T6 después de soldar o cabeza en acero 4130.
