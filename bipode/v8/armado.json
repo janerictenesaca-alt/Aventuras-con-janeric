@@ -1,0 +1,1472 @@
+{
+ "tau": 16.809918887750328,
+ "phi": -16.79896341072083,
+ "Z0": 2365.113486658501,
+ "alfa": 31.8,
+ "gin_tubo_L": 181.43390804503798,
+ "altura_I2": 2370.955789622435,
+ "lado_triangulo": 2829.573707686527,
+ "altura_B": 2251.1861046311988,
+ "lado_B": 2704.9060387036466,
+ "punta_A": 2767.2,
+ "punta_B": 2627.5,
+ "sale_arriba": 113.69999999999999,
+ "piezas": [
+  {
+   "node": "n00_01",
+   "id": "01",
+   "nombre": "Placa frontal (cara lisa)",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 0,
+   "explota": [
+    0.0,
+    -1.5,
+    507.8
+   ],
+   "vol": 235341.3
+  },
+  {
+   "node": "n01_02a",
+   "id": "02a",
+   "nombre": "Casquillo izq.",
+   "grupo": "cabeza",
+   "material": "Tubo Al 6061-T6 2½\" × 1/4\" · torno",
+   "orden": 1,
+   "explota": [
+    -379.4,
+    -55.8,
+    534.9
+   ],
+   "vol": 159114.2
+  },
+  {
+   "node": "n02_02b",
+   "id": "02b",
+   "nombre": "Casquillo der.",
+   "grupo": "cabeza",
+   "material": "Tubo Al 6061-T6 2½\" × 1/4\" · torno",
+   "orden": 2,
+   "explota": [
+    379.4,
+    -55.8,
+    534.9
+   ],
+   "vol": 159114.2
+  },
+  {
+   "node": "n03_03a",
+   "id": "03a",
+   "nombre": "Aleta de afuera izq.",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 3,
+   "explota": [
+    -179.4,
+    -102.1,
+    473.0
+   ],
+   "vol": 81474.7
+  },
+  {
+   "node": "n04_03b",
+   "id": "03b",
+   "nombre": "Aleta de adentro izq.",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 4,
+   "explota": [
+    -106.6,
+    -102.1,
+    473.0
+   ],
+   "vol": 81474.7
+  },
+  {
+   "node": "n05_03c",
+   "id": "03c",
+   "nombre": "Aleta de adentro der.",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 5,
+   "explota": [
+    106.6,
+    -102.1,
+    473.0
+   ],
+   "vol": 81474.7
+  },
+  {
+   "node": "n06_03d",
+   "id": "03d",
+   "nombre": "Aleta de afuera der.",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 6,
+   "explota": [
+    179.4,
+    -102.1,
+    473.0
+   ],
+   "vol": 81474.7
+  },
+  {
+   "node": "n07_04",
+   "id": "04",
+   "nombre": "Puente central (hueco C)",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 7,
+   "explota": [
+    0.0,
+    -61.0,
+    345.2
+   ],
+   "vol": 40968.5
+  },
+  {
+   "node": "n08_P-I1i",
+   "id": "P-I1i",
+   "nombre": "Pasador de cabeza 1/2\" · arriba",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR500)",
+   "orden": 8,
+   "explota": [
+    -205.9,
+    -183.7,
+    544.8
+   ],
+   "vol": 12057.9
+  },
+  {
+   "node": "n09_P-I2i",
+   "id": "P-I2i",
+   "nombre": "Pasador de cabeza 1/2\" · abajo",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR500)",
+   "orden": 9,
+   "explota": [
+    -205.9,
+    -129.5,
+    365.6
+   ],
+   "vol": 12057.9
+  },
+  {
+   "node": "n10_P-I1d",
+   "id": "P-I1d",
+   "nombre": "Pasador de cabeza 1/2\" · arriba",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR500)",
+   "orden": 10,
+   "explota": [
+    205.9,
+    -183.7,
+    543.9
+   ],
+   "vol": 12057.9
+  },
+  {
+   "node": "n11_P-I2d",
+   "id": "P-I2d",
+   "nombre": "Pasador de cabeza 1/2\" · abajo",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR500)",
+   "orden": 11,
+   "explota": [
+    205.9,
+    -129.5,
+    364.7
+   ],
+   "vol": 12057.9
+  },
+  {
+   "node": "n12_PLi",
+   "id": "PLi",
+   "nombre": "Polea Ø 38 mm (pasador de abajo izq.)",
+   "grupo": "pasadores",
+   "material": "Se compra",
+   "orden": 12,
+   "explota": [
+    -143.0,
+    -111.5,
+    305.5
+   ],
+   "vol": 16001.9
+  },
+  {
+   "node": "n13_PLd",
+   "id": "PLd",
+   "nombre": "Polea Ø 38 mm (pasador de abajo der.)",
+   "grupo": "pasadores",
+   "material": "Se compra",
+   "orden": 13,
+   "explota": [
+    143.0,
+    -111.5,
+    305.5
+   ],
+   "vol": 16001.9
+  },
+  {
+   "node": "n14_05",
+   "id": "05",
+   "nombre": "Ala de la gin pole (escudo)",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 14,
+   "explota": [
+    0.0,
+    -468.4,
+    583.3
+   ],
+   "vol": 138975.2
+  },
+  {
+   "node": "n15_06",
+   "id": "06",
+   "nombre": "Tubo de la gin pole",
+   "grupo": "gin",
+   "material": "Tubo Al 6061-T6 2½\" × 1/4\" · torno",
+   "orden": 15,
+   "explota": [
+    0.0,
+    -616.6,
+    445.2
+   ],
+   "vol": 144722.1
+  },
+  {
+   "node": "n16_07a",
+   "id": "07a",
+   "nombre": "Oreja de la gin pole izq.",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 16,
+   "explota": [
+    -143.0,
+    -214.9,
+    544.4
+   ],
+   "vol": 12483.0
+  },
+  {
+   "node": "n17_07b",
+   "id": "07b",
+   "nombre": "Oreja de la gin pole der.",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 17,
+   "explota": [
+    143.0,
+    -214.9,
+    544.4
+   ],
+   "vol": 12483.0
+  },
+  {
+   "node": "n18_08",
+   "id": "08",
+   "nombre": "Ojo central de la gin pole",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 18,
+   "explota": [
+    -0.0,
+    -274.7,
+    497.6
+   ],
+   "vol": 17543.2
+  },
+  {
+   "node": "n19_09a",
+   "id": "09a",
+   "nombre": "Cartela de la gin pole izq.",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 19,
+   "explota": [
+    -44.2,
+    -448.1,
+    511.2
+   ],
+   "vol": 14807.0
+  },
+  {
+   "node": "n20_09b",
+   "id": "09b",
+   "nombre": "Cartela de la gin pole der.",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 20,
+   "explota": [
+    44.2,
+    -448.1,
+    511.2
+   ],
+   "vol": 14807.0
+  },
+  {
+   "node": "n21_10I1",
+   "id": "10I1",
+   "nombre": "Pata de afuera 1 · pata izq.",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 21,
+   "explota": [
+    -626.0,
+    174.9,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n22_10I2",
+   "id": "10I2",
+   "nombre": "Pata de afuera 2 · pata izq.",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 22,
+   "explota": [
+    -594.9,
+    261.9,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n23_13I1",
+   "id": "13I1",
+   "nombre": "Pata de adentro · pata izq.",
+   "grupo": "patas",
+   "material": "Tubo Al 6061-T6 2\" × 1/4\"",
+   "orden": 23,
+   "explota": [
+    -584.3,
+    284.7,
+    0.0
+   ],
+   "vol": 849002.0
+  },
+  {
+   "node": "n24_14I1",
+   "id": "14I1",
+   "nombre": "Pie de flecha · pata izq.",
+   "grupo": "patas",
+   "material": "Casquillo Al + garra acero A36 12 mm",
+   "orden": 24,
+   "explota": [
+    -582.7,
+    288.1,
+    0.0
+   ],
+   "vol": 256653.3
+  },
+  {
+   "node": "n25_PP-I1",
+   "id": "PP-I1",
+   "nombre": "Pasador de pata 3/8\" · pata izq.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 25,
+   "explota": [
+    -650.0,
+    1.7,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n26_PP-I2",
+   "id": "PP-I2",
+   "nombre": "Pasador de pata 3/8\" · pata izq.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 26,
+   "explota": [
+    -598.9,
+    252.7,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n27_PP-I3",
+   "id": "PP-I3",
+   "nombre": "Pasador de pata 3/8\" · pata izq.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 27,
+   "explota": [
+    -584.0,
+    285.3,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n28_PP-I4",
+   "id": "PP-I4",
+   "nombre": "Pasador de pata 3/8\" · pata izq.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 28,
+   "explota": [
+    -578.1,
+    297.2,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n29_10D1",
+   "id": "10D1",
+   "nombre": "Pata de afuera 1 · pata der.",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 29,
+   "explota": [
+    626.0,
+    174.9,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n30_10D2",
+   "id": "10D2",
+   "nombre": "Pata de afuera 2 · pata der.",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 30,
+   "explota": [
+    594.9,
+    261.9,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n31_13D1",
+   "id": "13D1",
+   "nombre": "Pata de adentro · pata der.",
+   "grupo": "patas",
+   "material": "Tubo Al 6061-T6 2\" × 1/4\"",
+   "orden": 31,
+   "explota": [
+    584.3,
+    284.7,
+    0.0
+   ],
+   "vol": 849002.0
+  },
+  {
+   "node": "n32_14D1",
+   "id": "14D1",
+   "nombre": "Pie de flecha · pata der.",
+   "grupo": "patas",
+   "material": "Casquillo Al + garra acero A36 12 mm",
+   "orden": 32,
+   "explota": [
+    584.3,
+    284.9,
+    0.0
+   ],
+   "vol": 256653.3
+  },
+  {
+   "node": "n33_PP-D1",
+   "id": "PP-D1",
+   "nombre": "Pasador de pata 3/8\" · pata der.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 33,
+   "explota": [
+    650.0,
+    1.4,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n34_PP-D2",
+   "id": "PP-D2",
+   "nombre": "Pasador de pata 3/8\" · pata der.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 34,
+   "explota": [
+    598.9,
+    252.6,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n35_PP-D3",
+   "id": "PP-D3",
+   "nombre": "Pasador de pata 3/8\" · pata der.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 35,
+   "explota": [
+    584.1,
+    285.2,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n36_PP-D4",
+   "id": "PP-D4",
+   "nombre": "Pasador de pata 3/8\" · pata der.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 36,
+   "explota": [
+    578.1,
+    297.2,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n37_10G1",
+   "id": "10G1",
+   "nombre": "Pata de afuera 1 · pata de atrás",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 37,
+   "explota": [
+    0.0,
+    -650.0,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n38_10G2",
+   "id": "10G2",
+   "nombre": "Pata de afuera 2 · pata de atrás",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 38,
+   "explota": [
+    0.0,
+    -650.0,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n39_13G1",
+   "id": "13G1",
+   "nombre": "Pata de adentro · pata de atrás",
+   "grupo": "patas",
+   "material": "Tubo Al 6061-T6 2\" × 1/4\"",
+   "orden": 39,
+   "explota": [
+    0.0,
+    -650.0,
+    0.0
+   ],
+   "vol": 849002.0
+  },
+  {
+   "node": "n40_14G1",
+   "id": "14G1",
+   "nombre": "Pie de flecha · pata de atrás",
+   "grupo": "patas",
+   "material": "Casquillo Al + garra acero A36 12 mm",
+   "orden": 40,
+   "explota": [
+    4.7,
+    -650.0,
+    0.0
+   ],
+   "vol": 256653.3
+  },
+  {
+   "node": "n41_PP-G1",
+   "id": "PP-G1",
+   "nombre": "Pasador de pata 3/8\" · pata de atrás",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 41,
+   "explota": [
+    0.0,
+    -650.0,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n42_PP-G2",
+   "id": "PP-G2",
+   "nombre": "Pasador de pata 3/8\" · pata de atrás",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 42,
+   "explota": [
+    0.0,
+    -650.0,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n43_PP-G3",
+   "id": "PP-G3",
+   "nombre": "Pasador de pata 3/8\" · pata de atrás",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 43,
+   "explota": [
+    0.0,
+    -650.0,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n44_PP-G4",
+   "id": "PP-G4",
+   "nombre": "Pasador de pata 3/8\" · pata de atrás",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 44,
+   "explota": [
+    0.0,
+    -650.0,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n45_M1",
+   "id": "M1",
+   "nombre": "Maniota (cinta 25 mm con hebilla)",
+   "grupo": "maniotas",
+   "material": "Se compra",
+   "orden": 45,
+   "explota": [
+    0.0,
+    650.0,
+    0.0
+   ],
+   "vol": 141478.7
+  },
+  {
+   "node": "n46_M2",
+   "id": "M2",
+   "nombre": "Maniota (cinta 25 mm con hebilla)",
+   "grupo": "maniotas",
+   "material": "Se compra",
+   "orden": 46,
+   "explota": [
+    527.0,
+    -380.5,
+    0.0
+   ],
+   "vol": 141478.7
+  },
+  {
+   "node": "n47_M3",
+   "id": "M3",
+   "nombre": "Maniota (cinta 25 mm con hebilla)",
+   "grupo": "maniotas",
+   "material": "Se compra",
+   "orden": 47,
+   "explota": [
+    -527.0,
+    -380.5,
+    0.0
+   ],
+   "vol": 141478.7
+  }
+ ],
+ "piezas_B": [
+  {
+   "node": "n00_01",
+   "id": "01",
+   "nombre": "Placa frontal (cara lisa)",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 0,
+   "explota": [
+    0.0,
+    -1.5,
+    507.8
+   ],
+   "vol": 235341.3
+  },
+  {
+   "node": "n01_02a",
+   "id": "02a",
+   "nombre": "Casquillo izq.",
+   "grupo": "cabeza",
+   "material": "Tubo Al 6061-T6 2½\" × 1/4\" · torno",
+   "orden": 1,
+   "explota": [
+    -379.4,
+    -55.9,
+    534.8
+   ],
+   "vol": 159114.2
+  },
+  {
+   "node": "n02_02b",
+   "id": "02b",
+   "nombre": "Casquillo der.",
+   "grupo": "cabeza",
+   "material": "Tubo Al 6061-T6 2½\" × 1/4\" · torno",
+   "orden": 2,
+   "explota": [
+    379.5,
+    -55.8,
+    534.9
+   ],
+   "vol": 159114.2
+  },
+  {
+   "node": "n03_03a",
+   "id": "03a",
+   "nombre": "Aleta de afuera izq.",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 3,
+   "explota": [
+    -179.4,
+    -102.2,
+    473.0
+   ],
+   "vol": 81474.7
+  },
+  {
+   "node": "n04_03b",
+   "id": "03b",
+   "nombre": "Aleta de adentro izq.",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 4,
+   "explota": [
+    -106.6,
+    -102.2,
+    473.0
+   ],
+   "vol": 81474.7
+  },
+  {
+   "node": "n05_03c",
+   "id": "03c",
+   "nombre": "Aleta de adentro der.",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 5,
+   "explota": [
+    106.6,
+    -102.2,
+    473.0
+   ],
+   "vol": 81474.7
+  },
+  {
+   "node": "n06_03d",
+   "id": "03d",
+   "nombre": "Aleta de afuera der.",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 6,
+   "explota": [
+    179.4,
+    -102.2,
+    473.0
+   ],
+   "vol": 81474.7
+  },
+  {
+   "node": "n07_04",
+   "id": "04",
+   "nombre": "Puente central (hueco C)",
+   "grupo": "cabeza",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 7,
+   "explota": [
+    -0.0,
+    -61.0,
+    345.1
+   ],
+   "vol": 40968.5
+  },
+  {
+   "node": "n08_P-I1i",
+   "id": "P-I1i",
+   "nombre": "Pasador de cabeza 1/2\" · arriba",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR500)",
+   "orden": 8,
+   "explota": [
+    -205.9,
+    -183.7,
+    544.8
+   ],
+   "vol": 12057.9
+  },
+  {
+   "node": "n09_P-I2i",
+   "id": "P-I2i",
+   "nombre": "Pasador de cabeza 1/2\" · abajo",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR500)",
+   "orden": 9,
+   "explota": [
+    -205.9,
+    -129.5,
+    365.6
+   ],
+   "vol": 12057.9
+  },
+  {
+   "node": "n10_P-I1d",
+   "id": "P-I1d",
+   "nombre": "Pasador de cabeza 1/2\" · arriba",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR500)",
+   "orden": 10,
+   "explota": [
+    205.9,
+    -183.7,
+    543.9
+   ],
+   "vol": 12057.9
+  },
+  {
+   "node": "n11_P-I2d",
+   "id": "P-I2d",
+   "nombre": "Pasador de cabeza 1/2\" · abajo",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR500)",
+   "orden": 11,
+   "explota": [
+    205.9,
+    -129.5,
+    364.7
+   ],
+   "vol": 12057.9
+  },
+  {
+   "node": "n12_PLi",
+   "id": "PLi",
+   "nombre": "Polea Ø 38 mm (pasador de abajo izq.)",
+   "grupo": "pasadores",
+   "material": "Se compra",
+   "orden": 12,
+   "explota": [
+    -143.0,
+    -111.5,
+    305.4
+   ],
+   "vol": 16001.9
+  },
+  {
+   "node": "n13_PLd",
+   "id": "PLd",
+   "nombre": "Polea Ø 38 mm (pasador de abajo der.)",
+   "grupo": "pasadores",
+   "material": "Se compra",
+   "orden": 13,
+   "explota": [
+    143.0,
+    -111.5,
+    305.4
+   ],
+   "vol": 16001.9
+  },
+  {
+   "node": "n14_05",
+   "id": "05",
+   "nombre": "Ala de la gin pole (escudo)",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 14,
+   "explota": [
+    0.0,
+    -468.4,
+    583.5
+   ],
+   "vol": 138975.2
+  },
+  {
+   "node": "n15_06",
+   "id": "06",
+   "nombre": "Tubo de la gin pole",
+   "grupo": "gin",
+   "material": "Tubo Al 6061-T6 2½\" × 1/4\" · torno",
+   "orden": 15,
+   "explota": [
+    0.0,
+    -616.7,
+    445.5
+   ],
+   "vol": 144722.1
+  },
+  {
+   "node": "n16_07a",
+   "id": "07a",
+   "nombre": "Oreja de la gin pole izq.",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 16,
+   "explota": [
+    -143.0,
+    -214.9,
+    544.4
+   ],
+   "vol": 12483.0
+  },
+  {
+   "node": "n17_07b",
+   "id": "07b",
+   "nombre": "Oreja de la gin pole der.",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 17,
+   "explota": [
+    143.0,
+    -214.9,
+    544.4
+   ],
+   "vol": 12483.0
+  },
+  {
+   "node": "n18_08",
+   "id": "08",
+   "nombre": "Ojo central de la gin pole",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 18,
+   "explota": [
+    0.0,
+    -274.7,
+    497.6
+   ],
+   "vol": 17543.2
+  },
+  {
+   "node": "n19_09a",
+   "id": "09a",
+   "nombre": "Cartela de la gin pole izq.",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 19,
+   "explota": [
+    -44.2,
+    -448.2,
+    511.4
+   ],
+   "vol": 14807.0
+  },
+  {
+   "node": "n20_09b",
+   "id": "09b",
+   "nombre": "Cartela de la gin pole der.",
+   "grupo": "gin",
+   "material": "Al 6061-T6 · 10 mm · láser",
+   "orden": 20,
+   "explota": [
+    44.2,
+    -448.2,
+    511.4
+   ],
+   "vol": 14807.0
+  },
+  {
+   "node": "n21_13I1",
+   "id": "13I1",
+   "nombre": "Pata de adentro (sale arriba) · pata izq.",
+   "grupo": "patas",
+   "material": "Tubo Al 6061-T6 2\" × 1/4\"",
+   "orden": 21,
+   "explota": [
+    -637.8,
+    125.1,
+    0.0
+   ],
+   "vol": 849002.0
+  },
+  {
+   "node": "n22_10I1",
+   "id": "10I1",
+   "nombre": "Pata de afuera 1 (dada vuelta) · pata izq.",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 22,
+   "explota": [
+    -599.3,
+    251.6,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n23_10I2",
+   "id": "10I2",
+   "nombre": "Pata de afuera 2 (dada vuelta) · pata izq.",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 23,
+   "explota": [
+    -586.0,
+    281.3,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n24_14I1",
+   "id": "14I1",
+   "nombre": "Pie de flecha · pata izq.",
+   "grupo": "patas",
+   "material": "Casquillo Al + garra acero A36 12 mm",
+   "orden": 24,
+   "explota": [
+    -583.6,
+    286.3,
+    0.0
+   ],
+   "vol": 256653.3
+  },
+  {
+   "node": "n25_PP-I1",
+   "id": "PP-I1",
+   "nombre": "Pasador de pata 3/8\" · pata izq.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 25,
+   "explota": [
+    -650.0,
+    1.7,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n26_PP-I2",
+   "id": "PP-I2",
+   "nombre": "Pasador de pata 3/8\" · pata izq.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 26,
+   "explota": [
+    -605.3,
+    236.8,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n27_PP-I3",
+   "id": "PP-I3",
+   "nombre": "Pasador de pata 3/8\" · pata izq.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 27,
+   "explota": [
+    -586.2,
+    280.8,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n28_PP-I4",
+   "id": "PP-I4",
+   "nombre": "Pasador de pata 3/8\" · pata izq.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 28,
+   "explota": [
+    -578.8,
+    295.9,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n29_13D1",
+   "id": "13D1",
+   "nombre": "Pata de adentro (sale arriba) · pata der.",
+   "grupo": "patas",
+   "material": "Tubo Al 6061-T6 2\" × 1/4\"",
+   "orden": 29,
+   "explota": [
+    637.8,
+    125.2,
+    0.0
+   ],
+   "vol": 849002.0
+  },
+  {
+   "node": "n30_10D1",
+   "id": "10D1",
+   "nombre": "Pata de afuera 1 (dada vuelta) · pata der.",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 30,
+   "explota": [
+    599.3,
+    251.6,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n31_10D2",
+   "id": "10D2",
+   "nombre": "Pata de afuera 2 (dada vuelta) · pata der.",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 31,
+   "explota": [
+    586.0,
+    281.3,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n32_14D1",
+   "id": "14D1",
+   "nombre": "Pie de flecha · pata der.",
+   "grupo": "patas",
+   "material": "Casquillo Al + garra acero A36 12 mm",
+   "orden": 32,
+   "explota": [
+    585.2,
+    282.9,
+    0.0
+   ],
+   "vol": 256653.3
+  },
+  {
+   "node": "n33_PP-D1",
+   "id": "PP-D1",
+   "nombre": "Pasador de pata 3/8\" · pata der.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 33,
+   "explota": [
+    650.0,
+    1.4,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n34_PP-D2",
+   "id": "PP-D2",
+   "nombre": "Pasador de pata 3/8\" · pata der.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 34,
+   "explota": [
+    605.4,
+    236.7,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n35_PP-D3",
+   "id": "PP-D3",
+   "nombre": "Pasador de pata 3/8\" · pata der.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 35,
+   "explota": [
+    586.2,
+    280.8,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n36_PP-D4",
+   "id": "PP-D4",
+   "nombre": "Pasador de pata 3/8\" · pata der.",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 36,
+   "explota": [
+    578.8,
+    295.8,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n37_13G1",
+   "id": "13G1",
+   "nombre": "Pata de adentro (sale arriba) · pata de atrás",
+   "grupo": "patas",
+   "material": "Tubo Al 6061-T6 2\" × 1/4\"",
+   "orden": 37,
+   "explota": [
+    0.0,
+    -650.0,
+    0.0
+   ],
+   "vol": 849002.0
+  },
+  {
+   "node": "n38_10G1",
+   "id": "10G1",
+   "nombre": "Pata de afuera 1 (dada vuelta) · pata de atrás",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 38,
+   "explota": [
+    0.0,
+    -650.0,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n39_10G2",
+   "id": "10G2",
+   "nombre": "Pata de afuera 2 (dada vuelta) · pata de atrás",
+   "grupo": "patas",
+   "material": "Tubo 2\" céd. 40 + espiga 2\" × 1/4\"",
+   "orden": 39,
+   "explota": [
+    0.0,
+    -650.0,
+    0.0
+   ],
+   "vol": 859761.0
+  },
+  {
+   "node": "n40_14G1",
+   "id": "14G1",
+   "nombre": "Pie de flecha · pata de atrás",
+   "grupo": "patas",
+   "material": "Casquillo Al + garra acero A36 12 mm",
+   "orden": 40,
+   "explota": [
+    4.9,
+    -650.0,
+    0.0
+   ],
+   "vol": 256653.3
+  },
+  {
+   "node": "n41_PP-G1",
+   "id": "PP-G1",
+   "nombre": "Pasador de pata 3/8\" · pata de atrás",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 41,
+   "explota": [
+    0.0,
+    -650.0,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n42_PP-G2",
+   "id": "PP-G2",
+   "nombre": "Pasador de pata 3/8\" · pata de atrás",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 42,
+   "explota": [
+    0.0,
+    -650.0,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n43_PP-G3",
+   "id": "PP-G3",
+   "nombre": "Pasador de pata 3/8\" · pata de atrás",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 43,
+   "explota": [
+    0.0,
+    -650.0,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n44_PP-G4",
+   "id": "PP-G4",
+   "nombre": "Pasador de pata 3/8\" · pata de atrás",
+   "grupo": "pasadores",
+   "material": "Se compra (tipo VXQR375)",
+   "orden": 44,
+   "explota": [
+    0.0,
+    -650.0,
+    80.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n45_16",
+   "id": "16",
+   "nombre": "Carrete azul (de afuera)",
+   "grupo": "carrete",
+   "material": "",
+   "orden": 45,
+   "explota": [
+    -258.8,
+    -120.6,
+    837.8
+   ],
+   "vol": 272684.2
+  },
+  {
+   "node": "n46_15",
+   "id": "15",
+   "nombre": "Carrete naranja (de adentro)",
+   "grupo": "carrete",
+   "material": "",
+   "orden": 46,
+   "explota": [
+    -132.2,
+    -199.3,
+    933.2
+   ],
+   "vol": 226385.5
+  },
+  {
+   "node": "n47_PP-C",
+   "id": "PP-C",
+   "nombre": "Pasador del carrete 3/8\"",
+   "grupo": "pasadores",
+   "material": "",
+   "orden": 47,
+   "explota": [
+    -232.4,
+    -93.0,
+    838.0
+   ],
+   "vol": 8580.7
+  },
+  {
+   "node": "n48_M1",
+   "id": "M1",
+   "nombre": "Maniota (cinta 25 mm con hebilla)",
+   "grupo": "maniotas",
+   "material": "Se compra",
+   "orden": 48,
+   "explota": [
+    0.0,
+    650.0,
+    0.0
+   ],
+   "vol": 135245.3
+  },
+  {
+   "node": "n49_M2",
+   "id": "M2",
+   "nombre": "Maniota (cinta 25 mm con hebilla)",
+   "grupo": "maniotas",
+   "material": "Se compra",
+   "orden": 49,
+   "explota": [
+    525.4,
+    -382.7,
+    0.0
+   ],
+   "vol": 135245.3
+  },
+  {
+   "node": "n50_M3",
+   "id": "M3",
+   "nombre": "Maniota (cinta 25 mm con hebilla)",
+   "grupo": "maniotas",
+   "material": "Se compra",
+   "orden": 50,
+   "explota": [
+    -525.4,
+    -382.7,
+    0.0
+   ],
+   "vol": 135245.3
+  }
+ ],
+ "acc": [
+  {
+   "node": "a_15",
+   "id": "15",
+   "nombre": "Carrete naranja (de adentro)",
+   "grupo": "carrete",
+   "vol": 226385.5
+  },
+  {
+   "node": "a_16",
+   "id": "16",
+   "nombre": "Carrete azul (de afuera)",
+   "grupo": "carrete",
+   "vol": 272657.0
+  },
+  {
+   "node": "a_17",
+   "id": "17",
+   "nombre": "AHP (poste de enganche)",
+   "grupo": "ahp",
+   "vol": 895381.7
+  },
+  {
+   "node": "a_18",
+   "id": "18",
+   "nombre": "Adaptador de enganche 2\"",
+   "grupo": "ahp",
+   "vol": 454675.2
+  },
+  {
+   "node": "a_13x",
+   "id": "13x",
+   "nombre": "Pata de adentro en el AHP",
+   "grupo": "ahp",
+   "vol": 849002.0
+  },
+  {
+   "node": "a_PP-A",
+   "id": "PP-A",
+   "nombre": "Pasador del AHP 3/8\"",
+   "grupo": "ahp",
+   "vol": 8580.7
+  }
+ ],
+ "vol_sueltas": {
+  "01": 235341.3,
+  "02a": 159114.2,
+  "02b": 159114.2,
+  "03a": 81474.7,
+  "03b": 81474.7,
+  "03c": 81474.7,
+  "03d": 81474.7,
+  "04": 40968.5,
+  "05": 138975.2,
+  "06": 144722.1,
+  "07a": 12483.0,
+  "07b": 12483.0,
+  "08": 17543.2,
+  "09a": 14807.0,
+  "09b": 14807.0,
+  "10": 859761.0,
+  "13": 849002.0,
+  "14": 256653.3,
+  "15": 226385.5,
+  "16": 272835.6,
+  "17": 893934.8,
+  "18": 454675.2
+ }
+}

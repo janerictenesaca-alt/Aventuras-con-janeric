@@ -1,0 +1,470 @@
+<meta charset="utf-8">
+<title>Trípode VX-EC</title>
+<meta name="description" content="Copia del Arizona Vortex como trípode, con placas de corte láser soldadas con TIG: modelo 3D, juego de armado y planos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --fondo:#edf0f4; --sup:#ffffff; --sup2:#f6f8fa; --tinta:#111a24; --gris:#586676; --linea:#d4dbe4;
+  --azul:#1c4fb3; --azul-suave:#e3ebfa; --naranja:#d9571a; --naranja-suave:#fdeee4; --escena:#dfe5ec; --escena2:#f4f6f9;
+  --papel:#fbfcfd; --ok:#1f7a4a;
+  --display:'Barlow Condensed','Arial Narrow',Arial,sans-serif; --texto:'Barlow',Arial,Helvetica,sans-serif; --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark; --fondo:#0d131a; --sup:#141c26; --sup2:#19232f; --tinta:#e3e9f0; --gris:#95a3b4; --linea:#28344300;
+  --linea:#283443; --azul:#7ea6ff; --azul-suave:#1a2842; --naranja:#ff8a4c; --naranja-suave:#2c1d14; --escena:#18212c; --escena2:#212c39; --papel:#f5f7f9; --ok:#5fcf93;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark; --fondo:#0d131a; --sup:#141c26; --sup2:#19232f; --tinta:#e3e9f0; --gris:#95a3b4;
+  --linea:#283443; --azul:#7ea6ff; --azul-suave:#1a2842; --naranja:#ff8a4c; --naranja-suave:#2c1d14; --escena:#18212c; --escena2:#212c39; --papel:#f5f7f9; --ok:#5fcf93;
+}
+*{box-sizing:border-box}
+body{background:var(--fondo);color:var(--tinta);font:16px/1.5 var(--texto);margin:0}
+.envol{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 64px;display:grid;gap:56px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.02;text-wrap:balance}
+h1{font-size:clamp(44px,8vw,84px);font-weight:700;letter-spacing:-.005em}
+h2{font-size:clamp(28px,4.2vw,40px);font-weight:700;text-transform:uppercase;letter-spacing:.01em}
+h3{font-size:19px;font-weight:600;letter-spacing:.02em}
+p{margin:0}
+.etiqueta{font:500 12px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+.num,td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+code{font:13px var(--mono);background:var(--sup2);border:1px solid var(--linea);border-radius:3px;padding:1px 5px}
+section{display:grid;gap:20px}
+.cab-sec{display:grid;gap:8px;max-width:70ch}
+.cab-sec p{color:var(--gris)}
+
+/* encabezado */
+.cabecera{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end;border-bottom:2px solid var(--tinta);padding-bottom:22px}
+.cabecera h1 span{color:var(--azul)}
+.cabecera .lead{max-width:60ch;font-size:18px;color:var(--gris);margin-top:12px}
+.cifras{display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));gap:14px 26px}
+.cifra{display:grid;gap:2px;border-top:1px solid var(--linea);padding-top:8px}
+.cifra b{font:700 30px/1 var(--display)}
+.cifra span{font-size:13px;color:var(--gris);line-height:1.3}
+@media (max-width:760px){.cabecera{grid-template-columns:1fr}}
+
+/* escenas 3D */
+.escena{position:relative;background:radial-gradient(120% 90% at 50% 20%,var(--escena2),var(--escena));border:1px solid var(--linea);border-radius:6px;overflow:hidden;aspect-ratio:16/10;max-height:78vh;width:100%;touch-action:none}
+.escena canvas{display:block;width:100%;height:100%;outline:none}
+.escena .poster{position:absolute;inset:0;margin:auto;max-height:86%;max-width:80%;object-fit:contain;opacity:.55;pointer-events:none}
+.escena .aviso-carga{position:absolute;left:14px;bottom:12px;font:500 12px var(--mono);color:var(--gris);letter-spacing:.06em}
+.escena .nombre{position:absolute;left:12px;top:12px;max-width:calc(100% - 24px);background:var(--sup);border:1px solid var(--linea);border-left:4px solid var(--naranja);border-radius:4px;padding:7px 11px;font-size:14px;box-shadow:0 2px 10px #0000001a}
+.escena .nombre b{font-family:var(--mono);color:var(--azul);margin-right:8px}
+.escena .ayuda{position:absolute;right:12px;bottom:10px;font:12px var(--mono);color:var(--gris)}
+@media (max-width:600px){.escena{aspect-ratio:4/5}.escena .ayuda{display:none}}
+.barra{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.barra .sep{width:1px;height:26px;background:var(--linea);margin-inline:4px}
+button{font:500 14px var(--texto);color:var(--tinta);background:var(--sup);border:1px solid var(--linea);border-radius:4px;padding:7px 13px;cursor:pointer;min-height:36px}
+button:hover{border-color:var(--azul)}
+button:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+button[aria-pressed="true"]{background:var(--azul);border-color:var(--azul);color:#fff}
+:root[data-theme="dark"] button[aria-pressed="true"]{color:#0d131a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) button[aria-pressed="true"]{color:#0d131a}}
+button.primario{background:var(--naranja);border-color:var(--naranja);color:#fff;font-weight:600}
+button:disabled{opacity:.45;cursor:default}
+
+/* juego */
+.juego{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px;align-items:start}
+@media (max-width:900px){.juego{grid-template-columns:1fr}}
+.panel{background:var(--sup);border:1px solid var(--linea);border-radius:6px;padding:16px;display:grid;gap:14px}
+.paso-actual{display:grid;gap:6px;border-left:4px solid var(--naranja);padding-left:12px;min-height:96px}
+.paso-actual .k{font:500 12px var(--mono);color:var(--gris);letter-spacing:.08em;text-transform:uppercase}
+.paso-actual h3{font-size:24px}
+.paso-actual p{font-size:15px}
+.progreso{height:6px;background:var(--sup2);border-radius:3px;overflow:hidden;border:1px solid var(--linea)}
+.progreso i{display:block;height:100%;background:var(--azul);width:0;transition:width .4s}
+.controles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.controles .ancho{grid-column:1/3}
+ol.pasos{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:p}
+ol.pasos li{counter-increment:p}
+ol.pasos button{width:100%;text-align:left;border:0;background:none;padding:6px 8px;min-height:0;display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:baseline;font-size:14px;border-radius:3px}
+ol.pasos button::before{content:counter(p,decimal-leading-zero);font:500 12px var(--mono);color:var(--gris)}
+ol.pasos li.hecho button{color:var(--gris)}
+ol.pasos li.hecho button::before{content:"✓";color:var(--ok);font-weight:700}
+ol.pasos li.sigue button{background:var(--naranja-suave);color:var(--tinta);font-weight:600}
+ol.pasos button:hover{background:var(--sup2)}
+
+/* planos */
+.planos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:820px){.planos{grid-template-columns:1fr}}
+.plano{background:var(--sup);border:1px solid var(--linea);border-radius:6px;padding:16px;display:grid;gap:10px;align-content:start}
+.plano header{display:grid;gap:2px}
+.plano .meta{font:12px var(--mono);color:var(--gris);letter-spacing:.03em}
+.plano > p{font-size:14px;color:var(--gris)}
+.papel{background:var(--papel);border:1px solid #d4dbe4;border-radius:3px;padding:10px;overflow-x:auto}
+.papel .vista{width:100%!important;margin:0}
+.papel .vista-tit{display:none}
+.papel svg{width:100%!important;height:auto!important;display:block;overflow:visible}
+.papel svg[style*="overflow:hidden"]{overflow:hidden!important}
+svg .pieza{fill:#e3eaf5;stroke:#101820}
+svg .pieza2{fill:#f8dcc8;stroke:#101820}
+svg .pieza3{fill:#d9dee4;stroke:#101820}
+svg .hueco{fill:#fff;stroke:#101820}
+svg .obj{stroke:#101820;fill:none}
+svg .oculta{stroke:#4a5663;fill:none}
+svg .fantasma{stroke:#8795a3;fill:none}
+svg .eje{stroke:#d9571a;fill:none}
+svg .aux,svg .cota{stroke:#39434d;fill:none}
+svg .flecha{fill:#39434d}
+svg .t{font-family:'IBM Plex Mono',monospace;fill:#101820}
+svg .ct{font-family:'IBM Plex Mono',monospace;fill:#1a2530;font-weight:500}
+svg .etq{font-family:'IBM Plex Mono',monospace;fill:#1c4fb3;font-weight:500}
+
+/* tablas y listas */
+.tabla{overflow-x:auto;background:var(--sup);border:1px solid var(--linea);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--gris);text-align:left;padding:10px 12px;border-bottom:2px solid var(--tinta);white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid var(--linea);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n{font:500 14px var(--mono);color:var(--azul);white-space:nowrap}
+tr.dest td{background:var(--azul-suave)}
+.dos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+@media (max-width:820px){.dos{grid-template-columns:1fr}}
+ol.taller{margin:0;padding-left:22px;display:grid;gap:10px;max-width:75ch}
+ol.taller li::marker{font:600 15px var(--mono);color:var(--azul)}
+.nota{background:var(--naranja-suave);border-left:4px solid var(--naranja);border-radius:3px;padding:12px 16px;display:grid;gap:4px;font-size:15px;max-width:75ch}
+.nota b{font:700 17px var(--display);text-transform:uppercase;letter-spacing:.04em}
+ul.archivos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+ul.archivos li{background:var(--sup);border:1px solid var(--linea);border-radius:6px;padding:14px;display:grid;gap:6px;align-content:start}
+ul.archivos code{justify-self:start;overflow-wrap:anywhere}
+ul.archivos span{font-size:14px;color:var(--gris)}
+a{color:var(--azul)}
+.boton-enlace{display:inline-flex;align-items:center;gap:8px;background:var(--azul);color:#fff;text-decoration:none;font-weight:600;padding:10px 16px;border-radius:4px;justify-self:start}
+:root[data-theme="dark"] .boton-enlace{color:#0d131a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .boton-enlace{color:#0d131a}}
+.pie{font-size:13px;color:var(--gris);border-top:1px solid var(--linea);padding-top:16px;max-width:90ch}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<div class="envol">
+  <header class="cabecera">
+    <div>
+      <div class="etiqueta">VX-EC · Rev. E · Aventuras con Janeric</div>
+      <h1>Trípode <span>VX-EC</span></h1>
+      <p class="lead">Copia del Arizona Vortex armado como trípode. La cabeza azul es una placa lisa de 15,9 mm con 2 tubos, 4 aletas y un puente; la gin pole naranja son 7 piezas de 12,7 mm. 7 patas de afuera, 3 de adentro, 3 pies, el carrete de anclajes, el poste AHP de acero para el carro y el pie plano con rótula. Todos los huecos siguen una sola regla: 63,5 mm desde cada boca y 139,7 mm entre huecos.</p>
+    </div>
+    <div class="cifras">
+      <div class="cifra"><b>417 × 165</b><span>mm, cabeza A-frame (igual al Vortex)</span></div>
+      <div class="cifra"><b>%%ALTURA%% m</b><span>altura al pasador con 2 patas de afuera (tubo arriba: %%ALTURAB%% m)</span></div>
+      <div class="cifra"><b>%%KGC%% kg</b><span>cabeza A-frame soldada</span></div>
+      <div class="cifra"><b>%%KGG%% kg</b><span>gin pole soldada</span></div>
+    </div>
+  </header>
+
+  <section id="modelo" aria-labelledby="t-modelo">
+    <div class="cab-sec"><div class="etiqueta">1 · Modelo 3D</div><h2 id="t-modelo">Gíralo para cualquier lado</h2>
+      <p>Arrastra para girar, rueda o pellizco para acercar, dos dedos o clic derecho para mover. Toca una pieza para ver su número y nombre.</p></div>
+    <div class="barra" role="group" aria-label="Qué mostrar">
+      <button id="v-tri" aria-pressed="true">Trípode completo</button>
+      <button id="v-cab" aria-pressed="false">Cabeza + gin pole</button>
+      <button id="v-af" aria-pressed="false">Solo cabeza A-frame</button>
+      <button id="v-trib" aria-pressed="false">Tubo arriba + carrete</button>
+      <button id="v-car" aria-pressed="false">Carretes + gin pole de lado</button>
+      <button id="v-ahp" aria-pressed="false">AHP (carro)</button>
+      <button id="v-rot" aria-pressed="false">Pie con rótula</button>
+      <span class="sep" aria-hidden="true"></span>
+      <button id="c-iso">3D</button><button id="c-frente">Frente</button><button id="c-atras">Atrás</button><button id="c-lado">Lado</button><button id="c-arriba">Arriba</button>
+      <button id="c-giro" aria-pressed="false">Girar solo</button>
+    </div>
+    <div class="escena" id="escena1">
+      <img class="poster" src="%%POSTER%%" alt="Trípode armado (vista previa)">
+      <div class="aviso-carga">Cargando modelo 3D…</div>
+      <div class="nombre" hidden></div>
+      <div class="ayuda">toca una pieza</div>
+    </div>
+  </section>
+
+  <section id="juego" aria-labelledby="t-juego">
+    <div class="cab-sec"><div class="etiqueta">2 · Juego</div><h2 id="t-juego">Armar y desarmar paso a paso</h2>
+      <p>Las piezas que faltan flotan en gris; la que sigue sale en color. Puedes ir y volver cuantas veces quieras: con «Reiniciar» todo vuelve al principio.</p></div>
+    <div class="barra" role="group" aria-label="Modo del juego">
+      <button id="m-soldar" aria-pressed="true">Soldar la cabeza y la gin pole</button>
+      <button id="m-armar" aria-pressed="false">Armar el trípode</button>
+      <button id="m-carrete" aria-pressed="false">Carretes</button>
+      <button id="m-ahp" aria-pressed="false">AHP</button>
+      <button id="m-rotula" aria-pressed="false">Pie con rótula</button>
+    </div>
+    <div class="juego">
+      <div class="escena" id="escena2">
+        <img class="poster" src="%%POSTER%%" alt="">
+        <div class="aviso-carga">Cargando…</div>
+        <div class="nombre" hidden></div>
+      </div>
+      <div class="panel">
+        <div class="paso-actual" aria-live="polite"><span class="k" id="j-k">Paso 1 de 9</span><h3 id="j-t">—</h3><p id="j-d">—</p></div>
+        <div class="progreso" aria-hidden="true"><i id="j-bar"></i></div>
+        <div class="controles">
+          <button id="j-ant">◀ Desarmar</button>
+          <button id="j-sig" class="primario">Armar ▶</button>
+          <button id="j-todo-des">Desarmar todo</button>
+          <button id="j-todo-arm">Armar todo</button>
+          <button id="j-reset" class="ancho">Reiniciar</button>
+        </div>
+        <ol class="pasos" id="j-lista"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos" aria-labelledby="t-planos">
+    <div class="cab-sec"><div class="etiqueta">3 · Planos</div><h2 id="t-planos">Cada pieza, numerada y con medidas</h2>
+      <p><b>Todas las medidas están en milímetros (mm).</b> Cada dibujo dice cuántas piezas fabricar («FABRICAR × N»). La placa 01 va en aluminio de 15,9 mm; 03, 04, 05, 07, 08, 09 y los discos 15 y 16 en 12,7 mm; el AHP (17) y la base del pie con rótula (18) en acero A36. El PDF de 13 hojas en A3 y los archivos DXF están en la sección 6.</p></div>
+    <div class="planos">%%TARJETAS%%</div>
+  </section>
+
+  <section id="piezas" aria-labelledby="t-piezas">
+    <div class="cab-sec"><div class="etiqueta">4 · Lista</div><h2 id="t-piezas">Piezas y alturas</h2></div>
+    <div class="dos">
+      <div class="tabla"><table><thead><tr><th>N.º</th><th>Pieza</th><th>Material</th><th>FABRICAR</th><th>kg c/u</th></tr></thead><tbody>%%LISTA%%</tbody></table></div>
+      <div style="display:grid;gap:12px">
+        <div class="tabla"><table><thead><tr><th>Patas de afuera</th><th>Hueco pata de adentro</th><th>Altura</th><th>Lado entre pies</th></tr></thead><tbody>%%ALTURAS%%</tbody></table></div>
+        <p style="font-size:14px;color:var(--gris)">Altura del suelo al pasador de abajo de la cabeza, con las 3 patas iguales. Hueco 1 = pata de adentro metida lo menos posible. Vortex: 2,41 m con 2 patas de afuera.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="material" aria-labelledby="t-material">
+    <div class="cab-sec"><div class="etiqueta">5 · Material y taller</div><h2 id="t-material">Material, soldadura y prueba</h2></div>
+    <div class="tabla"><table><thead><tr><th>Cód.</th><th>Qué</th><th>Cant.</th><th>Material</th><th>Dónde va</th></tr></thead><tbody>%%COMPRAS%%</tbody></table></div>
+    <div class="nota"><b>Si no hay aluminio 6061-T6</b>Hacer las mismas piezas en acero 4130 (cromo-molibdeno) de 6 mm, con el mismo contorno y los mismos huecos. Pesa 1,7 veces más y se suelda con TIG y varilla ER80S-D2. No usar aluminio 6063 ni acero de construcción común.</div>
+    <div class="dos">
+      <div style="display:grid;gap:12px"><h3>En el taller</h3><ol class="taller">%%TALLER%%</ol></div>
+      <div style="display:grid;gap:12px"><h3>En el lugar</h3><ol class="taller">%%CAMPO%%</ol>
+        <div class="nota"><b>Antes de usar con personas</b>Hacer la prueba de carga del taller (18 kN por 3 minutos, sin personas) y que un ingeniero mecánico revise la soldadura. Si algo se deforma, no se usa.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="archivos" aria-labelledby="t-archivos">
+    <div class="cab-sec"><div class="etiqueta">6 · Archivos</div><h2 id="t-archivos">Archivos para el taller y el diseñador</h2>
+      <p>Todo está en la carpeta <code>bipode/v9</code> del repositorio. Desde GitHub se baja cada archivo o la carpeta completa en ZIP (botón «Code» → «Download ZIP»).</p></div>
+    <a class="boton-enlace" href="%%REPO%%" target="_blank" rel="noopener">Abrir la carpeta en GitHub ↗</a>
+    <ul class="archivos">%%ARCHIVOS%%</ul>
+  </section>
+
+  <p class="pie">Diseño propio basado en el Arizona Vortex de Rock Exotica, medido en fotos y en el manual. Medidas de la cabeza sacadas de la vista de frente del manual (escala 0,724 mm por píxel) y de 164 fotos. Uso con personas solo después de la prueba de carga y la revisión de un ingeniero.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+"use strict";
+var D = %%DATA%%;
+var MOV = !window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ---------------------------------------------------------------- carga de modelos
+var cache = {};
+function buffer(nombre){
+  if(!cache[nombre]) cache[nombre] = fetch(nombre).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.text(); })
+    .then(function(t){ var s = atob(t.trim()), u = new Uint8Array(s.length); for(var i=0;i<s.length;i++) u[i]=s.charCodeAt(i); return u.buffer; });
+  return cache[nombre];
+}
+function modelo(nombre){
+  return buffer(nombre).then(function(b){ return new Promise(function(res, rej){ new THREE.GLTFLoader().parse(b.slice(0), '', function(g){ res(g.scene); }, rej); }); })
+    .then(function(esc){ preparar(esc); var c = esc; while(c.children.length === 1 && !c.children[0].isMesh) c = c.children[0]; esc.userData.cont = c; return esc; });
+}
+function idDe(nombre){ var i = nombre.indexOf('_'); return i < 0 ? nombre : nombre.slice(i+1); }
+function preparar(esc){
+  esc.traverse(function(o){
+    if(!o.isMesh) return;
+    if(!o.geometry.attributes.normal) o.geometry.computeVertexNormals();
+    var c = o.material && o.material.color ? o.material.color.clone() : new THREE.Color(0x888888);
+    o.material = new THREE.MeshStandardMaterial({color:c, metalness:.3, roughness:.42});
+    o.userData.base = c.clone();
+    var e = new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 32), new THREE.LineBasicMaterial({color:0x0e1a26, transparent:true, opacity:.42}));
+    e.raycast = function(){}; o.add(e); o.userData.bordes = e;
+  });
+}
+function piezaDe(obj, raiz){ var c = raiz.userData.cont || raiz; while(obj && obj.parent && obj.parent !== c) obj = obj.parent; return obj; }
+
+// ---------------------------------------------------------------- escena
+function Escena(el){
+  var s = this; s.el = el;
+  s.r = new THREE.WebGLRenderer({antialias:true, alpha:true});
+  s.r.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  s.r.outputEncoding = THREE.sRGBEncoding; s.r.setClearColor(0x000000, 0);
+  el.insertBefore(s.r.domElement, el.firstChild);
+  s.escena = new THREE.Scene();
+  s.escena.add(new THREE.HemisphereLight(0xffffff, 0x5a6878, 1.0));
+  s.luz = new THREE.DirectionalLight(0xffffff, .85); s.escena.add(s.luz);
+  var l2 = new THREE.DirectionalLight(0xffffff, .35); l2.position.set(-4, 2, 3); s.escena.add(l2);
+  s.cam = new THREE.PerspectiveCamera(32, 1, 5, 80000);
+  s.ctl = new THREE.OrbitControls(s.cam, s.r.domElement); s.ctl.enableDamping = true; s.ctl.dampingFactor = .09; s.ctl.autoRotateSpeed = 1.2;
+  s.anim = null; s.raiz = null;
+  function tam(){ var w = el.clientWidth, h = el.clientHeight; if(!w || !h) return; s.r.setSize(w, h, false); s.cam.aspect = w/h; s.cam.updateProjectionMatrix(); }
+  if(window.ResizeObserver) new ResizeObserver(tam).observe(el); else window.addEventListener('resize', tam);
+  tam();
+  var abajo = null;
+  s.r.domElement.addEventListener('pointerdown', function(e){ abajo = [e.clientX, e.clientY]; });
+  s.r.domElement.addEventListener('pointerup', function(e){
+    if(!abajo || Math.hypot(e.clientX-abajo[0], e.clientY-abajo[1]) > 6 || !s.raiz) return;
+    var rc = el.getBoundingClientRect(), v = new THREE.Vector2((e.clientX-rc.left)/rc.width*2-1, -(e.clientY-rc.top)/rc.height*2+1);
+    var ray = new THREE.Raycaster(); ray.setFromCamera(v, s.cam);
+    var hits = ray.intersectObject(s.raiz, true).filter(function(h){ return h.object.visible && (!h.object.material.transparent || h.object.material.opacity > .5); });
+    s.elegir(hits.length ? piezaDe(hits[0].object, s.raiz) : null);
+  });
+  (function bucle(t){ requestAnimationFrame(bucle); if(s.anim) s.anim(t); s.ctl.update(); s.luz.position.copy(s.cam.position).add(new THREE.Vector3(0, s.dist*.6||800, 0)); s.r.render(s.escena, s.cam); })();
+}
+Escena.prototype.poner = function(raiz){
+  if(this.raiz) this.escena.remove(this.raiz);
+  this.raiz = raiz; this.escena.add(raiz); this.elegir(null);
+  var p = this.el.querySelector('.poster'); if(p) p.hidden = true;
+  var a = this.el.querySelector('.aviso-carga'); if(a) a.hidden = true;
+};
+Escena.prototype.caja = function(){
+  var b = new THREE.Box3(); this.raiz.updateMatrixWorld(true);
+  this.raiz.traverse(function(o){ if(o.isMesh && o.visible && !/_M\d/.test(o.name)) b.expandByObject(o); });
+  return b;
+};
+Escena.prototype.mirar = function(dir, caja, extra){
+  caja = caja || this.caja();
+  var c = caja.getCenter(new THREE.Vector3()), t = caja.getSize(new THREE.Vector3());
+  var r = t.length()/2, d = r / Math.sin(THREE.MathUtils.degToRad(this.cam.fov/2)) * (extra || 1.02);
+  if(this.cam.aspect < 1) d /= Math.max(this.cam.aspect, .55);
+  var v = new THREE.Vector3(dir[0], dir[1], dir[2]).normalize();
+  this.cam.position.copy(c).add(v.multiplyScalar(d)); this.ctl.target.copy(c); this.dist = d;
+  this.cam.near = d/100; this.cam.far = d*20; this.cam.updateProjectionMatrix(); this.ctl.update();
+};
+Escena.prototype.elegir = function(p){
+  var caja = this.el.querySelector('.nombre');
+  if(this.sel) this.sel.traverse(function(o){ if(o.isMesh) o.material.emissive.setHex(0x000000); });
+  this.sel = p;
+  if(!p){ caja.hidden = true; return; }
+  p.traverse(function(o){ if(o.isMesh) o.material.emissive.setHex(0x3a1c05); });
+  var id = idDe(p.name), nom = D.nombres[id] || id;
+  caja.innerHTML = '<b>' + id.replace(/^PP-/, 'P-') + '</b>' + nom.replace(/</g, '&lt;');
+  caja.hidden = false;
+};
+function falla(el, err){ var a = el.querySelector('.aviso-carga'); if(a){ a.hidden = false; a.textContent = 'No se pudo cargar el modelo 3D (' + (err && err.message || err) + '). Recarga la página.'; } }
+
+if(!window.THREE || !THREE.GLTFLoader || !THREE.OrbitControls){
+  ['escena1','escena2'].forEach(function(i){ falla(document.getElementById(i), 'sin conexión a la librería 3D'); });
+  return;
+}
+
+// ---------------------------------------------------------------- 1 · visor
+var E1 = new Escena(document.getElementById('escena1'));
+var vista1 = 'tri', vistas = {};
+var ARCH = {tri:'tripode_glb.txt', trib:'tripode_b_glb.txt', cab:'cabeza_glb.txt', af:'cabeza_glb.txt', car:'acc_glb.txt', ahp:'acc_glb.txt', rot:'acc_glb.txt'};
+var CLAVE = {tri:'tri', trib:'trib', cab:'cab', af:'cab', car:'acc', ahp:'acc', rot:'acc'};
+var FILTRO = {car:/^a_c/, ahp:/^a_17/, rot:/^a_18/, carrete:/^a_c/, rotula:/^a_18/};
+FILTRO.ahp2 = FILTRO.ahp;
+var DIRS = {tri:{iso:[1,.35,1.4], frente:[0,.12,-1], atras:[0,.18,1], lado:[1,.1,0], arriba:[0,1,.002]},
+            cab:{iso:[1,.9,1.3], frente:[0,.05,-1], atras:[0,.2,1], lado:[1,.05,0], arriba:[0,1,.002]},
+            acc:{iso:[.8,.9,1.2], frente:[0,.05,-1], atras:[0,.2,1], lado:[1,.05,0], arriba:[0,1,.002]}};
+DIRS.trib = DIRS.tri;
+var BOTONES = ['tri','cab','af','trib','car','ahp','rot'];
+function mostrar(v){
+  vista1 = v;
+  BOTONES.forEach(function(k){ document.getElementById('v-'+k).setAttribute('aria-pressed', k === v); });
+  var clave = CLAVE[v];
+  var p = vistas[clave] ? Promise.resolve(vistas[clave]) : modelo(ARCH[v]).then(function(m){ vistas[clave] = m; return m; });
+  p.then(function(m){
+    m.userData.cont.children.forEach(function(o){ var vis = FILTRO[v] ? FILTRO[v].test(o.name) : !(v === 'af' && /^g_/.test(o.name)); o.traverse(function(x){ if(x.isMesh) x.visible = vis; }); o.visible = vis; });
+    E1.poner(m); E1.mirar(DIRS[clave].iso, null, (clave === 'tri' || clave === 'trib') ? .8 : 1);
+  }).catch(function(e){ falla(E1.el, e); });
+}
+BOTONES.forEach(function(k){ document.getElementById('v-'+k).addEventListener('click', function(){ mostrar(k); }); });
+['iso','frente','atras','lado','arriba'].forEach(function(k){ document.getElementById('c-'+k).addEventListener('click', function(){ if(E1.raiz) E1.mirar(DIRS[CLAVE[vista1]][k]); }); });
+document.getElementById('c-giro').addEventListener('click', function(){ E1.ctl.autoRotate = !E1.ctl.autoRotate; this.setAttribute('aria-pressed', E1.ctl.autoRotate); });
+mostrar('tri');
+
+// ---------------------------------------------------------------- 2 · juego
+var E2 = new Escena(document.getElementById('escena2'));
+var modo = 'soldar', J = {}, k = 0, MODOS = ['soldar','armar','carrete','ahp','rotula'];
+var ARCHJ = {soldar:'cabeza_glb.txt', armar:'tripode_glb.txt', carrete:'acc_glb.txt', ahp:'acc_glb.txt', rotula:'acc_glb.txt'};
+var TXT_FIN = {soldar:'Cabeza y gin pole listas', armar:'Trípode armado', carrete:'Carretes armados con la gin pole de lado', ahp:'AHP armado', rotula:'Pie con rótula armado'};
+var EXP = {}; D.tri.forEach(function(p){ EXP[p.n] = p.e; });
+
+function montarJuego(m, nombre){
+  if(J[nombre]) return J[nombre];
+  var pasos = D[nombre], piezas = {}, C;
+  m.updateMatrixWorld(true);
+  var hijos = m.userData.cont.children.slice();
+  if(FILTRO[nombre]){ hijos = hijos.filter(function(o){ var ok = FILTRO[nombre].test(o.name); o.visible = ok; return ok; }); }
+  var caja = new THREE.Box3(); hijos.forEach(function(o){ caja.expandByObject(o); }); C = caja.getCenter(new THREE.Vector3());
+  hijos.forEach(function(o){
+    var casa = o.position.clone(), e;
+    if(nombre === 'armar'){ var v = EXP[o.name] || [0,0,0]; e = new THREE.Vector3(v[0], v[1], v[2]); }
+    else {
+      var c = new THREE.Box3().setFromObject(o).getCenter(new THREE.Vector3()), d = c.clone().sub(C);
+      if(/^g_|^a_cG/.test(o.name)) d.z += 140;
+      if(/^c_P-|^c_PL/.test(o.name)) d.x *= 2.2;
+      e = d.multiplyScalar(1.5).add(new THREE.Vector3(0, 90 + (/^g_/.test(o.name) ? 60 : 0), 0));
+      if(nombre === 'rotula'){ e.y = Math.abs(e.y) + 60; e.x *= 1.6; e.z *= 1.6; }
+    }
+    piezas[o.name] = {o:o, casa:casa, fuera:casa.clone().add(e), paso:-1, pos:casa.clone()};
+  });
+  pasos.forEach(function(p, i){ p.p.forEach(function(n){ if(piezas[n]) piezas[n].paso = i; }); });
+  var todo = new THREE.Box3();
+  Object.keys(piezas).forEach(function(n){ var q = piezas[n]; if(q.paso < 0) return; var b = new THREE.Box3().setFromObject(q.o); todo.union(b); b.translate(q.fuera.clone().sub(q.casa)); todo.union(b); });
+  J[nombre] = {m:m, pasos:pasos, piezas:piezas, caja:todo};
+  return J[nombre];
+}
+function estilo(q, est){
+  q.o.traverse(function(o){
+    if(!o.isMesh) return;
+    var mat = o.material, b = o.userData.bordes;
+    if(est === 'fantasma'){ mat.transparent = true; mat.opacity = .16; mat.depthWrite = false; mat.color.copy(o.userData.base).lerp(new THREE.Color(0x9aa6b4), .6); mat.emissive.setHex(0); if(b) b.material.opacity = .12; }
+    else if(est === 'sigue'){ mat.transparent = false; mat.opacity = 1; mat.depthWrite = true; mat.color.copy(o.userData.base); mat.emissive.setHex(0x4a1e00); if(b) b.material.opacity = .5; }
+    else { mat.transparent = false; mat.opacity = 1; mat.depthWrite = true; mat.color.copy(o.userData.base); mat.emissive.setHex(0); if(b) b.material.opacity = .42; }
+  });
+}
+function aplicar(anim){
+  var j = J[modo]; if(!j) return;
+  var desde = {}, hasta = {};
+  Object.keys(j.piezas).forEach(function(n){
+    var q = j.piezas[n];
+    var puesta = q.paso < 0 || q.paso < k;
+    estilo(q, puesta ? 'lista' : (q.paso === k ? 'sigue' : 'fantasma'));
+    desde[n] = q.o.position.clone(); hasta[n] = puesta ? q.casa : q.fuera;
+  });
+  var t0 = null, dur = (anim && MOV) ? 750 : 0;
+  E2.anim = function(t){
+    if(t0 === null) t0 = t;
+    var u = dur ? Math.min(1, (t - t0)/dur) : 1, w = u < .5 ? 4*u*u*u : 1 - Math.pow(-2*u + 2, 3)/2;
+    Object.keys(hasta).forEach(function(n){ j.piezas[n].o.position.lerpVectors(desde[n], hasta[n], w); });
+    if(u >= 1) E2.anim = null;
+  };
+  var N = j.pasos.length, p = j.pasos[Math.min(k, N-1)];
+  document.getElementById('j-k').textContent = k >= N ? 'Listo · ' + N + ' de ' + N + ' pasos' : 'Paso ' + (k+1) + ' de ' + N;
+  document.getElementById('j-t').textContent = k >= N ? TXT_FIN[modo] : p.t;
+  document.getElementById('j-d').textContent = k >= N ? (modo === 'armar' ? 'Las 3 patas iguales, con maniotas. Toca «Desarmar» para ir hacia atrás.' : 'Todas las piezas en su lugar. Toca «Desarmar» para ir hacia atrás.') : p.d;
+  document.getElementById('j-bar').style.width = (100*k/N) + '%';
+  document.getElementById('j-ant').disabled = k <= 0;
+  document.getElementById('j-sig').disabled = k >= N;
+  var lis = document.getElementById('j-lista').children;
+  for(var i=0;i<lis.length;i++){ lis[i].className = i < k ? 'hecho' : (i === k ? 'sigue' : ''); }
+}
+function lista(){
+  var ol = document.getElementById('j-lista'); ol.innerHTML = '';
+  D[modo].forEach(function(p, i){
+    var li = document.createElement('li'), b = document.createElement('button');
+    b.textContent = p.t; b.addEventListener('click', function(){ k = i; aplicar(true); });
+    li.appendChild(b); ol.appendChild(li);
+  });
+}
+function modoJuego(m){
+  modo = m; k = 0;
+  MODOS.forEach(function(x){ document.getElementById('m-'+x).setAttribute('aria-pressed', m === x); });
+  lista();
+  var p = J[m] ? Promise.resolve(J[m]) : modelo(ARCHJ[m]).then(function(mo){ return montarJuego(mo, m); });
+  p.then(function(j){ E2.poner(j.m); aplicar(false); E2.mirar(dirJuego(m), j.caja, .72); })
+   .catch(function(e){ falla(E2.el, e); });
+}
+function dirJuego(m){ return m === 'armar' ? [1,.5,1.5] : (m === 'ahp' ? [.9,.8,-1.1] : [1,.9,1.3]); }
+MODOS.forEach(function(x){ document.getElementById('m-'+x).addEventListener('click', function(){ modoJuego(x); }); });
+document.getElementById('j-sig').addEventListener('click', function(){ var j = J[modo]; if(j && k < j.pasos.length){ k++; aplicar(true); } });
+document.getElementById('j-ant').addEventListener('click', function(){ if(k > 0){ k--; aplicar(true); } });
+document.getElementById('j-todo-des').addEventListener('click', function(){ k = 0; aplicar(true); });
+document.getElementById('j-todo-arm').addEventListener('click', function(){ var j = J[modo]; if(j){ k = j.pasos.length; aplicar(true); } });
+document.getElementById('j-reset').addEventListener('click', function(){
+  var j = J[modo]; k = 0; if(!j) return;
+  Object.keys(j.piezas).forEach(function(n){ var q = j.piezas[n]; q.o.position.copy(q.paso < 0 ? q.casa : q.fuera); });
+  E2.ctl.autoRotate = false; aplicar(false); E2.mirar(dirJuego(modo), j.caja, .72);
+});
+modoJuego('soldar');
+})();
+</script>
