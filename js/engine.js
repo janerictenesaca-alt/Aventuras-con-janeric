@@ -1,4 +1,4 @@
-/* Ganchan - motor: proyecto, medios, reproducción, render, historial, exportación */
+/* Ganjan - motor: proyecto, medios, reproducción, render, historial, exportación */
 (function () {
   const G = window.G = {
     project: null, media: new Map(), els: new Map(), sel: null, time: 0, playing: false,

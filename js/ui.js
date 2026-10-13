@@ -1,4 +1,4 @@
-/* Ganchan - interfaz (pestañas, línea de tiempo, inspector, interacción) */
+/* Ganjan - interfaz (pestañas, línea de tiempo, inspector, interacción) */
 (function () {
   const ui = G.ui, { $, h, fmt, fmtS, toast } = G.ui;
   const clamp = G.clamp;
@@ -174,7 +174,7 @@
       ['Archivo', [['Nuevo proyecto', '', async () => { if (confirm('¿Empezar un proyecto nuevo? Se borra el actual.')) await G.reset(); }], ['Importar', '', () => $('#fileIn').click()], ['Exportar', 'Ctrl+E', openExport]]],
       ['Editar', [['Deshacer', 'Ctrl+Z', G.undo], ['Rehacer', 'Ctrl+Shift+Z', G.redo], ['Copiar', 'Ctrl+C', () => copyClip(false)], ['Cortar', 'Ctrl+X', () => copyClip(true)], ['Pegar', 'Ctrl+V', pasteClip, () => !ui.clipboard], ['Dividir', 'Ctrl+B', () => G.splitAtPlayhead()], ['Duplicar', 'Ctrl+D', () => G.sel && G.duplicate(G.sel)], ['Eliminar', 'Supr', () => delSel()]]],
       ['Diseño', [...LAYOUTS.map(([k, n]) => [n, '', () => setLayout(k), null, () => ui.layout === k]), ['Restablecer diseño actual', '', () => setLayout('media')]]],
-      ['Más', [['Versión: Ganchan 0.2', '', () => { }, () => true]]],
+      ['Más', [['Versión: Ganjan 0.2', '', () => { }, () => true]]],
       ['Ayuda', [['Atajos', '', shortcuts], ['Tutorial', '', tutorial], ['Acerca de', '', about]]],
       ['Configuración', [], settings],
     ];
@@ -188,7 +188,7 @@
     m.append(h('div', { class: 'sep' }), h('div', { class: 'it', onclick: () => { m.classList.add('hidden'); location.reload(); } }, 'Volver a la página de inicio'));
   }
   const modal = n => ui.modal(n), closeModal = () => ui.closeModal();
-  function about() { modal(h('div', null, h('h3', null, 'Ganchan'), h('div', { class: 'hint' }, 'Editor de video personal, hecho desde cero con la misma distribución que CapCut de escritorio. Funciona en el navegador y guarda tu trabajo automáticamente.'), h('div', { class: 'btnrow' }, h('button', { class: 'btn', onclick: closeModal }, 'Cerrar')))); }
+  function about() { modal(h('div', null, h('h3', null, 'Ganjan'), h('div', { class: 'hint' }, 'Editor de video personal, hecho desde cero con la misma distribución que CapCut de escritorio. Funciona en el navegador y guarda tu trabajo automáticamente.'), h('div', { class: 'btnrow' }, h('button', { class: 'btn', onclick: closeModal }, 'Cerrar')))); }
   function tutorial() { modal(h('div', null, h('h3', null, 'Cómo empezar'), h('ol', { class: 'hint', style: 'padding-left:18px;line-height:1.7' }, [h('li', null, 'Importa tus videos en "Archivos multimedia".'), h('li', null, 'Haz clic en un archivo (o arrástralo a la línea de tiempo).'), h('li', null, 'Selecciona un clip y usa Filtros, Efectos, Transiciones y el panel derecho.'), h('li', null, 'Divide con Ctrl+B, elimina con Supr.'), h('li', null, 'Cuando termines pulsa Exportar.')]), h('div', { class: 'btnrow' }, h('button', { class: 'btn', onclick: closeModal }, 'Cerrar')))); }
   function settings() {
     modal(h('div', null, h('h3', null, 'Configuración'), h('div', { class: 'f' }, h('label', null, 'Calidad de la vista previa'), h('select', { onchange: e => { const q = { Baja: 640, Media: 960, Alta: 1280 }; G.quality = e.target.value; G.previewMax = q[G.quality]; $('#btnQuality').textContent = G.quality; G.applyCanvasSize(); } }, ['Baja', 'Media', 'Alta'].map(q => h('option', { selected: q === G.quality }, q)))),
@@ -209,7 +209,7 @@
       h('div', { class: 'hint' }, 'La exportación se hace en tiempo real: dura lo mismo que tu video. Deja esta pestaña visible mientras exporta.'),
       h('div', { class: 'btnrow' }, h('button', { class: 'btn', onclick: closeModal }, 'Cancelar'), h('button', { class: 'btn-primary', onclick: go }, 'Exportar')));
     async function go() {
-      P.name = nameIn.value || 'Ganchan'; $('#projName').value = P.name;
+      P.name = nameIn.value || 'Ganjan'; $('#projName').value = P.name;
       box.append(h('h3', null, 'Exportando…'), h('div', { class: 'bar' }, bar), pct, h('div', { class: 'btnrow' }, h('button', { class: 'btn', onclick: () => G.exportCancel && G.exportCancel() }, 'Cancelar')));
       modal(box);
       try {

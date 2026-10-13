@@ -1,4 +1,4 @@
-/* Ganchan - biblioteca (panel izquierdo): pestañas, barra lateral, búsqueda, favoritos */
+/* Ganjan - biblioteca (panel izquierdo): pestañas, barra lateral, búsqueda, favoritos */
 (function () {
   const ui = G.ui, { $, h, fmtS, toast } = ui;
   const TABS = [['media', 'Archivos multimedia', '▶'], ['audio', 'Audio', '♫'], ['text', 'Texto', 'T'], ['stickers', 'Stickers', '☺'], ['effects', 'Efectos', '✦'],

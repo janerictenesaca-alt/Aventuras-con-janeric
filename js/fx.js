@@ -1,4 +1,4 @@
-/* Ganchan - efectos, transiciones, animaciones y utilidades de dibujo (propios) */
+/* Ganjan - efectos, transiciones, animaciones y utilidades de dibujo (propios) */
 (function () {
   const pool = {};
   GC.scratch = (name, w, h) => {

@@ -1,4 +1,4 @@
-# Ganchan
+# Ganjan
 
 Editor de video personal, hecho desde cero, con la misma distribución que CapCut de escritorio.
 Funciona en el navegador (Chrome o Edge recomendado), sin instalar nada y sin internet.

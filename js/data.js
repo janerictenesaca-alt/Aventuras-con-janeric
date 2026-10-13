@@ -1,4 +1,4 @@
-/* Ganchan - catálogos propios (filtros, textos, stickers, fuentes, sonidos) */
+/* Ganjan - catálogos propios (filtros, textos, stickers, fuentes, sonidos) */
 const GC = window.GC = {};
 
 GC.RATIOS = [

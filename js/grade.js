@@ -1,4 +1,4 @@
-/* Ganchan - corrección de color por píxel: luz, color, HSL, curvas, ruedas, LUT .cube, nitidez y croma */
+/* Ganjan - corrección de color por píxel: luz, color, HSL, curvas, ruedas, LUT .cube, nitidez y croma */
 (function () {
   const clamp = (v, a = 0, b = 1) => v < a ? a : v > b ? b : v;
   const lerp = (a, b, k) => a + (b - a) * k;

@@ -1,4 +1,4 @@
-/* Ganchan - utilidades de interfaz compartidas */
+/* Ganjan - utilidades de interfaz compartidas */
 (function () {
   const $ = s => document.querySelector(s);
   const h = (tag, attrs, ...kids) => {

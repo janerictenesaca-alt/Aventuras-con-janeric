@@ -1,4 +1,4 @@
-/* Ganchan - inspector (panel derecho) */
+/* Ganjan - inspector (panel derecho) */
 (function () {
   const ui = G.ui, { $, h, toast, sl, sel, sw, section, seg } = ui, clamp = G.clamp;
   const commit = () => { G.touch(); G.commit(); };
