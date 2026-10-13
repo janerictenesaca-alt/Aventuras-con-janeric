@@ -72,7 +72,9 @@
 
   GC.grade = (c, clip, S) => {
     const W = c.canvas.width, H = c.canvas.height, a = clip.adj || {};
-    const id = c.getImageData(0, 0, W, H), d = id.data, N = d.length;
+    const gs = GC.scratch('gr', W, H), g2 = gs._c || (gs._c = gs.getContext('2d', { willReadFrequently: true }));
+    g2.setTransform(1, 0, 0, 1, 0, 0); g2.globalCompositeOperation = 'source-over'; g2.globalAlpha = 1; g2.filter = 'none'; g2.clearRect(0, 0, W, H); g2.drawImage(c.canvas, 0, 0);
+    const id = g2.getImageData(0, 0, W, H), d = id.data, N = d.length;
     const ch = clip.chroma && clip.chroma.on ? clip.chroma : null;
     // ----- tablas de tono -----
     const ex = Math.pow(2, (a.exposure || 0) / 100 * 1.5), ct = 1 + (a.contrast || 0) / 100, bl = (a.black || 0) / 100 * .15, wh = 1 + (a.white || 0) / 100 * .2;
@@ -131,8 +133,9 @@
       }
       d[i] = r; d[i + 1] = g; d[i + 2] = b;
     }
-    c.putImageData(id, 0, 0);
-    if (a.sharpen) unsharp(c, a.sharpen / 100 * 1.2, Math.max(.6, 1 * S));
-    if (a.clarity) unsharp(c, a.clarity / 100 * .8, Math.max(4, 12 * S));
+    g2.putImageData(id, 0, 0);
+    if (a.sharpen) unsharp(g2, a.sharpen / 100 * 1.2, Math.max(.6, 1 * S));
+    if (a.clarity) unsharp(g2, a.clarity / 100 * .8, Math.max(4, 12 * S));
+    c.save(); c.setTransform(1, 0, 0, 1, 0, 0); c.globalCompositeOperation = 'copy'; c.globalAlpha = 1; c.filter = 'none'; c.drawImage(gs, 0, 0); c.restore();
   };
 })();

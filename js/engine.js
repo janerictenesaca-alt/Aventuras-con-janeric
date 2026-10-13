@@ -3,7 +3,7 @@
   const G = window.G = {
     project: null, media: new Map(), els: new Map(), sel: null, time: 0, playing: false,
     pps: 80, dirty: true, hist: [], hi: -1, listeners: {}, waitFrames: 0, exporting: false,
-    quality: 'Alta', previewMax: 1280,
+    quality: 'Media', previewMax: 960,
   };
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const uid = () => Math.random().toString(36).slice(2, 9);
@@ -18,7 +18,13 @@
   G.track = id => G.project.tracks.find(t => t.id === id);
   G.selClip = () => G.sel ? G.clip(G.sel) : null;
   G.duration = () => G.project.clips.reduce((m, c) => Math.max(m, c.start + c.dur), 0);
-  G.clipsOn = tid => G.project.clips.filter(c => c.track === tid).sort((a, b) => a.start - b.start);
+  G.rev = 0; let cRev = -1, cProj = null; const cache = new Map();
+  G.clipsOn = tid => {
+    if (cRev !== G.rev || cProj !== G.project) { cache.clear(); cRev = G.rev; cProj = G.project; }
+    let a = cache.get(tid); if (!a) { a = G.project.clips.filter(c => c.track === tid).sort((x, y) => x.start - y.start); cache.set(tid, a); }
+    return a;
+  };
+  G.transList = () => { const k = '__trans'; if (cRev !== G.rev || cProj !== G.project) { cache.clear(); cRev = G.rev; cProj = G.project; } let a = cache.get(k); if (!a) { a = G.project.clips.filter(c => c.transIn); cache.set(k, a); } return a; };
 
   G.mkClip = (type, o) => Object.assign({
     id: uid(), type, track: null, start: 0, dur: 3, in: 0, speed: 1, vol: 1, fadeIn: 0, fadeOut: 0,
@@ -65,7 +71,8 @@
   };
   G.undo = () => { if (G.hi > 0) { G.hi--; restore(); } };
   G.redo = () => { if (G.hi < G.hist.length - 1) { G.hi++; restore(); } };
-  G.touch = () => { G.dirty = true; };
+  G.touch = () => { G.dirty = true; G.rev++; };
+  G.on('tl', () => { G.rev++; });
   let saveT = 0;
   G.save = () => {
     clearTimeout(saveT);
@@ -104,7 +111,7 @@
   const fmtThumb = (src, w, h) => { const c = document.createElement('canvas'); c.width = 160; c.height = Math.round(160 * h / w) || 90; c.getContext('2d').drawImage(src, 0, 0, c.width, c.height); return c.toDataURL('image/jpeg', .7); };
   const peaksOf = async (blob) => {
     try {
-      const ac = G.ensureAudio(); if (!ac || blob.size > 150e6) return null;
+      const ac = G.ensureAudio(); if (!ac || blob.size > 60e6) return null;
       const buf = await ac.decodeAudioData(await blob.arrayBuffer()), d = buf.getChannelData(0), n = Math.ceil(buf.duration * 50), out = new Uint8Array(n), step = d.length / n;
       for (let i = 0; i < n; i++) { let m = 0; const a = Math.floor(i * step), b = Math.min(d.length, Math.floor((i + 1) * step)); for (let j = a; j < b; j += 8) m = Math.max(m, Math.abs(d[j])); out[i] = Math.min(255, m * 255 * 1.4); }
       return out;
@@ -262,7 +269,7 @@
     return m._rms > .001 ? clamp(.07 / m._rms, .25, 4) : 1;
   };
   const holding = (clip, t) => { // clip saliente durante una transición del siguiente
-    const nx = G.project.clips.find(o => o.track === clip.track && o.transIn && Math.abs(o.start - (clip.start + clip.dur)) < .05);
+    const nx = G.transList().find(o => o.track === clip.track && Math.abs(o.start - (clip.start + clip.dur)) < .05);
     return nx && t >= clip.start + clip.dur && t < nx.start + nx.transIn.dur;
   };
   const fadeVol = (c, lt) => {
@@ -284,7 +291,7 @@
       const lt = clamp(t - c.start, 0, c.dur), want = clamp(G.srcTime(c, lt), 0, Math.max(0, (G.media.get(c.mediaId).dur || 1e9) - .02));
       if (G.playing && active) {
         e.playbackRate = clamp(G.rateAt(c, lt), .0625, 16); e.preservesPitch = !c.pitch;
-        if (e.paused) { e.currentTime = want; e._target = want; const p = e.play(); if (p) p.catch(() => { }); }
+        if (e.paused) { if (Math.abs(e.currentTime - want) > .05) e.currentTime = want; e._target = want; const p = e.play(); if (p) p.catch(() => { }); }
         else if (Math.abs(e.currentTime - want) > .3) { e.currentTime = want; e._target = want; }
       } else {
         if (!e.paused) e.pause();
@@ -300,7 +307,7 @@
     if (G.canvas && (G.canvas.width !== w || G.canvas.height !== h)) { G.canvas.width = w; G.canvas.height = h; }
     G.emit('size'); G.touch();
   };
-  const layer = (name, W, H) => { const c = GC.scratch(name, W, H); if (!c._ctx) c._ctx = c.getContext('2d', { willReadFrequently: true }); return c; };
+  const layer = (name, W, H) => { const c = GC.scratch(name, W, H); if (!c._ctx) c._ctx = c.getContext('2d'); return c; };
 
   function drawText(c, clip, S, lt) {
     const T = clip.text; let s = T.s || '';

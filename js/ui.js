@@ -152,7 +152,7 @@
     const toCv = e => { const r = cv.getBoundingClientRect(), f = cv.width / r.width; return [(e.clientX - r.left) * f, (e.clientY - r.top) * f]; };
     const hit = (x, y) => {
       const vts = G.project.tracks.filter(t => t.kind === 'v');
-      for (const tr of vts) { if (tr.hide || tr.lock) continue; for (const c of G.clipsOn(tr.id).reverse()) { if (G.time < c.start || G.time >= c.start + c.dur || !c._box || !c._box.w) continue; const B = c._box, dx = x - B.cx, dy = y - B.cy, cs = Math.cos(-B.rot), sn = Math.sin(-B.rot), lx = dx * cs - dy * sn, ly = dx * sn + dy * cs; if (Math.abs(lx) <= B.w / 2 && Math.abs(ly) <= B.h / 2) return c; } }
+      for (const tr of vts) { if (tr.hide || tr.lock) continue; for (const c of G.clipsOn(tr.id).slice().reverse()) { if (G.time < c.start || G.time >= c.start + c.dur || !c._box || !c._box.w) continue; const B = c._box, dx = x - B.cx, dy = y - B.cy, cs = Math.cos(-B.rot), sn = Math.sin(-B.rot), lx = dx * cs - dy * sn, ly = dx * sn + dy * cs; if (Math.abs(lx) <= B.w / 2 && Math.abs(ly) <= B.h / 2) return c; } }
       return null;
     };
     cv.addEventListener('pointerdown', e => { const [x, y] = toCv(e), c = hit(x, y); G.sel = c ? c.id : null; G.emit('insp'); renderTL(); if (c) dragMove(e, c); });
@@ -258,7 +258,7 @@
     G.on('time', () => { $('#tCur').textContent = fmt(G.time); movePlayhead(); if (G.playing) { const sc = $('#tlscroll'), x = HW + G.time * G.pps; if (x > sc.scrollLeft + sc.clientWidth - 40) sc.scrollLeft = x - HW - 40; } });
     addEventListener('resize', () => { fitStage(); renderTL(); });
     await G.init(G.canvas);
-    $('#projName').value = G.project.name; $('#btnRatio').textContent = 'Relación'; $('#zoomR').value = zoomTo(G.pps);
+    $('#projName').value = G.project.name; $('#btnQuality').textContent = G.quality; $('#btnRatio').textContent = 'Relación'; $('#zoomR').value = zoomTo(G.pps);
     libBody(); fitStage(); renderTL(); inspector(); G.seek(0);
     window.addEventListener('beforeunload', () => { try { localStorage.getItem('x'); } catch (e) { } });
   };
