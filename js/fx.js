@@ -179,31 +179,52 @@
   ];
   GC.TBYID = Object.fromEntries(GC.TRANS.map(t => [t.id, t]));
 
-  /* ---------- Animaciones (entrada / salida / combo) ----------
-     f(e,p): e = 1 → oculto, 0 → reposo ; devuelve {alpha,dx,dy,sc,rot,sx} */
+  /* ---------- Animaciones (entrada / salida / combinado) ----------
+     f(e,p,out): e = 1 → oculto, 0 → reposo ; devuelve {alpha,dx,dy,sc,rot,sx,sy} */
   const bounceOut = x => { const n = 7.5625, d = 2.75; if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + .75; if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + .9375; return n * (x -= 2.625 / d) * x + .984375; };
   const backOut = x => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+  GC.ANIM_CATS = ['En tendencia', 'Básicos', 'Movimiento', '3D', 'Luz', 'Fallos'];
   GC.ANIM_IO = [
-    { id: 'fade', name: 'Fundido', f: e => ({ alpha: 1 - e }) },
-    { id: 'zoomin', name: 'Zoom +', f: e => ({ sc: 1 - .7 * e, alpha: 1 - e }) },
-    { id: 'zoomout', name: 'Zoom −', f: e => ({ sc: 1 + e, alpha: 1 - e }) },
-    { id: 'slidel', name: 'Deslizar ←', f: e => ({ dx: e * .5, alpha: 1 - e }) },
-    { id: 'slider', name: 'Deslizar →', f: e => ({ dx: -e * .5, alpha: 1 - e }) },
-    { id: 'slideu', name: 'Deslizar ↑', f: e => ({ dy: e * .5, alpha: 1 - e }) },
-    { id: 'slided', name: 'Deslizar ↓', f: e => ({ dy: -e * .5, alpha: 1 - e }) },
-    { id: 'spin', name: 'Giro', f: e => ({ rot: e * Math.PI * 2, sc: 1 - .8 * e, alpha: 1 - e }) },
-    { id: 'flip', name: 'Voltear', f: e => ({ sx: Math.max(.02, 1 - e), alpha: 1 - e * .5 }) },
-    { id: 'pop', name: 'Rebote', f: (e, p, out) => { const q = out ? 1 - p : p; return { sc: Math.max(0, backOut(q)), alpha: Math.min(1, q * 3) }; } },
-    { id: 'drop', name: 'Caída', f: (e, p, out) => { const q = out ? 1 - p : p; return { dy: -(1 - bounceOut(q)) * .5, alpha: Math.min(1, q * 4) }; } },
-    { id: 'typewriter', name: 'Máquina de escribir', text: true, f: () => ({}) },
+    { id: 'fade', name: 'Fundido', cat: 'Básicos', trend: 1, f: e => ({ alpha: 1 - e }) },
+    { id: 'zoomin', name: 'Zoom +', cat: 'Básicos', trend: 1, f: e => ({ sc: 1 - .7 * e, alpha: 1 - e }) },
+    { id: 'zoomout', name: 'Zoom −', cat: 'Básicos', f: e => ({ sc: 1 + e, alpha: 1 - e }) },
+    { id: 'slidel', name: 'Deslizar ←', cat: 'Básicos', f: e => ({ dx: e * .5, alpha: 1 - e }) },
+    { id: 'slider', name: 'Deslizar →', cat: 'Básicos', f: e => ({ dx: -e * .5, alpha: 1 - e }) },
+    { id: 'slideu', name: 'Deslizar ↑', cat: 'Básicos', f: e => ({ dy: e * .5, alpha: 1 - e }) },
+    { id: 'slided', name: 'Deslizar ↓', cat: 'Básicos', f: e => ({ dy: -e * .5, alpha: 1 - e }) },
+    { id: 'pop', name: 'Rebote', cat: 'Básicos', trend: 1, f: (e, p, out) => { const q = out ? 1 - p : p; return { sc: Math.max(0, backOut(q)), alpha: Math.min(1, q * 3) }; } },
+    { id: 'drop', name: 'Caída', cat: 'Movimiento', trend: 1, f: (e, p, out) => { const q = out ? 1 - p : p; return { dy: -(1 - bounceOut(q)) * .5, alpha: Math.min(1, q * 4) }; } },
+    { id: 'spin', name: 'Giro', cat: 'Movimiento', f: e => ({ rot: e * Math.PI * 2, sc: 1 - .8 * e, alpha: 1 - e }) },
+    { id: 'whirl', name: 'Remolino', cat: 'Movimiento', f: e => ({ rot: e * Math.PI, sc: 1 - .5 * e, alpha: 1 - e }) },
+    { id: 'rise', name: 'Ascenso suave', cat: 'Movimiento', f: e => ({ dy: e * .15, alpha: 1 - e }) },
+    { id: 'slidebig', name: 'Barrido', cat: 'Movimiento', f: e => ({ dx: e * 1.0 }) },
+    { id: 'tilt', name: 'Inclinación', cat: 'Movimiento', f: e => ({ rot: e * .5, dx: e * .15, alpha: 1 - e }) },
+    { id: 'flip', name: 'Voltear', cat: '3D', f: e => ({ sx: Math.max(.02, 1 - e), alpha: 1 - e * .5 }) },
+    { id: 'flipv', name: 'Voltear vertical', cat: '3D', f: e => ({ sy: Math.max(.02, 1 - e), alpha: 1 - e * .5 }) },
+    { id: 'tumble', name: 'Voltereta', cat: '3D', f: e => ({ sx: Math.max(.05, 1 - e), rot: e * 1.2, alpha: 1 - e }) },
+    { id: 'flashin', name: 'Destello', cat: 'Luz', f: e => ({ alpha: (1 - e) + e * .6 * (Math.floor(e * 14) % 2) }) },
+    { id: 'glow', name: 'Aparición lenta', cat: 'Luz', f: e => ({ alpha: Math.pow(1 - e, 2), sc: 1 + e * .05 }) },
+    { id: 'glitchin', name: 'Falla', cat: 'Fallos', trend: 1, f: e => ({ dx: (GC.rnd(Math.floor(e * 24)) - .5) * .12 * e, alpha: 1 - e * (.5 + .5 * GC.rnd(Math.floor(e * 30))) }) },
+    { id: 'jitter', name: 'Temblor de entrada', cat: 'Fallos', f: e => ({ dx: (GC.rnd(Math.floor(e * 40)) - .5) * .06 * e, dy: (GC.rnd(Math.floor(e * 40) + 7) - .5) * .06 * e, alpha: 1 - e }) },
+    { id: 'typewriter', name: 'Máquina de escribir', cat: 'Básicos', text: true, f: () => ({}) },
   ];
   GC.ANIM_COMBO = [
-    { id: 'heart', name: 'Latido', f: t => ({ sc: 1 + .08 * Math.pow(Math.max(0, Math.sin(t * 6)), 2) }) },
-    { id: 'swing', name: 'Columpio', f: t => ({ rot: Math.sin(t * 3) * .15 }) },
-    { id: 'float', name: 'Flotar', f: t => ({ dy: Math.sin(t * 2) * .02 }) },
-    { id: 'wiggle', name: 'Vibrar', f: t => ({ rot: Math.sin(t * 25) * .04 }) },
-    { id: 'breathe', name: 'Respirar', f: t => ({ sc: 1 + Math.sin(t * 2) * .05 }) },
-    { id: 'blink', name: 'Parpadeo', f: t => ({ alpha: .55 + .45 * Math.abs(Math.sin(t * 5)) }) },
+    { id: 'zoom1', name: 'Zoom 1', cat: 'Básicos', trend: 1, f: t => ({ sc: 1 + .08 * Math.sin(t * 2) }) },
+    { id: 'zoom2', name: 'Zoom 2', cat: 'Básicos', f: t => ({ sc: 1 + .15 * Math.abs(Math.sin(t * 2)) }) },
+    { id: 'heart', name: 'Latido', cat: 'Básicos', trend: 1, f: t => ({ sc: 1 + .08 * Math.pow(Math.max(0, Math.sin(t * 6)), 2) }) },
+    { id: 'breathe', name: 'Respirar', cat: 'Básicos', f: t => ({ sc: 1 + Math.sin(t * 2) * .05 }) },
+    { id: 'blink', name: 'Parpadeo', cat: 'Luz', f: t => ({ alpha: .55 + .45 * Math.abs(Math.sin(t * 5)) }) },
+    { id: 'strobe', name: 'Estroboscopio', cat: 'Luz', f: t => ({ alpha: Math.floor(t * 8) % 2 ? .35 : 1 }) },
+    { id: 'swing', name: 'Balanceo', cat: 'Movimiento', trend: 1, f: t => ({ rot: Math.sin(t * 3) * .15 }) },
+    { id: 'pendulum', name: 'Péndulo', cat: 'Movimiento', f: t => ({ rot: Math.sin(t * 2.2) * .4 }) },
+    { id: 'bounce1', name: 'Rebote 1', cat: 'Movimiento', f: t => ({ dy: -Math.abs(Math.sin(t * 3)) * .05 }) },
+    { id: 'osc', name: 'Oscilación', cat: 'Movimiento', f: t => ({ dx: Math.sin(t * 2) * .04 }) },
+    { id: 'float', name: 'Flotar', cat: 'Movimiento', f: t => ({ dy: Math.sin(t * 2) * .02 }) },
+    { id: 'slowspin', name: 'Giro lento', cat: 'Movimiento', f: t => ({ rot: t * .5 }) },
+    { id: 'wiggle', name: 'Vibrar', cat: 'Fallos', f: t => ({ rot: Math.sin(t * 25) * .04 }) },
+    { id: 'shake', name: 'Temblor', cat: 'Fallos', trend: 1, f: t => { const n = Math.floor(t * 24); return { dx: (GC.rnd(n) - .5) * .015, dy: (GC.rnd(n + 9) - .5) * .015 }; } },
+    { id: 'flip3d', name: 'Giro 3D', cat: '3D', f: t => ({ sx: Math.max(.05, Math.abs(Math.cos(t * 1.5))) }) },
+    { id: 'wobble3d', name: 'Vaivén 3D', cat: '3D', f: t => ({ sx: 1 - .25 * Math.abs(Math.sin(t * 2)) }) },
   ];
   GC.ABYID = Object.fromEntries([...GC.ANIM_IO, ...GC.ANIM_COMBO].map(a => [a.id, a]));
 })();

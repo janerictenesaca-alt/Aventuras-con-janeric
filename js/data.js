@@ -96,3 +96,64 @@ GC.SFX = [
 GC.BLENDS = [['source-over', 'Normal'], ['multiply', 'Multiplicar'], ['screen', 'Trama'], ['overlay', 'Superponer'],
   ['lighten', 'Aclarar'], ['darken', 'Oscurecer'], ['soft-light', 'Luz suave'], ['difference', 'Diferencia']];
 GC.MASKS = [['', 'Ninguna'], ['circle', 'Círculo'], ['rect', 'Rectángulo'], ['heart', 'Corazón'], ['star', 'Estrella']];
+
+/* Filtros de voz (se construyen con el motor de audio del navegador) */
+GC.VOICES = [
+  { id: '', name: 'Original' }, { id: 'clear', name: 'Voz nítida' }, { id: 'eco', name: 'Eco' }, { id: 'full', name: 'Voz llena' },
+  { id: 'sweet', name: 'Dulce' }, { id: 'bot', name: 'Bot plano' }, { id: 'broken', name: 'Micrófono roto' }, { id: 'church', name: 'Iglesia' },
+  { id: 'bass', name: 'Micrófono de bajos' }, { id: 'deep', name: 'Profundo' }, { id: 'drowned', name: 'Ahogado' }, { id: 'phone', name: 'Teléfono' },
+  { id: 'mega', name: 'Megáfono' }, { id: 'studio', name: 'Micrófono de estudio' }, { id: 'eco2', name: 'Eco II' }, { id: 'radio', name: 'Locutor de radio' },
+];
+
+/* Curvas de velocidad: m(u) = multiplicador de velocidad en el instante u (0..1), se normaliza para conservar la duración */
+const gauss = (u, c, w) => Math.exp(-Math.pow((u - c) / w, 2));
+GC.SPEED_CURVES = [
+  { id: '', name: 'Ninguno' },
+  { id: 'montage', name: 'Montaje', m: u => .5 + 1.5 * (.5 - .5 * Math.cos(u * Math.PI * 4)) },
+  { id: 'hero', name: 'Héroe', m: u => 1.8 - 1.6 * gauss(u, .5, .15) },
+  { id: 'bullet', name: 'Bala', m: u => 2 - 1.9 * gauss(u, .5, .08) },
+  { id: 'cutin', name: 'Corte en la entrada', m: u => .3 + 1.7 * Math.pow(1 - u, 2) },
+  { id: 'flashin', name: 'Flash de entrada', m: u => .3 + 1.7 * gauss(u, .12, .1) * 2 },
+  { id: 'flashout', name: 'Flash de salida', m: u => .3 + 1.7 * Math.pow(u, 2) },
+];
+GC.SPEED_CURVES.forEach(c => {
+  if (!c.m) return; const N = 200, T = [0]; let acc = 0, sum = 0;
+  for (let i = 0; i < N; i++) sum += c.m((i + .5) / N); const mean = sum / N;
+  for (let i = 0; i < N; i++) { acc += c.m((i + .5) / N) / mean / N; T.push(acc); }
+  c.T = T; c.mean = mean;
+});
+GC.SPEED_BY = Object.fromEntries(GC.SPEED_CURVES.map(c => [c.id, c]));
+
+/* Ajustes rápidos (pestaña Ajuste) */
+GC.ADJ_PRESETS = [
+  { name: 'Ajuste vacío', adj: {} },
+  { name: 'Brillante', adj: { exposure: 18, contrast: 8, sat: 12 } },
+  { name: 'Contraste fuerte', adj: { contrast: 35, shadow: -15, hl: 10 } },
+  { name: 'Cálido suave', adj: { temp: 25, sat: 8, fade: 8 } },
+  { name: 'Frío suave', adj: { temp: -25, sat: 5, fade: 8 } },
+  { name: 'Película', adj: { contrast: 12, sat: -10, fade: 18, grain: 25, vignette: 25 } },
+  { name: 'Nitidez', adj: { sharpen: 45, clarity: 25 } },
+  { name: 'Viñeta', adj: { vignette: 55 } },
+  { name: 'Sueño', adj: { exposure: 12, fade: 20, sat: 10, clarity: -20 } },
+];
+
+/* Categorías de plantillas de texto y estilos de subtítulos */
+GC.TEXT_CATS = ['Tendencias', 'Clásica', 'Retro', 'Título', 'Redes sociales'];
+({ 'Básico': 'Clásica', 'Contorno': 'Tendencias', 'Subtítulo': 'Clásica', 'Neón': 'Tendencias', 'Retro': 'Retro', 'Cómic': 'Redes sociales', 'Elegante': 'Título', 'Manuscrito': 'Título', 'Caja amarilla': 'Redes sociales', 'Terminal': 'Retro' });
+GC.TEXT_PRESETS.forEach(p => { p.cat = { 'Básico': 'Clásica', 'Contorno': 'Tendencias', 'Subtítulo': 'Clásica', 'Neón': 'Tendencias', 'Retro': 'Retro', 'Cómic': 'Redes sociales', 'Elegante': 'Título', 'Manuscrito': 'Título', 'Caja amarilla': 'Redes sociales', 'Terminal': 'Retro' }[p.name] || 'Clásica'; });
+GC.SUB_CATS = ['Tendencias', 'Clásica', 'Brillo', 'Básico', 'Resaltado', 'Blanco y negro', 'Enmarcado'];
+GC.SUB_STYLES = [
+  { name: 'Básico', cat: 'Básico', t: { font: 'Arial', size: 58, bold: true, color: '#ffffff', shadow: { c: 'rgba(0,0,0,.8)', b: 8, x: 0, y: 3 } } },
+  { name: 'Caja negra', cat: 'Clásica', t: { font: 'Arial', size: 52, color: '#ffffff', bg: 'rgba(0,0,0,.7)' } },
+  { name: 'Amarillo', cat: 'Tendencias', t: { font: 'Montserrat', size: 60, bold: true, color: '#ffe14d', stroke: '#000000', strokeW: 8 } },
+  { name: 'Contorno', cat: 'Clásica', t: { font: 'Impact', size: 64, color: '#ffffff', stroke: '#000000', strokeW: 10 } },
+  { name: 'Neón', cat: 'Brillo', t: { font: 'Pacifico', size: 60, color: '#ffffff', shadow: { c: '#22e0d0', b: 36, x: 0, y: 0 }, glow: true } },
+  { name: 'Resaltado', cat: 'Resaltado', t: { font: 'Montserrat', size: 54, bold: true, color: '#111111', bg: '#ffe14d' } },
+  { name: 'Verde terminal', cat: 'Resaltado', t: { font: 'Courier New', size: 50, bold: true, color: '#39ff14', bg: 'rgba(0,0,0,.8)' } },
+  { name: 'Blanco y negro', cat: 'Blanco y negro', t: { font: 'Oswald', size: 58, color: '#ffffff', stroke: '#000000', strokeW: 6 } },
+  { name: 'Negro sobre blanco', cat: 'Blanco y negro', t: { font: 'Arial', size: 52, bold: true, color: '#000000', bg: '#ffffff' } },
+  { name: 'Enmarcado', cat: 'Enmarcado', t: { font: 'Playfair Display', size: 54, italic: true, color: '#ffffff', stroke: '#c0392b', strokeW: 6 } },
+  { name: 'Rosa brillante', cat: 'Brillo', t: { font: 'Lobster', size: 60, color: '#ffffff', shadow: { c: '#ff2bd6', b: 30, x: 0, y: 0 }, glow: true } },
+];
+GC.STICKERS['Formas'] = '■ ● ▲ ◆ ★ ♥ ✚ ➜ ✔ ✖ ☁ ☀ ☾ ♪ ⚡ ✿';
+GC.SFX_CATS = { whoosh: 'Transiciones', riser: 'Transiciones', pop: 'Interfaz', click: 'Interfaz', ding: 'Interfaz', coin: 'Interfaz', impact: 'Impactos', laser: 'Impactos' };

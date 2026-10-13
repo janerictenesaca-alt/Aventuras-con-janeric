@@ -23,7 +23,7 @@
   G.mkClip = (type, o) => Object.assign({
     id: uid(), type, track: null, start: 0, dur: 3, in: 0, speed: 1, vol: 1, fadeIn: 0, fadeOut: 0,
     x: 0, y: 0, sc: 1, rot: 0, op: 1, flipH: false, flipV: false, blend: 'source-over', mask: null,
-    filter: null, adj: {}, fx: [], transIn: null, animIn: null, animOut: null, animLoop: null, mediaId: null, text: null,
+    scy: null, filter: null, adj: {}, hsl: {}, curves: null, wheels: null, wheelInt: 100, lut: null, chroma: null, voice: '', pitch: false, norm: false, curve: '', fx: [], transIn: null, animIn: null, animOut: null, animLoop: null, mediaId: null, text: null,
   }, o);
 
   G.fits = (tid, id, s, d) => !G.project.clips.some(o => o.track === tid && o.id !== id && s < o.start + o.dur - 1e-6 && s + d > o.start + 1e-6);
@@ -155,6 +155,16 @@
     const c = G.mkClip('sticker', { dur: 3, text: { s: emoji, size: 260 } });
     G.placeClip(c, start ?? G.time); G.sel = c.id; G.touch(); G.emit('tl'); G.emit('insp'); G.commit(); return c;
   };
+  G.addAdjust = (preset, start) => {
+    const c = G.mkClip('adjust', { dur: 5, name: 'Ajuste', adj: JSON.parse(JSON.stringify(preset ? preset.adj : {})) });
+    G.placeClip(c, start ?? G.time); G.sel = c.id; G.touch(); G.emit('tl'); G.emit('insp'); G.commit(); return c;
+  };
+  try { G.favs = new Set(JSON.parse(localStorage.getItem('ganchan.favs') || '[]')); } catch (e) { G.favs = new Set(); }
+  G.toggleFav = key => { G.favs.has(key) ? G.favs.delete(key) : G.favs.add(key); try { localStorage.setItem('ganchan.favs', JSON.stringify([...G.favs])); } catch (e) { } G.emit('favs'); };
+  G.importLut = async file => {
+    const text = await file.text(), name = file.name.replace(/\.cube$/i, ''); GC.parseCube(text, name); await dbPut('lut:' + name, new Blob([text]));
+    const names = JSON.parse(localStorage.getItem('ganchan.luts') || '[]'); if (!names.includes(name)) names.push(name); localStorage.setItem('ganchan.luts', JSON.stringify(names)); G.emit('luts'); return name;
+  };
   G.addSfx = async (id, start) => {
     let m = [...G.media.values()].find(x => x.sfx === id);
     if (!m) { const blob = await synthSfx(id); const mid = uid(); await dbPut(mid, blob); m = await G.loadMedia(mid, GC.SFX.find(s => s.id === id).name, blob, { sfx: id }); }
@@ -198,7 +208,37 @@
   };
 
   /* ---------- Elementos multimedia ---------- */
-  function disposeEl(id) { const e = G.els.get(id); if (!e) return; try { e.pause(); } catch (x) { } if (e._gain) try { e._gain.disconnect(); } catch (x) { } G.els.delete(id); }
+  function disposeEl(id) { const e = G.els.get(id); if (!e) return; try { e.pause(); } catch (x) { } if (e._gain) try { e._gain.disconnect(); } catch (x) { } (e._vnodes || []).forEach(n => { try { n.stop && n.stop(); n.disconnect(); } catch (x) { } }); G.els.delete(id); }
+  const shaper = (ac, k) => { const w = ac.createWaveShaper(), n = 2048, cu = new Float32Array(n); for (let i = 0; i < n; i++) { const x = i * 2 / n - 1; cu[i] = ((3 + k) * x * 20 * Math.PI / 180) / (Math.PI + k * Math.abs(x)); } w.curve = cu; return w; };
+  G.applyVoice = (e, id) => {
+    const ac = G.actx; if (!ac || !e._gain) return; id = id || '';
+    try { e._gain.disconnect(); } catch (x) { }
+    (e._vnodes || []).forEach(n => { try { n.stop && n.stop(); n.disconnect(); } catch (x) { } });
+    e._vnodes = []; e._voice = id; const V = e._vnodes;
+    const bq = (type, f, q, g) => { const n = ac.createBiquadFilter(); n.type = type; n.frequency.value = f; if (q) n.Q.value = q; if (g !== undefined) n.gain.value = g; V.push(n); return n; };
+    const comp = () => { const n = ac.createDynamicsCompressor(); V.push(n); return n; };
+    const sh = k => { const n = shaper(ac, k); V.push(n); return n; };
+    const chain = (...nodes) => { let prev = e._gain; nodes.forEach(n => { prev.connect(n); prev = n; }); prev.connect(G.master); };
+    const echo = (t, fb, mix) => { const d = ac.createDelay(2), f = ac.createGain(), w = ac.createGain(); d.delayTime.value = t; f.gain.value = fb; w.gain.value = mix; e._gain.connect(G.master); e._gain.connect(d); d.connect(f); f.connect(d); d.connect(w); w.connect(G.master); V.push(d, f, w); };
+    switch (id) {
+      case 'clear': chain(bq('highshelf', 3000, 0, 6), comp()); break;
+      case 'full': chain(bq('lowshelf', 250, 0, 5), bq('peaking', 2500, 1, 3)); break;
+      case 'sweet': chain(bq('highshelf', 2500, 0, 7), bq('lowshelf', 200, 0, -6)); break;
+      case 'eco': echo(.28, .4, .5); break;
+      case 'eco2': echo(.12, .55, .6); break;
+      case 'church': { const len = ac.sampleRate * 2.5, ir = ac.createBuffer(2, len, ac.sampleRate); for (let c = 0; c < 2; c++) { const d = ir.getChannelData(c); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.5); } const cv = ac.createConvolver(), w = ac.createGain(); cv.buffer = ir; w.gain.value = .6; e._gain.connect(G.master); e._gain.connect(cv); cv.connect(w); w.connect(G.master); V.push(cv, w); break; }
+      case 'broken': chain(bq('bandpass', 1600, 1.2), sh(40)); break;
+      case 'bot': { const r = ac.createGain(), o = ac.createOscillator(); r.gain.value = 0; o.frequency.value = 60; o.type = 'sine'; o.connect(r.gain); o.start(); e._gain.connect(r); r.connect(G.master); V.push(r, o); break; }
+      case 'bass': chain(bq('lowshelf', 200, 0, 12)); break;
+      case 'deep': chain(bq('lowshelf', 160, 0, 10), bq('lowpass', 3500)); break;
+      case 'drowned': chain(bq('lowpass', 450, .7)); break;
+      case 'phone': chain(bq('highpass', 400), bq('lowpass', 3200), sh(8)); break;
+      case 'mega': chain(bq('bandpass', 1500, .8), sh(25)); break;
+      case 'studio': chain(bq('highshelf', 6000, 0, 3), bq('lowshelf', 120, 0, 3), comp()); break;
+      case 'radio': chain(bq('highpass', 200), bq('peaking', 3000, 1, 5), comp()); break;
+      default: e._gain.connect(G.master);
+    }
+  };
   const getEl = clip => {
     let e = G.els.get(clip.id); if (e) return e;
     const m = G.media.get(clip.mediaId); if (!m) return null;
@@ -206,11 +246,21 @@
     e = document.createElement(clip.type === 'video' ? 'video' : 'audio'); e.preload = 'auto'; e.playsInline = true; e.src = m.url;
     e.addEventListener('seeked', G.touch); e.addEventListener('loadeddata', G.touch);
     const ac = G.ensureAudio();
-    if (ac) { try { const s = ac.createMediaElementSource(e), g = ac.createGain(); s.connect(g); g.connect(G.master); e._gain = g; } catch (x) { } }
+    if (ac) { try { const s = ac.createMediaElementSource(e), g = ac.createGain(); s.connect(g); e._gain = g; G.applyVoice(e, clip.voice); } catch (x) { } }
     else e.muted = true;
     G.els.set(clip.id, e); return e;
   };
-  G.srcTime = (c, lt) => c.in + lt * c.speed;
+  G.srcTime = (c, lt) => {
+    const cu = GC.SPEED_BY[c.curve || '']; if (!cu || !cu.T) return c.in + lt * c.speed;
+    const u = clamp(lt / c.dur, 0, 1), T = cu.T, f = u * (T.length - 1), i = Math.min(T.length - 2, Math.floor(f));
+    return c.in + (T[i] + (T[i + 1] - T[i]) * (f - i)) * c.dur * c.speed;
+  };
+  G.rateAt = (c, lt) => { const cu = GC.SPEED_BY[c.curve || '']; if (!cu || !cu.m) return c.speed; return c.speed * cu.m(clamp(lt / c.dur, 0, 1)) / cu.mean; };
+  G.normGain = c => {
+    if (!c.norm) return 1; const m = G.media.get(c.mediaId); if (!m || !m.peaks) return 1;
+    if (m._rms === undefined) { let t = 0; for (const p of m.peaks) t += p; m._rms = (t / m.peaks.length / 255 / 1.4) * .5; }
+    return m._rms > .001 ? clamp(.07 / m._rms, .25, 4) : 1;
+  };
   const holding = (clip, t) => { // clip saliente durante una transición del siguiente
     const nx = G.project.clips.find(o => o.track === clip.track && o.transIn && Math.abs(o.start - (clip.start + clip.dur)) < .05);
     return nx && t >= clip.start + clip.dur && t < nx.start + nx.transIn.dur;
@@ -229,10 +279,11 @@
       if (!near && !hold) { if (e && !e.paused) e.pause(); continue; }
       e = e || getEl(c); if (!e) continue;
       const tr = G.track(c.track);
-      if (e._gain) e._gain.gain.value = (tr && tr.mute) || !active ? 0 : c.vol * fadeVol(c, t - c.start);
+      if (e._gain) if (e._voice !== (c.voice || '')) G.applyVoice(e, c.voice);
+      if (e._gain) e._gain.gain.value = (tr && tr.mute) || !active ? 0 : c.vol * G.normGain(c) * fadeVol(c, t - c.start);
       const lt = clamp(t - c.start, 0, c.dur), want = clamp(G.srcTime(c, lt), 0, Math.max(0, (G.media.get(c.mediaId).dur || 1e9) - .02));
       if (G.playing && active) {
-        e.playbackRate = clamp(c.speed, .0625, 16);
+        e.playbackRate = clamp(G.rateAt(c, lt), .0625, 16); e.preservesPitch = !c.pitch;
         if (e.paused) { e.currentTime = want; e._target = want; const p = e.play(); if (p) p.catch(() => { }); }
         else if (Math.abs(e.currentTime - want) > .3) { e.currentTime = want; e._target = want; }
       } else {
@@ -249,7 +300,7 @@
     if (G.canvas && (G.canvas.width !== w || G.canvas.height !== h)) { G.canvas.width = w; G.canvas.height = h; }
     G.emit('size'); G.touch();
   };
-  const layer = (name, W, H) => { const c = GC.scratch(name, W, H); return c; };
+  const layer = (name, W, H) => { const c = GC.scratch(name, W, H); if (!c._ctx) c._ctx = c.getContext('2d', { willReadFrequently: true }); return c; };
 
   function drawText(c, clip, S, lt) {
     const T = clip.text; let s = T.s || '';
@@ -281,22 +332,29 @@
     else if (type === 'heart') { c.moveTo(0, r * .9); c.bezierCurveTo(-r * 1.6, -r * .1, -r * .8, -r * 1.2, 0, -r * .4); c.bezierCurveTo(r * .8, -r * 1.2, r * 1.6, -r * .1, 0, r * .9); c.closePath(); }
     else if (type === 'star') { for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * .45 : r; c[i ? 'lineTo' : 'moveTo'](Math.cos(a) * rr, Math.sin(a) * rr); } c.closePath(); }
   }
+  function processLayer(c, clip, lt, S, def, k) {
+    if (GC.needsGrade(clip)) GC.grade(c, clip, S);
+    GC.tintsOf(def, k, null).forEach(t => GC.tintLayer(c, t[0], t[1], t[2], t[3], t[4]));
+    if (clip.adj && clip.adj.vignette) GC.vignette(c, clip.adj.vignette / 100);
+    if (clip.adj && clip.adj.grain) GC.grain(c, clip.adj.grain / 100, lt);
+    (clip.fx || []).forEach(f => { const d = GC.FXBYID[f.id]; if (d && d.post) { c.save(); d.post(c, c.canvas.width, c.canvas.height, lt, f.k); c.restore(); } });
+  }
   function drawClipLayer(clip, lt, cv, opts) {
     opts = opts || {};
     const W = cv.width, H = cv.height, S = Math.min(W, H) / 1080, c = cv.getContext('2d');
     c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over'; c.filter = 'none'; c.clearRect(0, 0, W, H);
-    const a = { alpha: 1, dx: 0, dy: 0, sc: 1, rot: 0, sx: 1 };
-    const mix = r => { if (!r) return; if (r.alpha !== undefined) a.alpha *= r.alpha; if (r.dx) a.dx += r.dx; if (r.dy) a.dy += r.dy; if (r.sc) a.sc *= r.sc; if (r.rot) a.rot += r.rot; if (r.sx !== undefined) a.sx *= r.sx; };
+    const a = { alpha: 1, dx: 0, dy: 0, sc: 1, rot: 0, sx: 1, sy: 1 };
+    const mix = r => { if (!r) return; if (r.alpha !== undefined) a.alpha *= r.alpha; if (r.dx) a.dx += r.dx; if (r.dy) a.dy += r.dy; if (r.sc) a.sc *= r.sc; if (r.rot) a.rot += r.rot; if (r.sx !== undefined) a.sx *= r.sx; if (r.sy !== undefined) a.sy *= r.sy; };
     const ai = clip.animIn && GC.ABYID[clip.animIn.id];
     if (ai && lt < clip.animIn.dur) { const p = clamp(lt / clip.animIn.dur, 0, 1), e = 1 - p * p * (3 - 2 * p); mix(ai.f(e, p, false)); }
     const ao = clip.animOut && GC.ABYID[clip.animOut.id];
     if (ao && !opts.noOut && lt > clip.dur - clip.animOut.dur) { const p = clamp((lt - (clip.dur - clip.animOut.dur)) / clip.animOut.dur, 0, 1), e = p * p * (3 - 2 * p); mix(ao.f(e, p, true)); }
     const al = clip.animLoop && GC.ABYID[clip.animLoop.id]; if (al) mix(al.f(lt * (clip.animLoop.speed || 1)));
     (clip.fx || []).forEach(f => { const d = GC.FXBYID[f.id]; if (d && d.xf) mix(d.xf(lt, f.k)); });
-    const cx = W / 2 + (clip.x + a.dx) * W, cy = H / 2 + (clip.y + a.dy) * H, rot = clip.rot * Math.PI / 180 + a.rot, sc = clip.sc * a.sc;
-    c.translate(cx, cy); c.rotate(rot); c.scale(sc * (clip.flipH ? -1 : 1) * a.sx, sc * (clip.flipV ? -1 : 1));
+    const cx = W / 2 + (clip.x + a.dx) * W, cy = H / 2 + (clip.y + a.dy) * H, rot = clip.rot * Math.PI / 180 + a.rot, sc = clip.sc * a.sc, scy = (clip.scy ?? clip.sc) * a.sc;
+    c.translate(cx, cy); c.rotate(rot); c.scale(sc * (clip.flipH ? -1 : 1) * a.sx, scy * (clip.flipV ? -1 : 1) * a.sy);
     const def = clip.filter ? GC.FBYID[clip.filter.id] : null, k = clip.filter ? clip.filter.k : 1;
-    c.filter = GC.filterStr(def, k, clip.adj, S);
+    c.filter = GC.filterStr(def, k, null, S);
     let bw = 0, bh = 0;
     if (clip.type === 'video' || clip.type === 'image') {
       const m = G.media.get(clip.mediaId), e = getEl(clip);
@@ -304,11 +362,8 @@
     } else if (clip.type === 'text') { [bw, bh] = drawText(c, clip, S, lt); }
     else if (clip.type === 'sticker') { const sz = clip.text.size * S; c.font = `${sz}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(clip.text.s, 0, 0); bw = bh = sz * 1.15; }
     c.setTransform(1, 0, 0, 1, 0, 0); c.filter = 'none';
-    clip._box = { cx, cy, w: bw * sc, h: bh * sc, rot };
-    GC.tintsOf(def, k, clip.adj).forEach(t => GC.tintLayer(c, t[0], t[1], t[2], t[3], t[4]));
-    if (clip.adj && clip.adj.vignette) GC.vignette(c, clip.adj.vignette / 100);
-    if (clip.adj && clip.adj.grain) GC.grain(c, clip.adj.grain / 100, lt);
-    (clip.fx || []).forEach(f => { const d = GC.FXBYID[f.id]; if (d && d.post) { c.save(); d.post(c, W, H, lt, f.k); c.restore(); } });
+    clip._box = { cx, cy, w: bw * sc, h: bh * scy, rot };
+    processLayer(c, clip, lt, S, def, k);
     return a.alpha;
   }
   G.drawClipLayer = drawClipLayer;
@@ -323,6 +378,10 @@
     G.waitFrames = 0;
     ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.filter = 'none';
     ctx.fillStyle = P.bg; ctx.fillRect(0, 0, W, H);
+    if (P.bgMode === 'blur') {
+      for (const tr of vts) { if (tr.hide) continue; const c0 = G.clipsOn(tr.id).find(c => (c.type === 'video' || c.type === 'image') && t >= c.start && t < c.start + c.dur);
+        if (c0) { const m = G.media.get(c0.mediaId), e = c0.type === 'image' ? (m && m.img) : G.els.get(c0.id); if (m && e && m.w) { const base = Math.max(W / m.w, H / m.h); ctx.filter = `blur(${30 * H / 1080}px)`; try { ctx.drawImage(e, (W - m.w * base) / 2, (H - m.h * base) / 2, m.w * base, m.h * base); } catch (x) { } ctx.filter = 'none'; ctx.fillStyle = 'rgba(0,0,0,.35)'; ctx.fillRect(0, 0, W, H); } break; } }
+    }
     const LA = layer('LA', W, H), LB = layer('LB', W, H), LT = layer('LT', W, H);
     const put = (cv2, clip, al) => { ctx.globalAlpha = clamp(clip.op * al, 0, 1); ctx.globalCompositeOperation = clip.blend; ctx.drawImage(cv2, 0, 0); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; };
     for (const tr of vts) {
@@ -330,6 +389,12 @@
       for (const clip of G.clipsOn(tr.id)) {
         if (t < clip.start || t >= clip.start + clip.dur || clip.type === 'audio') continue;
         const lt = t - clip.start;
+        if (clip.type === 'adjust') {
+          const sn = GC.snap(ctx, 'adjsnap'), lc = LB.getContext('2d'), S = Math.min(W, H) / 1080, def = clip.filter ? GC.FBYID[clip.filter.id] : null, k = clip.filter ? clip.filter.k : 1;
+          lc.setTransform(1, 0, 0, 1, 0, 0); lc.globalAlpha = 1; lc.globalCompositeOperation = 'source-over'; lc.clearRect(0, 0, W, H);
+          lc.filter = GC.filterStr(def, k, null, S); lc.drawImage(sn, 0, 0); lc.filter = 'none'; processLayer(lc, clip, lt, S, def, k);
+          ctx.globalAlpha = clamp(clip.op, 0, 1); ctx.drawImage(LB, 0, 0); ctx.globalAlpha = 1; clip._box = { cx: 0, cy: 0, w: 0, h: 0, rot: 0 }; continue;
+        }
         if (clip.transIn && lt < clip.transIn.dur && GC.TBYID[clip.transIn.id]) {
           const prev = G.clipsOn(tr.id).find(o => o !== clip && Math.abs(o.start + o.dur - clip.start) < .05 && o.type !== 'audio');
           const p = clamp(lt / clip.transIn.dur, 0, 1);
@@ -433,6 +498,7 @@
         const ids = new Set(G.media.keys()); G.project.clips = G.project.clips.filter(c => !c.mediaId || ids.has(c.mediaId)); loaded = true;
       }
     } catch (e) { console.warn('load', e); }
+    try { for (const n of JSON.parse(localStorage.getItem('ganchan.luts') || '[]')) { const b = await dbGet('lut:' + n); if (b) GC.parseCube(await b.text(), n); } } catch (e) { }
     if (!loaded) G.project = G.newProject();
     G.resetHistory(); G.applyCanvasSize(); G.emit('tl'); G.emit('insp'); G.emit('media');
     requestAnimationFrame(tick);

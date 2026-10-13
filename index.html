@@ -13,7 +13,7 @@
 <header id="top">
   <div class="logo"><span class="logo-mark">▶</span> Ganchan</div>
   <div class="menu-wrap"><button id="menuBtn" class="btn-menu">Menú ▾</button><div id="menu" class="menu hidden"></div></div>
-  <div id="saved" class="saved">● Listo</div>
+  <div id="saved" class="saved"><i class="dotok">✓</i> Guardado automático</div>
   <input id="projName" class="proj-name" spellcheck="false">
   <div class="spacer"></div>
   <button id="btnExport" class="btn-primary">⬆ Exportar</button>
@@ -22,7 +22,7 @@
 <main id="work">
   <section id="lib" class="panel">
     <nav id="libTabs" class="libtabs"></nav>
-    <div class="libmain"><aside id="libSide" class="libside"></aside><div id="libBody" class="libbody"></div></div>
+    <div class="libmain"><aside id="libSide" class="libside"></aside><div class="libcol"><div id="libBody" class="libbody"></div><div id="libFoot" class="libfoot"></div></div></div>
   </section>
 
   <section id="player" class="panel">
@@ -33,8 +33,8 @@
       <div class="spacer"></div>
       <button id="btnPlay" class="round" title="Reproducir (Espacio)">▶</button>
       <div class="spacer"></div>
-      <button id="btnQuality" class="chip">Alta</button>
-      <button id="btnRatio" class="chip">16:9</button>
+      <button id="btnQuality" class="chip" data-pop="1">Alta</button>
+      <button id="btnRatio" class="chip" data-pop="1">Relación</button>
       <button id="btnFull" class="icon" title="Pantalla completa">⛶</button>
     </div>
   </section>
@@ -56,7 +56,11 @@
 
 <script src="js/data.js"></script>
 <script src="js/fx.js"></script>
+<script src="js/grade.js"></script>
 <script src="js/engine.js"></script>
+<script src="js/core.js"></script>
+<script src="js/lib.js"></script>
+<script src="js/insp.js"></script>
 <script src="js/ui.js"></script>
 </body>
 </html>
