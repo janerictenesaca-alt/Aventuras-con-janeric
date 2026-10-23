@@ -224,8 +224,8 @@
   "estado": 200,
   "huella": "0d1372699c86ab12",
   "primeraConsulta": "2026-10-23T05:27:20.053Z",
-  "ultimaConsulta": "2026-10-23T05:27:20.053Z",
-  "consultas": 1,
+  "ultimaConsulta": "2026-10-23T05:38:05.850Z",
+  "consultas": 2,
   "capturas": [
    "capturas/capinita/sobre-nosotros-escritorio-2026-10-23.png"
   ],
@@ -314,5 +314,104 @@
    "capturas/capinita/amazonia-morona-santiago-morona-hotel-la-jungla-escritorio-2026-10-23.png"
   ],
   "errores": 1
+ },
+ "https://airbnb.com.ec": {
+  "sitio": "airbnb",
+  "titulo": "Airbnb | Alojamientos para vacaciones, cabañas, casas en la playa y más",
+  "url": "https://www.airbnb.com.ec/",
+  "archivo": "clips/airbnb/inicio.md",
+  "estado": 200,
+  "huella": "569357fa974fb0c0",
+  "primeraConsulta": "2026-10-23T05:48:22.055Z",
+  "ultimaConsulta": "2026-10-23T05:50:24.202Z",
+  "consultas": 3,
+  "capturas": [
+   "capturas/airbnb/inicio-escritorio-2026-10-23.png"
+  ],
+  "errores": 0
+ },
+ "https://airbnb.com.ec/quito-ecuador/stays": {
+  "sitio": "airbnb",
+  "titulo": "Alquileres vacacionales en Quito, Ecuador | Airbnb",
+  "url": "https://www.airbnb.com.ec/quito-ecuador/stays",
+  "archivo": "clips/airbnb/quito-ecuador-stays.md",
+  "estado": 200,
+  "huella": "5232454571e272cf",
+  "primeraConsulta": "2026-10-23T05:48:33.862Z",
+  "ultimaConsulta": "2026-10-23T05:50:50.295Z",
+  "consultas": 2,
+  "capturas": [
+   "capturas/airbnb/quito-ecuador-stays-escritorio-2026-10-23.png",
+   "capturas/airbnb/quito-ecuador-stays-movil-2026-10-23.png"
+  ],
+  "errores": 0
+ },
+ "https://airbnb.com.ec/galapagos-islands-ecuador/stays": {
+  "sitio": "airbnb",
+  "titulo": "Alquileres vacacionales en Galápagos Islands, Ecuador | Airbnb",
+  "url": "https://www.airbnb.com.ec/galapagos-islands-ecuador/stays",
+  "archivo": "clips/airbnb/galapagos-islands-ecuador-stays.md",
+  "estado": 200,
+  "huella": "74b061d51e869580",
+  "primeraConsulta": "2026-10-23T05:48:45.633Z",
+  "ultimaConsulta": "2026-10-23T05:48:45.633Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://airbnb.com.ec/rooms/1000005827033635211": {
+  "sitio": "airbnb",
+  "titulo": "Apartamento Honegg - Ático Alpine Bliss - Apartamentos en alquiler en Lauterbrunnen, Bern, Suiza - Airbnb",
+  "url": "https://www.airbnb.com.ec/rooms/1000005827033635211",
+  "archivo": "clips/airbnb/rooms-1000005827033635211.md",
+  "estado": 200,
+  "huella": "a10719dddedee202",
+  "primeraConsulta": "2026-10-23T05:48:57.326Z",
+  "ultimaConsulta": "2026-10-23T05:51:01.792Z",
+  "consultas": 2,
+  "capturas": [
+   "capturas/airbnb/rooms-1000005827033635211-escritorio-2026-10-23.png",
+   "capturas/airbnb/rooms-1000005827033635211-movil-2026-10-23.png"
+  ],
+  "errores": 0
+ },
+ "https://airbnb.com.ec/experiences/6593888": {
+  "sitio": "airbnb",
+  "titulo": "Búsqueda secreta de trufas en el bosque",
+  "url": "https://www.airbnb.com.ec/experiences/6593888",
+  "archivo": "clips/airbnb/experiences-6593888.md",
+  "estado": 200,
+  "huella": "74ed0575e811a32f",
+  "primeraConsulta": "2026-10-23T05:49:09.280Z",
+  "ultimaConsulta": "2026-10-23T05:49:09.280Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://airbnb.com.ec/help": {
+  "sitio": "airbnb",
+  "titulo": "Atención al cliente - Centro de ayuda de Airbnb",
+  "url": "https://www.airbnb.com.ec/help",
+  "archivo": "clips/airbnb/help.md",
+  "estado": 200,
+  "huella": "d54376749682e61f",
+  "primeraConsulta": "2026-10-23T05:49:21.158Z",
+  "ultimaConsulta": "2026-10-23T05:49:21.158Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://airbnb.com.ec/help/article/2408": {
+  "sitio": "airbnb",
+  "titulo": "Invitaciones, ofertas y solicitudes caducadas o retiradas - Centro de ayuda de Airbnb",
+  "url": "https://www.airbnb.com.ec/help/article/2408",
+  "archivo": "clips/airbnb/help-article-2408.md",
+  "estado": 200,
+  "huella": "8de81cc77d658396",
+  "primeraConsulta": "2026-10-23T05:49:32.960Z",
+  "ultimaConsulta": "2026-10-23T05:49:32.960Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
  }
 }

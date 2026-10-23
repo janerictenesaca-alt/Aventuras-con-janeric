@@ -7,5 +7,8 @@
 - Pendiente de revisar a fondo: variantes de las plantillas repetidas (ruta, terminal, cooperativa, lugar) y comportamiento tras filtros/pestañas (requiere interacción: pedir autorización si implica enviar algo).
 - Re-ejecutar el inventario cuando se quiera detectar cambios (compara estados y títulos).
 
-## Segundo sitio
-- **PENDIENTE**: el usuario no ha dado la URL (el marcador `<URL_SITIO_2>` sigue sin reemplazar). Al recibirla: añadir su dominio a `sitios-autorizados.txt`, crear `research/<id-sitio>.md`, repetir inventario (sitemap) + fichas + móvil, y actualizar `sintesis.md`.
+## Segundo sitio: Airbnb Ecuador (https://www.airbnb.com.ec/) — indicado por el usuario el 2026-10-23
+- Registro: `research/airbnb.md`; fichas en `research/clips/airbnb/` (7 páginas, 2 con móvil); capturas en `research/capturas/airbnb/`.
+- Respetar `robots.txt`: NO visitar `/s/*/*` (búsqueda), `/book/`, `/rooms/*/reviews`, `/rooms/*/photos`, etc.; sin evadir anti-bots.
+- Pendiente: portada completa y precios (se bloquean peticiones no-GET en modo solo lectura; probar permitiendo solo la configuración del cliente con autorización del usuario), servicios, otros destinos, análisis de JavaScript con REA, flujos con cuenta (sin autorización).
+- Para reanudar: añadir URLs del sitemap por categoría (`sitemap-<categoría>-urls-N.xml.gz`) a mano, con pausas largas y pocas páginas por vez.

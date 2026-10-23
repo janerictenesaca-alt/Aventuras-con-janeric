@@ -2,6 +2,13 @@
 
 | Sitio | Página | Estado | Consultas | Última | Archivo |
 |---|---|---|---|---|---|
+| airbnb | Airbnb | Alojamientos para vacaciones, cabañas, ca | 200 | 3 | 2026-10-23 | clips/airbnb/inicio.md |
+| airbnb | Búsqueda secreta de trufas en el bosque | 200 | 1 | 2026-10-23 | clips/airbnb/experiences-6593888.md |
+| airbnb | Alquileres vacacionales en Galápagos Islands, Ecua | 200 | 1 | 2026-10-23 | clips/airbnb/galapagos-islands-ecuador-stays.md |
+| airbnb | Atención al cliente - Centro de ayuda de Airbnb | 200 | 1 | 2026-10-23 | clips/airbnb/help.md |
+| airbnb | Invitaciones, ofertas y solicitudes caducadas o re | 200 | 1 | 2026-10-23 | clips/airbnb/help-article-2408.md |
+| airbnb | Alquileres vacacionales en Quito, Ecuador | Airbnb | 200 | 2 | 2026-10-23 | clips/airbnb/quito-ecuador-stays.md |
+| airbnb | Apartamento Honegg - Ático Alpine Bliss - Apartame | 200 | 2 | 2026-10-23 | clips/airbnb/rooms-1000005827033635211.md |
 | capinita | App de Turismo Ecuador | Guía Turística | Capinita | 200 | 2 | 2026-10-23 | clips/capinita/inicio.md |
 | capinita | Región Amazonía Ecuatoriana: Biodiversidad, cultur | 200 | 1 | 2026-10-23 | clips/capinita/amazonia.md |
 | capinita | Hotel La Jungla en Macas: confort en plena Amazoní | 200 | 1 | 2026-10-23 | clips/capinita/amazonia-morona-santiago-morona-hotel-la-jungla.md |
@@ -21,7 +28,7 @@
 | capinita | Gualaquiza a Macas: Buses, Rutas, Horarios y Opcio | 200 | 2 | 2026-10-23 | clips/capinita/ruta-gualaquiza-a-morona.md |
 | capinita | Servicios Profesionales | Bryan Chacha | 200 | 1 | 2026-10-23 | clips/capinita/servicios-profesionales.md |
 | capinita | Region Sierra del Ecuador | 200 | 1 | 2026-10-23 | clips/capinita/sierra.md |
-| capinita | Sobre Nosotros | Capinita | 200 | 1 | 2026-10-23 | clips/capinita/sobre-nosotros.md |
+| capinita | Sobre Nosotros | Capinita | 200 | 2 | 2026-10-23 | clips/capinita/sobre-nosotros.md |
 | capinita | Terminales Terrestres en Ecuador | Guía Completa | 200 | 1 | 2026-10-23 | clips/capinita/terminal-terrestre.md |
 | capinita | Terminal terrestre Ambato | Horarios y Rutas | 200 | 1 | 2026-10-23 | clips/capinita/terminal-terrestre-ambato.md |
 | capinita | Tours en Ecuador | 200 | 3 | 2026-10-23 | clips/capinita/tours.md |

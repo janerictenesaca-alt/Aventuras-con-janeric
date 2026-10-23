@@ -76,3 +76,5 @@ Registro acumulativo. No se sobrescribe: cada consulta añade una sección. Solo
 
 **Síntesis fiel:** Presenta la aplicación y a su equipo (fundador y responsable técnico), muestra logotipos de empresas clientes, cifras declaradas y enlace para solicitar asesoría.
 **Inferencias [I]:** Las cifras y los clientes no son verificables desde la página.
+
+> Verificado de nuevo el 2026-10-23T05:38:05.850Z: sin cambios (huella `0d1372699c86ab12`).

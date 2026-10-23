@@ -105,6 +105,7 @@ try {
     consola: ev.filter(e => e.method === 'Runtime.consoleAPICalled' && e.params.type === 'error').map(e => (e.params.args || []).map(a => a.value ?? a.description ?? '').join(' ').slice(0, 160)).slice(0, 5),
     excepciones: ev.filter(e => e.method === 'Runtime.exceptionThrown').map(e => (e.params.exceptionDetails.exception?.description || e.params.exceptionDetails.text).split('\n')[0].slice(0, 160)).slice(0, 5),
     bloqueadasPorSerSoloLectura: ev.filter(e => e.method === 'bloqueada').length,
+    bloqueadasDetalle: Object.entries(ev.filter(e => e.method === 'bloqueada').reduce((o, e) => { try { const u = new URL(e.params.u); const k = `${e.params.m} ${u.host}${u.pathname.slice(0, 50)}`; o[k] = (o[k] || 0) + 1; } catch {} return o; }, {})).sort((x, y) => y[1] - x[1]).slice(0, 4).map(([k, n]) => `${k} x${n}`),
   };
 
   // Captura solo si se pide
@@ -144,7 +145,7 @@ ${dat.precios.map(p => `  - ${p}`).join('\n') || '  - _ninguno_'}
 - Medios: ${dat.medios.imagenes} imágenes (${dat.medios.picture} \`picture\`, ${dat.medios.sinAlt} sin alt, ${dat.medios.lazy} lazy), ${dat.medios.svg} SVG
 - Tecnología detectada: ${Object.entries(dat.tecnologia).map(([k, v]) => `${k}=${Array.isArray(v) ? v.join(',') || '-' : v || '-'}`).join('; ')}
 - Peticiones por host: ${Object.entries(porHost).sort((a, b) => b[1] - a[1]).slice(0, 6).map(([h, n]) => `${h} (${n})`).join(', ')}
-- Errores/límites: HTTP≥400: ${errores.http.join(' | ') || 'ninguno'}; consola: ${errores.consola.join(' | ') || 'ninguno'}; excepciones: ${errores.excepciones.join(' | ') || 'ninguna'}; peticiones no-GET bloqueadas por ser solo lectura: ${errores.bloqueadasPorSerSoloLectura}
+- Errores/límites: HTTP≥400: ${errores.http.join(' | ') || 'ninguno'}; consola: ${errores.consola.join(' | ') || 'ninguno'}; excepciones: ${errores.excepciones.join(' | ') || 'ninguna'}; peticiones no-GET bloqueadas por ser solo lectura: ${errores.bloqueadasPorSerSoloLectura}${errores.bloqueadasDetalle.length ? ' (' + errores.bloqueadasDetalle.join('; ') + ')' : ''}
 - Captura: ${captura ? captura : 'no tomada (solo con --captura cuando documenta un elemento visual)'}
 
 **Síntesis fiel:** _(pendiente: el agente la redacta en 3–6 líneas tras leer lo anterior, sin copiar texto del sitio)_

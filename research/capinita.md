@@ -120,3 +120,61 @@ Repo comprobado: rama `claude/magical-babbage-nxlkef`, árbol limpio y al día a
 | Bloqueadas / con error | 5 (4×404, 1×500) |
 | Pendientes | Comprobar si el contenido de las plantillas repetidas varía de forma relevante (p. ej. rutas con paradas, terminales sin datos); sin interacción con filtros/pestañas (no se hizo clic) |
 Punto de control para reanudar: `clips/PUNTO-DE-CONTROL.md`.
+
+
+## Sección 2026-10-23 — Lote 8: análisis técnico del frontend con REA + Chrome (solo lectura, sin commit)
+**Alcance.** Páginas públicas de Capinita, sin sesión de ninguna cuenta (no había una cuenta autorizada iniciada), sin enviar formularios, sin reservar, sin clics en enlaces de reserva, sin probar vulnerabilidades ni buscar credenciales. Herramientas: Chrome aparte con depuración local (perfil temporal, cerrado al terminar), herramientas REA (`inspect_web_page`, `analyze_web_bundle`; JavaScript analizado de forma estática, **nunca ejecutado por REA**), el clipper del proyecto y `curl` para cabeceras. Etiquetas: **[O]** observado · **[M]** medido · **[I]** inferido · **[NV]** no verificado.
+
+### 1. Evidencia del análisis estático (REA, ficha de ruta `/ruta/gualaquiza-a-morona`) [O/M]
+- 90 scripts capturados y analizados: **90 analizados, 0 fallos de análisis, 333 617 nodos de sintaxis**; 20 son archivos `.js` (1 589 755 bytes sin comprimir) y 70 son scripts en línea (datos de la página). 20 scripts, 6 hojas de estilo, 3 imágenes y 2 fuentes como recursos cargados.
+- Huellas de proveedor: **Next.js (confianza alta)** y **React (media)** [O].
+- Un solo destino externo en el código: la consulta de vías del ECU 911 (`fetch` en un chunk) [O]. No hay mapas de código fuente accesibles (no se solicitaron a REA; antes se comprobó que 0 de 15 archivos `.js` tienen `.map` público) [M].
+- Sin herramientas WebMCP declaradas por la página [O].
+- Parámetros de URL usados por la interfaz (candidatos de baja confianza, no una lista de llamadas): `origen`, `destino`, `buscar`, `consulta`, `categoria`, `pagina`, `p` [I].
+- **Falso positivo detectado**: REA listó 24 "rutas" que eran trazados de iconos SVG (redes sociales, correo, etc.); no son rutas de la aplicación. Las rutas reales salen del sitemap.
+
+### 2. Recursos del frontend y su función probable
+| Recurso | Evidencia | Función probable |
+|---|---|---|
+| Chunk 543 KB (`e9841c0d…`, el mayor) | tamaño en REA [M]; contenido sin identificar | [NV] probable código compartido/librerías (React, router de Next.js) |
+| `7275-…js` (249 KB) | contiene referencias a Swiper y a validación [M] | [I] componentes de interfaz y carruseles |
+| `d0deef33-…js` y `8644-…js` (145 y 134 KB) | contienen Leaflet; `8644` además el `fetch` al ECU 911 y Swiper [M] | [I] mapas de ruta y bloque de estado vial |
+| `4bd1b696-…js` (169 KB) | referencia a `react-dom` [M] | [I] núcleo de React |
+| `polyfills-…js` (109 KB) | nombre del archivo [O] | compatibilidad con navegadores antiguos |
+| 6 hojas CSS | análisis previo [M] | Tailwind + estilos de Swiper/Leaflet |
+| 2 fuentes `woff2` | red [O] | Montserrat e Inter (variable) |
+| 70 scripts en línea | REA [O] | datos de página serializados por Next.js (payload RSC) [I] |
+
+### 3. Flujos observados
+- **Búsqueda de rutas:** formulario de origen y destino que, según los parámetros de URL, lleva a una página de ruta `/ruta/<origen>-a-<destino>` [I]; no se ejecutó una búsqueda.
+- **Consulta (ficha de ruta/cooperativa/terminal):** tarjetas de salida con hora, duración, terminales, tipo, precio y contacto [O]. El mapa pide el trazado a un servicio de ruteo público (red) [M].
+- **Reserva:** no existe motor de reservas propio. Los botones abren **WhatsApp** con un enlace `https://api.whatsapp.com/send?phone=<número>&text=<mensaje prellenado>`; el ejemplo leído en `/tours` es un mensaje genérico ("quiero planificar mi viaje en Ecuador") y los de cada tour incluyen el tour (revisión anterior) [O]. No se hizo clic. El número de teléfono no se registra aquí.
+- **Estado vial:** el navegador consulta el servicio del ECU 911 (límite 200 registros) y se muestra por provincia [M].
+- **Cuenta/negocio:** registro y acceso (Auth.js + Google); panel y perfil son privados [NV].
+
+### 4. Diseño, rendimiento y SEO (resumen; detalles en secciones anteriores)
+Diseño: barra lateral fija en escritorio y menú hamburguesa en móvil, verde de marca `#16a34a`, Montserrat, tarjetas con esquinas redondeadas [O/M]. Rendimiento: FCP 0,23–1 s, carga 0,3–1,9 s según página; JS inicial ≈ 1,6 MB sin comprimir [M]. SEO: títulos y descripciones presentes, **sin etiqueta canonical**, 21 páginas con título genérico repetido, sitemap con 4 URLs 404 y 1 URL 500 [M].
+
+### 5. Problemas de uso y de calidad
+Botones desactivados sin explicación; datos viales con fechas antiguas pese a "cada minuto"; paginadores con contadores erróneos; error de hidratación de React (#418); apps de terceros por encima del buscador; imágenes de 700×1000 en PNG de ~1 MB; 8 imágenes sin `alt` en la ficha móvil.
+
+### 6. Cómo lograr los mismos objetivos con una solución original (sin copiar nada)
+| Objetivo funcional | Implementación propia propuesta |
+|---|---|
+| Aplicación rápida y rastreable | Next.js (App Router) con páginas prerenderizadas, revalidación periódica y datos desde nuestra base (PostgreSQL) |
+| Búsqueda origen → destino con resultados filtrables | Esquema propio (rutas, salidas, cooperativas, terminales) + buscador con filtros (hora, precio, cooperativa) y URL legible; índice de búsqueda en base de datos |
+| Mapa de ruta | MapLibre/Leaflet cargado solo en las páginas con mapa; ruteo autoalojado o proveedor con licencia |
+| Estado vial | Servicio propio en servidor que consulta la fuente oficial con permiso, guarda copia con fecha y degrada si falla |
+| Reserva | Solicitud estructurada (formulario propio con fecha, pasajeros y contacto) que genera un mensaje de WhatsApp o correo; sin pagos al inicio |
+| Cuentas y negocios | Auth.js con verificación de correo, límite de intentos y MFA para negocios; panel propio con permisos por negocio |
+| Contenido regional y SEO | Plantillas con contenido único por región, metadatos y canonical generados por página, comprobación automática de sitemap |
+| Rendimiento | AVIF/WebP con varios tamaños, importación dinámica de mapa y carruseles, presupuesto de JS por página (p. ej. ≤ 300 KB comprimidos) |
+Estos objetivos se cumplen con arquitectura, código, nombres, textos, diseño e imágenes propios; no se reutiliza ningún archivo de Capinita.
+
+### 7. Pendiente y por qué
+- **Páginas tras iniciar sesión (`/perfil`, `/administrador`)**: no hay una cuenta autorizada con sesión iniciada y el panel es privado; no se intentó acceder. Queda **pendiente por falta de autorización**.
+- **Resultados de búsquedas y filtros**: requieren interacción (rellenar formularios); no se hizo para mantener el modo solo lectura.
+- **Contenido de cada chunk** (identificación exacta de módulos): requeriría recuperar fuentes legibles; no se hizo recuperación de código y no hay mapas de código. [NV]
+- **Servidor, base de datos y APIs propias**: no accesibles sin autorización; el esquema sigue siendo deducción.
+- **Segundo sitio de referencia**: sin URL.
+- No se hizo commit ni push (orden expresa); los cambios de esta sesión quedan sin confirmar en el repositorio local.
