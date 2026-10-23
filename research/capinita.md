@@ -178,3 +178,72 @@ Estos objetivos se cumplen con arquitectura, código, nombres, textos, diseño e
 - **Servidor, base de datos y APIs propias**: no accesibles sin autorización; el esquema sigue siendo deducción.
 - **Segundo sitio de referencia**: sin URL.
 - No se hizo commit ni push (orden expresa); los cambios de esta sesión quedan sin confirmar en el repositorio local.
+
+
+## Metodología — REA, herramientas, errores aprendidos y avance medido (2026-10-23)
+*Sección acumulativa de metodología. Etiquetas: **[O]** observado · **[M]** medido · **[I]** inferido · **[NV]** no verificado.*
+
+### 1. Herramientas y versiones registradas
+| Herramienta | Versión / origen | Uso | Estado |
+|---|---|---|---|
+| **REA** (servidor MCP `rea`) | **`rea-agents@6.5.0`**, versión fijada en el registro del servidor (`npx -y rea-agents@6.5.0 mcp`) [M]; el skill instalado cita la misma versión | Inspección pasiva de la página, análisis estático del JavaScript, trazado de funciones | En uso; **no se instaló ni actualizó nada** |
+| Proveedores REA usados | `rea-cdp-browser` v2, `rea-web-script-export` v1, `rea-analysis-view` v1 [M] | Captura de la página, exportación de scripts, vistas de la evidencia | En uso |
+| Skill `reverse-engineer-anything` | Instalado localmente; carga comprobada (0 observaciones abiertas del registro) | Guía de ruta de trabajo: página → recursos → módulos | En uso |
+| Skill `task-observer` | Instalado localmente | Registro de observaciones | Sin entradas nuevas |
+| Chrome (para REA y clipper) | 155.0.8059.86, modo headless con perfil temporal [M] | Páginas, capturas y depuración local | En uso |
+| Brave | Instalado; probado como navegador del clipper | Alternativa si Chrome falla | Probado una vez |
+| Node.js | v24.20.0 [M] | Clipper | En uso |
+| Claude Code | 2.1.309 (paquete npm global) [M] | Entorno | — |
+| Extensión Claude in Chrome | Conectada, pero **bloquea todos los dominios** ("blocked by your site permissions") | Navegador integrado | **No utilizable**; causa fuera de nuestro alcance |
+| `browser-use` | Demonio no arranca: falta la depuración remota activada en el navegador del usuario | Alternativa | No utilizable sin acción del usuario |
+| WebFetch, `curl`, Python 3.13 | Del entorno | Lectura pública, cabeceras, análisis de datos | En uso |
+| **Clipper propio** `research/herramientas/clipper.mjs` | Creado en este proyecto (solo lectura, bloquea peticiones no-GET y la analítica del sitio) | Fichas por página | En uso; parcheado hoy para registrar qué peticiones bloquea |
+
+**Cambios realizados en herramientas:** ninguna instalación ni actualización externa; no se tocó configuración global. Solo se creó y ajustó el clipper dentro del repositorio autorizado. **Mejor combinación para inspeccionar una aplicación web** [I, basada en lo probado]: (1) `curl`/WebFetch para `robots.txt`, sitemap y cabeceras; (2) Chrome aparte con el clipper para fichas, capturas y móvil; (3) REA `inspect_web_page` con scripts → `export_web_scripts` → `analyze_javascript_application` (resumen) → `inspect_analysis_view`/`trace_application_feature` con semilla exacta para módulos y funciones.
+
+### 2. Resultados del análisis con REA (página de estado vial y ficha de ruta)
+- **Observado [M]:** 100 scripts exportados y analizados sin fallos de lectura; 278 441 nodos de sintaxis; **319 módulos** reconocidos (fábricas de módulos de Webpack/Rspack); 1 010 hallazgos; la cobertura del grafo es **parcial** (56 946 desconocidos semánticos), por lo que **la ausencia de un dato no significa que no exista**.
+- **Peticiones en el código:** 24 relaciones de petición retenidas; el único destino absoluto identificado con certeza es el **servicio del ECU 911** (`fetch` con revalidación de 300 s). El trazado con semilla de ese texto devolvió 1 coincidencia (tipo "endpoint"), 817 nodos, 1 531 aristas y 31 caminos terminales (1 098 hechos observados, 1 502 inferidos) [M].
+- **Huellas:** Next.js (alta), React (media) [O]. Sin mapas de código públicos; sin herramientas WebMCP; sin Electron.
+- **Limitación importante:** REA no ejecuta el JavaScript ni confirma que una relación estática ocurra en ejecución. Las funciones por módulo siguen siendo **hipótesis**, salvo las que se confirmaron por red.
+- Los scripts exportados se usaron solo para el análisis y **se borraron**; no se reutiliza ningún recurso de Capinita.
+
+### 3. Errores encontrados, causa, solución y cómo evitarlos
+| # | Error | Causa | Solución aplicada | Prevención |
+|---|---|---|---|---|
+| 1 | Extensión de Chrome: "blocked by your site permissions" para todos los dominios | Configuración/cuenta de la extensión (sin confirmar) o error conocido de la extensión | Chrome aparte con depuración local y clipper | Probar primero un sitio neutro para distinguir bloqueo global de bloqueo por sitio |
+| 2 | `browser-use`: "DevToolsActivePort not found" | Depuración remota no activada en el navegador del usuario | No se activó (ajuste de seguridad del usuario) | Usar Chrome propio con puerto de depuración |
+| 3 | Comandos largos de Bash fallaron ("unexpected EOF") | Comillas y heredocs mezclados en Git Bash | Escribir archivos con la herramienta de escritura y ejecutar scripts pequeños | Un archivo por script; evitar heredocs largos con comillas |
+| 4 | Python no veía `/tmp` de Bash | Rutas distintas entre Bash y Python en Windows | Usar rutas absolutas de la carpeta temporal de la sesión | Rutas absolutas |
+| 5 | Columnas mal asignadas en el primer inventario (títulos/h1 aparecían como números) | `curl -w` añadió columnas; se contó con índices equivocados | Recontar con cabecera etiquetada y repetir el análisis | Archivos TSV con cabecera y verificación de una fila antes de agregar |
+| 6 | REA `analyze_web_bundle`: "expected true" | Parámetro obligatorio `include_script_sources: true` | Repetir con ese valor | Leer el esquema de la herramienta antes de llamar |
+| 7 | Salidas de REA demasiado grandes (hasta 4 MB) | Capturas con fuentes y semillas amplias (`contains`) | Leer el archivo guardado con Python, solo claves y recuentos | Usar `detail: summary`, semillas exactas y vistas paginadas |
+| 8 | REA listó 24 "rutas" que eran iconos | Trazados SVG detectados como rutas | Descartar; las rutas reales vienen del sitemap | No usar el campo "routes" de REA como inventario de páginas |
+| 9 | Resúmenes parciales y numeración confusa de los términos de Airbnb | Documento largo con varias versiones y lectura por tramos | Releer por desplazamientos y separar versiones | Leer por tramos con un índice previo y marcar cada versión |
+| 10 | Captura móvil recortada | Chrome sin ventana no baja de cierto ancho | Emular el dispositivo por protocolo de depuración | Emulación en lugar de tamaño de ventana |
+| 11 | Portada y precios de Airbnb vacíos | El modo solo lectura bloquea las peticiones no-GET (registro, configuración) | Documentar la limitación; no se relajó la regla | Pedir autorización antes de permitir POST de configuración |
+| 12 | `brave --version` abrió una ventana en la sesión de Brave del usuario | El ejecutable reutiliza la sesión abierta | Sin daño; se registró | No ejecutar el navegador del usuario solo para ver su versión |
+| 13 | La huella del clipper mezcla escritorio y móvil | Misma clave de URL | Registrado como límite | Incluir el modo en la clave (mejora pendiente) |
+
+### 4. Inventario explícito y avance medido (corte 2026-10-23)
+**Cómo se calcula:** porcentaje = elementos con el nivel de evidencia indicado ÷ total del inventario de ese tipo. Niveles: **A** ficha con medición y, cuando aplica, captura; **B** solo inventario mínimo (estado HTTP, título, `h1`, tamaño); **E** error. **B no equivale a haber revisado el contenido.** No se declara 100 % de nada: el inventario podría no estar completo (páginas no enlazadas ni listadas, módulos de otras páginas).
+
+| Inventario | Total | Con evidencia | Pendiente | Porcentaje y cálculo |
+|---|---|---|---|---|
+| **Páginas públicas conocidas** (381 del sitemap + 4 fuera del sitemap: tours, emprendedor, servicios, privacidad) | **385** | **A: 23** · B: 357 · E: 5 | contenido de 357 páginas de plantillas repetidas | A = 23/385 = **6,0 %**; B = 357/385 = **92,7 %**; E = 5/385 = **1,3 %**; A+B = **98,7 %** (de evidencia mínima, no de contenido) |
+| **Plantillas de página identificadas** | 20 | 20 con ficha (A) | variantes no vistas | 20/20 de las identificadas; la lista puede estar incompleta |
+| **Funciones identificadas** | 22 | 21 con evidencia de existencia (interfaz o red) · 5 con comportamiento comprobado por red (mapa y ruteo, estado vial ECU 911, precarga de páginas, sesión, analítica) | panel privado (1, sin acceso); funciones **no ejercidas** (búsquedas, filtros, formularios, favoritos, comentarios) | existencia 21/22 = **95,5 %**; comportamiento verificado 5/22 = **22,7 %**; ejercidas de extremo a extremo 0/22 = **0 %** |
+| **Archivos JavaScript** (las 3 páginas con REA) | 20 | 20 analizados estáticamente · 8 con función probable asignada | 12 sin función asignada | 20/20 = 100 % analizados (de esas 3 páginas); función asignada 8/20 = **40 %** |
+| **Hojas de estilo y fuentes** | 6 + 2 | 6 CSS leídas · 2 fuentes identificadas | — | 8/8 = 100 % de las cargadas en esas páginas |
+| **Referencias de imagen** | 69 | 34 medidas (formato, peso, dimensiones) | 35 no medibles (27 respaldos PNG con 404 y 8 direcciones truncadas por el análisis) | 34/69 = **49,3 %** |
+| **Destinos externos observados** | 9 (ECU 911, teselas y ruteo de OpenStreetMap, unpkg, Google Analytics y Tag Manager, imágenes propias, Unsplash, WhatsApp) | 9 observados | — | 9/9 de los vistos |
+
+### 5. Cómo mejorar el método en el siguiente análisis
+1. Incluir el modo (escritorio/móvil) en la huella y la clave del clipper.
+2. Añadir al clipper un inventario de recursos por página (JavaScript, CSS, imágenes, hosts) para calcular los porcentajes automáticamente.
+3. Extender REA a una muestra de plantillas distintas (ruta, cooperativa, lugar) para ampliar el inventario de módulos más allá de 3 páginas.
+4. Si el usuario autoriza una cuenta de prueba o desbloquea la extensión: ejercer búsquedas y filtros en solo lectura y registrar su comportamiento.
+5. Repetir el inventario del sitemap periódicamente para detectar cambios (estados, títulos, errores).
+
+### 6. Aplicación a nuestra implementación (original)
+Lo aprendido con REA refuerza el plan ya documentado: Next.js con componentes de servidor, carga de mapa solo donde se use, consulta de datos viales desde nuestro servidor con caché y fecha del dato, un presupuesto de JavaScript por página (hoy 1,6 MB sin comprimir en las páginas con mapa), y un inventario automático de recursos. Todo con código, nombres, textos, diseño e imágenes propios.
