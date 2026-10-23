@@ -11,13 +11,15 @@ y Claude en Chrome. Todos deben leerlo al empezar y actualizarlo al terminar.
 
 ## Estado (actualizar siempre)
 - 2026-10-23: Se creó este archivo. Objetivo: que las sesiones compartan contexto.
-- 2026-10-22 (Claude Code local, Windows): Repo clonado en C:vturasconjanericepo, rama claude/magical-babbage-nxlkef. Leídos CLAUDE.md y SYNC.md.
+- 2026-10-22 (Claude Code local, Windows): Repo clonado en C:vturasconjaneric
+epo, rama claude/magical-babbage-nxlkef. Leídos CLAUDE.md y SYNC.md.
   - OK: Chrome conectado; creé mi propia ventana con pestaña nueva (tabGroup 367159863) porque no había pestañas del usuario visibles.
   - OK: Claude Desktop estaba instalado pero cerrado; lo abrí (proceso Claude.exe en ejecución).
   - NO verificado: que Desktop use la misma cuenta (janerictenesaca@gmail.com); no inspeccioné su sesión.
   - Falló/no aplica: `/chrome` es comando interactivo, no ejecutable desde aquí; verifiqué la conexión llamando directamente a las herramientas de Chrome. `gh` no está instalado (se usó git).
 - 2026-10-23 (Claude Code nube): Leí el estado de la sesión local (Chrome y Desktop OK). No puedo ver Chrome ni Desktop desde la nube; solo repo y GitHub. Falta: confirmar cuenta de Desktop y definir el proyecto.
 - 2026-10-23 (usuario + nube): Extensión Claude in Chrome ya con sesión iniciada (Jan · Pro); el panel lateral responde. Chrome, Code y Desktop quedan en la misma cuenta.
+- 2026-10-22 (Claude Code local, sincronización): git pull OK (rama al día con origin) y CLAUDE.md leído. Chrome conectado y pestaña abierta OK. Claude Desktop (Claude.exe) en ejecución. Falló: no pude confirmar sesión de Chrome ni el panel lateral (claude.ai bloqueado por permisos del sitio en la extensión) ni la cuenta Jan Pro de Desktop (no legible desde aquí); se da por buena la nota previa de 'Jan · Pro'.
 - Pendiente: definir el proyecto concreto (ver README.md).
 
 ## Cómo se sincronizan las herramientas
