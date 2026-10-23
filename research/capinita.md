@@ -89,3 +89,8 @@ Estado: /tours, /ruta y /estado-vial-ecuador pasan a **revisadas visualmente en 
 **Límite de la captura móvil** [M]: Chrome headless no baja de cierto ancho mínimo de ventana, y en `tours-movil-390.png` el contenido aparece cortado por la derecha. Esa imagen **no es fiable** como vista móvil; no saco conclusiones de ella. Para el móvil real hace falta la extensión desbloqueada o emulación de dispositivo por CDP.
 
 **Ideas para nuestro producto [I]**: estado vial con ruta alterna y fuente visible por tarjeta es un patrón útil; evitar publicidad de terceros encima del buscador; destino deshabilitado hasta elegir origen es correcto pero faltan filtros; no repetir los textos en mayúsculas.
+
+## Sección 2026-10-23 — Lote 3: ventanas y código
+- Informe de cada ventana: `research/informe-ventanas-capinita.md` (17 capturas de escritorio en `research/capturas/capinita/`).
+- Análisis del código público y plan original: `research/analisis-tecnico-capinita.md`. Stack medido: Next.js (App Router) en Vercel, Tailwind, Swiper, Leaflet + OSM + OSRM público, Auth.js + zod, Cloudinary e `img.capinita.com`, y consulta al servicio web del ECU 911 con caché de 300 s.
+- Estado de páginas: revisadas visualmente en escritorio inicio, tours, rutas, detalle de ruta, cooperativas, detalle de cooperativa, terminales (índice), lugares, estado vial, Amazonía, blog (entrada), emprendedor, login y registro. Capturadas sin revisar: Sierra, Costa, Galápagos, Sobre nosotros, Servicios, detalle de terminal. Pendiente: móvil real y ~360 fichas.

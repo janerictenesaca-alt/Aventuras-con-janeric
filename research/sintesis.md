@@ -41,7 +41,7 @@ Modelo de datos: Región > Provincia > Cantón; Lugar; Terminal; Cooperativa; Ru
 Pantallas: inicio, búsqueda de ruta, detalle, directorio, tours, estado vial, panel de negocio.
 
 ## 6. Stack
-Pendiente: el repo solo contiene documentación, no hay stack actual que revisar. Referencia: Capinita usa Next.js en Vercel [M]. Decidir tras definir el proyecto.
+Recomendación provisional (detalle y justificación en research/analisis-tecnico-capinita.md): Next.js + TypeScript + Tailwind, PostgreSQL, MapLibre/Leaflet con ruteo autoalojado, Auth.js y almacenamiento de imágenes propio. Referencia medida: Capinita usa Next.js en Vercel, Tailwind, Leaflet/OSM, Auth.js y datos del ECU 911 con caché de 5 min. Compatibilidad con el proyecto actual: el repo solo tiene documentación, así que no hay stack previo que respetar; confirmar con el usuario.
 
 ## 7. Riesgos y decisiones pendientes
 - Falta el sitio 2 y la revisión visual/móvil (Chrome bloqueó el dominio: hay que permitirlo en la extensión).
