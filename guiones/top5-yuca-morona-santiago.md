@@ -20,7 +20,7 @@ Antes de empezar, escuchen bien: la yuca cruda es veneno. Nada de "mordí un ped
 
 ## Puesto 5: Yuca frita (30-40 s)
 
-El chifle de la selva. Cortada en bastones, bien dorada, crocante por fuera y suavecita por dentro. Es el acompañamiento perfecto para cualquier cosa: con pescado, con carne, con ají, o solita viendo el partido. Te quita esa necesidad desgraciada de "algo que picar". Si existe la yuca frita, no me vengan con papas.
+El chifle de la selva. Cortada en bastones, bien dorada, crocante por fuera y suavecita por dentro. Es el acompañamiento perfecto para cualquier cosa: con pescado, con carne, con ají, o solita viendo el partido. Y sí, ya sé que parecen las piernas de mi primo cuando se pone short: blancas, flaquitas y largas. Mira esas yucas. Pero a diferencia de mi primo, estas sí se ponen doradas. Te quita esa necesidad desgraciada de "algo que picar". Si existe la yuca frita, no me vengan con papas.
 
 ## Puesto 4: Yuca hervida con ají (40-50 s)
 
