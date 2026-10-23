@@ -17,6 +17,7 @@ y Claude en Chrome. Todos deben leerlo al empezar y actualizarlo al terminar.
   - NO verificado: que Desktop use la misma cuenta (janerictenesaca@gmail.com); no inspeccioné su sesión.
   - Falló/no aplica: `/chrome` es comando interactivo, no ejecutable desde aquí; verifiqué la conexión llamando directamente a las herramientas de Chrome. `gh` no está instalado (se usó git).
 - 2026-10-23 (Claude Code nube): Leí el estado de la sesión local (Chrome y Desktop OK). No puedo ver Chrome ni Desktop desde la nube; solo repo y GitHub. Falta: confirmar cuenta de Desktop y definir el proyecto.
+- 2026-10-23 (usuario + nube): Extensión Claude in Chrome ya con sesión iniciada (Jan · Pro); el panel lateral responde. Chrome, Code y Desktop quedan en la misma cuenta.
 - Pendiente: definir el proyecto concreto (ver README.md).
 
 ## Cómo se sincronizan las herramientas
