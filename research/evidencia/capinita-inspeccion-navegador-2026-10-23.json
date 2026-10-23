@@ -1,0 +1,2838 @@
+{
+ "https://www.capinita.com/": {
+  "net": [
+   {
+    "url": "https://www.capinita.com/",
+    "method": "GET",
+    "type": "Document",
+    "status": 200,
+    "mime": "text/html"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/904be59b21bd51cb-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "35508"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "48432"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/db97ef92e31eaa36.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9add4b40e01add79.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/1de76be520b4de19.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9b8c55a7efa3bfa6.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/457a1f35031c354b.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/a3e4afe0f9bb7037.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/webpack-43c23bb066f790e0.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/1255-bf34beef1d383a36.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/main-app-b7ac91ae224968d9.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "572"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/d0deef33-59194872e4111dca.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/2619-04bc32f026a0d946.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/382-15dc625b189b7b28.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/6112-b44147c12467cead.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7489-3065f5a937664374.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7275-76e44e64dea69b16.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7568-0d12bc40d20120db.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7891-c83be2701ce55f2c.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/8644-0f074f5229e6a73a.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/page-0129265274110b55.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.googletagmanager.com/gtag/js?id=G-5YGKHXXSY9",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "180845"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/hotel-splendit.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "158782"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/centro-macas.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "105168"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/cerro-hermoso.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "231491"
+   },
+   {
+    "url": "https://img.capinita.com/cooperativa-de-transporte/icono-cooperativa-de-transporte-16-de-agosto.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "211378"
+   },
+   {
+    "url": "https://img.capinita.com/cooperativa-de-transporte/icono-cooperativa-de-transporte-orient-rut.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "185847"
+   },
+   {
+    "url": "https://img.capinita.com/cooperativa-de-transporte/icono-cooperativa-de-transporte-sucua.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "160757"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-rafting-rio-pastaza-madre-tierra-union-del-rio-puyo.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "337279"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-reserva-yanacocha-paso-de-monos-orquideas.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "104920"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-yasuni-park-camping-kareno-rio-nushino.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "117485"
+   },
+   {
+    "url": "https://www.capinita.com/rutas-de-viaje-com-capinita.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "46894"
+   },
+   {
+    "url": "https://www.capinita.com/cooperativas-de-transporte-en-ecuador.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "114974"
+   },
+   {
+    "url": "https://www.capinita.com/terminal-terrestre-de-buses.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "50168"
+   },
+   {
+    "url": "https://www.capinita.com/tours/banner-tour-rafting-rio-pastaza-madre-tierra-union-del-rio-puyo.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "203253"
+   },
+   {
+    "url": "https://www.capinita.com/tours/banner-tour-reserva-yanacocha-paso-de-monos-orquideas.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "193054"
+   },
+   {
+    "url": "https://www.capinita.com/balnerario-natural-jimbitono.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "156223"
+   },
+   {
+    "url": "https://www.capinita.com/balnerario-natural-panki.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "150754"
+   },
+   {
+    "url": "https://www.capinita.com/complejo-turistico-tigrillo-cozar.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "88455"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-volcan-chimborazo.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "239421"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-laguna-de-quilotoa.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "415719"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-feriados-en-ecuador-2025.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "115240"
+   },
+   {
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-5YGKHXXSY9&gtm=45je6al1v9169761845za208zd9169761845xf1&_p=1792732478829&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1388144044.1792732479&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=800x600&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.86%7CChromium%3B155.0.8059.86%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=1&tag_exp=115616985~115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121246026~121246034&sid=1792732478&sct=1&seg=0&dl=https%3A%2F%2Fwww.capinita.com%2F&dt=App%20de%20Turismo%20Ecuador%20%7C%20Gu%C3%ADa%20Tur%C3%ADstica%20%7C%20Capinita&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1133",
+    "method": "POST",
+    "type": "Fetch",
+    "status": 204,
+    "mime": "text/plain",
+    "len": "0"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/tours?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/ruta?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/cooperativa-de-transporte?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/buscador-de-lugares-turisticos?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/estado-vial-ecuador?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/promocionar-negocio-turistico?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/terminal-terrestre?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/volcan-chimborazo?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/laguna-de-quilotoa?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/promocionar-negocio-turistico/page-6ad8931c2776dcc7.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "211"
+   },
+   {
+    "url": "https://www.capinita.com/blog/feriados-ecuador?_rsc=rpz4o1L-V01iqf6J",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/blog/volcan-chimborazo/page-a85e2056acfd5b94.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/blog/laguna-de-quilotoa/page-a85e2056acfd5b94.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/blog/feriados-ecuador/page-a85e2056acfd5b94.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/favicon.ico",
+    "method": "GET",
+    "type": "Other",
+    "status": 200,
+    "mime": "image/x-icon"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   }
+  ],
+  "cons": [],
+  "exc": [],
+  "logs": [],
+  "dom": {
+   "title": "App de Turismo Ecuador | Guía Turística | Capinita",
+   "nodes": 1042,
+   "scripts": 92,
+   "stylesheets": 6,
+   "images": 35,
+   "pictures": 15,
+   "links": 80,
+   "forms": 2,
+   "inputs": 2,
+   "buttons": 13,
+   "iframes": 0,
+   "svgs": 77,
+   "h1": [
+    "Capinita"
+   ],
+   "landmarks": {
+    "nav": 1,
+    "main": 1,
+    "header": 1,
+    "footer": 4,
+    "aside": 10
+   },
+   "ariaLabels": 5,
+   "leaflet": true,
+   "nextData": true,
+   "lang": "es",
+   "theme": "",
+   "localStorageKeys": [],
+   "cookiesVisibleToJS": [
+    "_ga_5YGKHXXSY9",
+    "_ga"
+   ],
+   "sw": true,
+   "perf": {
+    "dcl": 670,
+    "load": 1913,
+    "fcp": 928,
+    "transferKB": 2045
+   }
+  }
+ },
+ "https://www.capinita.com/ruta": {
+  "net": [
+   {
+    "url": "https://www.capinita.com/ruta",
+    "method": "GET",
+    "type": "Document",
+    "status": 200,
+    "mime": "text/html"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/904be59b21bd51cb-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "35508"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "48432"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/db97ef92e31eaa36.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9add4b40e01add79.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/1de76be520b4de19.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9b8c55a7efa3bfa6.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/457a1f35031c354b.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/a3e4afe0f9bb7037.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/aplicacion-rutas-turismo-ecuador.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "30822"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/webpack-43c23bb066f790e0.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/1255-bf34beef1d383a36.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/main-app-b7ac91ae224968d9.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "572"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/d0deef33-59194872e4111dca.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/2619-04bc32f026a0d946.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/382-15dc625b189b7b28.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/6112-b44147c12467cead.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7489-3065f5a937664374.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7275-76e44e64dea69b16.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7568-0d12bc40d20120db.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7891-c83be2701ce55f2c.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/8644-0f074f5229e6a73a.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/ruta/page-a85e2056acfd5b94.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.googletagmanager.com/gtag/js?id=G-5YGKHXXSY9",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "180845"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-rafting-rio-pastaza-madre-tierra-union-del-rio-puyo.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-reserva-yanacocha-paso-de-monos-orquideas.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-yasuni-park-camping-kareno-rio-nushino.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-volcan-chimborazo.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "239421"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-laguna-de-quilotoa.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "415719"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-feriados-en-ecuador-2025.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "115240"
+   },
+   {
+    "url": "https://www.capinita.com/ruta/lista-de-cooperativas-de-transporte.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "260150"
+   },
+   {
+    "url": "https://www.capinita.com/ruta/mapas-iterativos-origen-destino-ruta.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "261040"
+   },
+   {
+    "url": "https://www.capinita.com/ruta/puntos-intermedios-de-ruta-de-viaje.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "39326"
+   },
+   {
+    "url": "https://www.capinita.com/ruta/estado-vial-ruta-tiempo-real.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "49314"
+   },
+   {
+    "url": "https://www.capinita.com/ruta/informacion-tecnica-transporte-publico.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "31384"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/tours?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/cooperativa-de-transporte?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/buscador-de-lugares-turisticos?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/page-0129265274110b55.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/estado-vial-ecuador?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/promocionar-negocio-turistico?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/volcan-chimborazo?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/laguna-de-quilotoa?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/blog/feriados-ecuador?_rsc=EzCSD0B0m54Htu7L",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/promocionar-negocio-turistico/page-6ad8931c2776dcc7.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "211"
+   },
+   {
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-5YGKHXXSY9&gtm=45je6al1v9169761845za208zd9169761845xf1&_p=1792732486310&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&cid=1388144044.1792732479&frm=0&ngs=1&pscdl=noapi&rcb=3&sr=800x600&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.86%7CChromium%3B155.0.8059.86%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=1&tag_exp=115616985~115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121246026~121246034&sid=1792732478&sct=1&seg=1&dl=https%3A%2F%2Fwww.capinita.com%2Fruta&dt=Buscador%20de%20Rutas%20en%20Ecuador%3A%20Encuentra%20Tu%20Camino%20F%C3%A1cilmente&en=page_view&_ee=1&tfd=6084",
+    "method": "POST",
+    "type": "Fetch",
+    "status": 204,
+    "mime": "text/plain",
+    "len": "0"
+   }
+  ],
+  "cons": [],
+  "exc": [],
+  "logs": [],
+  "dom": {
+   "title": "Buscador de Rutas en Ecuador: Encuentra Tu Camino Fácilmente",
+   "nodes": 648,
+   "scripts": 73,
+   "stylesheets": 6,
+   "images": 13,
+   "pictures": 3,
+   "links": 51,
+   "forms": 2,
+   "inputs": 3,
+   "buttons": 5,
+   "iframes": 0,
+   "svgs": 42,
+   "h1": [
+    "Encuentra tu Ruta Ideal en Ecuador"
+   ],
+   "landmarks": {
+    "nav": 1,
+    "main": 1,
+    "header": 1,
+    "footer": 1,
+    "aside": 7
+   },
+   "ariaLabels": 5,
+   "leaflet": true,
+   "nextData": true,
+   "lang": "es",
+   "theme": "",
+   "localStorageKeys": [],
+   "cookiesVisibleToJS": [
+    "_ga",
+    "_ga_5YGKHXXSY9"
+   ],
+   "sw": true,
+   "perf": {
+    "dcl": 1107,
+    "load": 1119,
+    "fcp": 1044,
+    "transferKB": 764
+   }
+  }
+ },
+ "https://www.capinita.com/ruta/gualaquiza-a-morona": {
+  "net": [
+   {
+    "url": "https://www.capinita.com/ruta/gualaquiza-a-morona",
+    "method": "GET",
+    "type": "Document",
+    "status": 200,
+    "mime": "text/html"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/904be59b21bd51cb-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "35508"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "48432"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/db97ef92e31eaa36.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9add4b40e01add79.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/1de76be520b4de19.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9b8c55a7efa3bfa6.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/457a1f35031c354b.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/a3e4afe0f9bb7037.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/webpack-43c23bb066f790e0.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/1255-bf34beef1d383a36.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/main-app-b7ac91ae224968d9.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "572"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/d0deef33-59194872e4111dca.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/2619-04bc32f026a0d946.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/382-15dc625b189b7b28.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/6112-b44147c12467cead.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7489-3065f5a937664374.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7275-76e44e64dea69b16.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7568-0d12bc40d20120db.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7891-c83be2701ce55f2c.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/8644-0f074f5229e6a73a.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/ruta/%5Bslug%5D/page-5e43557b9837c37b.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.googletagmanager.com/gtag/js?id=G-5YGKHXXSY9",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "180845"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-kilamo-house.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "155966"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-cascadas-umpuankas.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "208239"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-cascada-tambache.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "243094"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-rafting-rio-pastaza-madre-tierra-union-del-rio-puyo.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-reserva-yanacocha-paso-de-monos-orquideas.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-yasuni-park-camping-kareno-rio-nushino.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-volcan-chimborazo.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "239421"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-laguna-de-quilotoa.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "415719"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-feriados-en-ecuador-2025.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "115240"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/tours?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/ruta?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/cooperativa-de-transporte?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/buscador-de-lugares-turisticos?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/page-0129265274110b55.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/blog?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/estado-vial-ecuador?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/promocionar-negocio-turistico?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/cooperativa-de-transporte/16-de-agosto?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/volcan-chimborazo?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/laguna-de-quilotoa?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/promocionar-negocio-turistico/page-6ad8931c2776dcc7.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "211"
+   },
+   {
+    "url": "https://www.capinita.com/blog/feriados-ecuador?_rsc=sP3-YXirAnKKNMvT",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/blog/volcan-chimborazo/page-a85e2056acfd5b94.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://a.tile.openstreetmap.org/8/71/130.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "25810"
+   },
+   {
+    "url": "https://b.tile.openstreetmap.org/8/72/130.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "21992"
+   },
+   {
+    "url": "https://c.tile.openstreetmap.org/8/71/129.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "30923"
+   },
+   {
+    "url": "https://a.tile.openstreetmap.org/8/72/129.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "24786"
+   },
+   {
+    "url": "https://b.tile.openstreetmap.org/8/71/131.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "23871"
+   },
+   {
+    "url": "https://c.tile.openstreetmap.org/8/72/131.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "21470"
+   },
+   {
+    "url": "https://c.tile.openstreetmap.org/8/70/130.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "12104"
+   },
+   {
+    "url": "https://c.tile.openstreetmap.org/8/73/130.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "13676"
+   },
+   {
+    "url": "https://b.tile.openstreetmap.org/8/70/129.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "11983"
+   },
+   {
+    "url": "https://b.tile.openstreetmap.org/8/73/129.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "14906"
+   },
+   {
+    "url": "https://a.tile.openstreetmap.org/8/70/131.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "17091"
+   },
+   {
+    "url": "https://a.tile.openstreetmap.org/8/73/131.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "16160"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/e9841c0d.d59d0008472707a0.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://routing.openstreetmap.de/routed-car/route/v1/car/-78.581307,-3.404288;-78.123878,-2.315897?overview=false&alternatives=true&steps=true&hints=;",
+    "method": "GET",
+    "type": "XHR",
+    "status": 200,
+    "mime": "application/json",
+    "len": "21275"
+   },
+   {
+    "url": "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-5YGKHXXSY9&gtm=45je6al1v9169761845za208zd9169761845xf1&_p=1792732493773&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&cid=1388144044.1792732479&frm=0&ngs=1&pscdl=noapi&rcb=18&sr=800x600&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.86%7CChromium%3B155.0.8059.86%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=1&tag_exp=115938466~115938468~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792732478&sct=1&seg=1&dl=https%3A%2F%2Fwww.capinita.com%2Fruta%2Fgualaquiza-a-morona&dt=&en=page_view&_ee=1&tfd=5565",
+    "method": "POST",
+    "type": "Fetch",
+    "status": 204,
+    "mime": "text/plain",
+    "len": "0"
+   }
+  ],
+  "cons": [],
+  "exc": [
+   "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n "
+  ],
+  "logs": [],
+  "dom": {
+   "title": "Gualaquiza a Macas: Buses, Rutas, Horarios y Opciones",
+   "nodes": 1398,
+   "scripts": 92,
+   "stylesheets": 6,
+   "images": 27,
+   "pictures": 6,
+   "links": 103,
+   "forms": 1,
+   "inputs": 1,
+   "buttons": 15,
+   "iframes": 0,
+   "svgs": 125,
+   "h1": [
+    "Gualaquiza a Macas"
+   ],
+   "landmarks": {
+    "nav": 2,
+    "main": 1,
+    "header": 1,
+    "footer": 1,
+    "aside": 11
+   },
+   "ariaLabels": 16,
+   "leaflet": true,
+   "nextData": true,
+   "lang": "es",
+   "theme": "",
+   "localStorageKeys": [],
+   "cookiesVisibleToJS": [
+    "_ga",
+    "_ga_5YGKHXXSY9"
+   ],
+   "sw": true,
+   "perf": {
+    "dcl": 625,
+    "load": 851,
+    "fcp": 564,
+    "transferKB": 181
+   }
+  }
+ },
+ "https://www.capinita.com/estado-vial-ecuador": {
+  "net": [
+   {
+    "url": "https://www.capinita.com/estado-vial-ecuador",
+    "method": "GET",
+    "type": "Document",
+    "status": 200,
+    "mime": "text/html"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/904be59b21bd51cb-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "35508"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "48432"
+   },
+   {
+    "url": "https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "35412"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/db97ef92e31eaa36.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9add4b40e01add79.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/1de76be520b4de19.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9b8c55a7efa3bfa6.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/457a1f35031c354b.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/a3e4afe0f9bb7037.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/webpack-43c23bb066f790e0.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/1255-bf34beef1d383a36.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/main-app-b7ac91ae224968d9.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "572"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/d0deef33-59194872e4111dca.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/2619-04bc32f026a0d946.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/382-15dc625b189b7b28.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/6112-b44147c12467cead.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7489-3065f5a937664374.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7275-76e44e64dea69b16.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7568-0d12bc40d20120db.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7891-c83be2701ce55f2c.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/8644-0f074f5229e6a73a.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/estado-vial-ecuador/page-a85e2056acfd5b94.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.googletagmanager.com/gtag/js?id=G-5YGKHXXSY9",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "180845"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-rafting-rio-pastaza-madre-tierra-union-del-rio-puyo.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-reserva-yanacocha-paso-de-monos-orquideas.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-yasuni-park-camping-kareno-rio-nushino.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-volcan-chimborazo.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "239421"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-laguna-de-quilotoa.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "415719"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-feriados-en-ecuador-2025.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "115240"
+   },
+   {
+    "url": "https://ecu911.gob.ec/Services/WSVias/ViasWeb.php?estado=A&and:%3C%3E:EstadoActual-id=593&order=Provincia-descripcion&limit=200&start=0",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/tours?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/ruta?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/cooperativa-de-transporte?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/buscador-de-lugares-turisticos?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/page-0129265274110b55.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/blog?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/promocionar-negocio-turistico?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/crear-cuenta?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/volcan-chimborazo?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/laguna-de-quilotoa?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/promocionar-negocio-turistico/page-6ad8931c2776dcc7.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "211"
+   },
+   {
+    "url": "https://www.capinita.com/blog/feriados-ecuador?_rsc=VqelfpX93a_s06ZG",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/sin-resultados-estado-vial.svg",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/svg+xml"
+   },
+   {
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-5YGKHXXSY9&gtm=45je6al1v9169761845za208zd9169761845xf1&_p=1792732501114&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&cid=1388144044.1792732479&frm=0&ngs=1&pscdl=noapi&rcb=1&sr=800x600&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.86%7CChromium%3B155.0.8059.86%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792732478&sct=1&seg=1&dl=https%3A%2F%2Fwww.capinita.com%2Festado-vial-ecuador&dt=Estado%20Vial%20Ecuador%3A%20Consulta%20Rutas%20y%20Destinos%20en%20Tiempo%20Real&en=page_view&_ee=1&tfd=5376",
+    "method": "POST",
+    "type": "Fetch",
+    "status": 204,
+    "mime": "text/plain",
+    "len": "0"
+   }
+  ],
+  "cons": [],
+  "exc": [
+   "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n "
+  ],
+  "logs": [],
+  "dom": {
+   "title": "Estado Vial Ecuador: Consulta Rutas y Destinos en Tiempo Real",
+   "nodes": 1705,
+   "scripts": 102,
+   "stylesheets": 6,
+   "images": 8,
+   "pictures": 3,
+   "links": 78,
+   "forms": 2,
+   "inputs": 2,
+   "buttons": 9,
+   "iframes": 0,
+   "svgs": 158,
+   "h1": [
+    "Estado \nVial Ecuador en Tiempo Real"
+   ],
+   "landmarks": {
+    "nav": 1,
+    "main": 1,
+    "header": 43,
+    "footer": 43,
+    "aside": 20
+   },
+   "ariaLabels": 89,
+   "leaflet": true,
+   "nextData": true,
+   "lang": "es",
+   "theme": "",
+   "localStorageKeys": [],
+   "cookiesVisibleToJS": [
+    "_ga",
+    "_ga_5YGKHXXSY9"
+   ],
+   "sw": true,
+   "perf": {
+    "dcl": 365,
+    "load": 528,
+    "fcp": 356,
+    "transferKB": 160
+   }
+  }
+ },
+ "https://www.capinita.com/tours": {
+  "net": [
+   {
+    "url": "https://www.capinita.com/tours",
+    "method": "GET",
+    "type": "Document",
+    "status": 200,
+    "mime": "text/html"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/904be59b21bd51cb-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "35508"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "48432"
+   },
+   {
+    "url": "https://www.capinita.com/tours/toours-en-la-amazonia-ecuatoriana.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "107086"
+   },
+   {
+    "url": "https://www.capinita.com/tours/volcan-sangay-tours-senderismo.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "79782"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tours-cuevas-en-la-amazonia.webp",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "len": "137814"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/db97ef92e31eaa36.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9add4b40e01add79.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/1de76be520b4de19.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9b8c55a7efa3bfa6.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/457a1f35031c354b.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/a3e4afe0f9bb7037.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/webpack-43c23bb066f790e0.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/1255-bf34beef1d383a36.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/main-app-b7ac91ae224968d9.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "572"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/d0deef33-59194872e4111dca.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/2619-04bc32f026a0d946.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/382-15dc625b189b7b28.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/6112-b44147c12467cead.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7489-3065f5a937664374.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7275-76e44e64dea69b16.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7568-0d12bc40d20120db.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7891-c83be2701ce55f2c.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/8644-0f074f5229e6a73a.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/page-0129265274110b55.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.googletagmanager.com/gtag/js?id=G-5YGKHXXSY9",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "180845"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-reserva-yanacocha-paso-de-monos-orquideas.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-yasuni-park-camping-kareno-rio-nushino.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-rafting-rio-pastaza-madre-tierra-union-del-rio-puyo.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-1-dia-pomona-cacao-peces-cascadas-mirador-indichuris.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "340502"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-1-dia-mirador-cascada-peces-gigantes-animales.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "283602"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-volcan-chimborazo.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "239421"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-laguna-de-quilotoa.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "415719"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-feriados-en-ecuador-2025.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "115240"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-ruta-volcan-sangay-morona-santiago.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "262717"
+   },
+   {
+    "url": "https://www.capinita.com/tours/caminata-en-bosque-protejido-pastaza.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "302766"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-canyoning-caverna-mayaijee-chuwitayo.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/png",
+    "len": "296712"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/ruta?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/cooperativa-de-transporte?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/buscador-de-lugares-turisticos?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/estado-vial-ecuador?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/promocionar-negocio-turistico?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/volcan-chimborazo?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/laguna-de-quilotoa?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/feriados-ecuador?_rsc=eyCEemCjtDrPE0jJ",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/blog/volcan-chimborazo/page-a85e2056acfd5b94.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/promocionar-negocio-turistico/page-6ad8931c2776dcc7.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "211"
+   },
+   {
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-5YGKHXXSY9&gtm=45je6al1v9169761845za208zd9169761845xf1&_p=1792732508240&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&cid=1388144044.1792732479&frm=0&ngs=1&pscdl=noapi&rcb=8&sr=800x600&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.86%7CChromium%3B155.0.8059.86%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~120213116~120385423~120412528~120469145~120469153~121246026~121246034&sid=1792732478&sct=1&seg=1&dl=https%3A%2F%2Fwww.capinita.com%2Ftours&dt=Tours%20en%20Ecuador&en=page_view&_ee=1&tfd=5247",
+    "method": "POST",
+    "type": "Fetch",
+    "status": 204,
+    "mime": "text/plain",
+    "len": "0"
+   }
+  ],
+  "cons": [],
+  "exc": [],
+  "logs": [],
+  "dom": {
+   "title": "Tours en Ecuador",
+   "nodes": 736,
+   "scripts": 79,
+   "stylesheets": 6,
+   "images": 19,
+   "pictures": 3,
+   "links": 67,
+   "forms": 1,
+   "inputs": 1,
+   "buttons": 4,
+   "iframes": 0,
+   "svgs": 45,
+   "h1": [
+    "Tours en\nEcuador\nCON NOSOTROS"
+   ],
+   "landmarks": {
+    "nav": 1,
+    "main": 1,
+    "header": 1,
+    "footer": 1,
+    "aside": 5
+   },
+   "ariaLabels": 2,
+   "leaflet": true,
+   "nextData": true,
+   "lang": "es",
+   "theme": "",
+   "localStorageKeys": [],
+   "cookiesVisibleToJS": [
+    "_ga",
+    "_ga_5YGKHXXSY9"
+   ],
+   "sw": true,
+   "perf": {
+    "dcl": 145,
+    "load": 307,
+    "fcp": 232,
+    "transferKB": 1861
+   }
+  }
+ },
+ "https://www.capinita.com/buscador-de-lugares-turisticos": {
+  "net": [
+   {
+    "url": "https://www.capinita.com/buscador-de-lugares-turisticos",
+    "method": "GET",
+    "type": "Document",
+    "status": 200,
+    "mime": "text/html"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/904be59b21bd51cb-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "35508"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+    "method": "GET",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "len": "48432"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/db97ef92e31eaa36.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9add4b40e01add79.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/1de76be520b4de19.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/9b8c55a7efa3bfa6.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/457a1f35031c354b.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/css/a3e4afe0f9bb7037.css?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/webpack-43c23bb066f790e0.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/1255-bf34beef1d383a36.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/main-app-b7ac91ae224968d9.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "572"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/d0deef33-59194872e4111dca.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/2619-04bc32f026a0d946.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/382-15dc625b189b7b28.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/6112-b44147c12467cead.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7489-3065f5a937664374.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7275-76e44e64dea69b16.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7568-0d12bc40d20120db.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/7891-c83be2701ce55f2c.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/8644-0f074f5229e6a73a.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/buscador-de-lugares-turisticos/page-a85e2056acfd5b94.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.googletagmanager.com/gtag/js?id=G-5YGKHXXSY9",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "180845"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-hosteria-senorial-del-churo.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "299024"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-quinta-recreativa-damaritas.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "294838"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/hotel-splendit.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "158782"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-balneario-natural-rio-jimbitono.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "223084"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-centro-recreacional-huachito.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "338512"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/object-object.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "337220"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-centro-ecologico-zanja-arajuno.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "171904"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-complejo-cascadas-y-tarabita-el-triunfo.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "368174"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-kilamo-house.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "155966"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-parque-acuatico-aventura-amazonica.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "349935"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-cascadas-umpuankas.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "208239"
+   },
+   {
+    "url": "https://img.capinita.com/lugar-turistico/banner-complejo-turistico-tesoro.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "339446"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-rafting-rio-pastaza-madre-tierra-union-del-rio-puyo.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-reserva-yanacocha-paso-de-monos-orquideas.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://www.capinita.com/tours/tour-yasuni-park-camping-kareno-rio-nushino.png",
+    "method": "GET",
+    "type": "Image",
+    "status": 304,
+    "mime": "image/png"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-volcan-chimborazo.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "239421"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-laguna-de-quilotoa.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "415719"
+   },
+   {
+    "url": "https://img.capinita.com/blogs/banner-feriados-en-ecuador-2025.avif",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/avif",
+    "len": "115240"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/emprendimiento-ecuador.jpg",
+    "method": "GET",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/jpeg",
+    "len": "80550"
+   },
+   {
+    "url": "https://www.capinita.com/?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/tours?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/ruta?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/cooperativa-de-transporte?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/estado-vial-ecuador?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/page-0129265274110b55.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript"
+   },
+   {
+    "url": "https://www.capinita.com/promocionar-negocio-turistico?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/amazonia/morona-santiago/gualaquiza/hostera-seorial-del-churo?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/amazonia/morona-santiago/morona/quinta-recreativa-damaritas?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/amazonia/morona-santiago/morona/hotel-splendit?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/api/auth/session",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "application/json"
+   },
+   {
+    "url": "https://www.capinita.com/amazonia/morona-santiago/morona/balneario-natural-rio-jimbitono?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/_next/static/chunks/app/(layout-main)/promocionar-negocio-turistico/page-6ad8931c2776dcc7.js?dpl=dpl_8JTVDUg4rgTQRpyAFzQKctXjpwqL",
+    "method": "GET",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "len": "211"
+   },
+   {
+    "url": "https://www.capinita.com/amazonia/morona-santiago/morona/centro-recreacional-huachito?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/amazonia/pastaza/puyo/casa-del-arbol-puyo?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/volcan-chimborazo?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/laguna-de-quilotoa?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.capinita.com/blog/feriados-ecuador?_rsc=NMnSe34tGY2Vmp3P",
+    "method": "GET",
+    "type": "Fetch",
+    "status": 200,
+    "mime": "text/x-component"
+   },
+   {
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-5YGKHXXSY9&gtm=45je6al1v9169761845za208zd9169761845xf1&_p=1792732515549&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&cid=1388144044.1792732479&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=800x600&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B155.0.8059.86%7CChromium%3B155.0.8059.86%7CNot(A%253ABrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=1&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&sid=1792732478&sct=1&seg=1&dl=https%3A%2F%2Fwww.capinita.com%2Fbuscador-de-lugares-turisticos&dt=Buscador%20de%20Lugares%20Tur%C3%ADsticos%20en%20Ecuador%3A%20Descubre%20tu%20Pr%C3%B3ximo%20Destino&en=page_view&_ee=1&tfd=5431",
+    "method": "POST",
+    "type": "Fetch",
+    "status": 204,
+    "mime": "text/plain",
+    "len": "0"
+   }
+  ],
+  "cons": [],
+  "exc": [],
+  "logs": [],
+  "dom": {
+   "title": "Buscador de Lugares Turísticos en Ecuador: Descubre tu Próximo Destino",
+   "nodes": 846,
+   "scripts": 82,
+   "stylesheets": 6,
+   "images": 19,
+   "pictures": 15,
+   "links": 60,
+   "forms": 2,
+   "inputs": 2,
+   "buttons": 24,
+   "iframes": 0,
+   "svgs": 68,
+   "h1": [
+    "Buscador de Lugares Turísticos en Ecuador"
+   ],
+   "landmarks": {
+    "nav": 2,
+    "main": 1,
+    "header": 1,
+    "footer": 1,
+    "aside": 6
+   },
+   "ariaLabels": 3,
+   "leaflet": true,
+   "nextData": true,
+   "lang": "es",
+   "theme": "",
+   "localStorageKeys": [],
+   "cookiesVisibleToJS": [
+    "_ga",
+    "_ga_5YGKHXXSY9"
+   ],
+   "sw": true,
+   "perf": {
+    "dcl": 437,
+    "load": 832,
+    "fcp": 404,
+    "transferKB": 188
+   }
+  }
+ }
+}

@@ -96,3 +96,4 @@ Estado: /tours, /ruta y /estado-vial-ecuador pasan a **revisadas visualmente en 
 - Estado de páginas: revisadas visualmente en escritorio inicio, tours, rutas, detalle de ruta, cooperativas, detalle de cooperativa, terminales (índice), lugares, estado vial, Amazonía, blog (entrada), emprendedor, login y registro. Capturadas sin revisar: Sierra, Costa, Galápagos, Sobre nosotros, Servicios, detalle de terminal. Pendiente: móvil real y ~360 fichas.
 - 2026-10-23 Lote 4: ver research/analisis-imagenes-contenido-capinita.md (formatos, pesos y contenido).
 - 2026-10-23 Lote 5: ver research/seguridad-lecciones-capinita.md (revision pasiva y lista de verificacion de seguridad).
+- 2026-10-23 Lote 6: inspeccion en navegador (red, consola, DOM, metricas); ver adiciones en analisis-tecnico-capinita.md, seguridad-lecciones-capinita.md y research/evidencia/.

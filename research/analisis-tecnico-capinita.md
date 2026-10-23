@@ -53,3 +53,50 @@ Filtros en el buscador (hora, precio, tipo, cooperativa); fecha de última verif
 - Origen y licencia de los datos de horarios y precios: Capinita parece recopilarlos de las cooperativas; los nuestros deben obtenerse con permiso o propios.
 - Uso del servicio del ECU 911 y de teselas/ruteo públicos: revisar términos.
 - Aún sin revisar: móvil real, Sierra/Costa/Galápagos, ~360 fichas del sitemap y el segundo sitio de referencia.
+
+---
+## Adición 2026-10-23 — Inspección en navegador (solo lectura)
+Método: Chrome aparte (headless, perfil temporal, 1366×900) controlado por el protocolo de depuración; se registraron red, consola, excepciones y DOM durante la carga normal de 6 páginas públicas (`/`, `/ruta`, `/ruta/gualaquiza-a-morona`, `/estado-vial-ecuador`, `/tours`, `/buscador-de-lugares-turisticos`). No se hizo clic en nada que modificara datos, no se enviaron formularios y no se descargó ni reutilizó ningún recurso. Evidencia cruda (solo URLs y métricas): `research/evidencia/capinita-inspeccion-navegador-2026-10-23.json`. **[C]** comprobado en la inspección · **[I]** inferido.
+
+### Qué se observó y qué función cumple
+| Observado | Función | Evidencia |
+|---|---|---|
+| 49–67 peticiones por página: ~17–19 scripts propios, 6 hojas CSS, 2 fuentes, 8–23 imágenes, 13–19 `fetch` | Carga de la aplicación Next.js | red [C] |
+| 11–13 `fetch` a `?_rsc=` de enlaces del menú y de blogs/cooperativas | **Precarga (prefetch) de páginas** de Next al ver los enlaces: navegación casi instantánea, a costa de peticiones extra | red [C] |
+| 2 llamadas a `/api/auth/session` por página | Auth.js consulta si hay sesión iniciada (respuesta propia del sitio, la hace la propia página) | red [C] |
+| `GET gtag/js` + `POST google-analytics.com/g/collect` (204) | Google Analytics 4 | red [C]; cookies `_ga`, `_ga_<id>` legibles por JS [C] |
+| En `/estado-vial-ecuador`: `GET ecu911.gob.ec/Services/WSVias/ViasWeb.php?...&limit=200` | **El navegador del visitante consulta directamente al ECU 911** (200 registros, ordenados por provincia) | red [C] |
+| En `/ruta/<x>`: `GET routing.openstreetmap.de/routed-car/route/v1/car/<lon,lat;lon,lat>` y teselas `a/b/c.tile.openstreetmap.org` + iconos de `unpkg.com/leaflet@1.7.1` | Mapa Leaflet que traza la ruta con OSRM público (coordenadas origen/destino en la URL) | red [C] |
+| 9–15 imágenes de `img.capinita.com` por página; algunas respuestas **304** | Medios en subdominio propio con revalidación (el navegador pregunta y recibe "no modificado") | red [C] |
+| Sin errores de consola; **1 excepción** `Minified React error #418` en `/ruta/gualaquiza-a-morona` y en `/estado-vial-ecuador` | Desajuste de hidratación (el HTML del servidor no coincide con lo que renderiza el cliente; típico de fechas/horas o contenido dependiente del navegador) | consola [C]; causa exacta [I] |
+| `window.L` (Leaflet) existe en **todas** las páginas | El mapa se carga globalmente aunque solo la ruta lo use (peso innecesario) | DOM [C] |
+| Sin `localStorage`; sin iframes; sin service worker registrado detectado | No guarda datos locales; sin contenido incrustado | DOM [C] |
+
+### Métricas de carga (medición de una sola visita, no promedio) [C]
+| Página | Nodos DOM | FCP | Evento load | Transferido |
+|---|---|---|---|---|
+| `/` | 1042 | 928 ms | 1,9 s | 2,0 MB |
+| `/ruta` | 648 | 1,0 s | 1,1 s | 0,8 MB |
+| `/ruta/<x>` | 1398 | 0,56 s | 0,85 s | 0,2 MB* |
+| `/estado-vial-ecuador` | 1705 | 0,36 s | 0,53 s | 0,2 MB* |
+| `/tours` | 736 | 0,23 s | 0,31 s | 1,9 MB |
+| `/buscador-de-lugares-turisticos` | 846 | 0,40 s | 0,83 s | 0,2 MB* |
+*parte servida desde la caché del navegador (304/disco), por eso transfiere menos. Resultado **bueno** de velocidad percibida; la carga de inicio y de tours supera 1,8 MB por las imágenes.
+
+### Estructura y accesibilidad observadas [C]
+- Una sola `<h1>` por página, `lang="es"`, un `<main>` y un `<nav>`, 77–158 SVG (iconos en línea). Etiquetas ARIA presentes.
+- **Uso incorrecto de elementos semánticos:** en `/estado-vial-ecuador` hay 43 `<header>` y 43 `<footer>` (las tarjetas de cada tramo los usan como contenedores) y hasta 20 `<aside>`; esto confunde a lectores de pantalla.
+- Un `<h1>` con saltos de línea y un guion suave oculto en "Turísticos" (texto con caracteres invisibles).
+
+### Corrección a hallazgos anteriores
+- Antes se escribió que la consulta del ECU 911 "se hace en el servidor". **La inspección demuestra que el navegador del visitante también llama a `ecu911.gob.ec`** (visible en la red de `/estado-vial-ecuador`). El código incluye además `next:{revalidate:300}`, que Next solo aplica en servidor; es posible que existan las dos vías (renderizado servidor y recarga en cliente). Lo comprobado: hay una petición directa desde el navegador [C].
+- Consecuencia para nuestro diseño: **no exponer la dependencia directa** de un servicio externo en el cliente; consultarlo desde nuestro servidor con caché, validación y degradación elegante si el servicio falla.
+
+### Lecciones técnicas para nuestro proyecto
+1. Mantener el **prefetch** de Next pero limitarlo a los enlaces importantes (evitar 13 peticiones extra por página).
+2. **Cargar Leaflet/MapLibre solo en las páginas con mapa** (importación dinámica).
+3. Evitar errores de hidratación (#418): formatear fechas/horas igual en servidor y cliente (zona horaria fija `America/Guayaquil`).
+4. Usar **ruteo propio o proveedor con licencia**; el servidor OSRM público no es para producción y envía coordenadas del usuario a un tercero.
+5. Semántica HTML correcta (`<article>` para tarjetas, un solo `<header>`/`<footer>` de página).
+6. Presupuesto de peso por página (ej. ≤ 1 MB inicial) con imágenes optimizadas.
+7. Analítica con **consentimiento previo** antes de escribir cookies `_ga`.

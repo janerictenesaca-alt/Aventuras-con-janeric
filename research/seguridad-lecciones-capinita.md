@@ -47,3 +47,10 @@
 
 ## Límites
 Sin pruebas dinámicas ni acceso autenticado: no se evaluó fuerza bruta, inyección, control de acceso entre usuarios, subida de archivos ni la configuración del servidor. Para una auditoría real haría falta autorización escrita del propietario del sitio. En nuestro propio proyecto sí podremos hacer pruebas de seguridad completas (propias, en un entorno de pruebas).
+
+---
+## Adición 2026-10-23 — Resultado de la inspección en navegador
+- Corrección: el punto "consulta de datos viales hecha en el servidor" de la lista de aciertos **no está confirmado**: el navegador llama directamente a `ecu911.gob.ec` desde `/estado-vial-ecuador` (ver `analisis-tecnico-capinita.md`, adición de hoy). Para nuestro proyecto: consulta desde servidor con caché.
+- Nuevo hallazgo de privacidad: en `/ruta/<x>` el navegador envía las **coordenadas de origen y destino** a `routing.openstreetmap.de` (tercero). Evitar enviar datos de uso a terceros sin aviso; preferir ruteo propio.
+- Nuevo: las cookies de Google Analytics (`_ga`) se establecen en la primera carga, sin aviso visible de consentimiento.
+- Sin errores de consola relevantes; 1 error de hidratación de React (#418) en 2 páginas (calidad, no seguridad).
