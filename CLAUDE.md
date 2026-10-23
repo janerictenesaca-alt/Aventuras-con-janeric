@@ -16,6 +16,7 @@ y Claude en Chrome. Todos deben leerlo al empezar y actualizarlo al terminar.
   - OK: Claude Desktop estaba instalado pero cerrado; lo abrí (proceso Claude.exe en ejecución).
   - NO verificado: que Desktop use la misma cuenta (janerictenesaca@gmail.com); no inspeccioné su sesión.
   - Falló/no aplica: `/chrome` es comando interactivo, no ejecutable desde aquí; verifiqué la conexión llamando directamente a las herramientas de Chrome. `gh` no está instalado (se usó git).
+- 2026-10-23 (Claude Code nube): Leí el estado de la sesión local (Chrome y Desktop OK). No puedo ver Chrome ni Desktop desde la nube; solo repo y GitHub. Falta: confirmar cuenta de Desktop y definir el proyecto.
 - Pendiente: definir el proyecto concreto (ver README.md).
 
 ## Cómo se sincronizan las herramientas
