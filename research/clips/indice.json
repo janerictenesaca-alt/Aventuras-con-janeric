@@ -5,13 +5,314 @@
   "url": "https://www.capinita.com/tours",
   "archivo": "clips/capinita/tours.md",
   "estado": 200,
-  "huella": "4071e88d78505a55",
+  "huella": "c6e397d267e0d57d",
   "primeraConsulta": "2026-10-23T05:18:43.847Z",
-  "ultimaConsulta": "2026-10-23T05:19:01.407Z",
-  "consultas": 2,
+  "ultimaConsulta": "2026-10-23T05:28:38.929Z",
+  "consultas": 3,
   "capturas": [
-   "capturas/capinita/tours-escritorio-2026-10-23.png"
+   "capturas/capinita/tours-escritorio-2026-10-23.png",
+   "capturas/capinita/tours-movil-2026-10-23.png"
   ],
   "errores": 0
+ },
+ "https://capinita.com": {
+  "sitio": "capinita",
+  "titulo": "App de Turismo Ecuador | Guía Turística | Capinita",
+  "url": "https://www.capinita.com/",
+  "archivo": "clips/capinita/inicio.md",
+  "estado": 200,
+  "huella": "5f4c1557be7d03f5",
+  "primeraConsulta": "2026-10-23T05:25:02.936Z",
+  "ultimaConsulta": "2026-10-23T05:28:20.357Z",
+  "consultas": 2,
+  "capturas": [
+   "capturas/capinita/inicio-movil-2026-10-23.png"
+  ],
+  "errores": 0
+ },
+ "https://capinita.com/ruta": {
+  "sitio": "capinita",
+  "titulo": "Buscador de Rutas en Ecuador: Encuentra Tu Camino Fácilmente",
+  "url": "https://www.capinita.com/ruta",
+  "archivo": "clips/capinita/ruta.md",
+  "estado": 200,
+  "huella": "a3ed1de25a4d3967",
+  "primeraConsulta": "2026-10-23T05:25:11.587Z",
+  "ultimaConsulta": "2026-10-23T05:25:11.587Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/cooperativa-de-transporte": {
+  "sitio": "capinita",
+  "titulo": "Cooperativas de Transporte en Ecuador: Rutas, Horarios y Precios",
+  "url": "https://www.capinita.com/cooperativa-de-transporte",
+  "archivo": "clips/capinita/cooperativa-de-transporte.md",
+  "estado": 200,
+  "huella": "90554c12429dbc23",
+  "primeraConsulta": "2026-10-23T05:25:20.381Z",
+  "ultimaConsulta": "2026-10-23T05:25:20.381Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/buscador-de-lugares-turisticos": {
+  "sitio": "capinita",
+  "titulo": "Buscador de Lugares Turísticos en Ecuador: Descubre tu Próximo Destino",
+  "url": "https://www.capinita.com/buscador-de-lugares-turisticos",
+  "archivo": "clips/capinita/buscador-de-lugares-turisticos.md",
+  "estado": 200,
+  "huella": "72967f74db3d9536",
+  "primeraConsulta": "2026-10-23T05:25:29.040Z",
+  "ultimaConsulta": "2026-10-23T05:25:29.040Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/terminal-terrestre": {
+  "sitio": "capinita",
+  "titulo": "Terminales Terrestres en Ecuador | Guía Completa",
+  "url": "https://www.capinita.com/terminal-terrestre",
+  "archivo": "clips/capinita/terminal-terrestre.md",
+  "estado": 200,
+  "huella": "48749260e8a8aefa",
+  "primeraConsulta": "2026-10-23T05:25:37.769Z",
+  "ultimaConsulta": "2026-10-23T05:25:37.769Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/blog": {
+  "sitio": "capinita",
+  "titulo": "Los Mejores Blogs en Ecuador: Inspiración y Tendencias",
+  "url": "https://www.capinita.com/blog",
+  "archivo": "clips/capinita/blog.md",
+  "estado": 200,
+  "huella": "928f7de17f8642f1",
+  "primeraConsulta": "2026-10-23T05:25:46.507Z",
+  "ultimaConsulta": "2026-10-23T05:25:46.507Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/blog/volcan-chimborazo": {
+  "sitio": "capinita",
+  "titulo": "Volcán Chimborazo: El Punto Más Cercano al Sol",
+  "url": "https://www.capinita.com/blog/volcan-chimborazo",
+  "archivo": "clips/capinita/blog-volcan-chimborazo.md",
+  "estado": 200,
+  "huella": "81314151e00119dd",
+  "primeraConsulta": "2026-10-23T05:25:55.432Z",
+  "ultimaConsulta": "2026-10-23T05:25:55.432Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/estado-vial-ecuador": {
+  "sitio": "capinita",
+  "titulo": "Estado Vial Ecuador: Consulta Rutas y Destinos en Tiempo Real",
+  "url": "https://www.capinita.com/estado-vial-ecuador",
+  "archivo": "clips/capinita/estado-vial-ecuador.md",
+  "estado": 200,
+  "huella": "c09c26b06be02fde",
+  "primeraConsulta": "2026-10-23T05:26:04.008Z",
+  "ultimaConsulta": "2026-10-23T05:28:48.446Z",
+  "consultas": 2,
+  "capturas": [
+   "capturas/capinita/estado-vial-ecuador-movil-2026-10-23.png"
+  ],
+  "errores": 1
+ },
+ "https://capinita.com/promocionar-negocio-turistico": {
+  "sitio": "capinita",
+  "titulo": "Promocionar negocio turístico",
+  "url": "https://www.capinita.com/promocionar-negocio-turistico",
+  "archivo": "clips/capinita/promocionar-negocio-turistico.md",
+  "estado": 200,
+  "huella": "9ddebe3f4ce2ee50",
+  "primeraConsulta": "2026-10-23T05:26:12.907Z",
+  "ultimaConsulta": "2026-10-23T05:26:12.907Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/iniciar-sesion": {
+  "sitio": "capinita",
+  "titulo": "Iniciar Sesión en Capinita",
+  "url": "https://www.capinita.com/iniciar-sesion",
+  "archivo": "clips/capinita/iniciar-sesion.md",
+  "estado": 200,
+  "huella": "3a1e6ab0892fdcc4",
+  "primeraConsulta": "2026-10-23T05:26:21.615Z",
+  "ultimaConsulta": "2026-10-23T05:26:21.615Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/crear-cuenta": {
+  "sitio": "capinita",
+  "titulo": "Iniciar Sesion en Capinita",
+  "url": "https://www.capinita.com/crear-cuenta",
+  "archivo": "clips/capinita/crear-cuenta.md",
+  "estado": 200,
+  "huella": "951fa138e54c5157",
+  "primeraConsulta": "2026-10-23T05:26:30.191Z",
+  "ultimaConsulta": "2026-10-23T05:26:30.191Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/sierra": {
+  "sitio": "capinita",
+  "titulo": "Region Sierra del Ecuador",
+  "url": "https://www.capinita.com/sierra",
+  "archivo": "clips/capinita/sierra.md",
+  "estado": 200,
+  "huella": "ba907cb2f6f78e44",
+  "primeraConsulta": "2026-10-23T05:26:44.870Z",
+  "ultimaConsulta": "2026-10-23T05:26:44.870Z",
+  "consultas": 1,
+  "capturas": [
+   "capturas/capinita/sierra-escritorio-2026-10-23.png"
+  ],
+  "errores": 0
+ },
+ "https://capinita.com/costa": {
+  "sitio": "capinita",
+  "titulo": "Region Costa del Ecuador",
+  "url": "https://www.capinita.com/costa",
+  "archivo": "clips/capinita/costa.md",
+  "estado": 200,
+  "huella": "c8da3194772647de",
+  "primeraConsulta": "2026-10-23T05:26:54.122Z",
+  "ultimaConsulta": "2026-10-23T05:26:54.122Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/galapagos": {
+  "sitio": "capinita",
+  "titulo": "Región Galápagos del Ecuador",
+  "url": "https://www.capinita.com/galapagos",
+  "archivo": "clips/capinita/galapagos.md",
+  "estado": 200,
+  "huella": "39df55bd69435621",
+  "primeraConsulta": "2026-10-23T05:27:02.903Z",
+  "ultimaConsulta": "2026-10-23T05:27:02.903Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/amazonia": {
+  "sitio": "capinita",
+  "titulo": "Región Amazonía Ecuatoriana: Biodiversidad, cultura y aventura en la Selva",
+  "url": "https://www.capinita.com/amazonia",
+  "archivo": "clips/capinita/amazonia.md",
+  "estado": 200,
+  "huella": "7c0fdf02269cfc2e",
+  "primeraConsulta": "2026-10-23T05:27:11.466Z",
+  "ultimaConsulta": "2026-10-23T05:27:11.466Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/sobre-nosotros": {
+  "sitio": "capinita",
+  "titulo": "Sobre Nosotros | Capinita",
+  "url": "https://www.capinita.com/sobre-nosotros",
+  "archivo": "clips/capinita/sobre-nosotros.md",
+  "estado": 200,
+  "huella": "0d1372699c86ab12",
+  "primeraConsulta": "2026-10-23T05:27:20.053Z",
+  "ultimaConsulta": "2026-10-23T05:27:20.053Z",
+  "consultas": 1,
+  "capturas": [
+   "capturas/capinita/sobre-nosotros-escritorio-2026-10-23.png"
+  ],
+  "errores": 0
+ },
+ "https://capinita.com/servicios-profesionales": {
+  "sitio": "capinita",
+  "titulo": "Servicios Profesionales | Bryan Chacha",
+  "url": "https://www.capinita.com/servicios-profesionales",
+  "archivo": "clips/capinita/servicios-profesionales.md",
+  "estado": 200,
+  "huella": "398096ef6b0f7a8a",
+  "primeraConsulta": "2026-10-23T05:27:28.667Z",
+  "ultimaConsulta": "2026-10-23T05:27:28.667Z",
+  "consultas": 1,
+  "capturas": [
+   "capturas/capinita/servicios-profesionales-escritorio-2026-10-23.png"
+  ],
+  "errores": 0
+ },
+ "https://capinita.com/politica-de-privacidad": {
+  "sitio": "capinita",
+  "titulo": "Politica de priivacidad en Capinita",
+  "url": "https://www.capinita.com/politica-de-privacidad",
+  "archivo": "clips/capinita/politica-de-privacidad.md",
+  "estado": 200,
+  "huella": "41c94d73b3228fbb",
+  "primeraConsulta": "2026-10-23T05:27:37.206Z",
+  "ultimaConsulta": "2026-10-23T05:27:37.206Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/ruta/gualaquiza-a-morona": {
+  "sitio": "capinita",
+  "titulo": "Gualaquiza a Macas: Buses, Rutas, Horarios y Opciones",
+  "url": "https://www.capinita.com/ruta/gualaquiza-a-morona",
+  "archivo": "clips/capinita/ruta-gualaquiza-a-morona.md",
+  "estado": 200,
+  "huella": "e0efb6ec4ce12189",
+  "primeraConsulta": "2026-10-23T05:27:45.527Z",
+  "ultimaConsulta": "2026-10-23T05:28:29.805Z",
+  "consultas": 2,
+  "capturas": [
+   "capturas/capinita/ruta-gualaquiza-a-morona-movil-2026-10-23.png"
+  ],
+  "errores": 1
+ },
+ "https://capinita.com/cooperativa-de-transporte/16-de-agosto": {
+  "sitio": "capinita",
+  "titulo": "Cooperativa de Transporte 16 de Agosto: Rutas, Horarios y Precios",
+  "url": "https://www.capinita.com/cooperativa-de-transporte/16-de-agosto",
+  "archivo": "clips/capinita/cooperativa-de-transporte-16-de-agosto.md",
+  "estado": 200,
+  "huella": "7a6a3c114f68d002",
+  "primeraConsulta": "2026-10-23T05:27:54.243Z",
+  "ultimaConsulta": "2026-10-23T05:27:54.243Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/terminal-terrestre/ambato": {
+  "sitio": "capinita",
+  "titulo": "Terminal terrestre Ambato | Horarios y Rutas",
+  "url": "https://www.capinita.com/terminal-terrestre/ambato",
+  "archivo": "clips/capinita/terminal-terrestre-ambato.md",
+  "estado": 200,
+  "huella": "b5bb4150dff82c0b",
+  "primeraConsulta": "2026-10-23T05:28:02.918Z",
+  "ultimaConsulta": "2026-10-23T05:28:02.918Z",
+  "consultas": 1,
+  "capturas": [],
+  "errores": 0
+ },
+ "https://capinita.com/amazonia/morona-santiago/morona/hotel-la-jungla": {
+  "sitio": "capinita",
+  "titulo": "Hotel La Jungla en Macas: confort en plena Amazonía",
+  "url": "https://www.capinita.com/amazonia/morona-santiago/morona/hotel-la-jungla",
+  "archivo": "clips/capinita/amazonia-morona-santiago-morona-hotel-la-jungla.md",
+  "estado": 200,
+  "huella": "66c68d191f60ef51",
+  "primeraConsulta": "2026-10-23T05:28:11.459Z",
+  "ultimaConsulta": "2026-10-23T05:28:11.459Z",
+  "consultas": 1,
+  "capturas": [
+   "capturas/capinita/amazonia-morona-santiago-morona-hotel-la-jungla-escritorio-2026-10-23.png"
+  ],
+  "errores": 1
  }
 }

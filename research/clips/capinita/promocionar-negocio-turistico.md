@@ -1,0 +1,85 @@
+# capinita · /promocionar-negocio-turistico
+Registro acumulativo. No se sobrescribe: cada consulta añade una sección. Solo resúmenes y datos medidos; sin copiar páginas, imágenes ni código.
+
+### Consulta 2026-10-23T05:26:12.907Z · escritorio 1366 px · primera consulta
+- **URL exacta consultada:** https://www.capinita.com/promocionar-negocio-turistico
+- **URL final:** https://www.capinita.com/promocionar-negocio-turistico
+- **Título:** Promocionar negocio turístico · **Sitio:** capinita · **Idioma:** es · **Estado HTTP:** 200 · **Palabras visibles:** ~528 · **Huella de contenido:** `9ddebe3f4ce2ee50`
+- **Descripción declarada (meta):** Promociona tu emprendimiento turístico gratis en Ecuador. Aumenta tu visibilidad y atrae más clientes con Capinita.
+
+**Observado directamente (automático)**
+- Estructura (h1–h3):
+  - H1 Promociona tu negocio turístico GRATIS
+  - H2 Agregar emprendimiento
+  - H2 Haz crecer tu emprendimiento turístico
+  - H3 Diseño y desarrollo web
+  - H3 Tiendas online (Ecommerce)
+  - H3 Gestión de redes sociales
+  - H3 Edición de video
+  - H3 Diseño gráfico publicitario
+  - H3 Asesoría tecnológica
+  - H3 Desarrollo de aplicaciones web
+  - H2 ¿Tienes un emprendimiento turístico? ¡Haz que todos lo conozcan!
+  - H2 Boletín informativo
+  - H3 Explorar
+  - H3 Novedades
+  - H3 Información
+  - H3 Rafting en el río Pastaza
+  - H3 Rescate, Vida Silvestre y Orquídeas
+  - H3 Tour Parque Yasuni
+  - H3 Volcán Chimborazo
+  - H3 Laguna de Quilotoa
+  - H3 Feriados Ecuador
+- Navegación y enlaces (texto → ruta):
+| Texto | Ruta/Origen |
+|---|---|
+| Capinita | / |
+| Inicio | / |
+| Tours Nuevo | /tours |
+| Rutas | /ruta |
+| Cooperativas | /cooperativa-de-transporte |
+| Lugares | /buscador-de-lugares-turisticos |
+| Blog | /blog |
+| Vialidad | /estado-vial-ecuador |
+| Emprendedor | /promocionar-negocio-turistico |
+| Más Información Rutas Ecuador | https://rutasecuador.com |
+| Agregar Negocio | /promocionar-negocio-turistico |
+|  | /buscador-de-lugares-turisticos |
+| Crear un Cuenta Crea una cuenta en Capin | /crear-cuenta |
+| Ver Detalles | https://img.capinita.com |
+| Reservar | https://api.whatsapp.com |
+| Registrarse en Capinita | /crear-cuenta |
+| Politica de Privacidad | /politica-de-privacidad |
+| Facebook | https://www.facebook.com |
+| Tik Tok | https://www.tiktok.com |
+| Pinterest | https://www.pinterest.com |
+| Instagram | https://www.instagram.com |
+| X | https://x.com |
+| GitHub | https://github.com |
+| YouTube | https://www.youtube.com |
+| Rutas | /sobre-nosotros |
+| Sobre nosotros | /sobre-nosotros |
+| Equipo | /sobre-nosotros |
+| Privacidad | /politica-de-privacidad |
+| Contratar | /servicios-profesionales |
+| Ver detalles | https://img.capinita.com |
+| Volcán Chimborazo 18 de enero del 2025 E | /blog/volcan-chimborazo |
+| Laguna de Quilotoa 10 de enero del 2025  | /blog/laguna-de-quilotoa |
+| Feriados Ecuador 5 de enero del 2025 Des | /blog/feriados-ecuador |
+
+- Precios publicados (líneas con "$", recortadas):
+  - $35
+  - $60
+  - $780
+- Llamadas a la acción en el contenido principal: Iniciar ahora · Contáctanos →
+- Formularios (solo campos, no se enviaron): 
+  - Formulario 1: Email address (email, requerido, autocomplete=email) — botones: Suscribirse
+- Diseño medido (estilos calculados): fuente cuerpo `Montserrat, "Montserrat Fallback"`, títulos `Montserrat, "Montserrat Fallback"` (48px); texto rgb(40, 41, 40) sobre rgba(0, 0, 0, 0); botón principal rgb(22, 163, 74) / rgb(255, 255, 255) / radio 6px; desborde horizontal: no (ancho 1348px)
+- Medios: 9 imágenes (3 `picture`, 0 sin alt, 9 lazy), 36 SVG
+- Tecnología detectada: generator=-; next=true; react=true; leaflet=true; hostsScripts=www.capinita.com,www.googletagmanager.com; cookiesJS=-
+- Peticiones por host: www.capinita.com (45), img.capinita.com (3), www.googletagmanager.com (2)
+- Errores/límites: HTTP≥400: ninguno; consola: Event; excepciones: ninguna; peticiones no-GET bloqueadas por ser solo lectura: 0
+- Captura: no tomada (solo con --captura cuando documenta un elemento visual)
+
+**Síntesis fiel:** Página de captación de negocios turísticos: registro gratuito en cuatro pasos (crear cuenta, agregar negocio, validación, personalización), con botones de inicio y contacto, servicios digitales de pago sin precio visible y bloque de tours.
+**Inferencias [I]:** Los criterios de validación del negocio no se describen; la monetización podría ser la venta de servicios por WhatsApp.

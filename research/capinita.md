@@ -97,3 +97,26 @@ Estado: /tours, /ruta y /estado-vial-ecuador pasan a **revisadas visualmente en 
 - 2026-10-23 Lote 4: ver research/analisis-imagenes-contenido-capinita.md (formatos, pesos y contenido).
 - 2026-10-23 Lote 5: ver research/seguridad-lecciones-capinita.md (revision pasiva y lista de verificacion de seguridad).
 - 2026-10-23 Lote 6: inspeccion en navegador (red, consola, DOM, metricas); ver adiciones en analisis-tecnico-capinita.md, seguridad-lecciones-capinita.md y research/evidencia/.
+
+## Sección 2026-10-23 — Lote 7 (orden maestra): inventario completo, fichas y móvil
+Repo comprobado: rama `claude/magical-babbage-nxlkef`, árbol limpio y al día antes de empezar. Segundo sitio: **pendiente (la URL no se ha indicado; no se inventa)**.
+
+**Lote A — Inventario de las 381 URLs del sitemap** (GET con 4 peticiones en paralelo, solo lectura; datos en `evidencia/capinita-inventario-sitemap-2026-10-23.tsv`) [M]:
+- 376 responden 200; **4 devuelven 404** (`/amazonia/morona-santiago/morona/markinkia-estancia-amaznica`, `/amazonia/pastaza/mera/complejo-las-lajas-caras`, `/ruta/Zapotillo a Huaquillas`, `/sierra/pichincha/quito/transfers-y-tours-privados-en-quito`) y **1 devuelve 500** (`/cooperativa-de-transporte/gualaquiza-c-a`). Las 5 páginas de error llevan `noindex`, pero siguen en el sitemap.
+- **Ninguna página inspeccionada tiene etiqueta `canonical`** (inicio y una ficha de ruta, más el inventario) [M]; sí tienen `robots: index, follow`.
+- 356 títulos únicos de 376; **21 páginas comparten el título genérico "Buscador de lugares turísticos"** (10 rutas, 10 lugares de Amazonía, 1 cooperativa): metadatos incorrectos [M]. 33 títulos superan 65 caracteres.
+- Tiempo medio de respuesta del HTML 0,35–0,56 s por sección; HTML de 131 a 347 KB (cooperativas el más pesado) [M].
+- Reparto del sitemap: rutas 213, lugares de Amazonía 55, terminales 44, consultas de estado vial 25, cooperativas 24, blog 6, regiones y páginas informativas el resto.
+
+**Lote B — Fichas con el clipper** (23 fichas en `clips/capinita/`, 2 consultas de verificación en tours; capturas nuevas en `capturas/capinita/`): inicio, ruta, detalle de ruta, cooperativas (índice y detalle), buscador de lugares y ficha de lugar (Hotel La Jungla), terminales (índice y detalle), estado vial, blog (índice y entrada), emprendedor, login, registro, Sierra, Costa, Galápagos, Amazonía, sobre nosotros, servicios, privacidad y tours.
+- **Móvil probado** (390 px, 4 páginas: inicio, detalle de ruta, tours, estado vial): sin desborde horizontal [M]; la barra lateral pasa a menú hamburguesa y las tarjetas se apilan [O]; pestañas y promociones se desplazan en horizontal [O]; en la ficha de ruta móvil hay 8 imágenes sin `alt` [M]; el error de hidratación #418 persiste en detalle de ruta y estado vial [M].
+- Hallazgos nuevos [O]: las páginas de Sierra y Galápagos repiten el encabezado "Gastronomía Costera" (error de plantilla); la ficha de lugar es la plantilla más completa (descripción, habitaciones, servicios, horario, cómo llegar, mapa, galería, FAQ, redes, tours, comentarios y opiniones); el índice de cooperativas usa imágenes genéricas de bus para varias; Costa es la guía regional más extensa (~2300 palabras).
+
+**Estado de revisión por sitio (Capinita)**
+| Estado | Páginas |
+|---|---|
+| Revisadas directamente (ficha + captura o medición) | 23 plantillas/páginas clave (lista arriba) |
+| Revisadas parcialmente (solo inventario: estado, título, h1, tamaño) | unas 350 URLs de las mismas plantillas (rutas, lugares, terminales, cooperativas, consultas de estado vial y entradas de blog); recuento exacto en el TSV |
+| Bloqueadas / con error | 5 (4×404, 1×500) |
+| Pendientes | Comprobar si el contenido de las plantillas repetidas varía de forma relevante (p. ej. rutas con paradas, terminales sin datos); sin interacción con filtros/pestañas (no se hizo clic) |
+Punto de control para reanudar: `clips/PUNTO-DE-CONTROL.md`.

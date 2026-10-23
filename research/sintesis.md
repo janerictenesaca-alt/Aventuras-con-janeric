@@ -48,3 +48,47 @@ Recomendación provisional (detalle y justificación en research/analisis-tecnic
 - Fuente y licencia de los datos viales (ECU 911) y de horarios por cooperativa.
 - Originalidad: no copiar textos, imágenes, marcas ni datos de Capinita.
 - Confianza: alta en lo medido con curl; media en el resto.
+
+---
+## Actualización 2026-10-23 — Lote 7 (solo Capinita; segundo sitio PENDIENTE)
+Confianza: alta en inventario y mediciones (curl y navegador); media en la interpretación de funciones (sin interacción con filtros ni búsquedas).
+
+### 1. Tabla comparativa ampliada (fuentes: `clips/INDICE.md`, `evidencia/capinita-inventario-sitemap-2026-10-23.tsv`)
+| Página / función | Capinita | Evidencia | Sitio 2 |
+|---|---|---|---|
+| Inicio con buscador de lugares | Sí | `clips/capinita/inicio.md` | pendiente |
+| Búsqueda de rutas (origen → destino) | Sí, sin filtros | `ruta.md` | pendiente |
+| Ficha de ruta con horarios y mapa | Sí; 213 en el sitemap | `ruta-gualaquiza-a-morona.md` | pendiente |
+| Ficha de cooperativa | Sí; 24; reseñas vacías | `cooperativa-de-transporte-16-de-agosto.md` | pendiente |
+| Terminales | Índice y fichas; 44 | `terminal-terrestre*.md` | pendiente |
+| Ficha de lugar (alojamiento, atractivo) | Plantilla rica; 55 en Amazonía | `amazonia-…-hotel-la-jungla.md` | pendiente |
+| Estado vial | Por provincia; fuente ECU 911 | `estado-vial-ecuador.md` | pendiente |
+| Regiones y blog | 4 guías + 5 artículos | `sierra.md`, `blog*.md` | pendiente |
+| Registro, login y alta de negocio | Visibles (no usados) | `crear-cuenta.md`, `iniciar-sesion.md`, `promocionar-negocio-turistico.md` | pendiente |
+| Versión móvil | Responsiva, sin desborde (4 páginas) | capturas `*-movil-*.png` | pendiente |
+
+### 2. Patrones útiles añadidos (fuente: Capinita)
+- **Plantilla de ficha de lugar completa** (descripción, servicios, horario, cómo llegar, mapa, galería, FAQ, redes, tours cercanos, comentarios) → buen modelo de contenido para destinos y alojamientos.
+- **Sitemap con 381 URLs jerárquicas** que crecen con el catálogo (rutas, lugares, terminales) → buena base de SEO programático.
+- **Móvil**: navegación lateral que se convierte en menú, tarjetas apiladas, pestañas desplazables.
+
+### 3. A descartar (con motivo)
+- Metadatos genéricos repetidos (21 páginas con el mismo título) y **sin etiqueta canonical** → perjudica el SEO.
+- Páginas de error (404/500) incluidas en el sitemap.
+- Plantillas con errores de contenido copiadas entre regiones ("Gastronomía Costera" en la Sierra y Galápagos).
+- Imágenes sin `alt` en fichas dinámicas (8 en la ficha de ruta móvil).
+
+### 4. Backlog MoSCoW (cambios por este lote)
+- **Must (nuevo):** generar título, descripción y canonical únicos por página; sitemap que solo contenga URLs válidas; revisar automáticamente el sitemap contra errores 404/500 antes de publicar; texto alternativo obligatorio en toda imagen de contenido.
+- **Should (nuevo):** plantilla de ficha de lugar completa; plantilla de región con contenido propio por región; pruebas de hidratación (zona horaria fija).
+- **Could:** comentarios/opiniones moderados en lugares; favoritos y compartir.
+- **Won't por ahora:** sin cambios.
+
+### 5. Producto unificado (esbozo, sin cambios de arquitectura)
+Se mantiene lo propuesto en las secciones 5 y 6 anteriores. Añadir: módulo de **contenido editorial por región** con plantilla validada, y un **verificador de integridad** (enlaces, sitemap, metadatos) que corra en cada despliegue.
+
+### 6. Riesgos e hipótesis abiertas
+- Segundo sitio sin URL: sin comparación entre referencias todavía.
+- Sin interacción con filtros, búsquedas ni pestañas (no se hizo clic): comportamiento posterior a esas acciones no revisado.
+- ~350 URLs revisadas solo por inventario; podría haber variantes de plantilla no vistas.
+- Los datos de rutas y precios no tienen fecha de verificación visible: no se pueden dar como actuales.
