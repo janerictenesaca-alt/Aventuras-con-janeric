@@ -11,6 +11,11 @@ y Claude en Chrome. Todos deben leerlo al empezar y actualizarlo al terminar.
 
 ## Estado (actualizar siempre)
 - 2026-10-23: Se creó este archivo. Objetivo: que las sesiones compartan contexto.
+- 2026-10-22 (Claude Code local, Windows): Repo clonado en C:vturasconjanericepo, rama claude/magical-babbage-nxlkef. Leídos CLAUDE.md y SYNC.md.
+  - OK: Chrome conectado; creé mi propia ventana con pestaña nueva (tabGroup 367159863) porque no había pestañas del usuario visibles.
+  - OK: Claude Desktop estaba instalado pero cerrado; lo abrí (proceso Claude.exe en ejecución).
+  - NO verificado: que Desktop use la misma cuenta (janerictenesaca@gmail.com); no inspeccioné su sesión.
+  - Falló/no aplica: `/chrome` es comando interactivo, no ejecutable desde aquí; verifiqué la conexión llamando directamente a las herramientas de Chrome. `gh` no está instalado (se usó git).
 - Pendiente: definir el proyecto concreto (ver README.md).
 
 ## Cómo se sincronizan las herramientas
