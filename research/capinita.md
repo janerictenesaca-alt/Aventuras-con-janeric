@@ -95,3 +95,4 @@ Estado: /tours, /ruta y /estado-vial-ecuador pasan a **revisadas visualmente en 
 - Análisis del código público y plan original: `research/analisis-tecnico-capinita.md`. Stack medido: Next.js (App Router) en Vercel, Tailwind, Swiper, Leaflet + OSM + OSRM público, Auth.js + zod, Cloudinary e `img.capinita.com`, y consulta al servicio web del ECU 911 con caché de 300 s.
 - Estado de páginas: revisadas visualmente en escritorio inicio, tours, rutas, detalle de ruta, cooperativas, detalle de cooperativa, terminales (índice), lugares, estado vial, Amazonía, blog (entrada), emprendedor, login y registro. Capturadas sin revisar: Sierra, Costa, Galápagos, Sobre nosotros, Servicios, detalle de terminal. Pendiente: móvil real y ~360 fichas.
 - 2026-10-23 Lote 4: ver research/analisis-imagenes-contenido-capinita.md (formatos, pesos y contenido).
+- 2026-10-23 Lote 5: ver research/seguridad-lecciones-capinita.md (revision pasiva y lista de verificacion de seguridad).
