@@ -15,14 +15,14 @@ Sitemap [M]: 381 URLs (`research/capinita-sitemap-urls-2026-10-23.txt`): /ruta/*
 
 | Página | Estado |
 |---|---|
-| / | revisada parcialmente (texto; sin visual) |
-| /ruta | revisada parcialmente |
+| / | revisada parcialmente (texto; captura guardada, sin revisar) |
+| /ruta | revisada (texto + visual escritorio); móvil pendiente |
 | /ruta/gualaquiza-a-morona (muestra) | revisada parcialmente |
 | /cooperativa-de-transporte/16-de-agosto (muestra) | revisada parcialmente |
 | /terminal-terrestre/ambato (muestra) | revisada parcialmente |
-| /estado-vial-ecuador | revisada parcialmente |
+| /estado-vial-ecuador | revisada (texto + visual escritorio); móvil pendiente |
 | /buscador-de-lugares-turisticos | revisada parcialmente |
-| /tours | revisada parcialmente |
+| /tours | revisada (texto + visual escritorio); móvil pendiente |
 | /amazonia | revisada parcialmente |
 | /blog | revisada parcialmente |
 | /promocionar-negocio-turistico | revisada parcialmente |
@@ -71,3 +71,21 @@ Chrome sigue bloqueado; esto sale de los 6 archivos CSS que sirve la página (12
 - Puntos de corte [M]: 640, 768, 1024, 1280 y 1536 px (estándar de Tailwind); diseño adaptable mediante `min-width` (móvil primero) [I].
 - Estilo [I]: tarjetas con sombra suave y bordes redondeados; fondo claro. Sin tema oscuro detectado.
 - Pendiente: capturas, jerarquía visual, espaciado, estados de interacción y comportamiento móvil real.
+
+## Sección 2026-10-23 — Lote 2: revisión visual (Chrome aparte, solo lectura)
+Método: la extensión sigue bloqueada, así que abrí una instancia **separada** de Chrome en modo headless con perfil temporal (sin tu sesión) y tomé capturas de páginas públicas, 1366 px de ancho. Nada se envió ni se inició sesión. Capturas en `research/capturas/capinita/`: `tours-escritorio-1366.png`, `ruta-escritorio-1366.png`, `estado-vial-escritorio-1366.png`, `inicio-escritorio-1366.png` (esta última guardada pero **no revisada aún**) y `tours-movil-390.png`.
+Estado: /tours, /ruta y /estado-vial-ecuador pasan a **revisadas visualmente en escritorio**; móvil sigue **pendiente** (ver límite).
+
+**Observado en las capturas [O]**
+- Estructura: barra lateral izquierda fija (Inicio, Tours con insignia "Nuevo", Rutas, Cooperativas, Lugares, Blog, Vialidad, Emprendedor), cabecera con botón verde "Agregar Negocio", búsqueda, interruptor de tema claro/oscuro y acceso a cuenta; columna derecha con tarjeta de tour destacado ($35) y "Últimos Blogs"; tarjeta "Rutas Ecuador" fija abajo a la izquierda.
+- Estilo: fondo blanco, verde de marca para botones/acentos, títulos grandes en negrita con una palabra resaltada en verde (en /tours "Ecuador" en bloques de color y "NOSOTROS" sobre verde), insignias redondeadas, tarjetas con esquinas redondeadas y sombra suave, fotos con etiqueta de provincia y precio en amarillo.
+- /tours: carruseles horizontales por categoría (Ecoturismo, Aventura, Selva y Bosques…), tarjeta con foto, duración en verde, 3 viñetas, "Ver Detalles" (secundario) y "Reservar" (verde). La tercera tarjeta queda cortada en el borde → indica scroll horizontal.
+- /ruta: titular "Encuentra tu Ruta Ideal en Ecuador", dos selectores (origen, destino; destino deshabilitado hasta elegir origen) y botón "Buscar"; ilustración de bus y teléfono; 3 cifras (150 Mil+ usuarios, 15 Mill+ alcance, 250+ rutas); 3 tarjetas degradadas de apps de terceros (verde, morado, azul) que compiten con el buscador; sección con capturas de tabla de cooperativas y mapa de ruta con instrucciones paso a paso.
+- /estado-vial-ecuador: buscador único + filtro por estado; sello "Datos en tiempo real"; tarjetas por tramo con etiqueta de estado ("Parcialmente Habilitada" en ámbar), descripción en mayúsculas, **ruta alterna** en recuadro verde, fuente (`ECU_911_CUENCA`) y fecha del reporte; botones para compartir (Facebook, WhatsApp, Messenger, X); marca de actualización "22 de octubre del 2026, 11:57 pm".
+- Contradicción [O]: se anuncia "actualizada cada minuto", pero los tramos visibles tienen fechas de reporte del 20, 17 y 6 de octubre (pueden ser avisos aún vigentes, no necesariamente datos viejos) [I].
+- Ortografía: "Ruta refugion Volcán Sangay" visible en una tarjeta de tour.
+- Texto en MAYÚSCULAS largo en estado vial: lectura más difícil [I].
+
+**Límite de la captura móvil** [M]: Chrome headless no baja de cierto ancho mínimo de ventana, y en `tours-movil-390.png` el contenido aparece cortado por la derecha. Esa imagen **no es fiable** como vista móvil; no saco conclusiones de ella. Para el móvil real hace falta la extensión desbloqueada o emulación de dispositivo por CDP.
+
+**Ideas para nuestro producto [I]**: estado vial con ruta alterna y fuente visible por tarjeta es un patrón útil; evitar publicidad de terceros encima del buscador; destino deshabilitado hasta elegir origen es correcto pero faltan filtros; no repetir los textos en mayúsculas.
