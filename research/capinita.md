@@ -62,3 +62,12 @@ Punto de control: lote 1 = 15 páginas revisadas parcialmente, 1 bloqueada, rest
 **SEO** [M]: `<title>` y meta description presentes; Open Graph con `og:locale es_EC` y logo; sitemap con 381 URLs que incluye duplicados (/ruta dos veces) y rutas con espacios/mayúsculas; **robots.txt apunta a `https://acme.com/sitemap.xml`** (plantilla sin cambiar); bloquea /perfil y /administrador.
 
 **Accesibilidad visible** [M]: 0 imágenes con `alt=""` vacío en el HTML inicial; el resto no evaluado.
+
+## Sección 2026-10-23 — Lote 1b: diseño desde el CSS público (sin navegador)
+Chrome sigue bloqueado; esto sale de los 6 archivos CSS que sirve la página (129 KB) analizados con curl. Es **medición del código, no observación visual**: no sé cómo se ve la jerarquía ni el espaciado reales.
+- Tipografía [M]: Montserrat (la más usada, 35 reglas) e Inter (fuente variable 100–900, `font-display: swap`).
+- Color [M]: verde de marca `#16a34a` / `#22c55e` (paleta verde de Tailwind), sobre blanco `#fff` y grises (`#e5e7eb`, `#f4f4f4`, `#333`); rojo `#e4405f` (probablemente Instagram). Acento por defecto del carrusel `#007aff`.
+- Framework de estilos [M]: Tailwind CSS (utilidades `--tw-*`, anillos y sombras) y carrusel Swiper.
+- Puntos de corte [M]: 640, 768, 1024, 1280 y 1536 px (estándar de Tailwind); diseño adaptable mediante `min-width` (móvil primero) [I].
+- Estilo [I]: tarjetas con sombra suave y bordes redondeados; fondo claro. Sin tema oscuro detectado.
+- Pendiente: capturas, jerarquía visual, espaciado, estados de interacción y comportamiento móvil real.
