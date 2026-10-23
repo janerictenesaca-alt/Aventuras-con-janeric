@@ -1,0 +1,2 @@
+# Sitios cuya lectura pública autorizó el usuario (uno por línea, sin www)
+capinita.com

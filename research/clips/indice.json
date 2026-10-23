@@ -1,0 +1,17 @@
+{
+ "https://capinita.com/tours": {
+  "sitio": "capinita",
+  "titulo": "Tours en Ecuador",
+  "url": "https://www.capinita.com/tours",
+  "archivo": "clips/capinita/tours.md",
+  "estado": 200,
+  "huella": "4071e88d78505a55",
+  "primeraConsulta": "2026-10-23T05:18:43.847Z",
+  "ultimaConsulta": "2026-10-23T05:19:01.407Z",
+  "consultas": 2,
+  "capturas": [
+   "capturas/capinita/tours-escritorio-2026-10-23.png"
+  ],
+  "errores": 0
+ }
+}

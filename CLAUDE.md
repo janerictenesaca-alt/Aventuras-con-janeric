@@ -8,6 +8,7 @@ y Claude en Chrome. Todos deben leerlo al empezar y actualizarlo al terminar.
 - Repositorio: janerictenesaca-alt/aventuras-con-janeric
 - Rama de trabajo de la nube: claude/magical-babbage-nxlkef
 - Antes de parar, escribir en "Estado" qué se hizo y qué falta.
+- Investigación web: usar el método de research/METODO-CLIPPER.md (solo lectura, solo sitios de research/clips/sitios-autorizados.txt).
 
 ## Estado (actualizar siempre)
 - 2026-10-23: Se creó este archivo. Objetivo: que las sesiones compartan contexto.
@@ -26,6 +27,7 @@ epo, rama claude/magical-babbage-nxlkef. Leídos CLAUDE.md y SYNC.md.
 - 2026-10-23 (Claude Code local, lote 4): analisis de imagenes y contenido (research/analisis-imagenes-contenido-capinita.md): usa picture AVIF/WebP/PNG, 63 por ciento del peso en PNG, sin srcset ni optimizador, cache sin larga duracion. Falta: movil real, unas 360 fichas, sitio 2.
 - 2026-10-23 (Claude Code local, lote 5): revision pasiva de seguridad (research/seguridad-lecciones-capinita.md): sin CSP ni frame-ancestors, 161 enlaces externos sin rel, autocomplete de contrasena incorrecto en registro, robots.txt revela /administrador; buenos: HSTS, sin source maps ni secretos. No se probo nada activo ni se accedio a areas privadas. Falta: movil real, ~360 fichas, sitio 2.
 - 2026-10-23 (Claude Code local, lote 6): inspeccion en navegador de 6 paginas (red, consola, DOM, metricas) sin tocar nada del sitio; hallazgos: el navegador llama directo al ECU 911 y a OSRM publico, prefetch de Next, error de hidratacion #418, Leaflet global, semantica HTML incorrecta; corregido un dato previo. Evidencia en research/evidencia/. Falta: movil real, ~360 fichas, sitio 2.
+- 2026-10-23 (Claude Code local, lote 7): creado flujo clipper local (research/herramientas/clipper.mjs + research/METODO-CLIPPER.md). Probado con https://www.capinita.com/tours: registro en research/clips/capinita/tours.md, captura de escritorio, deduplicacion (2a consulta = sin cambios) y rechazo de sitio no autorizado. NO probado: modo --movil. Nimbus no esta conectado a Claude; la extension de Chrome sigue bloqueada para Capinita (se uso Chrome headless aparte).
 - Pendiente: definir el proyecto concreto (ver README.md).
 
 ## Cómo se sincronizan las herramientas
