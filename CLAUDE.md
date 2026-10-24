@@ -17,8 +17,11 @@ Si el usuario escribe **TUTI** (en cualquier combinación de mayúsculas/minúsc
    - `## 8. ENLACES, PERSONAS Y DATOS EXTERNOS`: URLs, nombres y referencias. Nunca credenciales; solo dónde se guardan.
    - `## 9. SUPUESTOS NO CONFIRMADOS`: todo lo que se dio por cierto sin confirmación.
 2. Reglas del bloque: no resumas de más, conserva nombres, cifras y rutas literales, no inventes nada. Si falta un dato, escribe `DESCONOCIDO`.
-3. Guarda el mismo bloque en `HANDOFF.md` en la raíz del repo (sobrescribiendo el anterior) y haz commit con el mensaje `Actualiza HANDOFF.md (TUTI)` en la rama de trabajo actual.
-4. Muestra el bloque en el chat y termina diciendo: "Listo. Abre un chat nuevo y escribe TUTI para continuar desde aquí."
+3. Guarda el bloque en dos sitios:
+   - Un archivo NUEVO en `resumenes/` llamado `YYYY-MM-DD_HHMM_resumen.md` (fecha y hora actuales, obténlas con `date`). Nunca borres ni sobrescribas resúmenes anteriores: son el historial y el respaldo.
+   - Una copia en `HANDOFF.md` en la raíz del repo (sobrescribiendo el anterior), que es el que se lee al empezar una sesión nueva.
+4. Haz commit de ambos archivos con el mensaje `Guarda resumen TUTI YYYY-MM-DD_HHMM` y súbelo a GitHub con `git push -u origin <rama de trabajo actual>`. Si el push falla por red, reintenta hasta 4 veces (2s, 4s, 8s, 16s). No abras pull request.
+5. Muestra el bloque en el chat y confirma explícitamente: nombre del archivo creado en `resumenes/`, y si el commit y el push se hicieron bien o fallaron. Termina diciendo: "Listo. Abre un chat nuevo y escribe TUTI para continuar desde aquí."
 
 ## Inicio de sesión
 
