@@ -33,6 +33,7 @@ Esta carpeta es una **bóveda de Obsidian** (*Open folder as vault*). Aquí vive
 
 ## Parte 3 — Cerebro del sitio web (pendiente de generar)
 - Prompt listo para Claude en PowerShell: [[prompt-claude-powershell-cerebro-sitio-web]]
+- Si es demasiado largo para pegarlo de una vez: versión en 6 partes → [[partes-del-prompt]]
 - Cuando exista, copiar su carpeta a `cerebro nanturia/sitio web/` (ver [[N13 Convenciones del cerebro|N13]]).
 
 ## Flujo para una idea nueva
