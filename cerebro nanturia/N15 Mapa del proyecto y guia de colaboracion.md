@@ -46,7 +46,7 @@ tags: [nanturia, colaboracion, guia]
 5. **Reunión:** usa «Plantilla reunion» y enlaza las decisiones que salgan.
 
 Reglas de oro:
-- Una idea por nota. Edita la original; **no dupliques** notas.
+- Una idea por nota. Edita la original; **no dupliques** notas. El original vive en la carpeta del PC y GitHub es solo su respaldo ([[N13 Convenciones del cerebro#7. Fuente única y respaldo (sin duplicados)|N13 §7]]).
 - Enlaza con `[[nombre exacto del archivo]]`.
 - Nombres de archivo sin acentos y sin los caracteres `: ? * " < > |`.
 - Nunca escribas aquí claves, contraseñas, tokens, teléfonos, correos, documentos de identidad ni datos de clientes.

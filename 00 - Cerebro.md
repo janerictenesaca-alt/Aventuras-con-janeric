@@ -33,8 +33,7 @@ Esta carpeta es una **bóveda de Obsidian** (*Open folder as vault*). Aquí vive
 - **producto:** [[I14 Plataforma estilo Airbnb solo tours con mapa y buses|I14]] · [[I15 Modo turista y modo guia asistente de creacion de rutas|I15]] · [[I16 Bot intermediario cliente guia y prevencion de fuga de datos|I16]] · [[I17 Flujo de reserva con confirmacion de disponibilidad|I17]] · [[I20 Asignacion automatica de guia cupos y desbordamiento|I20]] · [[I21 Rutas sin dueno ficha unica y multiples proveedores|I21]] · [[I23 Ranking y visibilidad de guias operadoras y colaboradores|I23]] · [[I25 Complementos de hospedaje y transporte aceptar u omitir|I25]] · [[I26 Rutas digitales 3D datos de ruta de pago y explicaciones de pago|I26]] · [[I35 Agente de ventas con IA|I35]]
 
 ## Parte 3 — Cerebro del sitio web (pendiente de generar)
-- Prompt listo para Claude en PowerShell: [[prompt-claude-powershell-cerebro-sitio-web]]
-- Si es demasiado largo para pegarlo de una vez: versión en 6 partes → [[partes-del-prompt]]
+- Prompt para Claude en PowerShell (se pega en 6 partes, una por mensaje): [[partes-del-prompt]]
 - **Estado actual del sitio (resumen de la auditoría):** [[N14 Estado actual del sitio web|N14]]
 - Para unir las notas del sitio con esta bóveda: [[leeme-herramientas]] (`herramientas/cerebro.mjs`)
 - Cuando exista, copiar su carpeta a `cerebro nanturia/sitio web/` (ver [[N13 Convenciones del cerebro|N13]]).

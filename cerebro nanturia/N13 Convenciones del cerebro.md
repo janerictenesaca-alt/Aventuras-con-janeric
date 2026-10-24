@@ -53,3 +53,10 @@ Resumen fiel · Problema · Análisis · Mejora propuesta · Reglas de negocio (
 2. Cada nota `S##` enlaza las ideas `I##` que implementa y los hallazgos `H##` que cumple o incumple.
 3. La nota de cobertura (`S00`) cruza **ideas × estado de implementación** y alimenta [[N07 Hoja de ruta por fases|N07]].
 4. Validar enlaces rotos con el script de validación (ver `prompts/`).
+
+## 7. Fuente única y respaldo (sin duplicados)
+- **Original:** la carpeta del PC de Janeric (`Aventuras-con-janeric`). Ahí se edita todo.
+- **Respaldo:** GitHub guarda esa misma carpeta y nada más. Lo que Claude en la nube cambie en GitHub se baja al PC con `git pull`; ambos deben quedar iguales.
+- **Sin copias manuales:** no se copian notas entre carpetas ni bóvedas; se edita la original. Las notas del sitio web (`sitio web/`) son una instantánea local de solo lectura, excluida de Git; no se editan ni se suben.
+- **Índices y tablas** (N00, N10, N16) son vistas de otras notas; si hay conflicto, manda la nota original.
+- **No hay generador:** los archivos Markdown son la fuente y se editan directamente.
