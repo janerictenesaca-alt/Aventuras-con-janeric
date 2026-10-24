@@ -57,3 +57,6 @@ P: M · I: A · Mitigación: opt-in y plantillas ([[N09 Verificaciones pendiente
 
 ## R16 Calidad desigual de guías y rutas
 P: M · I: M · Mitigación: habilitación por ruta ([[I22 Biblioteca de rutas precreadas y onboarding|I22]]), reseñas verificadas, auditorías de muestra, ranking ([[I23 Ranking y visibilidad de guias operadoras y colaboradores|I23]]).
+
+## R17 Costos de infraestructura que crecen con el uso
+P: M · I: M · Mitigación: auditoría de eficiencia ([[N07 Hoja de ruta por fases#F4 · Auditoría de eficiencia del código (al cerrar cada fase y antes de lanzar)|F4]]), plan de hosting verificado ([[N09 Verificaciones pendientes#V18 Costos y condiciones del hosting del sitio|V18]]), alertas de gasto y límites de presupuesto en el proveedor.

@@ -37,6 +37,23 @@ tags: [nanturia, roadmap]
 - Más cantones y clústeres ([[I34 Expansion nacional primero internacional despues|I34]]); agente de ventas ([[I35 Agente de ventas con IA|I35]]); canales globales ([[I31 Estrategia de confianza frente a las grandes plataformas|I31]]).
 - Contenido digital y suscripción ([[I26 Rutas digitales 3D datos de ruta de pago y explicaciones de pago|I26]]); tours internacionales emisivos ([[I04 Tours internacionales para ecuatorianos via operadoras aliadas|I04]]).
 
+## F4 · Auditoría de eficiencia del código (al cerrar cada fase y antes de lanzar)
+**Objetivo:** que el sitio haga lo mismo con menos peso, menos costo y más velocidad, **sin cambiar su comportamiento**. Es una revisión recurrente, no un hito único.
+
+**Reglas**
+- Medir antes y después, en las mismas páginas y con las mismas condiciones. Si una mejora no mejora una medida, se descarta.
+- Primero fijar el comportamiento con pruebas (mismos datos, mismo resultado); después optimizar.
+- Cambios pequeños y reversibles, cada uno con tu aprobación (ADELANTE). Menos código no siempre es mejor: se elimina lo muerto o duplicado, no se compacta lo que está claro.
+
+**Qué se revisa**
+1. **Peso:** JavaScript por página, imágenes (formato, tamaño, carga diferida), fuentes, dependencias sin uso, código muerto, scripts de terceros.
+2. **Velocidad:** en celular con conexión lenta, LCP < 2,5 s, INP < 200 ms y CLS < 0,1; páginas estáticas o en caché cuando no cambian; menos código en el navegador y más en el servidor.
+3. **Costo:** transferencia de datos, ejecuciones de servidor, optimización de imágenes y base de datos, frente al plan de hosting ([[N09 Verificaciones pendientes#V18 Costos y condiciones del hosting del sitio|V18]], [[N08 Registro de riesgos#R17 Costos de infraestructura que crecen con el uso|R17]]).
+4. **Organización:** duplicación, módulos demasiado grandes, nombres, y configuración en un solo lugar (límites legales, precios, textos).
+5. **Seguridad y privacidad:** cabeceras, datos personales guardados, dependencias con vulnerabilidades conocidas.
+
+**Entregable:** informe antes y después, con las cinco mejoras de mayor impacto, su esfuerzo y su riesgo. Para pedirlo: «ejecuta la auditoría de eficiencia de N07 F4».
+
 ## Indicadores por fase
 | Indicador | F0 | F1 | F2 |
 |---|---|---|---|

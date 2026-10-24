@@ -46,4 +46,4 @@ Esta carpeta es una **bóveda de Obsidian** (*Open folder as vault*). Aquí vive
 5. Cuando madura, pasa a guion en `guiones aventurasconjaneric/` o a especificación en [[N06 Arquitectura de plataforma|N06]].
 
 ## Pendientes
-- Final del audio [[A20 Precios entre operadoras y co-venta para llenar bus|A20]] (quedó cortado) · imagen de requisitos del audio [[A03 Exceso de documentacion y almacenamiento|A03]] ([[N09 Verificaciones pendientes#V16 Contenido de la imagen de requisitos mencionada en el audio A03|V16]]) · nombre definitivo ([[N04 Decisiones abiertas#D01 Nombre comercial|D01]]) · audio del «verde» para los videos.
+- Final del audio [[A20 Precios entre operadoras y co-venta para llenar bus|A20]] (quedó cortado) · imagen de requisitos del audio [[A03 Exceso de documentacion y almacenamiento|A03]] ([[N09 Verificaciones pendientes#V16 Contenido de la imagen de requisitos mencionada en el audio A03|V16]]) · audio del «verde» para los videos.

@@ -11,6 +11,7 @@ tags: [nanturia, decisiones]
 > Cada decisión trae opciones y una recomendación inicial. Las marcadas con ⚖️ requieren criterio jurídico/contable antes de cerrarse.
 
 ## D01 Nombre comercial
+- **Estado: cerrada.** Se usa **Nanturia** en todo el proyecto (confirmado al reconciliar las notas del PC, 2026-10-24). Pendiente solo: comprobar la disponibilidad de la razón social y de la marca.
 - **Pregunta:** ¿«Anturia» o «Nanturia»? Los audios usan ambas ([[A01 Operadoras aliadas en cadena|A01]], [[A12 Tours internacionales reserva y confianza|A12]]).
 - **Recomendación:** elegir uno, verificar disponibilidad (Superintendencia de Compañías, IEPI, dominio, redes) y estandarizar en todo el cerebro ([[N11 Glosario y correcciones de transcripcion|N11]]).
 

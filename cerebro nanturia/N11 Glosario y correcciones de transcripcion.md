@@ -33,7 +33,7 @@ tags: [nanturia, glosario]
 ## Correcciones y supuestos de transcripción
 | Aparece | Se interpreta como | Certeza |
 |---|---|---|
-| Anturia / Nanturia / «Anthropic» ([[A14 Precio por numero de personas\|A14]]) | Nombre de la empresa/plataforma (por decidir, [[N04 Decisiones abiertas#D01 Nombre comercial\|D01]]) | Media |
+| Anturia / Nanturia / «Anthropic» ([[A14 Precio por numero de personas\|A14]]) | Nombre de la empresa/plataforma: **decidido, Nanturia** ([[N04 Decisiones abiertas#D01 Nombre comercial\|D01]]) | Media |
 | Cueva de los Tallos | Cueva de los Tayos | Media |
 | Morón, Santiago | Morona Santiago | Alta |
 | Carihuerazo | Carihuairazo (volcán) | Media |

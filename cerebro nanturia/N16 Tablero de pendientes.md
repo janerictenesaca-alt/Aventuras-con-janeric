@@ -24,7 +24,7 @@ tags: [nanturia, tablero, pendientes]
 
 ## 2. Decisiones abiertas
 
-- [ ] [[N04 Decisiones abiertas#D01 Nombre comercial|D01]] — Nombre comercial · responsable: ______ · fecha: ______
+- [x] [[N04 Decisiones abiertas#D01 Nombre comercial|D01]] — Nombre comercial · responsable: ______ · fecha: ______
 - [ ] [[N04 Decisiones abiertas#D02 Estructura habilitante agencia propia o venta bajo agencia aliada|D02]] — Estructura habilitante agencia propia o venta bajo agencia aliada ⚖️ · responsable: ______ · fecha: ______
 - [ ] [[N04 Decisiones abiertas#D03 Modelo operativo operador de registro o intermediario puro|D03]] — Modelo operativo operador de registro o intermediario puro · responsable: ______ · fecha: ______
 - [ ] [[N04 Decisiones abiertas#D04 Política de reserva y reembolsos|D04]] — Política de reserva y reembolsos ⚖️ · responsable: ______ · fecha: ______
@@ -61,6 +61,8 @@ tags: [nanturia, tablero, pendientes]
 - [ ] [[N09 Verificaciones pendientes#V12 Permisos de acceso a sitios, comunidades y patrimonio|V12]] — Permisos de acceso a sitios, comunidades y patrimonio · responsable: ______ · fecha: ______
 - [ ] [[N09 Verificaciones pendientes#V13 Condiciones de WhatsApp Business API|V13]] — Condiciones de WhatsApp Business API · responsable: ______ · fecha: ______
 - [ ] [[N09 Verificaciones pendientes#V15 Normas de transporte turístico y alojamiento si se venden como complementos|V15]] — Normas de transporte turístico y alojamiento si se venden como complementos · responsable: ______ · fecha: ______
+
+- [ ] [[N09 Verificaciones pendientes#V18 Costos y condiciones del hosting del sitio|V18]] — Costos y condiciones del hosting del sitio · responsable: ______ · fecha: ______
 
 ### Prioridad P3 · mejora
 
