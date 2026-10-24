@@ -17,7 +17,8 @@ Esta carpeta es una **bóveda de Obsidian** (*Open folder as vault*). Aquí vive
 - Decisiones abiertas: [[N04 Decisiones abiertas|N04]] · Precios y finanzas: [[N05 Modelo financiero y precios|N05]] · Arquitectura: [[N06 Arquitectura de plataforma|N06]]
 - Hoja de ruta: [[N07 Hoja de ruta por fases|N07]] · Riesgos: [[N08 Registro de riesgos|N08]] · Verificaciones: [[N09 Verificaciones pendientes|N09]]
 - Trazabilidad audio→idea: [[N10 Matriz audio a idea|N10]] · Glosario: [[N11 Glosario y correcciones de transcripcion|N11]] · Fuentes: [[N12 Fuentes|N12]] · Convenciones: [[N13 Convenciones del cerebro|N13]]
-- Materia prima: los 27 audios con transcripción literal en `audios e ideas/audios/` ([[A01 Operadoras aliadas en cadena|A01]] … [[A27 Reserva no reembolsable|A27]])
+- **Para colaboradores:** [[N15 Mapa del proyecto y guia de colaboracion|N15]] · **Tablero de pendientes:** [[N16 Tablero de pendientes|N16]]
+- Materia prima: los 27 audios con transcripción literal en `cerebro nanturia/audios/` ([[A01 Operadoras aliadas en cadena|A01]] … [[A27 Reserva no reembolsable|A27]]); plantillas en `cerebro nanturia/plantillas/`
 
 ### Ideas por área
 - **crecimiento:** [[I06 Reclutamiento de guias desde el Catastro Turistico|I06]] · [[I22 Biblioteca de rutas precreadas y onboarding|I22]] · [[I24 QR en hoteles atribucion de origen y comision|I24]] · [[I28 Enlaces de pago y de ruta compartibles marketing viral|I28]] · [[I31 Estrategia de confianza frente a las grandes plataformas|I31]]

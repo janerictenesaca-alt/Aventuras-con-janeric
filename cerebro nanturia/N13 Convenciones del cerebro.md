@@ -13,7 +13,7 @@ tags: [nanturia, convenciones, integracion]
 ## 1. Identificadores
 | Prefijo | Significa | Ubicación |
 |---|---|---|
-| `A##` | Audio (transcripción literal) | `audios e ideas/audios/` |
+| `A##` | Audio (transcripción literal) | `cerebro nanturia/audios/` |
 | `I##` | Idea analizada | `cerebro nanturia/ideas/` |
 | `N##` | Nota de síntesis (hub) | `cerebro nanturia/` |
 | `H##` `D##` `R##` `V##` | Hallazgo · Decisión · Riesgo · Verificación (encabezados dentro de N03/N04/N08/N09) | `cerebro nanturia/` |
