@@ -11,7 +11,7 @@ tags: [nanturia, tablero, pendientes]
 > Lista viva de lo que falta resolver. Marca la casilla cuando esté hecho y completa responsable y fecha. Las decisiones y verificaciones se generan desde [[N04 Decisiones abiertas|N04]] y [[N09 Verificaciones pendientes|N09]]; ⚖️ indica que requiere criterio jurídico o contable.
 
 ## 1. Las diez primeras acciones (orden recomendado)
-1. Decidir el nombre y el vehículo legal: [[N04 Decisiones abiertas#D01 Nombre comercial|D01]], [[N04 Decisiones abiertas#D02 Estructura habilitante agencia propia o venta bajo agencia aliada|D02]].
+1. Decidir el vehículo legal ([[N04 Decisiones abiertas#D02 Estructura habilitante agencia propia o venta bajo agencia aliada|D02]]) y aprobar o ajustar las decisiones del piloto ([[N17 Decisiones del piloto propuesta|N17]]). El nombre ya está cerrado: Nanturia.
 2. Si el sitio ya está público, corregir los textos de la portada que prometen lo que no existe ([[N03 Hallazgos criticos#H06 La plataforma responde ante el cliente|H06]], [[N03 Hallazgos criticos#H08 Requisitos obligatorios del canal virtual|H08]], [[N14 Estado actual del sitio web|N14]]).
 3. Decidir si el repositorio de GitHub pasa a privado antes de invitar colaboradores.
 4. Consulta con abogado de turismo: [[N09 Verificaciones pendientes#V01 Texto consolidado del Reglamento de Operación e Intermediación Turística|V01]], [[N09 Verificaciones pendientes#V03 Si un portal que vende tours sin operarlos califica como agencia de viajes|V03]], [[N09 Verificaciones pendientes#V06 Legalidad de comisiones a colaboradores y de links de venta de guías|V06]], [[N09 Verificaciones pendientes#V07 Derecho de retracto y reserva no reembolsable|V07]].
