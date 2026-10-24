@@ -40,6 +40,9 @@ node ..\Aventuras-con-janeric\herramientas\cerebro.mjs enlazar --vault ..\Aventu
 ```
 Sin `--write`, `enlazar` y `fusionar` solo simulan.
 
+## Enlaces de carpeta
+La herramienta sigue los enlaces de carpeta (junction o symlink): lo que esté dentro de un enlace se valida y se enlaza como si estuviera en la bóveda. `enlazar` modifica el **original** al que apunta el enlace. Un enlace roto se omite y los ciclos no la bloquean.
+
 ## Límites
 - Los enlaces escritos como `[texto](ruta/archivo.md)` (Markdown clásico) no se corrigen; solo los de Obsidian (`[[…]]`).
 - Un identificador escrito solo como texto (por ejemplo «I07») se enlaza siempre; si un código con esa forma significa otra cosa, revísalo.

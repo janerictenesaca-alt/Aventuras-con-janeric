@@ -33,12 +33,32 @@ function parseArgs(argv) {
   return { cmd, opts };
 }
 
-function walk(dir, exts = null, out = []) {
+function walk(dir, exts = null, out = [], visitados = new Set()) {
+  let real;
+  try {
+    real = fs.realpathSync(dir);
+  } catch {
+    return out;
+  }
+  if (visitados.has(real)) return out; // evita ciclos y carpetas contadas dos veces
+  visitados.add(real);
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     if (IGNORAR.has(e.name)) continue;
     const p = path.join(dir, e.name);
-    if (e.isDirectory()) walk(p, exts, out);
-    else if (!exts || exts.includes(path.extname(e.name).toLowerCase())) out.push(p);
+    let esDir = e.isDirectory();
+    let esArchivo = e.isFile();
+    if (e.isSymbolicLink()) {
+      // enlaces de carpeta (junction o symlink): se siguen; un enlace roto se omite
+      try {
+        const st = fs.statSync(p);
+        esDir = st.isDirectory();
+        esArchivo = st.isFile();
+      } catch {
+        continue;
+      }
+    }
+    if (esDir) walk(p, exts, out, visitados);
+    else if (esArchivo && (!exts || exts.includes(path.extname(e.name).toLowerCase()))) out.push(p);
   }
   return out;
 }
