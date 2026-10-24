@@ -1,3 +1,7 @@
+---
+tags: [guion, plantilla]
+---
+
 # Guiones para videos — Aventuras con Janeric
 
 Plantillas listas para grabar. Reemplaza lo que está en `[CORCHETES]`.
@@ -95,3 +99,7 @@ Cada tema tiene versión **corta** (Reels/TikTok/Shorts, 30-45 s) y **larga** (Y
 - [ ] Subtítulos en pantalla (la mayoría ve sin sonido).
 - [ ] Llamado a la acción claro en cada video.
 - [ ] Música sin derechos de autor.
+
+
+---
+Ver también: [[00 - Cerebro]] · [[ideas]]

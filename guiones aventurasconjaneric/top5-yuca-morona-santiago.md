@@ -1,3 +1,10 @@
+---
+tags: [guion, top5, morona-santiago, comida]
+estado: guion-listo
+serie: Top 5 de Morona Santiago
+formato: reel
+---
+
 # Top 5 de la yuca en Morona Santiago
 
 Formato: Reel/TikTok/Short (aprox. 90-100 s hablado). Mismo estilo del audio del verde: arranque exagerado, "¿por qué ninguna ciudad le ha hecho un monumento a la yuca?", cuenta regresiva del 5 al 1, humor y remate con gancho a la siguiente parte.
@@ -51,3 +58,7 @@ Y espérate que se me viene la segunda parte: dónde comer los mejores platos de
 - Cambia las muletillas por las tuyas: tu forma de hablar es lo que le da la gracia.
 - Tomas sugeridas: yuca recién sacada de la chacra, cuchillo cortando, sartén con aceite, abrir la hoja de bijao con el vapor saliendo, y la olla grande de chicha.
 - Si quieres una versión de YouTube de 5-8 minutos, se puede ampliar cada puesto con entrevista y receta.
+
+
+---
+Ver también: [[00 - Cerebro]] · [[ideas]]

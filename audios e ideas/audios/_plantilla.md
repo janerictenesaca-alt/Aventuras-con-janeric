@@ -1,3 +1,8 @@
+---
+tags: [audio]
+estado: audio-grabado
+---
+
 # [TÍTULO DEL AUDIO]
 
 - **Fecha:** AAAA-MM-DD
@@ -8,6 +13,13 @@
 ## Transcripción
 
 [Pega aquí el audio tal cual lo dijiste]
+
+## Análisis y mejora (Claude)
+
+- **Idea central:**
+- **Qué la hace fuerte:**
+- **Qué mejoraría:**
+- **Conexiones con otras notas:** [[nota]]
 
 ## Lo que funciona (frases, chistes, datos para conservar)
 
