@@ -1,19 +1,15 @@
-# Audios e ideas — Aventuras con Janeric
+# Audios e ideas
 
-Aquí guardo la materia prima de los videos: los audios que grabo y las ideas que se me ocurren.
+Materia prima del cerebro: audios transcritos y banco de ideas de videos.
 
 ```
 audios e ideas/
-├── README.md          ← este archivo (cómo funciona todo)
-├── ideas.md           ← banco de ideas de videos (con estado)
+├── README.md        ← este archivo
+├── ideas.md         ← banco de ideas de VIDEOS (contenido)
 └── audios/
-    ├── _plantilla.md  ← copia esto por cada audio nuevo
-    └── (un .md por audio: transcripción + notas)
+    ├── _plantilla.md        ← copia esto para un audio nuevo sin analizar
+    └── A01 … A27 *.md       ← audios de negocio de Nanturia (transcripción literal)
 ```
 
-## Flujo
-
-1. **Idea suelta** → anótala en `ideas.md` (una línea basta).
-2. **Grabo un audio** → copio `audios/_plantilla.md`, lo nombro `AAAA-MM-DD-tema.md` y pego la transcripción.
-3. **Del audio al guion** → el guion final va en `../guiones aventurasconjaneric/` con el formato del Top 5 de la yuca.
-4. Marco el estado en `ideas.md` (💡 idea → 🎙️ audio grabado → 📝 guion listo → 🎬 grabado → ✅ publicado).
+- El análisis y las mejoras de los 27 audios están en `cerebro nanturia/` (empieza por [[N00 Resumen ejecutivo]]).
+- Las convenciones de IDs, nombres y frontmatter están en [[N13 Convenciones del cerebro]].

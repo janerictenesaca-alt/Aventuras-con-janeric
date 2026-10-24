@@ -2,7 +2,10 @@
 tags: [ideas, banco]
 ---
 
-# Banco de ideas
+# Banco de ideas de videos
+
+> Esta nota reúne ideas de **videos** (contenido). Las ideas de **negocio** de Nanturia, analizadas desde 27 audios, están en [[N00 Resumen ejecutivo]].
+
 
 Estados: 💡 idea · 🎙️ audio grabado · 📝 guion listo · 🎬 grabado · ✅ publicado
 

@@ -19,7 +19,7 @@ estado: audio-grabado
 - **Idea central:**
 - **Qué la hace fuerte:**
 - **Qué mejoraría:**
-- **Conexiones con otras notas:** [[nota]]
+- **Conexiones con otras notas:** `[[nota]]`
 
 ## Lo que funciona (frases, chistes, datos para conservar)
 
