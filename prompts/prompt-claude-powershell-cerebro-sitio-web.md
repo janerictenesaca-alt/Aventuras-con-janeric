@@ -128,7 +128,7 @@ confianza: media           # alta | media | baja
 tags: [sitio-web, pagos]
 ---
 ```
-Cuerpo: Resumen · Evidencia (ruta:línea) · Análisis · Brechas · Mejora propuesta · Esfuerzo · Riesgos · Próximos pasos · Relacionadas. Enlaza con wikilinks a las notas del cerebro de negocio por su nombre de archivo, por ejemplo `[[I07 Pagos retencion de fondos split y fondo de respaldo|I07]]` o `[[N03 Hallazgos criticos#H06 La plataforma responde ante el cliente|H06]]`, y entre notas del sitio web con `[[S06 Flujos criticos]]`. Las reglas verificables van en bloques ```text con pseudocódigo.
+Cuerpo: Resumen · Evidencia (ruta:línea) · Análisis · Brechas · Mejora propuesta · Esfuerzo · Riesgos · Próximos pasos · Relacionadas. Enlaza con wikilinks a las notas del cerebro de negocio por su nombre de archivo, por ejemplo `[[I07 Pagos retencion de fondos split y fondo de respaldo|I07]]` o `[[N03 Hallazgos criticos#H06 La plataforma responde ante el cliente|H06]]`, y entre notas del sitio web con `[[S06 Flujos criticos]]`. Dentro de tablas Markdown escribe el alias con barra invertida: `[[Nota\|alias]]`. Las reglas verificables van en bloques ```text con pseudocódigo.
 
 # CRITERIOS DE CALIDAD (autoevalúate antes de entregar)
 - [ ] Ninguna afirmación sin evidencia `archivo:línea` o marcada «no determinado».
@@ -146,7 +146,7 @@ $names = @(); foreach ($p in @($root, $extra)) { if (Test-Path $p) { $names += G
 Get-ChildItem $root -Recurse -Filter *.md | ForEach-Object {
   $txt = Get-Content $_.FullName -Raw -Encoding UTF8
   [regex]::Matches($txt, '\[\[([^\]\|#]+)') | ForEach-Object {
-    $t = $_.Groups[1].Value.Trim(); if ($names -notcontains $t) { "{0} -> {1}" -f $_.Name, $t }
+    $t = $_.Groups[1].Value.Trim().TrimEnd('\'); if ($names -notcontains $t) { "{0} -> {1}" -f $_.Name, $t }
   }
 }
 ```
