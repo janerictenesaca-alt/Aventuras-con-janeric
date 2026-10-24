@@ -14,7 +14,7 @@ tags: [nanturia, roadmap]
 **Objetivo:** vender de forma legal y manual 3 rutas y aprender.
 - Resolver vehículo legal ([[N04 Decisiones abiertas#D02 Estructura habilitante agencia propia o venta bajo agencia aliada|D02]]); cotizar póliza ([[I29 Seguros y requisitos de las plataformas globales|I29]]); abogado y contador ([[N09 Verificaciones pendientes|N09]]).
 - Elegir 3 rutas ([[N04 Decisiones abiertas#D09 Modalidades y cantones del piloto|D09]]); dossiers por plantilla ([[I18 Automatizacion documental legal por ruta|I18]]); registro y checklist de equipos ([[I19 Almacenamiento documental nube fisica NAS y registro de equipos|I19]], [[I33 Equipos y seguridad arnes en El Churo y alquiler de equipos|I33]]).
-- Sitio simple con requisitos de canal virtual ([[N03 Hallazgos criticos#H08 Requisitos obligatorios del canal virtual|H08]]); link de pago; confirmación por WhatsApp ([[I28 Enlaces de pago y de ruta compartibles marketing viral|I28]], [[I32 MVP concierge sitio basico tours cargados prueba y error|I32]]).
+- Sitio simple con requisitos de canal virtual ([[N03 Hallazgos criticos#H08 Requisitos obligatorios del canal virtual|H08]]); link de pago; confirmación por WhatsApp ([[I28 Enlaces de pago y de ruta compartibles marketing viral|I28]], [[I32 MVP concierge sitio basico tours cargados prueba y error|I32]]). Punto de partida real: demo estática sin servidor ni base de datos, ver [[N14 Estado actual del sitio web|N14]].
 - QR en 5 hoteles solo para medición ([[I24 QR en hoteles atribucion de origen y comision|I24]]).
 - Alianza ancla piloto ([[I05 Alianzas ancla Cueva de los Tayos Mateo y empresa de Hernan|I05]]).
 - **Puerta F0→F1:** ≥ 30 reservas, ≥ 80 % de salidas sin incidentes, política de cancelación validada.

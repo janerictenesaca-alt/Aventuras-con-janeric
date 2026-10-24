@@ -57,3 +57,6 @@ Qué: registro de proveedores, pólizas, reglas de reventa. Prioridad: **P2**. R
 
 ## V16 Contenido de la imagen de requisitos mencionada en el audio A03
 Qué: el autor menciona una imagen con los requisitos documentales que no se entregó. Pasar su contenido en texto para contrastarlo con [[N02 Marco legal Ecuador|N02]]. Prioridad: **P1**. Relacionadas: [[I18 Automatizacion documental legal por ruta|I18]].
+
+## V17 Relación contractual con los guías independiente o en dependencia
+Qué: confirmar el encuadre laboral y tributario de los guías (independientes con RUC frente a relación de dependencia), afiliación, facturación de honorarios, retenciones y cláusulas de no exclusividad en el contrato. Con quién: abogado laboral y contador. Prioridad: **P1**. Relacionadas: [[N04 Decisiones abiertas#D13 Relación con los guías independientes o en nómina|D13]], [[I13 Incumplimiento del guia no activa el tour o no se presenta|I13]], [[I01 Modelo en cadena con operadoras aliadas|I01]], [[N09 Verificaciones pendientes#V09 Tratamiento tributario|V09]].

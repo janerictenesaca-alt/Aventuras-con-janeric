@@ -54,3 +54,9 @@ tags: [nanturia, decisiones]
 ## D12 Almacenamiento documental
 - **Opciones:** nube (Drive/Dropbox) ahora; NAS + respaldo cifrado después.
 - **Recomendación inicial:** nube en F0, NAS en F1 con regla 3-2-1 ([[I19 Almacenamiento documental nube fisica NAS y registro de equipos|I19]]).
+
+## D13 Relación con los guías independientes o en nómina
+- **Pregunta (surgida de la auditoría del sitio, [[N14 Estado actual del sitio web|N14]]):** ¿los guías trabajarán como independientes o en relación de dependencia?
+- **Opciones:** (A) independientes con RUC que facturan honorarios y firman contrato de servicios con la agencia/operadora; (B) en nómina; (C) mixto (guías fijos en nómina y apoyo independiente).
+- **Contexto:** el reglamento de guías exige RUC con actividad de guianza para obtener el registro (Guianza 2025, Art. 16, 19, 27, 38 🟢), lo que encaja con el modelo independiente; el riesgo es la relación laboral encubierta si hay exclusividad y subordinación.
+- **Recomendación inicial:** A para el piloto, con contrato de servicios, sin exclusividad, y validación laboral ([[N09 Verificaciones pendientes#V17 Relación contractual con los guías independiente o en dependencia|V17]], [[I13 Incumplimiento del guia no activa el tour o no se presenta|I13]], [[I01 Modelo en cadena con operadoras aliadas|I01]]).
